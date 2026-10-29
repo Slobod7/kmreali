@@ -1,0 +1,182 @@
+---
+import { Image } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import FisaMasinii from '../components/FisaMasinii.astro';
+import logo from '../assets/brand/kmreali-logo.svg';
+import { getArticles, readingMinutes, type Article } from '../articles';
+import { categories, formatDate, site, url } from '../site';
+
+export async function getStaticPaths() {
+  const articles = await getArticles();
+  return articles.map((article, i) => ({
+    params: { slug: article.id },
+    props: { article, newer: articles[i - 1], older: articles[i + 1] },
+  }));
+}
+
+interface Props {
+  article: Article;
+  newer?: Article;
+  older?: Article;
+}
+
+const { article, newer, older } = Astro.props;
+const { title, description, date, updated, category, cover, coverAlt, masina, draft } = article.data;
+const { Content } = await render(article);
+const minutes = readingMinutes(article.body);
+const coverUrl = new URL(cover.src, Astro.site).href;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description,
+    image: coverUrl,
+    datePublished: date.toISOString(),
+    dateModified: (updated ?? date).toISOString(),
+    inLanguage: 'ro-RO',
+    mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).href,
+    author: { '@type': 'Person', name: site.author.name },
+    publisher: { '@type': 'Organization', name: site.name, logo: { '@type': 'ImageObject', url: new URL(logo.src, Astro.site).href } },
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  image={cover}
+  imageAlt={coverAlt}
+  type="article"
+  published={date}
+  modified={updated}
+  noindex={draft}
+  jsonLd={jsonLd}
+>
+  <article>
+    <header class="container articol-antet">
+      {draft && <p class="ciorna">Ciornă: se vede doar pe calculatorul tău, nu și pe site.</p>}
+      <a class="categorie" href={url(`${category}/`)}>{categories[category].singular}</a>
+      <h1>{title}</h1>
+      <p class="articol-meta">
+        <span>De {site.author.name}</span>
+        <time datetime={date.toISOString()}>{formatDate(date)}</time>
+        <span>{minutes} min de citit</span>
+      </p>
+    </header>
+
+    <div class="container">
+      <Image class="articol-coperta" src={cover} alt={coverAlt} priority widths={[640, 960, 1280, 1600]} sizes="(min-width: 75rem) 75rem, 100vw" />
+    </div>
+
+    <div class:list={['container', 'articol-corp', { 'are-fisa': masina }]}>
+      {masina && <FisaMasinii masina={masina} />}
+      <div class="coloana">
+        <div class="text">
+          <Content />
+        </div>
+
+        <footer class="articol-subsol">
+          <section class="autor" aria-label="Despre autor">
+            <p class="autor__eticheta">Despre autor</p>
+            <p class="autor__nume">{site.author.name}</p>
+            <p>{site.author.bio}</p>
+          </section>
+
+          {
+            (newer || older) && (
+              <nav class="vecini" aria-label="Alte articole">
+                {older && (
+                  <a href={url(`${older.id}/`)}>
+                    <span>Articolul anterior</span>
+                    {older.data.title}
+                  </a>
+                )}
+                {newer && (
+                  <a href={url(`${newer.id}/`)}>
+                    <span>Articolul următor</span>
+                    {newer.data.title}
+                  </a>
+                )}
+              </nav>
+            )
+          }
+        </footer>
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .articol-antet {
+    display: grid;
+    gap: 0.875rem;
+    justify-items: start;
+    padding-block: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 3vw, 2.25rem);
+  }
+  .articol-antet h1 { max-width: 18em; }
+  .articol-meta { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; color: var(--gri); font-size: var(--text-mic); }
+
+  .ciorna {
+    font-family: var(--font-titlu);
+    font-weight: 700;
+    color: var(--rosu);
+    border: 2px solid currentColor;
+    border-radius: 4px;
+    padding: 0.2em 0.6em;
+  }
+
+  :global(.articol-coperta) { width: 100%; border-radius: 8px; aspect-ratio: 16 / 9; object-fit: cover; }
+
+  .articol-corp {
+    display: grid;
+    gap: 2.5rem;
+    padding-top: clamp(2rem, 5vw, 3rem);
+  }
+  .coloana { max-width: var(--latime-text); }
+  .articol-corp:not(.are-fisa) .coloana { margin-inline: auto; }
+
+  /* Wide screens: the car's card sits on the right and stays in view while reading. */
+  @media (min-width: 64rem) {
+    .are-fisa { grid-template-columns: minmax(0, var(--latime-text)) 20rem; justify-content: space-between; align-items: start; }
+    .are-fisa .coloana { grid-row: 1; grid-column: 1; }
+    .are-fisa :global(.fisa) { grid-column: 2; position: sticky; top: 1.5rem; }
+  }
+
+  .articol-subsol { display: grid; gap: 2rem; margin-top: 3.5rem; }
+
+  .autor {
+    display: grid;
+    gap: 0.25rem;
+    background: var(--alb);
+    border: 1px solid var(--nisip);
+    border-radius: 8px;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+  .autor__eticheta { font-family: var(--font-titlu); font-weight: 700; color: var(--rosu); font-size: var(--text-mic); }
+  .autor__nume { font-family: var(--font-titlu); font-weight: 700; font-size: var(--text-mare); line-height: 1.2; }
+
+  .vecini { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; }
+  .vecini a { display: grid; gap: 0.25rem; text-decoration: none; font-family: var(--font-titlu); font-weight: 700; font-size: var(--text-mare); line-height: 1.15; }
+  .vecini span { font-family: var(--font-text); font-weight: 400; font-size: var(--text-mic); color: var(--gri); }
+
+  /* Article text */
+  .text :global(> * + *) { margin-top: 1.25em; }
+  .text :global(h2) { margin-top: 2.2em; font-size: clamp(1.6rem, 1.4rem + 0.9vw, 2.1rem); }
+  .text :global(h3) { margin-top: 1.8em; }
+  .text :global(h2 + *), .text :global(h3 + *) { margin-top: 0.75em; }
+  .text :global(a) { text-decoration-color: var(--rosu); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  .text :global(img) { width: 100%; border-radius: 6px; }
+  .text :global(ul), .text :global(ol) { padding-left: 1.25em; }
+  .text :global(li + li) { margin-top: 0.4em; }
+  .text :global(li::marker) { color: var(--rosu); }
+  .text :global(blockquote) { margin-inline: 0; padding-left: 1.25rem; border-left: 4px solid var(--rosu); color: var(--grafit); }
+  .text :global(table) { width: 100%; border-collapse: collapse; font-size: 0.95em; background: var(--alb); }
+  .text :global(th), .text :global(td) { border: 1px solid var(--nisip); padding: 0.6em 0.85em; text-align: left; vertical-align: top; }
+  .text :global(th) { background: var(--carbune); color: var(--hartie); font-family: var(--font-titlu); font-weight: 600; letter-spacing: 0.03em; }
+  .text :global(tbody tr:nth-child(even) td) { background: #faf8f4; }
+  .text :global(hr) { border: 0; border-top: 1px solid var(--nisip); margin-block: 2.5em; }
+</style>

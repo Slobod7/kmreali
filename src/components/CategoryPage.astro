@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import ArticleCard from './ArticleCard.astro';
+import { getArticles } from '../articles';
+import { categories, type CategoryId } from '../site';
+
+interface Props {
+  category: CategoryId;
+}
+
+const { category } = Astro.props;
+const info = categories[category];
+const articles = await getArticles(category);
+---
+
+<Base title={info.title} description={info.description}>
+  <header class="sectiune-antet">
+    <div class="container">
+      <h1>{info.title}</h1>
+      <p>{info.description}</p>
+    </div>
+  </header>
+  <div class="container">
+    {
+      articles.length > 0 ? (
+        <ul class="grila-articole">
+          {articles.map((article) => (
+            <ArticleCard article={article} level="h2" />
+          ))}
+        </ul>
+      ) : (
+        <p class="gol">{info.empty}</p>
+      )
+    }
+  </div>
+</Base>
+
+<style>
+  .sectiune-antet {
+    padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(2rem, 4vw, 3rem);
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    border-bottom: 1px solid var(--nisip);
+  }
+  .sectiune-antet .container { display: grid; gap: 0.75rem; }
+  .sectiune-antet p { max-width: 36rem; font-size: var(--text-mare); line-height: 1.45; color: var(--grafit); }
+</style>

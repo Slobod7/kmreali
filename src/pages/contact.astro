@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../site';
+
+// Set `contactEmail` in src/site.ts to publish this page and its footer link.
+const email = site.contactEmail;
+---
+
+<Base title="Contact" description="Cum ne poți scrie." noindex={!email}>
+  <div class="container pagina">
+    <h1>Contact</h1>
+    {
+      email ? (
+        <p>
+          Pentru întrebări, corecturi sau dacă vrei să scrii despre mașina ta, trimite un email la{' '}
+          <a href={`mailto:${email}`}>{email}</a>.
+        </p>
+      ) : (
+        <p>Adresa de contact apare aici în curând.</p>
+      )
+    }
+  </div>
+</Base>
+
+<style>
+  .pagina { max-width: calc(var(--latime-text) + 2 * var(--margine)); padding-top: clamp(2.5rem, 6vw, 4.5rem); display: grid; gap: 1.25rem; }
+  p { font-size: var(--text-mare); line-height: 1.45; }
+  a { text-decoration-color: var(--rosu); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+</style>

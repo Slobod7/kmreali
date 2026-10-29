@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../site';
+---
+
+<Base title="Pagina nu există" noindex>
+  <div class="container pagina">
+    <h1>Pagina nu există</h1>
+    <p>Adresa nu duce la nicio pagină de pe KM Reali. Poate a fost scrisă greșit sau articolul a fost mutat.</p>
+    <p>
+      Mergi la <a href={url()}>pagina principală</a> sau alege o secțiune:
+      <a href={url('recenzii/')}>Recenzii</a>, <a href={url('ghiduri/')}>Ghiduri</a>, <a href={url('topuri/')}>Topuri</a>.
+    </p>
+  </div>
+</Base>
+
+<style>
+  .pagina { max-width: calc(var(--latime-text) + 2 * var(--margine)); padding-top: clamp(2.5rem, 6vw, 4.5rem); display: grid; gap: 1.25rem; }
+  p { font-size: var(--text-mare); line-height: 1.45; }
+  a { text-decoration-color: var(--rosu); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+</style>

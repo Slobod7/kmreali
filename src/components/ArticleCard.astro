@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+import Borna from './Borna.astro';
+import type { Article } from '../articles';
+import { categories, formatDate, url } from '../site';
+
+interface Props {
+  article: Article;
+  /** Heading level inside the card, so the page outline stays correct. */
+  level?: 'h2' | 'h3';
+}
+
+const { article, level: Heading = 'h3' } = Astro.props;
+const { title, description, date, category, cover, coverAlt, masina, draft } = article.data;
+const href = url(`${article.id}/`);
+---
+
+<li class="card">
+  <a class="card__poza" href={href} tabindex="-1" aria-hidden="true">
+    <Image src={cover} alt="" widths={[400, 640, 800]} sizes="(min-width: 75rem) 24rem, (min-width: 40rem) 45vw, 100vw" />
+    {masina?.kilometraj && <span class="card__borna"><Borna km={masina.kilometraj} /></span>}
+  </a>
+  <div class="card__text">
+    <a class="categorie" href={url(`${category}/`)}>{categories[category].singular}</a>
+    <Heading class="card__titlu"><a href={href}>{title}</a></Heading>
+    <p class="card__rezumat">{description}</p>
+    <p class="card__data">
+      <time datetime={date.toISOString()}>{formatDate(date)}</time>
+      {draft && <span class="ciorna">Ciornă</span>}
+    </p>
+  </div>
+</li>
+
+<style>
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--alb);
+    border: 1px solid var(--nisip);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .card__poza { position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden; }
+  .card__poza :global(img) { width: 100%; height: 100%; object-fit: cover; }
+  .card__borna { position: absolute; left: 1rem; bottom: 0.875rem; }
+
+  .card__text { display: grid; gap: 0.5rem; padding: 1.25rem 1.25rem 1.5rem; }
+  .card__titlu { font-size: var(--text-mare); font-weight: 800; }
+  .card__titlu a { text-decoration: none; }
+  .card__titlu a::after { content: ''; position: absolute; inset: 0; }
+  .card .categorie { position: relative; z-index: 1; justify-self: start; }
+  .card__rezumat { font-size: 1rem; line-height: 1.55; color: var(--grafit); }
+  .card__data { display: flex; gap: 0.75rem; align-items: center; font-size: var(--text-mic); color: var(--gri); }
+
+  .ciorna {
+    font-family: var(--font-titlu);
+    font-weight: 700;
+    color: var(--rosu);
+    border: 1.5px solid currentColor;
+    border-radius: 3px;
+    padding: 0 0.4em;
+  }
+</style>

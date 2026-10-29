@@ -1,0 +1,88 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import hero from '../assets/brand/kmreali-hero.webp';
+import logo from '../assets/brand/kmreali-logo.svg';
+import { getArticles } from '../articles';
+import { site } from '../site';
+
+const articles = (await getArticles()).slice(0, 9);
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: site.name,
+    url: Astro.site?.href,
+    inLanguage: 'ro-RO',
+    description: site.description,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: site.name,
+    url: Astro.site?.href,
+    logo: new URL(logo.src, Astro.site).href,
+  },
+];
+---
+
+<Base jsonLd={jsonLd}>
+  <section class="erou">
+    <div class="container erou__titlu">
+      <h1>{site.tagline}</h1>
+    </div>
+    <div class="erou__poza">
+      <Image
+        src={hero}
+        alt="Skoda Superb 2020 neagră parcată, văzută din față"
+        layout="full-width"
+        priority
+      />
+    </div>
+    <div class="container erou__intro">
+      <p>{site.description}</p>
+    </div>
+  </section>
+
+  <section class="container noutati" aria-labelledby="noutati-titlu">
+    <h2 id="noutati-titlu">Cele mai noi articole</h2>
+    {
+      articles.length > 0 ? (
+        <ul class="grila-articole">
+          {articles.map((article) => (
+            <ArticleCard article={article} />
+          ))}
+        </ul>
+      ) : (
+        <p class="gol">Primele articole apar în curând.</p>
+      )
+    }
+  </section>
+</Base>
+
+<style>
+  /* Phones: title and intro above the photo. */
+  .erou { position: relative; display: flex; flex-direction: column; }
+  .erou__titlu { order: 1; padding-top: 2rem; }
+  .erou__intro { order: 2; padding-block: 1rem 2rem; }
+  .erou__poza { order: 3; aspect-ratio: 2 / 1; overflow: hidden; background: #9ec6ec; }
+  .erou__poza :global(img) { width: 100%; height: 100%; object-fit: cover; }
+  .erou__intro p { max-width: 38rem; font-size: var(--text-mare); line-height: 1.45; color: var(--grafit); }
+
+  /* Wide screens: the photo has open sky top-left, and the title sits there. */
+  @media (min-width: 60rem) {
+    .erou__titlu {
+      position: absolute;
+      inset: 0 0 auto 0;
+      z-index: 1;
+      padding-top: clamp(1.75rem, 3vw, 3rem);
+    }
+    .erou__titlu h1 { max-width: 8em; font-size: clamp(2.25rem, 3.9vw, 3.4rem); }
+    .erou__poza { order: 1; }
+    .erou__intro { order: 2; padding-block: 2rem 0; }
+  }
+
+  .noutati { display: grid; gap: 1.5rem; padding-top: clamp(2.5rem, 6vw, 4rem); }
+</style>

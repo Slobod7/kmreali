@@ -1,0 +1,54 @@
+---
+// The kilometre marker from the logo, used to show how many real km the car has.
+import { formatKm } from '../site';
+
+interface Props {
+  km: number;
+  marime?: 'mica' | 'mare';
+}
+
+const { km, marime = 'mica' } = Astro.props;
+---
+
+<div class:list={['borna', `borna--${marime}`]} role="img" aria-label={`${formatKm(km)} km la bord`}>
+  <span class="borna__cap" aria-hidden="true">km</span>
+  <span class="borna__nr" aria-hidden="true">{formatKm(km)}</span>
+</div>
+
+<style>
+  .borna {
+    --l: 5.5em;
+    display: inline-flex;
+    flex-direction: column;
+    width: var(--l);
+    background: var(--alb);
+    color: var(--carbune);
+    border-radius: calc(var(--l) / 2) calc(var(--l) / 2) 0.3em 0.3em;
+    box-shadow: 0 0 0 0.125em var(--carbune);
+    overflow: hidden;
+    font-family: var(--font-titlu);
+    text-align: center;
+    line-height: 1;
+  }
+  .borna--mica { font-size: 0.875rem; }
+  .borna--mare { font-size: 1.15rem; }
+
+  .borna__cap {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: calc(var(--l) / 2);
+    padding-bottom: 0.35em;
+    background: var(--rosu);
+    color: var(--alb);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .borna__nr {
+    padding: 0.45em 0.2em 0.55em;
+    font-weight: 800;
+    font-size: 1.3em;
+    font-variant-numeric: tabular-nums;
+  }
+</style>

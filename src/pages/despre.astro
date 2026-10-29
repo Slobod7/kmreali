@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import Borna from '../components/Borna.astro';
+import { url } from '../site';
+---
+
+<Base title="Despre" description="Ce este KM Reali și de ce scriem doar despre mașini pe care le-am condus.">
+  <div class="container pagina">
+    <h1>Despre KM Reali</h1>
+    <p class="intro">
+      KM Reali adună păreri de la oameni care chiar conduc mașinile despre care scriu. Nu de la un test drive de o zi,
+      ci după luni de drumuri, plinuri și vizite la service.
+    </p>
+
+    <h2>Ce găsești aici</h2>
+    <ul>
+      <li><a href={url('recenzii/')}>Recenzii</a>: o mașină, un proprietar, tot ce a mers bine și tot ce nu.</li>
+      <li><a href={url('ghiduri/')}>Ghiduri</a>: explicații practice pentru întreținere, cumpărare și drumurile de zi cu zi.</li>
+      <li><a href={url('topuri/')}>Topuri</a>: clasamente făcute pe experiența proprietarilor, nu pe broșuri.</li>
+    </ul>
+
+    <h2>De ce „km reali”</h2>
+    <div class="borna-rand">
+      <Borna km={120000} marime="mare" />
+      <p>
+        Borna din logo e cea de pe marginea drumului. La fiecare recenzie vezi câți kilometri avea mașina la bord când
+        am scris despre ea. Cu cât numărul e mai mare, cu atât știm mai bine cum se poartă în timp.
+      </p>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .pagina { max-width: calc(var(--latime-text) + 2 * var(--margine)); padding-top: clamp(2.5rem, 6vw, 4.5rem); }
+  .pagina > * + * { margin-top: 1.25rem; }
+  .pagina h2 { margin-top: 2.5rem; font-size: clamp(1.6rem, 1.4rem + 0.9vw, 2.1rem); }
+  .intro { font-size: var(--text-mare); line-height: 1.45; color: var(--grafit); }
+  ul { padding-left: 1.25em; }
+  li + li { margin-top: 0.5em; }
+  li::marker { color: var(--rosu); }
+  .pagina a { text-decoration-color: var(--rosu); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  .borna-rand { display: flex; gap: 1.5rem; align-items: center; }
+  @media (max-width: 30rem) { .borna-rand { flex-direction: column; align-items: start; } }
+</style>

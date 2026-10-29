@@ -1,0 +1,67 @@
+---
+// The car's ID card next to a review: the facts a reader checks first.
+import Borna from './Borna.astro';
+import type { Article } from '../articles';
+
+interface Props {
+  masina: NonNullable<Article['data']['masina']>;
+}
+
+const { masina } = Astro.props;
+const rows = [
+  ['Model', masina.model],
+  ['An', masina.an],
+  ['Motor', masina.motor],
+  ['Tracțiune', masina.tractiune],
+  ['Cutie', masina.cutie],
+  ['Caroserie', masina.caroserie],
+  ['Consum real', masina.consum],
+].filter(([, value]) => value);
+---
+
+<aside class="fisa" aria-labelledby="fisa-titlu">
+  <div class="fisa__cap">
+    <h2 id="fisa-titlu">Mașina din articol</h2>
+    {masina.kilometraj && <Borna km={masina.kilometraj} marime="mare" />}
+  </div>
+  <dl>
+    {
+      rows.map(([label, value]) => (
+        <div>
+          <dt>{label}</dt>
+          <dd>{value}</dd>
+        </div>
+      ))
+    }
+  </dl>
+</aside>
+
+<style>
+  .fisa {
+    background: var(--alb);
+    border: 1px solid var(--nisip);
+    border-radius: 8px;
+    padding: 1.25rem 1.25rem 0.5rem;
+    font-size: 1rem;
+  }
+  .fisa__cap {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--carbune);
+  }
+  h2 { font-size: var(--text-mare); }
+  dl { margin: 0; }
+  dl div {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    gap: 1rem;
+    padding-block: 0.6rem;
+    border-bottom: 1px solid var(--nisip);
+  }
+  dl div:last-child { border-bottom: 0; }
+  dt { color: var(--gri); }
+  dd { margin: 0; font-weight: 600; }
+</style>

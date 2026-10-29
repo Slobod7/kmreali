@@ -1,0 +1,62 @@
+---
+import logo from '../assets/brand/kmreali-logo-dark.svg';
+import { site, url } from '../site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="subsol">
+  <div class="container">
+    <div class="subsol__rand">
+      <div class="subsol__despre">
+        <a class="subsol__logo" href={url()} rel="home">
+          <img src={logo.src} alt="KM Reali" width="127" height="40" loading="lazy" />
+        </a>
+        <p>{site.footerText}</p>
+      </div>
+      <nav aria-label="Secțiuni">
+        <ul>
+          <li><a href={url('recenzii/')}>Recenzii</a></li>
+          <li><a href={url('ghiduri/')}>Ghiduri</a></li>
+          <li><a href={url('topuri/')}>Topuri</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Despre site">
+        <ul>
+          <li><a href={url('despre/')}>Despre</a></li>
+          {site.contactEmail && <li><a href={url('contact/')}>Contact</a></li>}
+          <li><a href={url('rss.xml')}>Flux RSS</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="subsol__copy">© {year} KM Reali</p>
+  </div>
+</footer>
+
+<style>
+  .subsol {
+    margin-top: clamp(4rem, 8vw, 6rem);
+    padding-block: 3.5rem 2.5rem;
+    background: var(--carbune);
+    color: var(--hartie);
+    font-size: var(--text-mic);
+  }
+  .subsol__rand {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem 4rem;
+  }
+  .subsol__despre {
+    flex: 1 1 22rem;
+    max-width: 26rem;
+    display: grid;
+    gap: 1rem;
+    color: var(--gri-deschis);
+  }
+  .subsol__logo { display: inline-flex; line-height: 0; justify-self: start; }
+  .subsol__logo img { height: 40px; width: auto; }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+  a { color: var(--hartie); text-underline-offset: 3px; }
+  a:hover { color: var(--alb); text-decoration-color: var(--rosu); }
+  .subsol__copy { margin-top: 3rem; color: var(--gri-deschis); }
+</style>
