@@ -72,7 +72,7 @@ Am cumpărat mașina din Republica Moldova, unde este și înmatriculată. Alege
 
 Pe hârtie, Superb 2.0 TSI 4x4 face 0–100 km/h în 5,6 secunde, iar cuplul maxim de 350 Nm e disponibil de la 2.000 rpm. Puterea e primul lucru care îmi place la ea. Singura limită apare la viteze foarte mari, unde un motor de 2 litri începe să se simtă: mi-ar fi plăcut un 3.0 pe benzină, dar recunosc că aici sunt eu pretențios. La performanță îi dau 7 din 10.
 
-Cutia DSG nu mi-a dat probleme, dar are un obicei care nu îmi place: uneori urcă prea mult în turație înainte să schimbe treapta. Se simte mai ales în oraș, la trecerile din 1 în 2 și din 2 în 3, și la urcare pe munte, unde prefer să trec pe modul manual. Urmează să schimb uleiul la cutie și revin cu o actualizare dacă se schimbă ceva.
+Cutia DSG nu mi-a dat probleme, dar are un obicei care nu îmi place: uneori urcă prea mult în turație înainte să schimbe treapta. Se simte mai ales în oraș, la trecerile din 1 în 2 și din 2 în 3, și la urcare pe munte, unde prefer să trec pe modul manual. Între timp am schimbat uleiul la cutie, cu un kit ZF (detalii mai jos, la costuri), și revin cu o actualizare dacă se schimbă ceva.
 
 Tracțiunea integrală își face treaba: pe ploaie sau pe zăpadă n-am avut nicio problemă și n-am pierdut niciodată aderența. Cu anvelope bune, tracțiunea e excelentă.
 
@@ -111,7 +111,7 @@ Portbagajul l-am testat serios, la două mutări: Cluj–Chișinău și apoi Chi
 
 ## Interior și tehnologie
 
-Echiparea Laurin & Klement are tot ce îți trebuie: sistem audio Canton, bord digital Virtual Cockpit, scaune față încălzite și ventilate și un asistent care parchează mașina singur. Două lucruri m-au deranjat. Primul: nu are Apple CarPlay wireless, doar prin cablu. Al doilea: rotițele de volum de pe volan s-au crăpat, iar ca să le înlocuiești trebuie schimbat tot butonul, nu doar rotița din plastic. Momentan nu pot folosi comenzile de pe volan.
+Echiparea Laurin & Klement are tot ce îți trebuie: sistem audio Canton, bord digital Virtual Cockpit, scaune față încălzite și ventilate și un asistent care parchează mașina singur. Două lucruri m-au deranjat. Primul: nu are Apple CarPlay wireless, doar prin cablu. Al doilea: rotițele de volum de pe volan s-au crăpat, iar ca să le înlocuiești trebuie schimbat tot butonul, nu doar rotița din plastic. Am cumpărat deja piesele, aștept butoanele și le schimb cum am timp. Până atunci nu pot folosi comenzile de pe volan.
 
 ![Bordul Skodei Superb 2020 cu Virtual Cockpit, ecranul central și selectorul DSG](./skoda-superb-2020-interior-bord.webp)
 
@@ -122,7 +122,7 @@ Echiparea Laurin & Klement are tot ce îți trebuie: sistem audio Canton, bord d
 În aproape 40.000 km nu s-a stricat nimic important, așa că la fiabilitate îi dau 9 din 10. Au fost însă câteva lucruri mici, dar enervante:
 
 - **Jantele de 19" și anvelopele 235/40 R19.** Arată foarte bine, dar nu sunt practice. Anvelopele sunt mai scumpe decât cele de 17" sau 18", fac zgomot pe drumuri proaste și se taie ușor în gropi. Mie mi s-a întâmplat de două ori: o dată anvelopa s-a tăiat complet, a doua oară am putut-o repara. Partea bună: cu anvelope de calitate, aderența e excelentă.
-- **Rotițele de volum de pe volan s-au crăpat.** Nu se schimbă separat, doar cu tot butonul.
+- **Rotițele de volum de pe volan s-au crăpat.** Nu se schimbă separat, doar cu tot butonul. Piesele sunt comandate.
 - **Pilotul automat adaptiv (ACC) și bateria.** Când bateria începe să se descarce, ACC-ul nu mai funcționează, iar senzorul radar din față se oprește și el. Dacă ACC-ul refuză să pornească, verifică întâi bateria.
 - **Vopseaua neagră.** Nu e un defect, dar nu stă curată niciodată.
 
@@ -152,12 +152,21 @@ Eu înțeleg argumentul pentru diesel, dar dacă vrei și viteză, 2.0 TSI 4x4 e
 
 ## Costuri de întreținere
 
-Mașina e înmatriculată în Republica Moldova, așa că RCA-ul și impozitul meu nu sunt relevante pentru o mașină din România. Costurile de service, în schimb, spun multe. Prețurile de dealer sunt de la dealerul Skoda din Republica Moldova.
+Mașina e înmatriculată în Republica Moldova, așa că RCA-ul și impozitul meu nu sunt relevante pentru o mașină din România. Costurile de service, în schimb, spun multe. Prețurile de dealer sunt de la dealerul Skoda din Republica Moldova. Unde am plătit în lei moldovenești (MDL), sumele în euro sunt aproximative, la cursul BNM din octombrie 2026 (circa 20 MDL pentru 1 €).
 
 | Lucrare | La dealer | La mecanicul meu | Observații |
 | --- | --- | --- | --- |
 | Schimb de ulei (revizie) | 300 € | 150 € | exact același ulei |
-| Schimb de ulei la cutia DSG | ~500 € | ~250 €, cu manoperă | kit ZF |
+| Schimb de ulei la cutia DSG | ~500 € | 5.900 MDL (~295 €), cu manoperă | kit ZF 4.900 MDL, manoperă 1.000 MDL |
+| Ulei la reductorul unghiular din față | – | 1.100 MDL (~55 €), cu manoperă | ulei G 052 145 S2 |
+| Ulei la cuplajul Haldex | ~3.500 MDL (~175 €) | – | programat la dealer |
+
+Ce am făcut la mașină aproape de 120.000 km:
+
+- **Uleiul la cutia DSG.** Am folosit kitul ZF 5961.308.278, făcut pentru cutia DQ381 (cod 0GC). Conține 6 l de ulei ZF LifeguardFluid 7.6 DCT, filtrul de ulei și garniturile, iar ZF îl dă ca echivalent pentru uleiul original VW G 055 529 A2 ([catalogul ZF](https://aftermarket.zf.com/en/catalog/search/?term=5961.308.278)). Nu e același ulei ca la vechiul DSG cu 6 trepte (DQ250), care folosește G 052 182.
+- **Uleiul la reductorul unghiular.** Lângă cutia DSG e un reductor unghiular care trimite puterea spre puntea spate. Are uleiul lui, separat de cel al cutiei, iar mulți mecanici îi spun „diferențialul față”. VW cere aici ulei de transmisie G 052 145 S2 (75W-90), cam 0,9 l. Cifrele sunt din [fișa de capacități VW pentru Golf R](https://static.nhtsa.gov/odi/tsbs/2016/MC-10130147-9999.pdf), care are aceeași platformă MQB și același sistem 4x4; pentru mașina ta, verifică după seria de șasiu.
+- **Frânele.** Am schimbat discurile și plăcuțele din față cu unele Textar și plăcuțele din spate cu Brembo. Cele din față sunt excelente. Mecanicul m-a avertizat că plăcuțele Brembo din spate pot scârțâi puțin, dar eu n-am auzit niciun sunet.
+- **Uleiul la Haldex (urmează).** Cuplajul Haldex, care decide cât cuplu ajunge la roțile din spate, are și el uleiul lui. Schimbul e programat la dealer și costă în jur de 3.500 MDL.
 
 Anvelopele de 19" sunt cheltuiala care te surprinde: un set Bridgestone 235/40 R19 m-a costat în jur de 1.000 $. Uleiul de motor trebuie să aibă omologarea VW 504 00 sau 502 00; verifică în carnetul mașinii.
 
@@ -208,3 +217,5 @@ Da, l-aș cumpăra din nou. Superb 2.0 TSI 4x4 e pentru cine vrea viteză, confo
 **Ce diferență e între Superb 272 CP și 280 CP?** Ambele folosesc motorul 2.0 TSI cu 4x4 și DSG. Versiunea de 272 CP a fost oferită în 2019–2020, apoi Skoda a revenit la 280 CP.
 
 **Ce ulei folosește Superb 2.0 TSI?** Ulei cu omologare VW 504 00 sau 502 00, în funcție de tipul de interval de service. Verifică în carnetul mașinii.
+
+**Ce ulei intră în cutia DSG la Superb 2.0 TSI 4x4?** Cutia DQ381 (cod 0GC) folosește ulei cu specificația VW G 055 529 A2, cam 6 l la un schimb cu filtru. Eu am folosit kitul ZF 5961.308.278, cu ulei ZF LifeguardFluid 7.6 DCT. Reductorul unghiular din față are ulei separat, G 052 145 S2 (75W-90).
