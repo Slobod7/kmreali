@@ -175,7 +175,11 @@ const jsonLd = [
   .text :global(li::marker) { color: var(--rosu); }
   .text :global(blockquote) { margin-inline: 0; padding-left: 1.25rem; border-left: 4px solid var(--rosu); color: var(--grafit); }
   .text :global(table) { width: 100%; border-collapse: collapse; font-size: 0.95em; background: var(--alb); }
-  .text :global(th), .text :global(td) { border: 1px solid var(--nisip); padding: 0.6em 0.85em; text-align: left; vertical-align: top; }
+  .text :global(th), .text :global(td) { border: 1px solid var(--nisip); padding: 0.6em 0.85em; text-align: left; vertical-align: top; line-height: 1.4; }
+  @media (max-width: 30rem) {
+    .text :global(table) { font-size: 0.875em; }
+    .text :global(th), .text :global(td) { padding: 0.5em 0.55em; }
+  }
   .text :global(th) { background: var(--carbune); color: var(--hartie); font-family: var(--font-titlu); font-weight: 600; letter-spacing: 0.03em; }
   .text :global(tbody tr:nth-child(even) td) { background: #faf8f4; }
   .text :global(hr) { border: 0; border-top: 1px solid var(--nisip); margin-block: 2.5em; }
