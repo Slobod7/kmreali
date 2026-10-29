@@ -3,6 +3,8 @@ import { Image } from 'astro:assets';
 import { render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import FisaMasinii from '../components/FisaMasinii.astro';
+import Cuprins from '../components/Cuprins.astro';
+import InapoiSus from '../components/InapoiSus.astro';
 import logo from '../assets/brand/kmreali-logo.svg';
 import { faq, getArticles, readingMinutes, reviewSummary, type Article } from '../articles';
 import { categories, formatDate, site, url } from '../site';
@@ -23,7 +25,9 @@ interface Props {
 
 const { article, newer, older } = Astro.props;
 const { title, description, date, updated, category, cover, coverAlt, masina, draft } = article.data;
-const { Content } = await render(article);
+const { Content, headings } = await render(article);
+const sections = headings.filter((heading) => heading.depth === 2);
+const hasSidebar = Boolean(masina) || sections.length > 0;
 const minutes = readingMinutes(article.body);
 const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 const coverUrl = new URL(cover.src, Astro.site).href;
@@ -129,8 +133,15 @@ if (questions.length) {
       <Image class="articol-coperta" src={cover} alt={coverAlt} priority widths={[640, 960, 1280, 1600]} sizes="(min-width: 75rem) 75rem, 100vw" />
     </div>
 
-    <div class:list={['container', 'articol-corp', { 'are-fisa': masina }]}>
-      {masina && <FisaMasinii masina={masina} />}
+    <div class:list={['container', 'articol-corp', { 'are-lateral': hasSidebar }]}>
+      {
+        hasSidebar && (
+          <div class="lateral">
+            {masina && <FisaMasinii masina={masina} />}
+            {sections.length > 0 && <Cuprins headings={sections} />}
+          </div>
+        )
+      }
       <div class="coloana">
         <div class="text">
           <Content />
@@ -165,6 +176,8 @@ if (questions.length) {
       </div>
     </div>
   </article>
+
+  <InapoiSus />
 </Base>
 
 <style>
@@ -194,13 +207,17 @@ if (questions.length) {
     padding-top: clamp(2rem, 5vw, 3rem);
   }
   .coloana { max-width: var(--latime-text); }
-  .articol-corp:not(.are-fisa) .coloana { margin-inline: auto; }
+  .articol-corp:not(.are-lateral) .coloana { margin-inline: auto; }
+  .lateral { display: grid; gap: 1rem; align-content: start; }
 
-  /* Wide screens: the car's card sits on the right and stays in view while reading. */
+  /* Wide screens: the text takes the width the sidebar leaves, with a gap of at most 6.25rem.
+     The car's card scrolls past with the text, then the contents stay in view until the end.
+     The sidebar runs the full height of the article so the contents have room to stick. */
   @media (min-width: 64rem) {
-    .are-fisa { grid-template-columns: minmax(0, var(--latime-text)) 20rem; justify-content: space-between; align-items: start; }
-    .are-fisa .coloana { grid-row: 1; grid-column: 1; }
-    .are-fisa :global(.fisa) { grid-column: 2; position: sticky; top: 1.5rem; }
+    .are-lateral { grid-template-columns: minmax(0, 1fr) 20rem; column-gap: clamp(2.5rem, 7vw, 6.25rem); }
+    .are-lateral .coloana { grid-row: 1; grid-column: 1; max-width: none; }
+    .lateral { grid-column: 2; }
+    .lateral :global(.cuprins) { position: sticky; top: 1.5rem; max-height: calc(100vh - 3rem); overflow-y: auto; }
   }
 
   .articol-subsol { display: grid; gap: 2rem; margin-top: 3.5rem; }
@@ -223,7 +240,7 @@ if (questions.length) {
 
   /* Article text */
   .text :global(> * + *) { margin-top: 1.25em; }
-  .text :global(h2) { margin-top: 2.2em; font-size: clamp(1.6rem, 1.4rem + 0.9vw, 2.1rem); }
+  .text :global(h2) { margin-top: 2.2em; font-size: clamp(1.6rem, 1.4rem + 0.9vw, 2.1rem); scroll-margin-top: 1.5rem; }
   .text :global(h3) { margin-top: 1.8em; }
   .text :global(h2 + *), .text :global(h3 + *) { margin-top: 0.75em; }
   .text :global(a) { text-decoration-color: var(--rosu); text-decoration-thickness: 2px; text-underline-offset: 3px; }
@@ -241,4 +258,31 @@ if (questions.length) {
   .text :global(th) { background: var(--carbune); color: var(--hartie); font-family: var(--font-titlu); font-weight: 600; letter-spacing: 0.03em; }
   .text :global(tbody tr:nth-child(even) td) { background: #faf8f4; }
   .text :global(hr) { border: 0; border-top: 1px solid var(--nisip); margin-block: 2.5em; }
+
+  /* FAQ: each question opens its answer below it. */
+  .text :global(.intrebare) { border-block: 1px solid var(--nisip); }
+  .text :global(.intrebare + .intrebare) { margin-top: 0; border-top: 0; }
+  .text :global(.intrebare summary) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding-block: 0.9rem;
+    font-weight: 600;
+    list-style: none;
+    cursor: pointer;
+  }
+  .text :global(.intrebare summary::-webkit-details-marker) { display: none; }
+  .text :global(.intrebare summary:hover) { color: var(--rosu); }
+  .text :global(.intrebare summary::after) {
+    content: '+';
+    flex: none;
+    color: var(--rosu);
+    font-family: var(--font-titlu);
+    font-weight: 700;
+    font-size: 1.4em;
+    line-height: 1;
+  }
+  .text :global(.intrebare[open] summary::after) { content: '−'; }
+  .text :global(.intrebare p) { padding-bottom: 1.1rem; }
 </style>

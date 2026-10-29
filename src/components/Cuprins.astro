@@ -1,0 +1,71 @@
+---
+// The article's sections, always open. On wide screens it follows the reader under the car's card.
+import type { MarkdownHeading } from 'astro';
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+
+const { headings } = Astro.props;
+---
+
+<nav class="cuprins" aria-labelledby="cuprins-titlu">
+  <h2 id="cuprins-titlu">Cuprins</h2>
+  <ol>
+    {headings.map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}
+  </ol>
+</nav>
+
+<script>
+  // Marks the section being read.
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('.cuprins a')];
+  const sections = links.map((link) => document.getElementById(decodeURIComponent(link.hash.slice(1))));
+  let current: HTMLAnchorElement | undefined;
+  let queued = false;
+
+  function update() {
+    queued = false;
+    const index = sections.findLastIndex((section) => section !== null && section.getBoundingClientRect().top < innerHeight / 4);
+    if (links[index] === current) return;
+    current?.removeAttribute('aria-current');
+    current = links[index];
+    current?.setAttribute('aria-current', 'location');
+  }
+
+  addEventListener(
+    'scroll',
+    () => {
+      if (!queued) requestAnimationFrame(update);
+      queued = true;
+    },
+    { passive: true },
+  );
+  update();
+</script>
+
+<style>
+  .cuprins {
+    background: var(--alb);
+    border: 1px solid var(--nisip);
+    border-radius: 8px;
+    padding: 1.25rem 1.25rem 0.75rem;
+    font-size: var(--text-mic);
+    line-height: 1.35;
+  }
+  h2 {
+    font-size: var(--text-mare);
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--carbune);
+  }
+
+  ol { list-style: none; margin: 0; padding: 0.75rem 0 0; }
+  a {
+    display: block;
+    padding: 0.35rem 0 0.35rem 0.75rem;
+    border-left: 2px solid var(--nisip);
+    color: var(--gri);
+    text-decoration: none;
+  }
+  a:hover { color: var(--rosu); }
+  a[aria-current] { color: var(--carbune); border-left-color: var(--rosu); }
+</style>

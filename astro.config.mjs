@@ -1,7 +1,9 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { satteri } from '@astrojs/markdown-satteri';
 import { site } from './src/site.ts';
+import { faqPlugin } from './src/faq-plugin.ts';
 
 // SITE_URL and BASE_PATH are set by the GitHub Pages workflow. While the site is
 // tested at <user>.github.io/<repo>, BASE_PATH is "/<repo>"; on kmreali.ro it is empty.
@@ -20,7 +22,10 @@ export default defineConfig({
     responsiveStyles: true,
   },
   markdown: {
-    // Romanian uses „…” quotes; keep whatever the author typed.
-    smartypants: false,
+    processor: satteri({
+      hastPlugins: [faqPlugin],
+      // Romanian uses „…” quotes; keep whatever the author typed.
+      features: { smartPunctuation: false },
+    }),
   },
 });

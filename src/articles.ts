@@ -1,4 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { isFaqHeading } from './faq-plugin';
 import type { CategoryId } from './site';
 
 export type Article = CollectionEntry<'articole'>;
@@ -22,7 +23,7 @@ export function readingMinutes(body = '') {
  * `**Cât consumă?** 9–10 l/100 km pe drum lung.`
  */
 export function faq(body = '') {
-  const section = body.split(/^## /m).find((part) => normalized(part.split('\n')[0]) === 'intrebari frecvente');
+  const section = body.split(/^## /m).find((part) => isFaqHeading(part.split('\n')[0]));
   if (!section) return [];
 
   return section
@@ -56,7 +57,7 @@ export function reviewSummary(body = '') {
   };
 }
 
-/** Lowercase, without diacritics, so "Întrebări" and "Intrebari" match. */
+/** Lowercase, without diacritics, so "Îmi place" and "Imi place" match. */
 function normalized(text: string) {
   return text.normalize('NFD').replace(/\p{M}/gu, '').trim().toLowerCase();
 }

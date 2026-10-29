@@ -1,0 +1,64 @@
+---
+// Round arrow in the corner that jumps straight back to the top. It shows up once 35% of the page has been scrolled.
+---
+
+<button class="sus" type="button" aria-label="Înapoi sus" title="Înapoi sus">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+</button>
+
+<script>
+  const button = document.querySelector<HTMLButtonElement>('.sus');
+  let queued = false;
+
+  function update() {
+    queued = false;
+    const scrollable = document.documentElement.scrollHeight - innerHeight;
+    button?.classList.toggle('sus--vizibil', scrollable > 0 && scrollY / scrollable >= 0.35);
+  }
+
+  button?.addEventListener('click', () => scrollTo({ top: 0, behavior: 'instant' }));
+  addEventListener(
+    'scroll',
+    () => {
+      if (!queued) requestAnimationFrame(update);
+      queued = true;
+    },
+    { passive: true },
+  );
+  update();
+</script>
+
+<style>
+  .sus {
+    position: fixed;
+    right: var(--margine);
+    bottom: 1.5rem;
+    z-index: 5;
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--carbune);
+    color: var(--alb);
+    box-shadow: 0 4px 14px rgb(0 0 0 / 0.25);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0.5rem);
+    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+  }
+  .sus--vizibil { opacity: 1; visibility: visible; transform: none; }
+  .sus:hover { background: var(--rosu); }
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+</style>

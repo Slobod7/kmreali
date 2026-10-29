@@ -20,6 +20,7 @@ const { km, marime = 'mica' } = Astro.props;
     --l: 5.5em;
     display: inline-flex;
     flex-direction: column;
+    flex-shrink: 0; /* next to text in a row, it would otherwise get squeezed and cut the number */
     width: var(--l);
     background: var(--alb);
     color: var(--carbune);
