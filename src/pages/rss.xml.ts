@@ -1,7 +1,7 @@
 import rss from '@astrojs/rss';
 import type { APIContext } from 'astro';
-import { getArticles } from '../articles';
-import { site, url } from '../site';
+import { articleUrl, getArticles } from '../articles';
+import { site } from '../site';
 
 export async function GET(context: APIContext) {
   const articles = await getArticles();
@@ -13,7 +13,7 @@ export async function GET(context: APIContext) {
       title: article.data.title,
       description: article.data.description,
       pubDate: article.data.date,
-      link: url(`${article.id}/`),
+      link: articleUrl(article),
     })),
     customData: '<language>ro-RO</language>',
   });

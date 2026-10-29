@@ -1,8 +1,13 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { isFaqHeading } from './faq-plugin';
-import type { CategoryId } from './site';
+import { url, type CategoryId } from './site';
 
 export type Article = CollectionEntry<'articole'>;
+
+/** The article's address under its section, e.g. /recenzii/skoda-superb-2020-pareri-proprietar/. */
+export function articleUrl(article: Article) {
+  return url(`${article.data.category}/${article.id}/`);
+}
 
 /** Newest first. Drafts are included only in the local preview (`npm run dev`). */
 export async function getArticles(category?: CategoryId) {

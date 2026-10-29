@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import Borna from './Borna.astro';
-import type { Article } from '../articles';
+import { articleUrl, type Article } from '../articles';
 import { categories, formatDate, url } from '../site';
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
 
 const { article, level: Heading = 'h3' } = Astro.props;
 const { title, description, date, category, cover, coverAlt, masina, draft } = article.data;
-const href = url(`${article.id}/`);
+const href = articleUrl(article);
 ---
 
 <li class="card">

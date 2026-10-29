@@ -1,18 +1,19 @@
 ---
 import { Image } from 'astro:assets';
 import { render } from 'astro:content';
-import Base from '../layouts/Base.astro';
-import FisaMasinii from '../components/FisaMasinii.astro';
-import Cuprins from '../components/Cuprins.astro';
-import InapoiSus from '../components/InapoiSus.astro';
-import logo from '../assets/brand/kmreali-logo.svg';
-import { faq, getArticles, readingMinutes, reviewSummary, type Article } from '../articles';
-import { categories, formatDate, site, url } from '../site';
+import Base from '../../layouts/Base.astro';
+import FisaMasinii from '../../components/FisaMasinii.astro';
+import Cuprins from '../../components/Cuprins.astro';
+import InapoiSus from '../../components/InapoiSus.astro';
+import logo from '../../assets/brand/kmreali-logo.svg';
+import { articleUrl, faq, getArticles, readingMinutes, reviewSummary, type Article } from '../../articles';
+import { categories, formatDate, site, url } from '../../site';
 
+// Articles live under their section: /recenzii/<slug>/, /ghiduri/<slug>/, /topuri/<slug>/.
 export async function getStaticPaths() {
   const articles = await getArticles();
   return articles.map((article, i) => ({
-    params: { slug: article.id },
+    params: { category: article.data.category, slug: article.id },
     props: { article, newer: articles[i - 1], older: articles[i + 1] },
   }));
 }
@@ -158,13 +159,13 @@ if (questions.length) {
             (newer || older) && (
               <nav class="vecini" aria-label="Alte articole">
                 {older && (
-                  <a href={url(`${older.id}/`)}>
+                  <a href={articleUrl(older)}>
                     <span>Articolul anterior</span>
                     {older.data.title}
                   </a>
                 )}
                 {newer && (
-                  <a href={url(`${newer.id}/`)}>
+                  <a href={articleUrl(newer)}>
                     <span>Articolul următor</span>
                     {newer.data.title}
                   </a>

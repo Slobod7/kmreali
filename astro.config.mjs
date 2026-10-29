@@ -11,6 +11,10 @@ export default defineConfig({
   // GitHub reports http:// until HTTPS is enforced; the site is always served over https.
   site: (process.env.SITE_URL || 'https://kmreali.ro').replace(/^http:/, 'https:'),
   base: process.env.BASE_PATH || '/',
+  // The Superb review was first published at the root; old links and search results land on its new address.
+  redirects: {
+    '/skoda-superb-2020-pareri-proprietar/': '/recenzii/skoda-superb-2020-pareri-proprietar/',
+  },
   integrations: [
     sitemap({
       // The contact page stays out of Google until it has an address.

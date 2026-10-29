@@ -14,7 +14,7 @@ The kmreali.ro website: a static site built with [Astro](https://astro.build) an
 
 ## Adding an article
 
-1. Make a folder in `src/content/articole/` named like the address you want, e.g. `dacia-duster-2022-pareri-proprietar`.
+1. Make a folder in `src/content/articole/` named like the address you want, e.g. `dacia-duster-2022-pareri-proprietar`. The article goes under its section, e.g. `kmreali.ro/recenzii/dacia-duster-2022-pareri-proprietar/`.
 2. Put the photos in that folder, plus an `index.md` (copy the Skoda one as a starting point).
 3. Fill in the block at the top (title, description, category, cover photo, car details).
 4. Keep `draft: true` while writing. Drafts show in the local preview but not on the live site.
