@@ -1,11 +1,9 @@
 ---
-import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import ArticleCard from '../components/ArticleCard.astro';
-import hero from '../assets/brand/kmreali-hero.webp';
 import logo from '../assets/brand/kmreali-logo.svg';
 import { getArticles } from '../articles';
-import { site } from '../site';
+import { site, url } from '../site';
 
 const articles = (await getArticles()).slice(0, 9);
 
@@ -30,19 +28,26 @@ const jsonLd = [
 
 <Base jsonLd={jsonLd}>
   <section class="erou">
-    <div class="container erou__titlu">
-      <h1>{site.tagline}</h1>
-    </div>
-    <div class="erou__poza">
-      <Image
-        src={hero}
-        alt="Skoda Superb 2020 neagră parcată, văzută din față"
-        layout="full-width"
-        priority
-      />
-    </div>
-    <div class="container erou__intro">
-      <p>{site.description}</p>
+    <div class="container erou__rand">
+      <h1 class="erou__titlu">{site.tagline}</h1>
+      <p class="erou__intro">
+        Recenzii, ghiduri și topuri scrise de oameni care chiar conduc mașinile despre care scriu. Nu după o zi de test
+        drive, ci după luni de drumuri, plinuri și vizite la service.
+      </p>
+      <p class="erou__actiuni">
+        <a class="buton" href={url('recenzii/')}>Citește recenziile</a>
+        <a class="erou__despre" href={url('despre/')}>De ce „km reali”</a>
+      </p>
+
+      <!-- The roadside marker from the logo, planted on the ground line under the hero. -->
+      <div class="stalp">
+        <span class="stalp__cap" aria-hidden="true">km</span>
+        <ul class="stalp__lista" aria-label="Ce afli din fiecare recenzie">
+          <li>Consum real</li>
+          <li>Probleme reale</li>
+          <li>Costuri reale</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -63,25 +68,109 @@ const jsonLd = [
 </Base>
 
 <style>
-  /* Phones: title and intro above the photo. */
-  .erou { position: relative; display: flex; flex-direction: column; }
-  .erou__titlu { order: 1; padding-top: 2rem; }
-  .erou__intro { order: 2; padding-block: 1rem 2rem; }
-  .erou__poza { order: 3; aspect-ratio: 2 / 1; overflow: hidden; background: #9ec6ec; }
-  .erou__poza :global(img) { width: 100%; height: 100%; object-fit: cover; }
-  .erou__intro p { max-width: 38rem; font-size: var(--text-mare); line-height: 1.45; color: var(--grafit); }
+  /* The bottom border is the ground the marker stands on. */
+  .erou { border-bottom: 4px solid var(--carbune); }
 
-  /* Wide screens: the photo has open sky top-left, and the title sits there. */
-  @media (min-width: 60rem) {
-    .erou__titlu {
-      position: absolute;
-      inset: 0 0 auto 0;
-      z-index: 1;
-      padding-top: clamp(1.75rem, 3vw, 3rem);
+  /* Phones: text on top, the button and the marker share the last row. */
+  .erou__rand {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      'titlu titlu'
+      'intro intro'
+      'actiuni stalp';
+    column-gap: 1.25rem;
+    padding-top: clamp(2rem, 5vw, 4rem);
+  }
+  .erou__titlu { grid-area: titlu; font-size: clamp(2.6rem, 1.4rem + 4.6vw, 6rem); max-width: 11em; }
+  .erou__intro {
+    grid-area: intro;
+    max-width: 36rem;
+    margin-top: 1.25rem;
+    font-size: var(--text-mare);
+    line-height: 1.45;
+    color: var(--grafit);
+  }
+  .erou__actiuni {
+    grid-area: actiuni;
+    align-self: end;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    padding-block: 1.75rem 2.25rem;
+  }
+  .erou__despre {
+    font-weight: 600;
+    text-decoration-color: var(--rosu);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+
+  .buton {
+    display: inline-block;
+    padding: 0.6rem 1.25rem 0.65rem;
+    background: var(--carbune);
+    color: var(--hartie);
+    border-radius: 4px;
+    font-family: var(--font-titlu);
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+  .buton:hover { background: var(--rosu); color: var(--alb); }
+
+  /* The marker: same shape as the logo and the km badge on cards, sized in em so it scales as one piece. */
+  .stalp {
+    grid-area: stalp;
+    align-self: end;
+    width: 9.5em;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    background: var(--alb);
+    border: 4px solid var(--carbune);
+    border-bottom: 0;
+    border-radius: 4.75em 4.75em 0 0;
+    overflow: hidden;
+    font-family: var(--font-titlu);
+    text-align: center;
+    line-height: 1.1;
+  }
+  .stalp__cap {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 3.9em;
+    padding-bottom: 0.3em;
+    background: var(--rosu);
+    color: var(--alb);
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .stalp__lista { list-style: none; margin: 0; padding: 0.5em 0.6em 1.4em; }
+  .stalp__lista li {
+    padding-block: 0.55em;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--carbune);
+  }
+  .stalp__lista li + li { border-top: 1px solid var(--nisip); }
+
+  /* Wide screens: text on the left, a tall marker on the right. */
+  @media (min-width: 48rem) {
+    .erou__rand {
+      grid-template-areas:
+        'titlu stalp'
+        'intro stalp'
+        'actiuni stalp';
+      grid-template-rows: auto auto 1fr;
+      column-gap: clamp(2rem, 6vw, 6rem);
     }
-    .erou__titlu h1 { max-width: 8em; font-size: clamp(2.25rem, 3.9vw, 3.4rem); }
-    .erou__poza { order: 1; }
-    .erou__intro { order: 2; padding-block: 2rem 0; }
+    .erou__actiuni { padding-block: 2rem clamp(2.5rem, 5vw, 4rem); }
+    .stalp { margin-top: 0; font-size: clamp(1.15rem, 0.1rem + 1.9vw, 2.1rem); }
   }
 
   .noutati { display: grid; gap: 1.5rem; padding-top: clamp(2.5rem, 6vw, 4rem); }
