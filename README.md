@@ -24,6 +24,8 @@ Photos go in the text as `![alt text](./photo-name.webp)`.
 
 For the FAQ, add a `## Întrebări frecvente` section and write each question as its own paragraph: the question in bold, then the answer on the same line, e.g. `**Cât consumă?** 9–10 l/100 km pe drum lung.` The site turns these into FAQ data for search engines automatically.
 
+In reviews, the **Pe scurt** list near the top feeds the review data for search engines (the score, likes and dislikes) together with the car details at the top. Keep its `**Îmi place:**`, `**Nu îmi place:**` and `**Nota mea:** 7,8/10` lines, and separate the likes and dislikes with commas or semicolons.
+
 ## Running it on your Mac
 
 Node.js is installed in `~/.local/node`. In a terminal, from this folder:

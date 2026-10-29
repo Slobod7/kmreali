@@ -22,8 +22,7 @@ export function readingMinutes(body = '') {
  * `**Cât consumă?** 9–10 l/100 km pe drum lung.`
  */
 export function faq(body = '') {
-  const plain = (s: string) => s.normalize('NFD').replace(/\p{M}/gu, '').trim().toLowerCase();
-  const section = body.split(/^## /m).find((part) => plain(part.split('\n')[0]) === 'intrebari frecvente');
+  const section = body.split(/^## /m).find((part) => normalized(part.split('\n')[0]) === 'intrebari frecvente');
   if (!section) return [];
 
   return section
@@ -32,6 +31,42 @@ export function faq(body = '') {
     .map((paragraph) => paragraph.trim().match(/^\*\*(.+?)\*\*\s+([\s\S]+)$/))
     .filter((match) => match !== null)
     .map(([, question, answer]) => ({ question: question.trim(), answer: markdownToText(answer) }));
+}
+
+/**
+ * The score, likes and dislikes from a review's "Pe scurt" list, for the Review schema:
+ * `- **Îmi place:** ...`, `- **Nu îmi place:** ...` and `- **Nota mea:** 7,8/10`.
+ */
+export function reviewSummary(body = '') {
+  const [, rest = ''] = body.split(/^(?:\*\*Pe scurt\*\*|#{2,3} Pe scurt)\s*$/m);
+  const list = rest.trimStart().split(/\n\s*\n/)[0];
+  const fields = new Map(
+    list
+      .split('\n')
+      .map((line) => line.match(/^[-*]\s+\*\*(.+?):?\*\*:?\s*(.+)$/))
+      .filter((match) => match !== null)
+      .map(([, label, value]) => [normalized(label), markdownToText(value)] as const),
+  );
+  const score = fields.get('nota mea')?.match(/(\d+(?:[.,]\d+)?)\s*\/\s*(\d+)/);
+
+  return {
+    rating: score ? { value: Number(score[1].replace(',', '.')), best: Number(score[2]) } : undefined,
+    pros: splitList(fields.get('imi place') ?? ''),
+    cons: splitList(fields.get('nu imi place') ?? ''),
+  };
+}
+
+/** Lowercase, without diacritics, so "Întrebări" and "Intrebari" match. */
+function normalized(text: string) {
+  return text.normalize('NFD').replace(/\p{M}/gu, '').trim().toLowerCase();
+}
+
+/** "a, b; c (d, e)" becomes a, b and "c (d, e)". Commas inside brackets or numbers (9,5) don't split. */
+function splitList(text: string) {
+  return text
+    .split(/[;,](?!\d)(?![^(]*\))/)
+    .map((item) => item.trim())
+    .filter(Boolean);
 }
 
 function markdownToText(markdown: string) {

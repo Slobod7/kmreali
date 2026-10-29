@@ -4,7 +4,7 @@ import { render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import FisaMasinii from '../components/FisaMasinii.astro';
 import logo from '../assets/brand/kmreali-logo.svg';
-import { faq, getArticles, readingMinutes, type Article } from '../articles';
+import { faq, getArticles, readingMinutes, reviewSummary, type Article } from '../articles';
 import { categories, formatDate, site, url } from '../site';
 
 export async function getStaticPaths() {
@@ -25,8 +25,11 @@ const { article, newer, older } = Astro.props;
 const { title, description, date, updated, category, cover, coverAlt, masina, draft } = article.data;
 const { Content } = await render(article);
 const minutes = readingMinutes(article.body);
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 const coverUrl = new URL(cover.src, Astro.site).href;
+const author = { '@type': 'Person', name: site.author.name };
 const questions = faq(article.body);
+const verdict = category === 'recenzii' ? reviewSummary(article.body) : undefined;
 
 const jsonLd: Record<string, unknown>[] = [
   {
@@ -38,11 +41,52 @@ const jsonLd: Record<string, unknown>[] = [
     datePublished: date.toISOString(),
     dateModified: (updated ?? date).toISOString(),
     inLanguage: 'ro-RO',
-    mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).href,
-    author: { '@type': 'Person', name: site.author.name },
+    mainEntityOfPage: pageUrl,
+    author,
     publisher: { '@type': 'Organization', name: site.name, logo: { '@type': 'ImageObject', url: new URL(logo.src, Astro.site).href } },
   },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: site.name, item: new URL(url(), Astro.site).href },
+      { '@type': 'ListItem', position: 2, name: categories[category].title, item: new URL(url(`${category}/`), Astro.site).href },
+      { '@type': 'ListItem', position: 3, name: title },
+    ],
+  },
 ];
+
+// Reviews: the car from `masina`, with the score, likes and dislikes from the "Pe scurt" list.
+if (masina && verdict && (verdict.rating || verdict.pros.length || verdict.cons.length)) {
+  const notes = (items: string[]) =>
+    items.length ? { '@type': 'ItemList', itemListElement: items.map((name, i) => ({ '@type': 'ListItem', position: i + 1, name })) } : undefined;
+
+  jsonLd.push({
+    '@context': 'https://schema.org',
+    '@type': ['Product', 'Car'],
+    name: masina.model,
+    image: coverUrl,
+    vehicleModelDate: masina.an?.toString(),
+    vehicleEngine: masina.motor ? { '@type': 'EngineSpecification', name: masina.motor } : undefined,
+    driveWheelConfiguration: masina.tractiune,
+    vehicleTransmission: masina.cutie,
+    bodyType: masina.caroserie,
+    mileageFromOdometer: masina.kilometraj ? { '@type': 'QuantitativeValue', value: masina.kilometraj, unitCode: 'KMT' } : undefined,
+    review: {
+      '@type': 'Review',
+      name: title,
+      url: pageUrl,
+      inLanguage: 'ro-RO',
+      datePublished: date.toISOString(),
+      author,
+      reviewRating: verdict.rating
+        ? { '@type': 'Rating', ratingValue: verdict.rating.value, bestRating: verdict.rating.best, worstRating: 1 }
+        : undefined,
+      positiveNotes: notes(verdict.pros),
+      negativeNotes: notes(verdict.cons),
+    },
+  });
+}
 
 if (questions.length) {
   jsonLd.push({
