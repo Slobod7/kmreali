@@ -22,6 +22,8 @@ The kmreali.ro website: a static site built with [Astro](https://astro.build) an
 
 Photos go in the text as `![alt text](./photo-name.webp)`.
 
+For the FAQ, add a `## Întrebări frecvente` section and write each question as its own paragraph: the question in bold, then the answer on the same line, e.g. `**Cât consumă?** 9–10 l/100 km pe drum lung.` The site turns these into FAQ data for search engines automatically.
+
 ## Running it on your Mac
 
 Node.js is installed in `~/.local/node`. In a terminal, from this folder:

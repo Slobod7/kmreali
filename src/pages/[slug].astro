@@ -4,7 +4,7 @@ import { render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import FisaMasinii from '../components/FisaMasinii.astro';
 import logo from '../assets/brand/kmreali-logo.svg';
-import { getArticles, readingMinutes, type Article } from '../articles';
+import { faq, getArticles, readingMinutes, type Article } from '../articles';
 import { categories, formatDate, site, url } from '../site';
 
 export async function getStaticPaths() {
@@ -26,8 +26,9 @@ const { title, description, date, updated, category, cover, coverAlt, masina, dr
 const { Content } = await render(article);
 const minutes = readingMinutes(article.body);
 const coverUrl = new URL(cover.src, Astro.site).href;
+const questions = faq(article.body);
 
-const jsonLd = [
+const jsonLd: Record<string, unknown>[] = [
   {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -42,6 +43,19 @@ const jsonLd = [
     publisher: { '@type': 'Organization', name: site.name, logo: { '@type': 'ImageObject', url: new URL(logo.src, Astro.site).href } },
   },
 ];
+
+if (questions.length) {
+  jsonLd.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'ro-RO',
+    mainEntity: questions.map(({ question, answer }) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: { '@type': 'Answer', text: answer },
+    })),
+  });
+}
 ---
 
 <Base
