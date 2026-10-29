@@ -6,7 +6,8 @@ import { site } from './src/site.ts';
 // SITE_URL and BASE_PATH are set by the GitHub Pages workflow. While the site is
 // tested at <user>.github.io/<repo>, BASE_PATH is "/<repo>"; on kmreali.ro it is empty.
 export default defineConfig({
-  site: process.env.SITE_URL || 'https://kmreali.ro',
+  // GitHub reports http:// until HTTPS is enforced; the site is always served over https.
+  site: (process.env.SITE_URL || 'https://kmreali.ro').replace(/^http:/, 'https:'),
   base: process.env.BASE_PATH || '/',
   integrations: [
     sitemap({

@@ -1,0 +1,24 @@
+; DNS records for kmreali.ro, to import into Cloudflare
+; (DNS > Records > Import and Export > Import). Keep every record "DNS only" (grey cloud):
+; GitHub Pages issues the HTTPS certificate itself and needs to see its own addresses.
+$ORIGIN kmreali.ro.
+$TTL 3600
+
+; The website, hosted on GitHub Pages (repository Slobod7/kmreali)
+@	3600	IN	A	185.199.108.153 ; cf_tags=cf-proxied:false
+@	3600	IN	A	185.199.109.153 ; cf_tags=cf-proxied:false
+@	3600	IN	A	185.199.110.153 ; cf_tags=cf-proxied:false
+@	3600	IN	A	185.199.111.153 ; cf_tags=cf-proxied:false
+@	3600	IN	AAAA	2606:50c0:8000::153 ; cf_tags=cf-proxied:false
+@	3600	IN	AAAA	2606:50c0:8001::153 ; cf_tags=cf-proxied:false
+@	3600	IN	AAAA	2606:50c0:8002::153 ; cf_tags=cf-proxied:false
+@	3600	IN	AAAA	2606:50c0:8003::153 ; cf_tags=cf-proxied:false
+www	3600	IN	CNAME	slobod7.github.io. ; cf_tags=cf-proxied:false
+
+; Google Search Console ownership (kept from Hostico)
+@	3600	IN	TXT	"google-site-verification=4v3k8ghL93osTKAZoc-n7syCsG5aZ4UthRc9Z4-RJns"
+
+; No email is sent from kmreali.ro yet, so tell mail servers to reject anything claiming
+; to come from it. Change these when you set up email marketing.
+@	3600	IN	TXT	"v=spf1 -all"
+_dmarc	3600	IN	TXT	"v=DMARC1; p=reject;"
