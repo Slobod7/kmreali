@@ -27,7 +27,7 @@ const { Content } = await render(article);
 const minutes = readingMinutes(article.body);
 const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 const coverUrl = new URL(cover.src, Astro.site).href;
-const author = { '@type': 'Person', name: site.author.name };
+const author = { '@type': 'Person', name: site.author.name, url: new URL(url('despre/'), Astro.site).href };
 const questions = faq(article.body);
 const verdict = category === 'recenzii' ? reviewSummary(article.body) : undefined;
 
