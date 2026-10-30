@@ -6,7 +6,7 @@ date: 2026-10-30
 category: ghiduri
 cover: ./skoda-superb-laurin-klement-2020-fata.webp
 coverAlt: "Skoda Superb Laurin & Klement 2020 neagră, văzută din față, cu inscripția Laurin & Klement pe aripă"
-# To check before publishing:
+# Still to check (published 30 Oct 2026 before these were confirmed):
 #   the autovit.ro listing counts in "Cât costau noi și cât costă acum" (keyword search, 30 Oct 2026)
 #   whether Romanian-market Sportline cars had DCC as standard (no original Romanian price list found yet)
 #   the 19" wheels on Bogdan's car: Trinity anthracite? (compare with Škoda's wheel overview in the research folder)
@@ -17,7 +17,7 @@ coverAlt: "Skoda Superb Laurin & Klement 2020 neagră, văzută din față, cu i
 #   skoda-superb-drive-mode-dcc.webp, Drive Mode Select with the chassis setting ("Cum verifici ce are de fapt mașina")
 #   a Sportline and a Style facelift interior, taken by Bogdan (no free photo found)
 # Set to true to hide the article from the live site.
-draft: true
+draft: false
 ---
 
 Dacă te uiți după un Skoda Superb second hand, în anunțurile cu mașini bine echipate dai mereu de trei nume: Style, Sportline și Laurin & Klement. Eu am un Superb Laurin & Klement din 2020 pe care l-am condus aproape 40.000 km, așa că partea despre L&K e din experiență. Pentru Sportline și Style m-am uitat în listele oficiale de prețuri și dotări Škoda și am citit ce spun proprietarii.
