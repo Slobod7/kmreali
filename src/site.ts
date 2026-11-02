@@ -14,6 +14,9 @@ export const site = {
   },
   // Leave empty to hide the Contact page and link until there is an address.
   contactEmail: '',
+  // Cloudflare Web Analytics token. Leave empty to load no analytics.
+  // The beacon only renders in production builds on the live domain (see src/layouts/Base.astro).
+  cloudflareAnalyticsToken: '',
 };
 
 export const categories = {

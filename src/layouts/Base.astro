@@ -38,6 +38,7 @@ const ogImage = await getImage({ src: image, width: 1200, height: 630, fit: 'cov
 const ogImageUrl = new URL(ogImage.src, Astro.site);
 // Keep test copies (github.io) out of Google; only kmreali.ro gets indexed.
 const isLiveDomain = Astro.site?.hostname === site.domain;
+const analyticsToken = import.meta.env.PROD && isLiveDomain ? site.cloudflareAnalyticsToken : '';
 ---
 
 <!doctype html>
@@ -78,5 +79,15 @@ const isLiveDomain = Astro.site?.hostname === site.domain;
       <slot />
     </main>
     <Footer />
+    {
+      analyticsToken && (
+        <script
+          is:inline
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={JSON.stringify({ token: analyticsToken })}
+        />
+      )
+    }
   </body>
 </html>
