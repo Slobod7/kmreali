@@ -1,22 +1,44 @@
 ---
 import Base from '../layouts/Base.astro';
 import Borna from '../components/Borna.astro';
-import { url } from '../site';
+import { site, url } from '../site';
 ---
 
-<Base title="Despre" description="Ce este KM Reali și de ce scriem doar despre mașini pe care le-am condus.">
+<Base title="Despre" description="Cine scrie KM Reali și cum: recenzii din mașina proprie, ghiduri și topuri pe date publice și păreri de la proprietari, cu surse.">
   <div class="container pagina">
     <h1>Despre KM Reali</h1>
     <p class="intro">
-      KM Reali adună păreri de la oameni care chiar conduc mașinile despre care scriu. Nu de la un test drive de o zi,
-      ci după luni de drumuri, plinuri și vizite la service.
+      KM Reali e despre cum se poartă o mașină după luni de drumuri, plinuri și vizite la service, nu după un test drive
+      de o zi.
     </p>
+
+    <section id="autor" class="autor">
+      <h2>Cine scrie</h2>
+      {site.author.photo && <img class="autor__foto" src={url(site.author.photo)} alt={site.author.name} width="224" height="224" />}
+      <p>Sunt {site.author.name}, autorul KM Reali.</p>
+      <p>
+        Am un Skoda Superb L&amp;K din 2020, cu motor 2.0 TSI de 272 CP și tracțiune 4x4. L-am cumpărat second hand, cu
+        80.000 km la bord, iar acum se apropie de 120.000 km. E înmatriculat în Republica Moldova. Tot ce a mers bine și
+        tot ce nu e în <a href={url('recenzii/skoda-superb-2020-pareri-proprietar/')}>recenzia lui</a>.
+      </p>
+      <p>Am mai condus un BMW Seria 7, un Range Rover, un Mercedes GLS 400d și un BMW X7 M50d, așa că am cu ce să compar.</p>
+    </section>
+
+    <h2>Cum lucrez</h2>
+    <ul>
+      <li>
+        <strong>Recenziile:</strong> vin din faptul că dețin mașina, așa că scriu ce consumă, ce s-a stricat și cât m-a
+        costat. Când citez alte surse, pun linkul.
+      </li>
+      <li><strong>Ghidurile și topurile:</strong> se bazează pe date publice și pe ce raportează proprietarii, cu linkuri către surse.</li>
+      <li><strong>Reclame și sponsorizări:</strong> în acest moment, site-ul nu are reclame, linkuri afiliate sau conținut sponsorizat.</li>
+    </ul>
 
     <h2>Ce găsești aici</h2>
     <ul>
       <li><a href={url('recenzii/')}>Recenzii</a>: o mașină, un proprietar, tot ce a mers bine și tot ce nu.</li>
       <li><a href={url('ghiduri/')}>Ghiduri</a>: explicații practice pentru întreținere, cumpărare și drumurile de zi cu zi.</li>
-      <li><a href={url('topuri/')}>Topuri</a>: clasamente făcute pe experiența proprietarilor, nu pe broșuri.</li>
+      <li><a href={url('topuri/')}>Topuri</a>: clasamente făcute pe date publice și păreri de la proprietari, cu surse, nu pe broșuri.</li>
     </ul>
 
     <h2>De ce „km reali”</h2>
@@ -24,7 +46,7 @@ import { url } from '../site';
       <Borna km={120000} marime="mare" />
       <p>
         Borna din logo e cea de pe marginea drumului. La fiecare recenzie vezi câți kilometri avea mașina la bord când
-        am scris despre ea. Cu cât numărul e mai mare, cu atât știm mai bine cum se poartă în timp.
+        am scris despre ea. Cu cât numărul e mai mare, cu atât știu mai bine cum se poartă în timp.
       </p>
     </div>
   </div>
@@ -32,9 +54,12 @@ import { url } from '../site';
 
 <style>
   .pagina { max-width: calc(var(--latime-text) + 2 * var(--margine)); padding-top: clamp(2.5rem, 6vw, 4.5rem); }
-  .pagina > * + * { margin-top: 1.25rem; }
+  .pagina > * + *, .autor > * + * { margin-top: 1.25rem; }
   .pagina h2 { margin-top: 2.5rem; font-size: clamp(1.6rem, 1.4rem + 0.9vw, 2.1rem); }
   .intro { font-size: var(--text-mare); line-height: 1.45; color: var(--grafit); }
+  .autor { scroll-margin-top: 1.5rem; }
+  .autor::after { content: ''; display: block; clear: both; }
+  .autor__foto { float: right; width: 7rem; height: 7rem; margin-left: 1.25rem; object-fit: cover; border-radius: 8px; }
   ul { padding-left: 1.25em; }
   li + li { margin-top: 0.5em; }
   li::marker { color: var(--rosu); }

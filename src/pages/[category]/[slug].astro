@@ -125,7 +125,7 @@ if (questions.length) {
       <a class="categorie" href={url(`${category}/`)}>{categories[category].singular}</a>
       <h1>{title}</h1>
       <p class="articol-meta">
-        <span>De {site.author.name}</span>
+        <span>De <a href={url('despre/#autor')}>{site.author.name}</a></span>
         <time datetime={date.toISOString()}>{formatDate(date)}</time>
         <span>{minutes} min de citit</span>
       </p>
@@ -152,7 +152,7 @@ if (questions.length) {
         <footer class="articol-subsol">
           <section class="autor" aria-label="Despre autor">
             <p class="autor__eticheta">Despre autor</p>
-            <p class="autor__nume">{site.author.name}</p>
+            <p class="autor__nume"><a href={url('despre/#autor')}>{site.author.name}</a></p>
             <p>{site.author.bio}</p>
           </section>
 
@@ -192,6 +192,7 @@ if (questions.length) {
   }
   .articol-antet h1 { max-width: 18em; }
   .articol-meta { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; color: var(--gri); font-size: var(--text-mic); }
+  .articol-meta a, .autor__nume a { text-decoration-color: var(--rosu); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 
   .ciorna {
     font-family: var(--font-titlu);

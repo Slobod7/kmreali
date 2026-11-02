@@ -7,7 +7,7 @@ The kmreali.ro website: a static site built with [Astro](https://astro.build) an
 | What | Where |
 | --- | --- |
 | Articles (text + photos) | `src/content/articole/<slug>/index.md` |
-| Site name, tagline, author, contact email | `src/site.ts` |
+| Site name, tagline, author and photo, contact email, analytics token | `src/site.ts` |
 | Colors and fonts | `src/styles/global.css` |
 | Header, footer, cards, car spec box | `src/components/` |
 | Pages (home, sections, Despre, Contact) | `src/pages/` |

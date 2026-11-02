@@ -11,6 +11,8 @@ export const site = {
   author: {
     name: 'Bogdan Slobodzean',
     bio: 'Scrie despre mașinile pe care le conduce zi de zi.',
+    // Photo on the Despre page: put a square image in public/foto/ and set its path here, e.g. 'foto/autor.webp'.
+    photo: '',
   },
   // Leave empty to hide the Contact page and link until there is an address.
   contactEmail: '',
