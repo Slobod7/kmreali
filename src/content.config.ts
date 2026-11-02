@@ -4,7 +4,14 @@ import { z } from 'astro/zod';
 
 const articole = defineCollection({
   // One folder per article: src/content/articole/<slug>/index.md plus its photos.
-  loader: glob({ pattern: '*/index.md', base: './src/content/articole', generateId: ({ entry }) => entry.split('/')[0] }),
+  // Articles are rendered when their page is built, not cached by the loader, so a change to an
+  // article's date.json (its widgets, see src/widgets-plugin.ts) shows up in the next build.
+  loader: glob({
+    pattern: '*/index.md',
+    base: './src/content/articole',
+    generateId: ({ entry }) => entry.split('/')[0],
+    deferRender: true,
+  }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),

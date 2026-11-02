@@ -4,6 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import { satteri } from '@astrojs/markdown-satteri';
 import { site } from './src/site.ts';
 import { faqPlugin } from './src/faq-plugin.ts';
+import { widgetsPlugin } from './src/widgets-plugin.ts';
 
 // SITE_URL and BASE_PATH are set by the GitHub Pages workflow. While the site is
 // tested at <user>.github.io/<repo>, BASE_PATH is "/<repo>"; on kmreali.ro it is empty.
@@ -27,7 +28,7 @@ export default defineConfig({
   },
   markdown: {
     processor: satteri({
-      hastPlugins: [faqPlugin],
+      hastPlugins: [faqPlugin, widgetsPlugin],
       // Romanian uses „…” quotes; keep whatever the author typed.
       features: { smartPunctuation: false },
     }),

@@ -5,6 +5,7 @@ import Base from '../../layouts/Base.astro';
 import FisaMasinii from '../../components/FisaMasinii.astro';
 import Cuprins from '../../components/Cuprins.astro';
 import InapoiSus from '../../components/InapoiSus.astro';
+import Widgeturi from '../../components/Widgeturi.astro';
 import logo from '../../assets/brand/kmreali-logo.svg';
 import { articleUrl, faq, getArticles, readingMinutes, reviewSummary, type Article } from '../../articles';
 import { categories, formatDate, site, url } from '../../site';
@@ -179,6 +180,7 @@ if (questions.length) {
   </article>
 
   <InapoiSus />
+  {article.body?.includes('data-widget=') && <Widgeturi />}
 </Base>
 
 <style>

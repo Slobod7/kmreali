@@ -1,0 +1,177 @@
+---
+// Styles and the script for the widgets src/widgets-plugin.ts builds into an article:
+// the search by budget (data-cautator) and the table of what each source says (.matrice).
+---
+
+<script>
+  // The search by budget: shows the cars that match the filters. Without JavaScript it stays hidden.
+  const finder = document.querySelector<HTMLElement>('[data-cautator]');
+
+  if (finder) {
+    const form = finder.querySelector('form')!;
+    const budgetOutput = finder.querySelector('[data-buget]')!;
+    const counter = finder.querySelector('[data-numar]')!;
+    const empty = finder.querySelector<HTMLElement>('[data-gol]')!;
+    const list = finder.querySelector('ul')!;
+    const cards = [...list.querySelectorAll<HTMLElement>(':scope > .masina')];
+    const groups = ['lista', 'rezerve', 'slabe'];
+    const number = new Intl.NumberFormat('ro-RO');
+
+    // Recommended cars first; within them, the ones the budget fully covers, then the ones that are easy to find, then the cheaper ones.
+    const sortKey = (card: HTMLElement, budget: number) => [
+      groups.indexOf(card.dataset.grup ?? ''),
+      Number(card.dataset.pret) > budget ? 1 : 0,
+      card.hasAttribute('data-rar') ? 1 : 0,
+      Number(card.dataset.pret),
+    ];
+    const byKey = (a: number[], b: number[]) => a.reduce((result, value, i) => result || value - b[i], 0);
+
+    // Romanian counts: 1 mașină, 19 mașini, 20 de mașini.
+    const cars = (n: number) => (n === 1 ? '1 mașină se potrivește' : `${n}${n % 100 >= 20 ? ' de' : ''} mașini se potrivesc`);
+
+    function update() {
+      const filters = new FormData(form);
+      const budget = Number(filters.get('buget'));
+      const state = filters.get('stare');
+      const type = filters.get('tip');
+      const engine = filters.get('motor');
+      let shown = 0;
+
+      for (const card of cards) {
+        const { stare, tip, motor = '', pret, pretDeLa } = card.dataset;
+        const match =
+          (!state || stare === state) &&
+          (!type || tip === type) &&
+          (!engine || motor.split(' ').includes(String(engine))) &&
+          Number(pretDeLa) <= budget;
+        card.hidden = !match;
+        // Used cars whose typical price is over budget: only the cheaper listings fit.
+        card.querySelector<HTMLElement>('[data-peste-buget]')?.toggleAttribute('hidden', Number(pret) <= budget);
+        if (match) shown++;
+      }
+
+      list.append(...[...cards].sort((a, b) => byKey(sortKey(a, budget), sortKey(b, budget))));
+      budgetOutput.textContent = `${number.format(budget)} €`;
+      counter.textContent = shown ? cars(shown) : '';
+      empty.hidden = shown > 0;
+    }
+
+    form.addEventListener('input', update);
+    form.addEventListener('submit', (event) => event.preventDefault());
+    document.querySelector('.cautator-fara-js')?.remove();
+    finder.hidden = false;
+    update();
+  }
+</script>
+
+<style is:global>
+  /* Shared: how well a car does in one source. Colour plus text, never colour alone. */
+  .nivel { display: inline-block; padding: 0.15em 0.5em; border-radius: 4px; font-size: 0.85em; line-height: 1.3; color: var(--gri); }
+  .nivel--bun { background: #e1efe3; color: #1f5c30; }
+  .nivel--mediu { background: #ebe7de; color: var(--grafit); }
+  .nivel--slab { background: #f7dfd9; color: #9a2615; }
+
+  /* Search by budget */
+  .cautator {
+    display: grid;
+    gap: 1rem;
+    background: var(--alb);
+    border: 1px solid var(--nisip);
+    border-radius: 8px;
+    padding: clamp(1rem, 3vw, 1.5rem);
+  }
+  .cautator[hidden], .masina[hidden], .cautator [hidden] { display: none; }
+  .cautator__filtre { display: grid; gap: 1rem; }
+
+  .cautator__buget { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 0.25rem 1rem; }
+  .cautator__buget label, .cautator legend { font-family: var(--font-titlu); font-weight: 700; font-size: var(--text-mediu); }
+  .cautator__buget output { font-family: var(--font-titlu); font-weight: 800; font-size: var(--text-mare); color: var(--rosu); }
+  .cautator__buget input { grid-column: 1 / -1; width: 100%; accent-color: var(--rosu); }
+
+  .cautator fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+  .cautator legend { padding: 0; margin-bottom: 0.4rem; }
+  .cautator__optiuni { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .cautator__optiuni label { position: relative; }
+  .cautator__optiuni input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+  .cautator__optiuni span {
+    display: inline-block;
+    padding: 0.35em 0.9em;
+    border: 1px solid var(--gri-deschis);
+    border-radius: 999px;
+    background: var(--hartie);
+    font-size: var(--text-mic);
+  }
+  .cautator__optiuni input:checked + span { background: var(--carbune); border-color: var(--carbune); color: var(--hartie); }
+  .cautator__optiuni input:focus-visible + span { outline: 2px solid var(--rosu); outline-offset: 2px; }
+
+  .cautator__numar { font-weight: 600; color: var(--grafit); }
+  .text .cautator .cautator__lista { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; }
+  .text .cautator .cautator__lista > li { margin: 0; }
+  .cautator-fara-js { color: var(--gri); font-style: italic; }
+
+  .masina {
+    display: grid;
+    gap: 0.5rem;
+    background: var(--hartie);
+    border: 1px solid var(--nisip);
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: var(--text-mic);
+    line-height: 1.45;
+  }
+  .masina__cap { display: grid; grid-template-columns: clamp(6.5rem, 32%, 9.5rem) 1fr; align-items: center; gap: 0.85rem; }
+  .masina__cap:not(:has(.masina__foto)) { grid-template-columns: 1fr; }
+  .text .masina .masina__foto { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; background: var(--nisip); }
+  .masina__titlu { display: grid; justify-items: start; gap: 0.4rem; }
+  .masina__nume { font-family: var(--font-titlu); font-weight: 700; font-size: var(--text-mare); line-height: 1.15; }
+  .masina__nume span { display: block; font-family: var(--font-text); font-weight: 400; font-size: var(--text-mic); color: var(--gri); }
+  .masina__eticheta {
+    flex: none;
+    padding: 0.2em 0.6em;
+    border-radius: 4px;
+    font-family: var(--font-titlu);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .masina__eticheta--lista { background: #e1efe3; color: #1f5c30; }
+  .masina__eticheta--rezerve { background: #ebe7de; color: var(--grafit); }
+  .masina__eticheta--slabe { background: #f7dfd9; color: #9a2615; }
+  .masina__pret strong { font-size: 1.05rem; }
+  .masina__nota { color: #9a2615; }
+  .text .masina .masina__surse { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .text .masina .masina__surse > li { margin: 0; }
+  .masina__linkuri { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+  .masina__credit { font-size: 0.8rem; color: var(--gri); }
+  .text .masina .masina__credit a { color: inherit; text-decoration-thickness: 1px; }
+
+  /* What each source says */
+  .matrice { margin-inline: 0; display: grid; gap: 0.75rem; }
+  .matrice__derulare { overflow-x: auto; }
+  .text .matrice table.matrice__tabel { font-size: 0.85rem; }
+  .text .matrice table.matrice__tabel :is(th, td) { padding: 0.45em 0.5em; vertical-align: middle; }
+  .text .matrice table.matrice__tabel tbody tr:nth-child(n) td { background: var(--alb); }
+  .text .matrice table.matrice__tabel tbody th[scope='row'] {
+    background: var(--alb);
+    color: var(--carbune);
+    font-family: var(--font-text);
+    font-weight: 600;
+    letter-spacing: normal;
+  }
+  .text .matrice table.matrice__tabel tbody th[scope='row'] a { color: inherit; }
+  .text .matrice table.matrice__tabel tbody th[scope='row'] span { display: block; font-weight: 400; font-size: 0.9em; color: var(--gri); }
+  .text .matrice table.matrice__tabel .matrice__grup th {
+    background: var(--nisip);
+    color: var(--carbune);
+    font-size: 0.85em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .matrice figcaption { font-size: var(--text-mic); color: var(--gri); line-height: 1.6; }
+  @media (max-width: 30rem) {
+    .text .matrice table.matrice__tabel { font-size: 0.78rem; }
+    .text .matrice table.matrice__tabel :is(th, td) { padding: 0.4em 0.3em; }
+    .text .matrice table.matrice__tabel .nivel { padding: 0.1em 0.3em; }
+  }
+</style>

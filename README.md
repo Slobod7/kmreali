@@ -26,6 +26,20 @@ For the FAQ, add a `## Întrebări frecvente` section and write each question as
 
 In reviews, the **Pe scurt** list near the top feeds the review data for search engines (the score, likes and dislikes) together with the car details at the top. Keep its `**Îmi place:**`, `**Nu îmi place:**` and `**Nota mea:** 7,8/10` lines, and separate the likes and dislikes with commas or semicolons.
 
+## Widgets in an article
+
+An article can have a search by budget and a table of what each reliability source says about each car (see `masini-fiabile`). Their data lives in a `date.json` next to the article's `index.md`, and a line in the text marks where each one goes:
+
+```html
+<div data-widget="cautator"></div>
+```
+
+```html
+<div data-widget="matrice"></div>
+```
+
+When the site is built, `src/widgets-plugin.ts` turns each line into plain HTML from `date.json`; `src/components/Widgeturi.astro` styles them and makes the search work. Without JavaScript the search stays hidden and the table still shows. The small photos on the search cards are in `public/foto/<article folder>/` (400×225 WebP), because the widget's HTML doesn't go through Astro's image processing; their author and licence are listed under `fotografii` in `date.json` and shown on each card. To change a price or a source, edit `date.json`. In the local preview, save `index.md` once afterwards so the page picks up the change. After a change to `src/widgets-plugin.ts` itself, restart `npm run dev`.
+
 ## Running it on your Mac
 
 Node.js is installed in `~/.local/node`. In a terminal, from this folder:
