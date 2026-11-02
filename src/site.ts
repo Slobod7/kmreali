@@ -5,9 +5,9 @@ export const site = {
   domain: 'kmreali.ro',
   tagline: 'Păreri reale de la proprietari de mașini',
   description:
-    'Recenzii, ghiduri și topuri scrise de oameni care chiar conduc mașinile despre care scriu: consum real, probleme reale, costuri reale.',
+    'Recenzii scrise de proprietar, ghiduri și topuri făcute pe date publice și păreri de la proprietari, cu surse: consum real, probleme reale, costuri reale.',
   footerText:
-    'Păreri reale de la proprietari de mașini: consum real, probleme reale, costuri reale. Scris de oameni care conduc mașinile despre care scriu.',
+    'Păreri reale de la proprietari de mașini: consum real, probleme reale, costuri reale. Recenziile sunt scrise de proprietar; ghidurile și topurile se bazează pe date publice și păreri de la proprietari, cu surse.',
   author: {
     name: 'Bogdan Slobodzean',
     bio: 'Scrie despre mașinile pe care le conduce zi de zi.',
@@ -37,7 +37,7 @@ export const categories = {
   topuri: {
     title: 'Topuri',
     singular: 'Top',
-    description: 'Clasamente făcute pe date de la proprietari, nu pe broșuri.',
+    description: 'Clasamente făcute pe date publice și păreri de la proprietari, cu surse, nu pe broșuri.',
     empty: 'Primele topuri apar în curând.',
   },
 } as const;
