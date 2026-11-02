@@ -18,7 +18,7 @@ export const site = {
   contactEmail: '',
   // Cloudflare Web Analytics token. Leave empty to load no analytics.
   // The beacon only renders in production builds on the live domain (see src/layouts/Base.astro).
-  cloudflareAnalyticsToken: '',
+  cloudflareAnalyticsToken: '002124604d5b487e9bd062b8f06f11e7',
 };
 
 export const categories = {
