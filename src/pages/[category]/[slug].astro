@@ -136,6 +136,13 @@ if (questions.length) {
     </div>
 
     <div class:list={['container', 'articol-corp', { 'are-lateral': hasSidebar }]}>
+      <div class="coloana">
+        {sections.length > 0 && <Cuprins headings={sections} pliat />}
+        <div class="text">
+          <Content />
+        </div>
+      </div>
+
       {
         hasSidebar && (
           <div class="lateral">
@@ -144,38 +151,33 @@ if (questions.length) {
           </div>
         )
       }
-      <div class="coloana">
-        <div class="text">
-          <Content />
-        </div>
 
-        <footer class="articol-subsol">
-          <section class="autor" aria-label="Despre autor">
-            <p class="autor__eticheta">Despre autor</p>
-            <p class="autor__nume"><a href={url('despre/#autor')}>{site.author.name}</a></p>
-            <p>{site.author.bio}</p>
-          </section>
+      <footer class="articol-subsol">
+        <section class="autor" aria-label="Despre autor">
+          <p class="autor__eticheta">Despre autor</p>
+          <p class="autor__nume"><a href={url('despre/#autor')}>{site.author.name}</a></p>
+          <p>{site.author.bio}</p>
+        </section>
 
-          {
-            (newer || older) && (
-              <nav class="vecini" aria-label="Alte articole">
-                {older && (
-                  <a href={articleUrl(older)}>
-                    <span>Articolul anterior</span>
-                    {older.data.title}
-                  </a>
-                )}
-                {newer && (
-                  <a href={articleUrl(newer)}>
-                    <span>Articolul următor</span>
-                    {newer.data.title}
-                  </a>
-                )}
-              </nav>
-            )
-          }
-        </footer>
-      </div>
+        {
+          (newer || older) && (
+            <nav class="vecini" aria-label="Alte articole">
+              {older && (
+                <a href={articleUrl(older)}>
+                  <span>Articolul anterior</span>
+                  {older.data.title}
+                </a>
+              )}
+              {newer && (
+                <a href={articleUrl(newer)}>
+                  <span>Articolul următor</span>
+                  {newer.data.title}
+                </a>
+              )}
+            </nav>
+          )
+        }
+      </footer>
     </div>
   </article>
 
@@ -207,12 +209,17 @@ if (questions.length) {
 
   .articol-corp {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 2.5rem;
     padding-top: clamp(2rem, 5vw, 3rem);
   }
-  .coloana { max-width: var(--latime-text); }
-  .articol-corp:not(.are-lateral) .coloana { margin-inline: auto; }
-  .lateral { display: grid; gap: 1rem; align-content: start; }
+  .coloana, .articol-subsol, .lateral :global(.fisa) { max-width: var(--latime-text); }
+  .articol-corp:not(.are-lateral) :is(.coloana, .articol-subsol) { width: 100%; margin-inline: auto; }
+
+  /* Narrow screens: the contents fold into one line above the text and the car's card follows the text. */
+  .coloana :global(.cuprins--pliat) { margin-bottom: 1.25rem; }
+  .lateral { display: contents; }
+  .lateral :global(.cuprins) { display: none; }
 
   /* Wide screens: the text takes the width the sidebar leaves, with a gap of at most 6.25rem.
      The car's card scrolls past with the text, then the contents stay in view until the end.
@@ -220,11 +227,14 @@ if (questions.length) {
   @media (min-width: 64rem) {
     .are-lateral { grid-template-columns: minmax(0, 1fr) 20rem; column-gap: clamp(2.5rem, 7vw, 6.25rem); }
     .are-lateral .coloana { grid-row: 1; grid-column: 1; max-width: none; }
-    .lateral { grid-column: 2; }
-    .lateral :global(.cuprins) { position: sticky; top: 1.5rem; max-height: calc(100vh - 3rem); overflow-y: auto; }
+    .are-lateral .articol-subsol { grid-row: 2; grid-column: 1; max-width: none; }
+    .coloana :global(.cuprins--pliat) { display: none; }
+    .lateral { display: grid; gap: 1rem; align-content: start; grid-row: 1 / span 2; grid-column: 2; }
+    .lateral :global(.cuprins) { display: block; position: sticky; top: 1.5rem; max-height: calc(100vh - 3rem); overflow-y: auto; }
   }
 
-  .articol-subsol { display: grid; gap: 2rem; margin-top: 3.5rem; }
+  /* With the 2.5rem gap above it, 3.5rem from the end of the text. */
+  .articol-subsol { display: grid; gap: 2rem; margin-top: 1rem; }
 
   .autor {
     display: grid;
@@ -258,6 +268,8 @@ if (questions.length) {
   @media (max-width: 30rem) {
     .text :global(table) { font-size: 0.875em; }
     .text :global(th), .text :global(td) { padding: 0.5em 0.55em; }
+    /* Four columns don't always fit a phone: the table scrolls sideways on its own, not the whole page. */
+    .text :global(> table:has(th:nth-child(4))) { display: block; overflow-x: auto; }
   }
   .text :global(th) { background: var(--carbune); color: var(--hartie); font-family: var(--font-titlu); font-weight: 600; letter-spacing: 0.03em; }
   .text :global(tbody tr:nth-child(even) td) { background: #faf8f4; }

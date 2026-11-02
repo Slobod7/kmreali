@@ -1,36 +1,58 @@
 ---
-// The article's sections, always open. On wide screens it follows the reader under the car's card.
+// The article's sections. On wide screens they stay open and follow the reader under the car's card.
+// With `pliat` they come as one closed line, for the top of the text on narrow screens.
+// The article page renders both and shows the one that fits the screen.
 import type { MarkdownHeading } from 'astro';
 
 interface Props {
   headings: MarkdownHeading[];
+  pliat?: boolean;
 }
 
-const { headings } = Astro.props;
+const { headings, pliat = false } = Astro.props;
 ---
 
-<nav class="cuprins" aria-labelledby="cuprins-titlu">
-  <h2 id="cuprins-titlu">Cuprins</h2>
-  <ol>
-    {headings.map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}
-  </ol>
-</nav>
+{
+  pliat ? (
+    <details class="cuprins cuprins--pliat">
+      <summary>Cuprins</summary>
+      <nav aria-label="Cuprins">
+        <ol>
+          {headings.map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}
+        </ol>
+      </nav>
+    </details>
+  ) : (
+    <nav class="cuprins" aria-labelledby="cuprins-titlu">
+      <h2 id="cuprins-titlu">Cuprins</h2>
+      <ol>
+        {headings.map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}
+      </ol>
+    </nav>
+  )
+}
 
 <script>
-  // Marks the section being read.
+  // Marks the section being read, in both versions of the contents.
   const links = [...document.querySelectorAll<HTMLAnchorElement>('.cuprins a')];
   const sections = links.map((link) => document.getElementById(decodeURIComponent(link.hash.slice(1))));
-  let current: HTMLAnchorElement | undefined;
+  let current: string | undefined;
   let queued = false;
 
   function update() {
     queued = false;
     const index = sections.findLastIndex((section) => section !== null && section.getBoundingClientRect().top < innerHeight / 4);
-    if (links[index] === current) return;
-    current?.removeAttribute('aria-current');
-    current = links[index];
-    current?.setAttribute('aria-current', 'location');
+    const hash = links[index]?.hash;
+    if (hash === current) return;
+    current = hash;
+    for (const link of links) {
+      if (link.hash === hash) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    }
   }
+
+  // The closed version folds back once a section is picked.
+  for (const link of links) link.addEventListener('click', () => link.closest('details')?.removeAttribute('open'));
 
   addEventListener(
     'scroll',
@@ -57,6 +79,24 @@ const { headings } = Astro.props;
     padding-bottom: 0.75rem;
     border-bottom: 2px solid var(--carbune);
   }
+
+  .cuprins--pliat { padding: 0 1.25rem; }
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 2.75rem;
+    font-family: var(--font-titlu);
+    font-weight: 700;
+    font-size: var(--text-mare);
+    list-style: none;
+    cursor: pointer;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary:hover { color: var(--rosu); }
+  summary::after { content: '+'; color: var(--rosu); line-height: 1; }
+  [open] > summary::after { content: '−'; }
+  .cuprins--pliat nav { padding-bottom: 0.75rem; border-top: 2px solid var(--carbune); }
 
   ol { list-style: none; margin: 0; padding: 0.75rem 0 0; }
   a {
