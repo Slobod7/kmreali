@@ -10,7 +10,7 @@ export const site = {
     'Păreri reale de la proprietari de mașini: consum real, probleme reale, costuri reale. Recenziile sunt scrise de proprietar; ghidurile și topurile se bazează pe date publice și păreri de la proprietari, cu surse.',
   author: {
     name: 'Bogdan Slobodzean',
-    bio: 'Scrie despre mașinile pe care le conduce zi de zi.',
+    bio: 'Conduce zi de zi un Skoda Superb din 2020 și scrie despre mașini din perspectiva proprietarului.',
     // Photo on the Despre page: put a square image in public/foto/ and set its path here, e.g. 'foto/autor.webp'.
     photo: '',
   },
@@ -25,7 +25,7 @@ export const categories = {
   recenzii: {
     title: 'Recenzii',
     singular: 'Recenzie',
-    description: 'Mașini testate de proprietarii lor, după mii de kilometri: consum, probleme, costuri.',
+    description: 'Recenzii scrise de proprietar, după mii de kilometri: consum, probleme, costuri.',
     empty: 'Primele recenzii apar în curând.',
   },
   ghiduri: {
