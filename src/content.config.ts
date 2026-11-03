@@ -21,6 +21,11 @@ const articole = defineCollection({
       category: z.enum(['recenzii', 'ghiduri', 'topuri']),
       cover: image(),
       coverAlt: z.string(),
+      // Small caption under the cover. Links are written like in the text: [Wikimedia Commons](https://...).
+      coverCredit: z.string().optional(),
+      // Replaces the title in <title> only; the H1, address, og:title and JSON-LD keep `title`.
+      // The site name is added after it, so keep it to about 54 characters.
+      seoTitle: z.string().optional(),
       // Drafts show up in the local preview only, never on the live site.
       draft: z.boolean().default(false),
       // The car the article is about. Every field is optional; empty ones are not shown.

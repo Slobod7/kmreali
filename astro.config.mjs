@@ -5,6 +5,9 @@ import { satteri } from '@astrojs/markdown-satteri';
 import { site } from './src/site.ts';
 import { faqPlugin } from './src/faq-plugin.ts';
 import { widgetsPlugin } from './src/widgets-plugin.ts';
+import { articleLastmods } from './src/sitemap-lastmod.ts';
+
+const lastmods = articleLastmods(process.env.BASE_PATH);
 
 // SITE_URL and BASE_PATH are set by the GitHub Pages workflow. While the site is
 // tested at <user>.github.io/<repo>, BASE_PATH is "/<repo>"; on kmreali.ro it is empty.
@@ -20,6 +23,11 @@ export default defineConfig({
     sitemap({
       // The contact page stays out of Google until it has an address.
       filter: (page) => site.contactEmail !== '' || !page.endsWith('/contact/'),
+      // Articles get the date from their frontmatter, never the build date. Other pages get none.
+      serialize: (item) => {
+        const lastmod = lastmods.get(new URL(item.url).pathname);
+        return lastmod ? { ...item, lastmod } : item;
+      },
     }),
   ],
   image: {

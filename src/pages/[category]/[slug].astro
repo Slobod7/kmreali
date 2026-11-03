@@ -7,7 +7,7 @@ import Cuprins from '../../components/Cuprins.astro';
 import InapoiSus from '../../components/InapoiSus.astro';
 import Widgeturi from '../../components/Widgeturi.astro';
 import logo from '../../assets/brand/kmreali-logo.svg';
-import { articleUrl, faq, getArticles, readingMinutes, reviewSummary, type Article } from '../../articles';
+import { articleUrl, faq, getArticles, readingMinutes, reviewSummary, textWithLinks, type Article } from '../../articles';
 import { categories, formatDate, site, url } from '../../site';
 
 // Articles live under their section: /recenzii/<slug>/, /ghiduri/<slug>/, /topuri/<slug>/.
@@ -26,7 +26,7 @@ interface Props {
 }
 
 const { article, newer, older } = Astro.props;
-const { title, description, date, updated, category, cover, coverAlt, masina, draft } = article.data;
+const { title, seoTitle, description, date, updated, category, cover, coverAlt, coverCredit, masina, draft } = article.data;
 const { Content, headings } = await render(article);
 const sections = headings.filter((heading) => heading.depth === 2);
 const hasSidebar = Boolean(masina) || sections.length > 0;
@@ -110,6 +110,7 @@ if (questions.length) {
 
 <Base
   title={title}
+  seoTitle={seoTitle}
   description={description}
   image={cover}
   imageAlt={coverAlt}
@@ -127,12 +128,16 @@ if (questions.length) {
       <p class="articol-meta">
         <span>De <a href={url('despre/#autor')}>{site.author.name}</a></span>
         <time datetime={date.toISOString()}>{formatDate(date)}</time>
+        {updated && <span>Actualizat pe <time datetime={updated.toISOString()}>{formatDate(updated)}</time></span>}
         <span>{minutes} min de citit</span>
       </p>
     </header>
 
     <div class="container">
-      <Image class="articol-coperta" src={cover} alt={coverAlt} priority widths={[640, 960, 1280, 1600]} sizes="(min-width: 75rem) 75rem, 100vw" />
+      <figure class="articol-figura">
+        <Image class="articol-coperta" src={cover} alt={coverAlt} priority widths={[640, 960, 1280, 1600]} sizes="(min-width: 75rem) 75rem, 100vw" />
+        {coverCredit && <figcaption set:html={textWithLinks(coverCredit)} />}
+      </figure>
     </div>
 
     <div class:list={['container', 'articol-corp', { 'are-lateral': hasSidebar }]}>
@@ -205,7 +210,10 @@ if (questions.length) {
     padding: 0.2em 0.6em;
   }
 
+  .articol-figura { margin: 0; }
   :global(.articol-coperta) { width: 100%; border-radius: 8px; aspect-ratio: 16 / 9; object-fit: cover; }
+  .articol-figura figcaption { margin-top: 0.5rem; color: var(--gri); font-size: var(--text-mic); font-style: italic; line-height: 1.45; }
+  .articol-figura figcaption :global(a) { text-decoration-color: var(--rosu); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 
   .articol-corp {
     display: grid;

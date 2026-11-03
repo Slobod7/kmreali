@@ -1,5 +1,6 @@
 ---
 title: "Skoda Superb 2020 (2.0 TSI 272 CP 4x4) – păreri de proprietar după 40.000 km"
+seoTitle: "Skoda Superb 2020: păreri de proprietar după 40.000 km"
 # Shown in Google results and on the article card. Aim for 140–160 characters.
 description: "Am condus un Skoda Superb 2020 2.0 TSI 272 CP 4x4 aproape 40.000 km: consum real, probleme, costuri de întreținere și ce să verifici la cumpărare."
 date: 2026-10-29

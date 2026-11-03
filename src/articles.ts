@@ -62,6 +62,16 @@ export function reviewSummary(body = '') {
   };
 }
 
+/** HTML for a short frontmatter text such as coverCredit: escaped, with [text](https://...) as links. Addresses may contain (brackets). */
+export function textWithLinks(markdown: string) {
+  return markdown
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/\[([^\]]+)\]\((https?:\/\/(?:[^()\s]|\([^()\s]*\))+)\)/g, '<a href="$2">$1</a>');
+}
+
 /** Lowercase, without diacritics, so "Îmi place" and "Imi place" match. */
 function normalized(text: string) {
   return text.normalize('NFD').replace(/\p{M}/gu, '').trim().toLowerCase();

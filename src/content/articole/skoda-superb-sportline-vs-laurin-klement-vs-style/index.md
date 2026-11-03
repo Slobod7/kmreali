@@ -1,5 +1,6 @@
 ---
 title: "Skoda Superb Sportline vs Laurin & Klement vs Style – ce echipare să alegi"
+seoTitle: "Skoda Superb Sportline vs L&K vs Style: ce să alegi"
 # Shown in Google results and on the article card. Aim for 140–160 characters.
 description: "Sportline, Laurin & Klement sau Style? Ce diferă cu adevărat la Skoda Superb 3 facelift: DCC, scaune, ventilație, jante, prețuri și ce verifici la mâna a doua."
 date: 2026-10-30

@@ -10,6 +10,8 @@ import '../styles/global.css';
 interface Props {
   /** Page title without the site name. Leave empty on the home page. */
   title?: string;
+  /** Replaces the title in <title> only. */
+  seoTitle?: string;
   description?: string;
   image?: ImageMetadata;
   imageAlt?: string;
@@ -22,6 +24,7 @@ interface Props {
 
 const {
   title,
+  seoTitle,
   description = site.description,
   image = shareImage,
   imageAlt = 'Logo KM Reali',
@@ -32,7 +35,7 @@ const {
   jsonLd = [],
 } = Astro.props;
 
-const fullTitle = title ? `${title} | ${site.name}` : `${site.name}: ${site.tagline}`;
+const fullTitle = title ? `${seoTitle ?? title} | ${site.name}` : `${site.name}: ${site.tagline}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = await getImage({ src: image, width: 1200, height: 630, fit: 'cover', format: 'jpg' });
 const ogImageUrl = new URL(ogImage.src, Astro.site);
