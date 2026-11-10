@@ -29,7 +29,7 @@ const rows = [
       rows.map(([label, value]) => (
         <div>
           <dt>{label}</dt>
-          <dd>{value}</dd>
+          <dd>{label === 'Consum real' ? <span class="evidentiat">{value}</span> : value}</dd>
         </div>
       ))
     }

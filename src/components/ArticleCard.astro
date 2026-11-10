@@ -49,6 +49,13 @@ const href = articleUrl(article);
   .card__titlu { font-size: var(--text-mare); font-weight: 800; }
   .card__titlu a { text-decoration: none; }
   .card__titlu a::after { content: ''; position: absolute; inset: 0; }
+  /* The whole card is the link: under the pointer, the highlighter goes over the title. */
+  .card__titlu a:hover {
+    color: var(--carbune);
+    background: var(--evidentiator);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
   .card .categorie { position: relative; z-index: 1; justify-self: start; }
   .card__rezumat { font-size: 1rem; line-height: 1.55; color: var(--grafit); }
   .card__data { display: flex; gap: 0.75rem; align-items: center; font-size: var(--text-mic); color: var(--gri); }

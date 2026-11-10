@@ -22,6 +22,9 @@
   --gri: #55595f;
   --alb: #ffffff;
   --gri-deschis: #b9b6ae;
+  /* The highlighter: the one colour that is not from the logo. It marks what you can act on
+     (the main button, the link under the pointer) and the real figures. Always a fill under dark text, never text. */
+  --evidentiator: #ffd60a;
 
   --font-text: 'Barlow', 'Helvetica Neue', sans-serif;
   --font-titlu: 'Barlow Condensed', 'Arial Narrow', sans-serif;
@@ -75,6 +78,19 @@ a { color: inherit; }
 a:hover { color: var(--rosu); }
 
 img { max-width: 100%; height: auto; display: block; }
+
+::selection { background: var(--evidentiator); color: var(--carbune); }
+
+/* A highlighter stroke under a few words. It follows the text when it wraps. */
+.evidentiat {
+  background: var(--evidentiator);
+  color: var(--carbune);
+  padding: 0.05em 0.3em;
+  margin-inline: -0.3em;
+  border-radius: 2px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
 
 :focus-visible {
   outline: 3px solid var(--rosu);
