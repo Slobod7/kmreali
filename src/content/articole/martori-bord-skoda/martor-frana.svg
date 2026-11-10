@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="48" height="48" role="img" aria-label="Martorul instalației de frânare"><rect width="200" height="200" rx="40" fill="#15171a"/><svg x="22" y="22" width="156" height="156" viewBox="0 0 200 200" fill="#ff3b30" color="#ff3b30">
+ <g fill="none">
+  
+  <circle cx="100" cy="100" r="55.836" stroke="#ff3b30" stroke-width="5"/>
+ </g>
+ <rect x="94.915" y="58.898" width="10.169" height="65.572" rx="5.0847" ry="5.0847"/>
+ <circle cx="100" cy="137.71" r="5.0847"/>
+ <path d="m150.27 49.731a71.091 71.091 0 0 1 20.822 50.269 71.091 71.091 0 0 1-20.822 50.269" fill="none" stroke="#ff3b30" stroke-width="10"/>
+ <path d="m49.731 150.27a71.091 71.091 0 0 1 0-100.54" fill="none" stroke="#ff3b30" stroke-width="10"/>
+</svg></svg>

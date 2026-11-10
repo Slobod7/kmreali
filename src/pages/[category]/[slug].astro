@@ -282,6 +282,8 @@ if (questions.length) {
   }
   .text :global(th) { background: var(--carbune); color: var(--hartie); font-family: var(--font-titlu); font-weight: 600; letter-spacing: 0.03em; }
   .text :global(tbody tr:nth-child(even) td) { background: #faf8f4; }
+  /* A small symbol at the start of a cell, such as a warning light, sits above the cell's text. */
+  .text :global(td img) { width: 2.75rem; border-radius: 0.6rem; margin-bottom: 0.4em; }
   .text :global(hr) { border: 0; border-top: 1px solid var(--nisip); margin-block: 2.5em; }
 
   /* FAQ: each question opens its answer below it. */
