@@ -31,6 +31,10 @@ export default defineConfig({
       },
     }),
   ],
+  // The CSS goes into each page's <head>, so a phone can paint without waiting for two more requests.
+  build: {
+    inlineStylesheets: 'always',
+  },
   image: {
     layout: 'constrained',
     responsiveStyles: true,
