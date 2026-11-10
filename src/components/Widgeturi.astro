@@ -12,10 +12,16 @@
     const budgetOutput = finder.querySelector('[data-buget]')!;
     const counter = finder.querySelector('[data-numar]')!;
     const empty = finder.querySelector<HTMLElement>('[data-gol]')!;
+    const more = finder.querySelector<HTMLButtonElement>('[data-mai-mult]')!;
     const list = finder.querySelector('ul')!;
     const cards = [...list.querySelectorAll<HTMLElement>(':scope > .masina')];
     const groups = ['lista', 'rezerve', 'slabe'];
     const number = new Intl.NumberFormat('ro-RO');
+
+    // On a phone the full list is very long: the first matches show, a button shows the rest. Any filter change starts over.
+    const firstShown = 6;
+    let showAll = false;
+    let matching: HTMLElement[] = [];
 
     // Recommended cars first; within them, the ones the budget fully covers, then the ones that are easy to find, then the cheaper ones.
     const sortKey = (card: HTMLElement, budget: number) => [
@@ -27,7 +33,8 @@
     const byKey = (a: number[], b: number[]) => a.reduce((result, value, i) => result || value - b[i], 0);
 
     // Romanian counts: 1 mașină, 19 mașini, 20 de mașini.
-    const cars = (n: number) => (n === 1 ? '1 mașină se potrivește' : `${n}${n % 100 >= 20 ? ' de' : ''} mașini se potrivesc`);
+    const carCount = (n: number) => (n === 1 ? '1 mașină' : `${n}${n % 100 >= 20 ? ' de' : ''} mașini`);
+    const cars = (n: number) => `${carCount(n)} ${n === 1 ? 'se potrivește' : 'se potrivesc'}`;
 
     function update() {
       const filters = new FormData(form);
@@ -35,7 +42,7 @@
       const state = filters.get('stare');
       const type = filters.get('tip');
       const engine = filters.get('motor');
-      let shown = 0;
+      const matches = new Set<HTMLElement>();
 
       for (const card of cards) {
         const { stare, tip, motor = '', pret, pretDeLa } = card.dataset;
@@ -44,19 +51,40 @@
           (!type || tip === type) &&
           (!engine || motor.split(' ').includes(String(engine))) &&
           Number(pretDeLa) <= budget;
-        card.hidden = !match;
+        if (match) matches.add(card);
         // Used cars whose typical price is over budget: only the cheaper listings fit.
         card.querySelector<HTMLElement>('[data-peste-buget]')?.toggleAttribute('hidden', Number(pret) <= budget);
-        if (match) shown++;
       }
 
-      list.append(...[...cards].sort((a, b) => byKey(sortKey(a, budget), sortKey(b, budget))));
+      const sorted = [...cards].sort((a, b) => byKey(sortKey(a, budget), sortKey(b, budget)));
+      list.append(...sorted);
+      matching = sorted.filter((card) => matches.has(card));
+      for (const card of cards) card.hidden = !matches.has(card);
+      matching.forEach((card, i) => (card.hidden = !showAll && i >= firstShown));
+
+      const rest = showAll ? 0 : Math.max(0, matching.length - firstShown);
+      more.hidden = rest === 0;
+      more.textContent = `Arată încă ${carCount(rest)}`;
+
       budgetOutput.textContent = `${number.format(budget)} €`;
-      counter.textContent = shown ? cars(shown) : '';
-      empty.hidden = shown > 0;
+      // Only when it changes, so screen readers don't repeat it after "Arată încă".
+      const count = matching.length ? cars(matching.length) : '';
+      if (counter.textContent !== count) counter.textContent = count;
+      empty.hidden = matching.length > 0;
     }
 
-    form.addEventListener('input', update);
+    form.addEventListener('input', () => {
+      showAll = false;
+      update();
+    });
+    // The button disappears once pressed, so focus moves to the first car it brought in.
+    more.addEventListener('click', () => {
+      showAll = true;
+      update();
+      const name = matching[firstShown]?.querySelector<HTMLElement>('.masina__nume');
+      name?.setAttribute('tabindex', '-1');
+      name?.focus();
+    });
     form.addEventListener('submit', (event) => event.preventDefault());
     document.querySelector('.cautator-fara-js')?.remove();
     finder.hidden = false;
@@ -108,6 +136,20 @@
   .text .cautator .cautator__lista { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; }
   .text .cautator .cautator__lista > li { margin: 0; }
   .cautator-fara-js { color: var(--gri); font-style: italic; }
+  .cautator__mai-mult {
+    justify-self: start;
+    min-height: 2.75rem;
+    padding: 0.4em 1.25em;
+    border: 2px solid var(--carbune);
+    border-radius: 999px;
+    background: var(--alb);
+    color: var(--carbune);
+    font-family: var(--font-titlu);
+    font-weight: 700;
+    font-size: var(--text-mediu);
+    cursor: pointer;
+  }
+  .cautator__mai-mult:hover { border-color: var(--rosu); color: var(--rosu); }
 
   .masina {
     display: grid;

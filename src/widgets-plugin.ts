@@ -152,6 +152,7 @@ function finder({ modele, oferte, fotografii, folderFoto }: Data) {
       return card(offer, model, photo && { ...photo, fisier: folderFoto + photo.fisier });
     })
     .join('')}</ul>
+  <button type="button" class="cautator__mai-mult" data-mai-mult hidden></button>
   <p class="cautator__gol" data-gol hidden>Nicio mașină din listă nu se potrivește. Mărește bugetul sau alege „Oricare”.</p>
 </div>
 <p class="cautator-fara-js">Căutarea are nevoie de JavaScript. Modelele sunt descrise mai jos, pe bugete.</p>`;
@@ -203,7 +204,7 @@ function card(offer: Offer, model?: Model, photo?: Photo) {
       ${offer.deCe ? `<p><strong>De ce:</strong> ${esc(offer.deCe)}</p>` : ''}
       ${warning ? `<p><strong>Atenție la:</strong> ${esc(warning)}</p>` : ''}
       <p class="masina__linkuri">${links.join('')}</p>
-      ${photo ? `<p class="masina__credit">Foto: ${esc(photo.autor)}, <a href="${esc(photo.pagina)}">Wikimedia Commons</a>, <a href="${esc(photo.licentaUrl)}">${esc(photo.licenta)}</a></p>` : ''}
+      ${photo ? `<p class="masina__credit">Foto: ${esc(photo.autor)}, <a href="${esc(photo.pagina)}">Wikimedia Commons</a>, <a href="${esc(photo.licentaUrl)}">${esc(photo.licenta)}</a>, decupată și redimensionată</p>` : ''}
     </li>`;
 }
 
