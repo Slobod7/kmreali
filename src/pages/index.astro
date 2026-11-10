@@ -197,9 +197,18 @@ const jsonLd = [
 
   .noutati { display: grid; gap: 1.5rem; padding-top: clamp(2.5rem, 6vw, 4rem); }
 
-  /* The questions keep the width of an article's text, so the answers read like one. */
+  /* One column on phones; on wide screens two, filled row by row. Both questions in a row take its
+     height, so the lines under them meet; opening one only pushes down the rows below it. */
   .intrebari { padding-top: clamp(3rem, 7vw, 5rem); }
   .intrebari > :global(*) { max-width: var(--latime-text); }
   .intrebari :global(h2) { margin-bottom: 1rem; }
+  @media (min-width: 56rem) {
+    .intrebari { display: grid; grid-template-columns: 1fr 1fr; column-gap: clamp(2rem, 4vw, 3.5rem); align-content: start; }
+    .intrebari > :global(*) { max-width: none; }
+    .intrebari :global(h2) { grid-column: 1 / -1; }
+    /* Each question has only a bottom line; the first row also gets the top one. */
+    .intrebari :global(.intrebare) { border-top: 0; }
+    .intrebari :global(.intrebare:nth-of-type(-n + 2)) { border-top: 1px solid var(--nisip); }
+  }
   .intrebari :global(a) { text-decoration-color: var(--rosu); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 </style>
