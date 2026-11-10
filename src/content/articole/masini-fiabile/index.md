@@ -56,6 +56,8 @@ Tabelul de mai jos pune una lângă alta cele patru surse, pentru modelele din l
 
 ## Second hand sub 10.000 €
 
+Sub 10.000 € lista e scurtă: două mașini mici care ies foarte bine la What Car? și la ADAC, plus două variante pe care le găsești mai greu. Aici problema nu e fiabilitatea modelului, ci oferta: Swift-urile sunt puține pe Autovit, iar o Fabia de 2–4 ani are deja un kilometraj median de 99.000 km.
+
 ### Suzuki Swift (2017–2024)
 
 În sondajul What Car? 2026, Swift-ul din generația 2017–2024 are 100%, cea mai bună notă dintre mașinile mici. La TÜV e pe locul 6 la 6–7 ani (8,4%), iar la ADAC are pane puține în toți anii raportați. Suzuki e și cea mai fiabilă marcă din sondajul What Car? din acest an.
@@ -83,6 +85,8 @@ Proprietarii britanici îi dau 97,5% la What Car?, iar la ADAC Fabia apare print
 **Dacă găsești unul:** Mercedes B-Klasse e singurul model în top 10 TÜV la toate cele șase vârste. Pe Autovit am găsit însă doar 10 B 180 din 2015–2018, în jur de 8.500 €, cu 189.000 km în medie, și 7 din 2019–2022.
 
 ## Second hand 10.000–15.000 €
+
+Între 10.000 și 15.000 € alegerea e mai largă: trei SUV-uri mici și o compactă, de 5–10 ani, toate bine clasate în cel puțin două surse. Mazda CX-3, Suzuki Vitara și Audi Q2 ies bine la TÜV, iar Kia Ceed are cea mai bună notă dintre compacte la What Car?. Mașinile de pe Autovit au însă de obicei între 101.000 și 185.000 km, așa că istoricul de service contează mult.
 
 ### Mazda CX-3 (benzină, din 2015)
 
@@ -129,6 +133,8 @@ E pe locul 3 la TÜV la 4–5 ani și la 6–7 ani, are 98,5% la What Car? și p
 *Foto: Vauxford, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2017_Audi_Q2_Sport_TDi_1.6_Front.jpg), licență [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.ro). Fotografie redimensionată.*
 
 ## Second hand 15.000–20.000 €
+
+Între 15.000 și 20.000 € găsești trei SUV-uri și o compactă hibrid, de 2–9 ani. T-Roc e cel mai constant model din TÜV 2026, iar Skoda Karoq, Mazda CX-5 pe benzină și Toyota Corolla hibrid ies bine în cel puțin două surse. La bugetul ăsta contează mai ales motorul și cutia: DSG-ul la T-Roc și Karoq, benzina în loc de diesel la CX-5 și bateria de 12 V la Corolla.
 
 ### Volkswagen T-Roc (prima generație)
 
@@ -177,6 +183,8 @@ Pe Autovit sunt 93 de anunțuri din 2019–2021, cu un median de 17.000 € și 
 **Alternativă, cu rezerve:** Mazda3 pe benzină (din 2019) are kilometraje mai mici pe Autovit (33 de anunțuri din 2019–2022, cu un median de 16.500 € și 85.000 km), dar doar 90,8% la What Car?, iar ADAC trece anul 2020 pe lista problemelor.
 
 ## Second hand 20.000–30.000 €
+
+Între 20.000 și 30.000 € lista are doar SUV-uri de familie, iar datele sunt mai puține decât la bugetele mici. Doar Kia Sportage din generația nouă iese bine în două surse. Pentru Honda CR-V și Hyundai Tucson am găsit mai ales nota de la What Car?, iar Toyota RAV4 hibrid iese bine acolo, dar slab la ADAC.
 
 ### Kia Sportage (din 2022, a cincea generație)
 
