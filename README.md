@@ -57,3 +57,17 @@ Then open http://localhost:4321. `npm run build` makes the final site in `dist/`
 ## Publishing
 
 Every push to the `main` branch on GitHub rebuilds the site and publishes it (see `.github/workflows/deploy.yml`).
+
+## Search Console data
+
+`scripts/gsc.mjs` reads the site's Google Search Console data with a read-only service account (`kmreali-reader@km-reali.iam.gserviceaccount.com`, a Restricted user on the `kmreali.ro` Domain property). Its key lives outside this folder, in `~/.config/google/kmreali-key.json`, and must never be committed. With Node on the PATH (see above), from this folder:
+
+```bash
+node scripts/gsc.mjs query                         # top searches, last 28 days
+node scripts/gsc.mjs query --dims page             # top pages
+node scripts/gsc.mjs query --dims date             # clicks and impressions per day
+node scripts/gsc.mjs sitemaps                      # submitted sitemaps
+node scripts/gsc.mjs inspect https://kmreali.ro/   # is a page indexed, and why not
+```
+
+The comment at the top of `scripts/gsc.mjs` lists every option. The account can only read: submitting sitemaps and asking Google to index a page are done in Search Console itself.
