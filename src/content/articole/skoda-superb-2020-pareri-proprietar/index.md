@@ -39,7 +39,7 @@ Am cumpărat second hand un Skoda Superb 2020 cu motorul 2.0 TSI de 272 CP, trac
 
 ## Ce versiune am: Superb 3 facelift, 2.0 TSI 272 CP 4x4
 
-Mașina mea este a treia generație de Superb, în varianta facelift lansată în 2019. Versiunea de 272 CP cu 4x4 și DSG a fost vândută în 2019–2020; ulterior, Skoda a revenit la 280 CP pe același motor 2.0 TSI. Echiparea mea este Laurin & Klement, cu caroseria liftback (cea cu aspect de sedan), și are aproape tot ce se putea comanda: sistem audio Canton, suspensie adaptivă DCC, scaune față încălzite și ventilate și asistent de parcare care parchează mașina singur. Singura opțiune care îi lipsește este plafonul panoramic.
+Mașina mea este a treia generație de Superb, în varianta facelift lansată în 2019. Versiunea de 272 CP cu 4x4 și DSG a fost vândută în 2019–2020; ulterior, Skoda a revenit la 280 CP pe același motor 2.0 TSI. Echiparea mea este Laurin & Klement, cu caroseria liftback (cea cu aspect de sedan), și are aproape tot ce se putea comanda: sistem audio Canton, suspensie adaptivă DCC, scaune față încălzite și ventilate și asistent de parcare care parchează mașina singur. Singura opțiune care îi lipsește este plafonul panoramic. Ce diferă între L&K, Sportline și Style am explicat în [ghidul despre echipările Superb 3](/ghiduri/skoda-superb-sportline-vs-laurin-klement-vs-style/).
 
 | Specificație | Valoare |
 | --- | --- |
