@@ -4,6 +4,7 @@
 // Both come out as plain HTML; src/components/Widgeturi.astro styles them and makes the search work.
 import { readFileSync } from 'node:fs';
 import type { HastPluginDefinition } from 'satteri';
+import { externalAttributes } from './external-links.ts';
 
 type Level = 'bun' | 'mediu' | 'slab';
 type Note = [Level, string] | null;
@@ -186,7 +187,7 @@ function card(offer: Offer, model?: Model, photo?: Photo) {
 
   const links = [
     `<a href="#${esc(used && model ? model.sectiune : 'mașini-noi-sub-30000-')}">Detalii în articol</a>`,
-    `<a href="${esc(offer.link)}" rel="noopener">${used ? 'Anunțuri pe Autovit' : 'Site-ul oficial'}</a>`,
+    `<a href="${esc(offer.link)}" ${externalAttributes}>${used ? 'Anunțuri pe Autovit' : 'Site-ul oficial'}</a>`,
   ];
 
   return `
@@ -204,7 +205,7 @@ function card(offer: Offer, model?: Model, photo?: Photo) {
       ${offer.deCe ? `<p><strong>De ce:</strong> ${esc(offer.deCe)}</p>` : ''}
       ${warning ? `<p><strong>Atenție la:</strong> ${esc(warning)}</p>` : ''}
       <p class="masina__linkuri">${links.join('')}</p>
-      ${photo ? `<p class="masina__credit">Foto: ${esc(photo.autor)}, <a href="${esc(photo.pagina)}">Wikimedia Commons</a>, <a href="${esc(photo.licentaUrl)}">${esc(photo.licenta)}</a>, decupată și redimensionată</p>` : ''}
+      ${photo ? `<p class="masina__credit">Foto: ${esc(photo.autor)}, <a href="${esc(photo.pagina)}" ${externalAttributes}>Wikimedia Commons</a>, <a href="${esc(photo.licentaUrl)}" ${externalAttributes}>${esc(photo.licenta)}</a>, decupată și redimensionată</p>` : ''}
     </li>`;
 }
 

@@ -1,5 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { isFaqHeading } from './faq-plugin';
+import { externalAttributes, isExternal } from './external-links';
 import { url, type CategoryId } from './site';
 
 export type Article = CollectionEntry<'articole'>;
@@ -69,7 +70,9 @@ export function textWithLinks(markdown: string) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
-    .replace(/\[([^\]]+)\]\((https?:\/\/(?:[^()\s]|\([^()\s]*\))+)\)/g, '<a href="$2">$1</a>');
+    .replace(/\[([^\]]+)\]\((https?:\/\/(?:[^()\s]|\([^()\s]*\))+)\)/g, (_, text, href) =>
+      `<a href="${href}"${isExternal(href) ? ` ${externalAttributes}` : ''}>${text}</a>`,
+    );
 }
 
 /** Lowercase, without diacritics, so "Îmi place" and "Imi place" match. */

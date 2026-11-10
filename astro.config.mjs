@@ -5,6 +5,7 @@ import { satteri } from '@astrojs/markdown-satteri';
 import { site } from './src/site.ts';
 import { faqPlugin } from './src/faq-plugin.ts';
 import { widgetsPlugin } from './src/widgets-plugin.ts';
+import { externalLinksPlugin } from './src/external-links.ts';
 import { articleLastmods } from './src/sitemap-lastmod.ts';
 
 const lastmods = articleLastmods(process.env.BASE_PATH);
@@ -36,7 +37,7 @@ export default defineConfig({
   },
   markdown: {
     processor: satteri({
-      hastPlugins: [faqPlugin, widgetsPlugin],
+      hastPlugins: [faqPlugin, widgetsPlugin, externalLinksPlugin],
       // Romanian uses „…” quotes; keep whatever the author typed.
       features: { smartPunctuation: false },
     }),
