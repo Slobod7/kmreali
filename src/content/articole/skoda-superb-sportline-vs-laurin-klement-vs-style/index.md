@@ -5,8 +5,8 @@ seoTitle: "Skoda Superb Sportline vs L&K vs Style: ce să alegi"
 description: "Sportline, Laurin & Klement sau Style? Ce diferă cu adevărat la Skoda Superb 3 facelift: DCC, scaune, ventilație, jante, prețuri și ce verifici la mâna a doua."
 date: 2026-10-30
 category: ghiduri
-cover: ./skoda-superb-laurin-klement-2020-fata.webp
-coverAlt: "Skoda Superb Laurin & Klement 2020 neagră, văzută din față, cu inscripția Laurin & Klement pe aripă"
+cover: ./coperta-superb-echipari.webp
+coverAlt: "Ilustrație: cele trei echipări Skoda Superb 3 facelift puse una lângă alta, Style vs Sportline vs L&K"
 # Still to check (published 30 Oct 2026 before these were confirmed):
 #   the autovit.ro listing counts in "Cât costau noi și cât costă acum" (keyword search, 30 Oct 2026)
 #   whether Romanian-market Sportline cars had DCC as standard (no original Romanian price list found yet)

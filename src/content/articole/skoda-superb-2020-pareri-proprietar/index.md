@@ -5,8 +5,8 @@ seoTitle: "Skoda Superb 2020: păreri de proprietar după 40.000 km"
 description: "Am condus un Skoda Superb 2020 2.0 TSI 272 CP 4x4 aproape 40.000 km: consum real, probleme, costuri de întreținere și ce să verifici la cumpărare."
 date: 2026-10-29
 category: recenzii
-cover: ./skoda-superb-2020-pareri-proprietar.webp
-coverAlt: "Skoda Superb 2020 L&K neagră, 2.0 TSI 4x4, văzută din lateral-față într-o parcare"
+cover: ./coperta-superb-2020-proprietar.webp
+coverAlt: "Ilustrație: un Skoda Superb între două borne kilometrice, 80.000 și 120.000 km, adică 40.000 km cu mașina"
 # Photos still to add (put the file in this folder, then add it to the text):
 #   skoda-superb-2020-consum-virtual-cockpit.webp, replaces the fuel station photo in "Consum real"
 #   skoda-superb-2020-portbagaj-banchete-rabatate.webp, trunk with seats folded ("Spațiu și portbagaj")

@@ -5,9 +5,8 @@ seoTitle: "Martori bord Skoda: ce înseamnă fiecare și ce faci"
 description: "Ce înseamnă fiecare martor de bord Skoda, roșu sau galben, și ce faci când se aprinde: simbolurile și lista completă din manualul oficial Škoda."
 date: 2026-11-10
 category: ghiduri
-cover: ./skoda-octavia-3-bord-martori-aprinsi.webp
-coverAlt: "Bordul unei Skoda Octavia 3 RS cu contactul pus și motorul oprit: martorii EPC, de motor și ASR OFF aprinși galben, centura și frâna de parcare aprinse roșu, piciorul pe pedală aprins verde"
-coverCredit: "Foto copertă: Kickaffe (Mario von Berg), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2013_Skoda_Octavia_III_RS_(Typ_5E)_2.0_TSI_Kombiinstrument.JPG), licență [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.ro). Fotografie redimensionată."
+cover: ./coperta-martori-bord.webp
+coverAlt: "Ilustrație: martori de bord Skoda pe fundal închis, cei de motor, ulei, ABS, airbag, EPC și lichid de răcire aprinși"
 # Source for every light and message: Škoda's Romanian owner's manual for Superb 3, edition 11/2018
 # (model year 2019), pages 41–51. The colours were read from the manual's pages, not from other sites.
 # The Octavia 3 manual of the same month has the same list, plus CNG and Offroad lights.

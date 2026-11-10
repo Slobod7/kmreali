@@ -4,9 +4,8 @@ title: "Mașini fiabile 2026 – noi și second hand, sub 30.000 €"
 description: "Ce mașini fiabile poți lua în 2026 cu sub 30.000 €, noi sau second hand: modelele care ies bine la TÜV, ADAC și What Car?, cu prețuri din România."
 date: 2026-11-10
 category: topuri
-cover: ./vw-t-roc-1-5-tsi-fata.webp
-coverAlt: "Volkswagen T-Roc albastru din prima generație, cu motor 1.5 TSI, văzut din față pe o stradă"
-coverCredit: "Foto copertă: Vauxford, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2018_Volkswagen_T-Roc_SE_TSi_EVO_1.5_Front.jpg), licență [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.ro). Fotografie redimensionată."
+cover: ./coperta-masini-fiabile.webp
+coverAlt: "Ilustrație: trei mașini pe un drum, cea din mijloc roșie și bifată, deasupra textului „sub 30.000 €”"
 # When TÜV-Report 2027 is out: update the TÜV numbers in the text and in date.json, then set `updated:`.
 # Set to true to hide the article from the live site.
 draft: false
