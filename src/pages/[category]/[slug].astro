@@ -272,10 +272,11 @@ if (questions.length) {
   .text :global(li::marker) { color: var(--rosu); }
   .text :global(blockquote) { margin-inline: 0; padding-left: 1.25rem; border-left: 4px solid var(--rosu); color: var(--grafit); }
   .text :global(table) { width: 100%; border-collapse: collapse; font-size: 0.95em; background: var(--alb); }
-  .text :global(th), .text :global(td) { border: 1px solid var(--nisip); padding: 0.6em 0.85em; text-align: left; vertical-align: top; line-height: 1.4; }
+  /* A long word in a cell can carry a soft hyphen (&shy;): it only breaks there on a phone, so wider screens keep the table as it is. */
+  .text :global(th), .text :global(td) { border: 1px solid var(--nisip); padding: 0.6em 0.85em; text-align: left; vertical-align: top; line-height: 1.4; hyphens: none; }
   @media (max-width: 30rem) {
     .text :global(table) { font-size: 0.875em; }
-    .text :global(th), .text :global(td) { padding: 0.5em 0.55em; }
+    .text :global(th), .text :global(td) { padding: 0.5em 0.55em; hyphens: manual; }
     /* Four columns don't always fit a phone: the table scrolls sideways on its own, not the whole page. */
     .text :global(> table:has(th:nth-child(4))) { display: block; overflow-x: auto; }
   }

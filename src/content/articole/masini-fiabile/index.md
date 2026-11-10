@@ -7,25 +7,14 @@ category: topuri
 cover: ./vw-t-roc-1-5-tsi-fata.webp
 coverAlt: "Volkswagen T-Roc albastru din prima generație, cu motor 1.5 TSI, văzut din față pe o stradă"
 coverCredit: "Foto copertă: Vauxford, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2018_Volkswagen_T-Roc_SE_TSi_EVO_1.5_Front.jpg), licență [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.ro). Fotografie redimensionată."
-# Research: ~/Documents/ChatGPT/KMReali/research/masini-fiabile-research-2026-10-31.md (sources in masini-fiabile-surse/)
-# Still to check before publishing:
-#   Bogdan's OK on the Superb paragraph in "Mașini populare care nu ies bine" (it only uses facts from the Superb review)
-#   new-car prices on 1 Nov 2026 include promotions (Toyota Corolla sedan hybrid, Kia Stonic/Sportage); recheck the day it goes live
-#   Mazda list prices: mazda.ro does not say "TVA inclus" on the range page
-#   Suzuki prices: model names are missing from the PDF text; Swift/Vitara matched by engine and page order
-#   when TÜV-Report 2027 comes out (second half of November): update the TÜV numbers and set `updated:`
-# The search by budget and the sources table are built from date.json in this folder (see src/widgets-plugin.ts).
-#   When a price or a source changes, change it there too. After editing date.json, save this file once so the preview picks it up.
-# Photos that would make it better (put the file in this folder, then add it to the text):
-#   any of these cars owned by Bogdan, family or friends, with a short owner comment
-#   a 12 V battery test at a service ("Toyota: fiabilă, dar verifică bateria de 12 V")
+# When TÜV-Report 2027 is out: update the TÜV numbers in the text and in date.json, then set `updated:`.
 # Set to true to hide the article from the live site.
 draft: true
 ---
 
 Când întrebi ce mașină fiabilă să-ți iei, aproape toată lumea îți spune „ia o Toyota”. Datele din 2026 sunt mai nuanțate. Am pus cap la cap patru surse europene recente: inspecțiile tehnice din Germania (TÜV), panele la care a ieșit asistența rutieră ADAC și două sondaje cu proprietari din Marea Britanie (What Car? și Driver Power). Am păstrat doar modelele care ies bine în cel puțin două dintre ele și nu sunt la coada niciuneia.
 
-Apoi m-am uitat cât costă azi în România: pe Autovit pentru cele second hand și în listele oficiale de prețuri pentru cele noi. Prețurile sunt din 31 octombrie și 1 noiembrie 2026, iar bugetul e de cel mult 30.000 €.
+Apoi m-am uitat cât costă azi în România: pe Autovit pentru cele second hand și în listele oficiale de prețuri pentru cele noi. Prețurile sunt din 31 octombrie și 10 noiembrie 2026, iar bugetul e de cel mult 30.000 €.
 
 **Pe scurt**
 
@@ -47,7 +36,7 @@ Alege bugetul și ce fel de mașină vrei. Pentru cele second hand, prețul e me
 | Sursă | Ce măsoară | Ediția folosită |
 | --- | --- | --- |
 | [TÜV-Report 2026](https://www.tuvsud.com/de-de/publikationen/tuev-report/maengelzwerge-und-fehlerriesen) | câte mașini pică inspecția tehnică periodică din Germania (echivalentul ITP) cu defecte grave, pe vârste de la 2 la 13 ani | noiembrie 2025, aproximativ 9,5 milioane de inspecții |
-| [ADAC Pannenstatistik 2026](https://www.adac.de/rund-ums-fahrzeug/unfall-schaden-panne/adac-pannenstatistik-2026/) | la câte pane a ieșit ADAC, la 1.000 de mașini, pentru mașini de 2–9 ani | aprilie 2026, pane din 2025 |
+| [ADAC Pannen&shy;statistik 2026](https://www.adac.de/rund-ums-fahrzeug/unfall-schaden-panne/adac-pannenstatistik-2026/) | la câte pane a ieșit ADAC, la 1.000 de mașini, pentru mașini de 2–9 ani | aprilie 2026, pane din 2025 |
 | [What Car? Reliability Survey](https://www.whatcar.com/news/reliability-survey-most-reliable-cars-brands/n26159) | defectele raportate de proprietari în ultimii doi ani, cât au costat și cât a stat mașina în service, la mașini de până la 5 ani | octombrie 2026 |
 | [Driver Power](https://www.autoexpress.co.uk/best-cars-vans/91220/most-and-least-reliable-car-manufacturers-2026) | nota de fiabilitate dată de proprietari, pe mărci | august 2026 |
 
@@ -207,7 +196,7 @@ Sportage-ul nou e pe locul 8 la TÜV la 2–3 ani (4,0%) și are 96,5% la What C
 
 ## Mașini noi sub 30.000 €
 
-La o mașină nouă nu există încă date de fiabilitate: TÜV o vede prima dată după trei ani. Ce poți judeca e cum s-a descurcat generația anterioară sau același motor și cât de lungă e garanția. Prețurile de mai jos sunt de pe site-urile oficiale din România, cu TVA, pe 1 noiembrie 2026. Unele includ promoții care pot expira.
+La o mașină nouă nu există încă date de fiabilitate: TÜV o vede prima dată după trei ani. Ce poți judeca e cum s-a descurcat generația anterioară sau același motor și cât de lungă e garanția. Prețurile de mai jos sunt de pe site-urile oficiale din România, cu TVA, pe 10 noiembrie 2026. Unele includ promoții care pot expira.
 
 | Model | Preț de la | De ce | Atenție |
 | --- | --- | --- | --- |
@@ -217,13 +206,13 @@ La o mașină nouă nu există încă date de fiabilitate: TÜV o vede prima dat
 | Kia Stonic | 19.917 € după promoție | 96,4% la What Car?; garanție 7 ani | prețul de listă e 21.417 € |
 | Suzuki Vitara | 22.125 € | bine la TÜV, ADAC și What Car? | versiunea full hybrid are altă cutie |
 | Toyota Corolla sedan hibrid | 22.918 € după promoție | 96,5% la What Car?; garanție până la 10 ani, cu revizii la Toyota | bateria de 12 V (vezi mai jos); cea de 22.507 € e pe benzină |
-| Toyota Yaris Cross | 23.616 € | locul 4 la TÜV la 2–3 ani | pe lista problemelor ADAC în 2022–2023 |
+| Toyota Yaris Cross | 23.616 € după promoție | locul 4 la TÜV la 2–3 ani | pe lista problemelor ADAC în 2022–2023; prețul de listă e 25.123 € |
 | Mazda2 Hybrid | 23.680 € | Mazda 2 câștigă TÜV 2026; e un Yaris cu sigla Mazda | TÜV nu spune clar dacă premiul e al hibridului |
 | Honda Jazz hibrid | 25.990 € | 97,1% la What Car? | simulatorul de frână la cele din 2020–2022 (vezi mai jos) |
 | Kia Sportage | 26.308 € după promoție | locul 8 la TÜV la 2–3 ani; garanție 7 ani | fără promoție, 32.308 € |
 | Toyota Corolla hatchback hibrid | 26.835 € | ca la sedan | ca la sedan |
 
-Surse: [Toyota](https://www.toyota.ro/new-cars), [Skoda](https://www.skoda.ro/models/overview), [Suzuki](https://d2m726zkydqemy.cloudfront.net//Lista%20preturi_01.10.2026.pdf), [Kia](https://www.kia.ro/), [Mazda](https://www.mazda.ro/modele/), [Honda](https://hondatrading.ro/). Prețurile nu includ ecotichetul Rabla. Programul pentru persoane fizice e deschis până pe 31 decembrie 2026 sau până se termină banii ([Wall-Street.ro](https://www.wall-street.ro/articol/auto/programul-rabla-2026-pentru-persoane-fizice-incepe-pe-20-iulie.html)).
+Surse: [Toyota](https://www.toyota.ro/new-cars), [Skoda](https://www.skoda.ro/models/overview), [Suzuki](https://d2m726zkydqemy.cloudfront.net//Lista%20preturi_06.11.2026.pdf), [Kia](https://www.kia.ro/), [Mazda](https://www.mazda.ro/modele/), [Honda](https://hondatrading.ro/). Prețurile nu includ ecotichetul Rabla. Programul pentru persoane fizice e deschis până pe 31 decembrie 2026 sau până se termină banii ([Wall-Street.ro](https://www.wall-street.ro/articol/auto/programul-rabla-2026-pentru-persoane-fizice-incepe-pe-20-iulie.html)).
 
 **Honda Jazz și simulatorul de frână:** în decembrie 2023, Honda a anunțat în Japonia o remediere pentru mașini produse între iulie 2018 și martie 2022, printre care și Jazz (Fit). Senzorul de presiune din simulatorul de frână se poate coroda, se aprinde un martor și pedala devine mai grea; remedierea e un simulator nou ([Honda Japonia](https://www.honda.co.jp/recall/auto/info/231208_683.html)). În Marea Britanie, proprietarii de Jazz hibrid din 2020 au primit scrisori că piesa se schimbă gratuit ([ClubJazz](https://clubjazz.org/forum/index.php?topic=17262.0)). Un Jazz nou, produs după martie 2022, nu intră în această remediere; la unul second hand, cere la dealer verificarea după VIN.
 
