@@ -123,6 +123,33 @@ a.categorie:hover { text-decoration: underline; text-decoration-thickness: 2px; 
   font-size: var(--text-mare);
 }
 
+/* FAQ, in articles and on the homepage: each question opens its answer below it (src/faq-plugin.ts). */
+.intrebare { border-block: 1px solid var(--nisip); }
+.intrebare + .intrebare { border-top: 0; }
+.intrebare summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding-block: 0.9rem;
+  font-weight: 600;
+  list-style: none;
+  cursor: pointer;
+}
+.intrebare summary::-webkit-details-marker { display: none; }
+.intrebare summary:hover { color: var(--rosu); }
+.intrebare summary::after {
+  content: '+';
+  flex: none;
+  color: var(--rosu);
+  font-family: var(--font-titlu);
+  font-weight: 700;
+  font-size: 1.4em;
+  line-height: 1;
+}
+.intrebare[open] summary::after { content: '−'; }
+.intrebare p { padding-bottom: 1.1rem; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }

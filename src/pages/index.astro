@@ -2,17 +2,17 @@
 import Base from '../layouts/Base.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import logo from '../assets/brand/kmreali-logo.svg';
-import { articleUrl, getArticles } from '../articles';
+import { faq, getArticles } from '../articles';
 import { site, url } from '../site';
+import * as homepageFaq from '../content/acasa/intrebari-frecvente.md';
 
-const allArticles = await getArticles();
-const articles = allArticles.slice(0, 9);
+const articles = (await getArticles()).slice(0, 9);
 
-// The budget buttons open the search in Mașini fiabile with that budget already set (see src/components/Widgeturi.astro).
-// The amounts match the article's budget headings; under 10.000 € the search finds only one to three cars.
-const reliableCars = allArticles.find((article) => article.id === 'masini-fiabile');
-const budgets = [10000, 15000, 20000, 30000];
-const euro = new Intl.NumberFormat('ro-RO');
+// The questions under the articles are written like an article's "Întrebări frecvente" section,
+// so they open on click the same way (src/faq-plugin.ts) and go into the same FAQPage schema.
+const { Content: FaqText } = homepageFaq;
+const questions = faq(homepageFaq.rawContent());
+const faqHeadingId = homepageFaq.getHeadings()[0]?.slug;
 
 const jsonLd = [
   {
@@ -29,6 +29,16 @@ const jsonLd = [
     name: site.name,
     url: Astro.site?.href,
     logo: new URL(logo.src, Astro.site).href,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'ro-RO',
+    mainEntity: questions.map(({ question, answer }) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: { '@type': 'Answer', text: answer },
+    })),
   },
 ];
 ---
@@ -58,34 +68,6 @@ const jsonLd = [
     </div>
   </section>
 
-  {
-    reliableCars && (
-      <section class="container buget" aria-labelledby="buget-titlu">
-        <div class="buget__card">
-          <div class="buget__text">
-            <h2 id="buget-titlu">Ce mașină fiabilă iei cu bugetul tău?</h2>
-            <p>
-              Alege suma și vezi modelele din <a href={articleUrl(reliableCars)}>{reliableCars.data.title.split(' – ')[0]}</a>:
-              noi sau second hand, cele care ies bine la TÜV, ADAC și What Car?, cu prețuri din România.
-            </p>
-          </div>
-          <div class="buget__alegere">
-            <p class="buget__eticheta" id="buget-eticheta">Buget maxim</p>
-            <ul class="buget__optiuni" aria-labelledby="buget-eticheta">
-              {budgets.map((budget) => (
-                <li>
-                  <a href={`${articleUrl(reliableCars)}?buget=${budget}#caută-după-buget`}>
-                    <span>până la</span> {euro.format(budget)} €
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
   <section class="container noutati" aria-labelledby="noutati-titlu">
     <h2 id="noutati-titlu">Cele mai noi articole</h2>
     {
@@ -99,6 +81,10 @@ const jsonLd = [
         <p class="gol">Primele articole apar în curând.</p>
       )
     }
+  </section>
+
+  <section class="container intrebari" aria-labelledby={faqHeadingId}>
+    <FaqText />
   </section>
 </Base>
 
@@ -208,50 +194,11 @@ const jsonLd = [
     .stalp { margin-top: 0; font-size: clamp(1.15rem, 0.1rem + 1.9vw, 2.1rem); }
   }
 
-  /* The way into Mașini fiabile by budget: a card like the search it opens, with one button per amount. */
-  .buget { padding-top: clamp(2.5rem, 6vw, 4rem); }
-  .buget__card {
-    display: grid;
-    gap: 1.5rem;
-    background: var(--alb);
-    border: 1px solid var(--nisip);
-    border-radius: 8px;
-    padding: clamp(1.25rem, 3vw, 2rem);
-  }
-  .buget__text { display: grid; gap: 0.6rem; max-width: 36rem; }
-  .buget__text p { color: var(--grafit); }
-  .buget__text a { font-weight: 600; text-decoration-color: var(--rosu); text-decoration-thickness: 2px; text-underline-offset: 3px; }
-  .buget__eticheta { margin-bottom: 0.5rem; font-family: var(--font-titlu); font-weight: 700; font-size: var(--text-mediu); }
-  .buget__optiuni {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.6rem;
-  }
-  .buget__optiuni a {
-    display: grid;
-    justify-items: center;
-    padding: 0.55rem 0.75rem 0.65rem;
-    border: 2px solid var(--carbune);
-    border-radius: 6px;
-    background: var(--hartie);
-    font-family: var(--font-titlu);
-    font-weight: 800;
-    font-size: var(--text-mare);
-    line-height: 1.1;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  .buget__optiuni a span { font-family: var(--font-text); font-weight: 400; font-size: var(--text-mic); color: var(--gri); }
-  .buget__optiuni a:hover { border-color: var(--rosu); }
-
-  /* Wide screens: the text on the left, the four amounts in one row on the right. */
-  @media (min-width: 60rem) {
-    .buget__card { grid-template-columns: minmax(0, 1fr) auto; align-items: end; column-gap: clamp(2rem, 5vw, 4rem); }
-    .buget__optiuni { grid-template-columns: repeat(4, minmax(6.5rem, auto)); }
-  }
-
   .noutati { display: grid; gap: 1.5rem; padding-top: clamp(2.5rem, 6vw, 4rem); }
+
+  /* The questions keep the width of an article's text, so the answers read like one. */
+  .intrebari { padding-top: clamp(3rem, 7vw, 5rem); }
+  .intrebari > :global(*) { max-width: var(--latime-text); }
+  .intrebari :global(h2) { margin-bottom: 1rem; }
+  .intrebari :global(a) { text-decoration-color: var(--rosu); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 </style>

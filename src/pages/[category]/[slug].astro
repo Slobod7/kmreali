@@ -286,30 +286,6 @@ if (questions.length) {
   .text :global(td img) { width: 2.75rem; border-radius: 0.6rem; margin-bottom: 0.4em; }
   .text :global(hr) { border: 0; border-top: 1px solid var(--nisip); margin-block: 2.5em; }
 
-  /* FAQ: each question opens its answer below it. */
-  .text :global(.intrebare) { border-block: 1px solid var(--nisip); }
-  .text :global(.intrebare + .intrebare) { margin-top: 0; border-top: 0; }
-  .text :global(.intrebare summary) {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
-    padding-block: 0.9rem;
-    font-weight: 600;
-    list-style: none;
-    cursor: pointer;
-  }
-  .text :global(.intrebare summary::-webkit-details-marker) { display: none; }
-  .text :global(.intrebare summary:hover) { color: var(--rosu); }
-  .text :global(.intrebare summary::after) {
-    content: '+';
-    flex: none;
-    color: var(--rosu);
-    font-family: var(--font-titlu);
-    font-weight: 700;
-    font-size: 1.4em;
-    line-height: 1;
-  }
-  .text :global(.intrebare[open] summary::after) { content: '−'; }
-  .text :global(.intrebare p) { padding-bottom: 1.1rem; }
+  /* FAQ: the questions are styled in global.css. Here they only drop the space the text puts between blocks. */
+  .text :global(.intrebare + .intrebare) { margin-top: 0; }
 </style>
