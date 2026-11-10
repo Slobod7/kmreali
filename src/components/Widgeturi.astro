@@ -86,6 +86,11 @@
       name?.focus();
     });
     form.addEventListener('submit', (event) => event.preventDefault());
+
+    // A link can choose the starting budget, e.g. the homepage's ?buget=10000. The slider keeps it within its range and step.
+    const preset = Number(new URLSearchParams(location.search).get('buget'));
+    if (preset > 0) form.querySelector<HTMLInputElement>('input[name="buget"]')!.value = String(preset);
+
     document.querySelector('.cautator-fara-js')?.remove();
     finder.hidden = false;
     update();
