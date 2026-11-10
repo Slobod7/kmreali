@@ -186,7 +186,7 @@ Așa compar eu două mașini concrete: diferența de preț cerut plus cheltuieli
 
 **Style** merită dacă vrei banii cei mai bine cheltuiți. Alege exemplarul după opțiunile pe care le are, nu după nume. Un Style cu DCC, piele și pilot automat adaptiv poate fi o alegere mai bună decât un L&K de bază.
 
-Despre cum se comportă Superb-ul meu L&K în viața de zi cu zi, cât consumă și ce s-a stricat am scris în [recenzia după 40.000 km](/recenzii/skoda-superb-2020-pareri-proprietar/).
+Despre cum se comportă Superb-ul meu L&K în viața de zi cu zi, cât consumă și ce s-a stricat am scris în [recenzia după 40.000 km](/recenzii/skoda-superb-2020-pareri-proprietar/). Dacă încă alegi între mai multe modele, în [Mașini fiabile 2026](/topuri/masini-fiabile/) găsești mașinile noi și second hand sub 30.000 € care ies bine în statisticile de fiabilitate, cu prețuri din România.
 
 ## Superb 3 dinainte de facelift și Superb 4
 

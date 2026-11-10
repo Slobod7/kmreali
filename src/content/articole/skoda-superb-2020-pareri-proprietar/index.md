@@ -138,6 +138,8 @@ Iată ce semnalează rapoartele de fiabilitate pentru Superb 3 cu 2.0 TSI ([Car 
 - **Hayonul electric:** amortizoarele electrice pot ceda. Înlocuire: 600–800 € perechea.
 - **Jantele diamantate:** lacul se poate coji după 2–4 ani; problema e doar estetică.
 
+Ca să compari cu alte mașini, în [Mașini fiabile 2026](/topuri/masini-fiabile/) am adunat ce spun TÜV, ADAC, What Car? și Driver Power despre modelele noi și second hand sub 30.000 €.
+
 ## Ce spun alți proprietari pe forumuri
 
 Am citit discuțiile proprietarilor de Superb 3 cu 2.0 TSI 4x4 de pe forumuri din România și din Marea Britanie. Concluzia generală seamănă cu a mea: mașina e foarte apreciată, cu condiția să nu faci economie la întreținere.

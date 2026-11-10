@@ -2,14 +2,14 @@
 title: "Mașini fiabile 2026 – noi și second hand, sub 30.000 €"
 # Shown in Google results and on the article card. Aim for 140–160 characters.
 description: "Ce mașini fiabile poți lua în 2026 cu sub 30.000 €, noi sau second hand: modelele care ies bine la TÜV, ADAC și What Car?, cu prețuri din România."
-date: 2026-11-01
+date: 2026-11-10
 category: topuri
 cover: ./vw-t-roc-1-5-tsi-fata.webp
 coverAlt: "Volkswagen T-Roc albastru din prima generație, cu motor 1.5 TSI, văzut din față pe o stradă"
 coverCredit: "Foto copertă: Vauxford, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2018_Volkswagen_T-Roc_SE_TSi_EVO_1.5_Front.jpg), licență [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.ro). Fotografie redimensionată."
 # When TÜV-Report 2027 is out: update the TÜV numbers in the text and in date.json, then set `updated:`.
 # Set to true to hide the article from the live site.
-draft: true
+draft: false
 ---
 
 Când întrebi ce mașină fiabilă să-ți iei, aproape toată lumea îți spune „ia o Toyota”. Datele din 2026 sunt mai nuanțate. Am pus cap la cap patru surse europene recente: inspecțiile tehnice din Germania (TÜV), panele la care a ieșit asistența rutieră ADAC și două sondaje cu proprietari din Marea Britanie (What Car? și Driver Power). Am păstrat doar modelele care ies bine în cel puțin două dintre ele și nu sunt la coada niciuneia.
