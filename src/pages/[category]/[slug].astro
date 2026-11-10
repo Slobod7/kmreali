@@ -135,7 +135,16 @@ if (questions.length) {
 
     <div class="container">
       <figure class="articol-figura">
-        <Image class="articol-coperta" src={cover} alt={coverAlt} priority widths={[640, 960, 1280, 1600]} sizes="(min-width: 75rem) 75rem, 100vw" />
+        {/* sizes follows .container: 75rem at most, less the --margine gutters (1rem, then 4vw, then 2.5rem).
+            720 covers a 412px phone at 1.75x (Lighthouse's test phone), which used to load the 960 file. */}
+        <Image
+          class="articol-coperta"
+          src={cover}
+          alt={coverAlt}
+          priority
+          widths={[640, 720, 960, 1280, 1600]}
+          sizes="(min-width: 80rem) 75rem, (min-width: 62.5rem) calc(100vw - 5rem), (min-width: 25rem) 92vw, calc(100vw - 2rem)"
+        />
         {coverCredit && <figcaption set:html={textWithLinks(coverCredit)} />}
       </figure>
     </div>
