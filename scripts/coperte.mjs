@@ -209,6 +209,34 @@ const coperte = {
       return pagina(c.carbune, icoane);
     },
   },
+
+  // Review: the Superb on a snowy road at night, with the 4x4 badge on the highlighter.
+  'skoda-superb-4x4': {
+    fisier: 'coperta-superb-4x4.webp',
+    html: () => {
+      const sol = 690;
+      // Fixed pseudo-random snowflakes, so the cover is the same on every run.
+      let seed = 7;
+      const rnd = () => ((seed = (seed * 9301 + 49297) % 233280) / 233280);
+      const fulgi = Array.from({ length: 90 }, () => {
+        const x = Math.round(rnd() * 1600);
+        const y = Math.round(rnd() * (sol - 20));
+        const r = (2 + rnd() * 5).toFixed(1);
+        return `<circle cx="${x}" cy="${y}" r="${r}" fill="${c.alb}" opacity="${(0.35 + rnd() * 0.5).toFixed(2)}"/>`;
+      }).join('');
+      return pagina(
+        c.carbune,
+        `
+        ${fulgi}
+        <path d="M0 ${sol} Q400 ${sol - 26} 800 ${sol - 10} T1600 ${sol - 18} L1600 900 L0 900 Z" fill="${c.hartie}"/>
+        ${[0, 1, 2, 3, 4, 5, 6].map((i) => `<rect x="${20 + i * 240}" y="${sol + 96}" width="130" height="12" fill="${c.nisip}"/>`).join('')}
+        ${masina({ tip: 'liftback', x: 380, sol, w: 840, culoare: c.rosu })}
+        <rect x="610" y="120" width="380" height="170" fill="${c.evidentiator}"/>
+        ${text(800, 258, 170, '4x4', { anchor: 'middle' })}
+      `,
+      );
+    },
+  },
 };
 
 // ---------- Render ----------
