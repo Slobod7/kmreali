@@ -1,0 +1,75 @@
+# Refreshes the fuel prices behind /preturi-carburanti-europa/ from the European Commission's Weekly Oil Bulletin.
+# Countries report on Wednesdays and the bulletin goes out on Thursdays, so the first run is Thursday afternoon
+# and Friday morning retries a late bulletin. A new edition is committed to main and the deploy is started.
+name: Actualizează prețurile carburanților
+
+on:
+  schedule:
+    - cron: '17 15 * * 4' # Thursday 15:17 UTC
+    - cron: '17 7 * * 5' # Friday 07:17 UTC, retry
+  workflow_dispatch:
+
+permissions:
+  contents: write # commit the new edition
+  actions: write # start deploy.yml: pushes made with GITHUB_TOKEN don't trigger workflows
+
+concurrency:
+  group: carburanti
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install openpyxl==3.1.5
+
+      # Exits nonzero and leaves current.json alone when a check fails or the next bulletin is more than 10 days late.
+      - id: refresh
+        name: Refresh the data
+        shell: bash
+        run: |
+          python scripts/carburanti/refresh.py --download 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          git add -- data/carburanti/current.json data/carburanti/editions
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --cached --stat
+          fi
+
+      # The downloaded workbooks, to see what a failed check was looking at, or where an edition came from.
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: surse-carburanti
+          path: data/carburanti/raw/
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - uses: actions/setup-node@v4
+        if: steps.refresh.outputs.changed == 'true'
+        with:
+          node-version: 26
+          cache: npm
+      - name: Build the site as a check
+        if: steps.refresh.outputs.changed == 'true'
+        run: npm ci && npm run build
+
+      # Only from main, so a run started on another branch never pushes that branch's commits.
+      - name: Commit the new edition and deploy
+        if: steps.refresh.outputs.changed == 'true' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          week=$(python -c "import json; print(json.load(open('data/carburanti/current.json'))['week'])")
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "Update fuel prices to the week of $week"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          gh workflow run deploy.yml --ref main
