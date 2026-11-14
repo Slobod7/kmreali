@@ -71,3 +71,15 @@ node scripts/gsc.mjs inspect https://kmreali.ro/   # is a page indexed, and why 
 ```
 
 The comment at the top of `scripts/gsc.mjs` lists every option. The account can only read: submitting sitemaps and asking Google to index a page are done in Search Console itself.
+
+## „100 de lei prin Europa”
+
+The fuel comparison lives at `/preturi-carburanti-europa/`: a hub with a calculator, a map and a ranking, one page per EU country, a methodology page and a chart other sites can embed. The pages are Astro templates (`src/pages/preturi-carburanti-europa/`), the shared sums are in `src/carburanti/calcule.ts` and the browser script is `src/scripts/carburanti.ts`. Each page carries only the prices it needs; the full editions are published at `/carburanti/data/` for dated links and the embed.
+
+The data is in `data/carburanti/`: `current.json` is the edition the site shows and `editions/` keeps every published one, so a dated link (`?rev=…&week=…`) keeps showing the numbers it was shared with. To refresh it, install Python 3 and `openpyxl`, then run:
+
+```bash
+python3 scripts/carburanti/refresh.py --download
+```
+
+The script downloads the European Commission's Weekly Oil Bulletin workbooks and the ECB exchange rates, checks dates, units, the 27 countries and unusual jumps, and keeps the previous edition if anything fails. Then run `npm run build`, look at the pages and commit `data/carburanti/`. The downloaded workbooks stay in `data/carburanti/raw/` and `data/carburanti/sources/`, which git ignores. Nothing refreshes the data on its own yet: the pages show the week of the last refresh.

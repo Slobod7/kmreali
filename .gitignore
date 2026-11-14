@@ -3,3 +3,8 @@ dist/
 .astro/
 .DS_Store
 .claude/
+
+# Fuel prices (src/pages/preturi-carburanti-europa): the downloaded workbooks stay on the computer that refreshes the data.
+data/carburanti/raw/
+data/carburanti/sources/
+__pycache__/

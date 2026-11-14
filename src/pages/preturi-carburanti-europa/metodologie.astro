@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import { editie } from '../../carburanti/date';
+import { zi } from '../../carburanti/calcule';
+import { url } from '../../site';
+import '../../styles/carburanti.css';
+---
+
+<Base
+  title="Cum calculăm distanța cu 100 de lei"
+  description="De unde vin prețurile la carburanți din „100 de lei prin Europa”, cum le transformăm în lei și cum calculăm distanța, costul drumului și taxele."
+>
+  <div class="carburanti">
+    <article class="container tara-antet metodologie">
+      <a class="inapoi" href={url('preturi-carburanti-europa/')}>← 100 de lei prin Europa</a>
+      <span class="eticheta">Metodologie</span>
+      <h1>Cum calculăm <span class="evidentiat">distanța.</span></h1>
+      <p class="intro">Aceeași sumă, aceleași ipoteze, prețuri naționale comparabile.</p>
+
+      <h2>Sursele</h2>
+      <p>Folosim media națională a prețurilor cu taxe și fără taxe din <a href="https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en">Weekly Oil Bulletin</a>, buletinul săptămânal al Comisiei Europene, pentru benzina 95 și motorină. Comisia publică prețurile în euro pentru 1.000 de litri.</p>
+      <p>Le transformăm în lei cu <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html">cursul de referință al BCE</a> din ziua buletinului sau, dacă în ziua aceea nu s-a publicat curs, din ultima zi de dinainte. Pentru România, Comisia explică de unde ia prețurile în <a href="https://energy.ec.europa.eu/document/download/5c167af7-eaff-4fb3-a0e7-9e8b51669852_en?filename=2018_romania_notes.pdf">nota metodologică pentru România</a>.</p>
+
+      <h2>Formula</h2>
+      <p class="formula">Prețul în lei pe litru = prețul în euro pentru 1.000 l ÷ 1.000 × cursul lei pentru un euro</p>
+      <p class="formula">Distanța = 100 de lei ÷ prețul în lei pe litru × 100 ÷ consumul în l/100 km</p>
+      <p>Răspunsul publicat pe fiecare pagină de țară folosește benzina 95 și un consum de 6,5 l/100 km. Calculele personale folosesc consumul și carburantul pe care le alegi tu.</p>
+      <p>Taxele sunt diferența dintre prețul cu taxe și cel fără taxe, pentru aceeași săptămână și același carburant. Le arătăm doar când ambele prețuri există și prețul fără taxe nu e mai mare decât cel cu taxe.</p>
+
+      <h2>Ce trebuie să știi</h2>
+      <p>Sunt medii naționale, nu prețuri de la o anumită benzinărie și nu prețuri în timp real. Când Comisia nu are un preț pentru o țară, scriem „Fără date”, nu estimăm. Dacă buletinul săptămânii și fișierul cu istoricul dau valori diferite pentru aceeași săptămână, folosim buletinul săptămânii.</p>
+      <p>Fiecare ediție a datelor rămâne publicată, așa că un link datat arată mereu cifrele cu care a fost trimis. Ediția curentă este cea din săptămâna de {zi(editie.week)}.</p>
+    </article>
+  </div>
+</Base>

@@ -1,0 +1,284 @@
+/* „100 de lei prin Europa”: the fuel pages. Built from the site's own pieces: white cards with a sand edge,
+   the yellow button, pills for choices, carbon table headers, red labels. Everything sits under .carburanti. */
+
+.carburanti { padding-bottom: clamp(3rem, 8vw, 5rem); }
+.carburanti [hidden] { display: none !important; }
+:where(.carburanti) :where(button, input, select) { font: inherit; color: inherit; }
+.carburanti button { cursor: pointer; }
+.carburanti h2 { font-size: clamp(1.6rem, 1.4rem + 0.9vw, 2.1rem); }
+/* The highlighter in a title needs a little air, or it covers the line above. */
+.carburanti h1 { line-height: 1.1; }
+.carburanti a:not(.buton, .tari__lista a) { text-decoration-color: var(--rosu); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+
+/* Small red label above a title, like the category above an article title. */
+.eticheta {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-titlu);
+  font-weight: 700;
+  font-size: var(--text-mic);
+  letter-spacing: 0.02em;
+  color: var(--rosu);
+}
+.discret { color: var(--gri); font-size: var(--text-mic); line-height: 1.5; }
+
+.card {
+  background: var(--alb);
+  border: 1px solid var(--nisip);
+  border-radius: 8px;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+/* Buttons: the yellow one for the main action, outlined pills for the rest, underlined text for small actions. */
+.buton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 1.25rem 0.65rem;
+  background: var(--evidentiator);
+  color: var(--carbune);
+  border: 3px solid var(--carbune);
+  border-radius: 4px;
+  font-family: var(--font-titlu);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.buton:hover { background: var(--carbune); color: var(--evidentiator); }
+.buton--lat { display: flex; width: 100%; }
+.pastila {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  min-height: 2.75rem;
+  padding: 0.35em 1.1em;
+  border: 2px solid var(--carbune);
+  border-radius: 999px;
+  background: var(--alb);
+  color: var(--carbune);
+  font-family: var(--font-titlu);
+  font-weight: 700;
+  font-size: var(--text-mediu);
+  line-height: 1.2;
+  text-decoration: none;
+}
+.pastila:hover { border-color: var(--rosu); color: var(--rosu); }
+.legatura {
+  padding: 0.5rem 0;
+  border: 0;
+  background: none;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--rosu);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.legatura:hover { color: var(--rosu); }
+.actiuni { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.5rem; }
+
+/* Form fields */
+.camp label, .camp legend { display: block; margin-bottom: 0.35rem; font-weight: 600; font-size: var(--text-mic); }
+.camp label span { font-weight: 400; color: var(--gri); }
+.camp fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.cu-unitate { display: flex; align-items: center; background: var(--alb); border: 1px solid var(--gri-deschis); border-radius: 6px; }
+.cu-unitate:focus-within { border-color: var(--carbune); outline: 3px solid var(--rosu); outline-offset: 2px; }
+.cu-unitate input { flex: 1; min-width: 0; padding: 0.6rem 0.75rem; border: 0; background: transparent; outline: 0; font-size: var(--text-mediu); }
+.cu-unitate span { padding-right: 0.75rem; color: var(--gri); font-size: var(--text-mic); white-space: nowrap; }
+.cu-unitate:has([aria-invalid='true']) { border-color: var(--rosu); }
+.carburanti select, .carburanti input[list] {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  background: var(--alb);
+  border: 1px solid var(--gri-deschis);
+  border-radius: 6px;
+  font-size: var(--text-mediu);
+}
+.carburanti select:focus-visible, .carburanti input[list]:focus-visible { border-color: var(--carbune); }
+.eroare { margin-top: 0.4rem; color: var(--rosu); font-weight: 600; font-size: var(--text-mic); }
+.eroare:empty { display: none; }
+
+/* Choices as pills, like the filters in the car finder. */
+.optiuni { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.optiuni label { position: relative; margin: 0; font-weight: 400; }
+.optiuni input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+.optiuni span {
+  display: inline-block;
+  padding: 0.4em 1em;
+  border: 1px solid var(--gri-deschis);
+  border-radius: 999px;
+  background: var(--hartie);
+  font-size: var(--text-mic);
+}
+.optiuni input:checked + span { background: var(--carbune); border-color: var(--carbune); color: var(--hartie); }
+.optiuni input:focus-visible + span { outline: 3px solid var(--rosu); outline-offset: 2px; }
+.optiuni button {
+  padding: 0.4em 1em;
+  border: 1px solid var(--gri-deschis);
+  border-radius: 999px;
+  background: var(--hartie);
+  font-size: var(--text-mic);
+}
+.optiuni button:hover { border-color: var(--carbune); }
+.optiuni button[aria-pressed='true'] { background: var(--carbune); border-color: var(--carbune); color: var(--hartie); }
+
+/* Tables, as in articles */
+.tabel { overflow-x: auto; margin-top: 1rem; border-radius: 6px; }
+.tabel table { width: 100%; border-collapse: collapse; background: var(--alb); font-size: var(--text-mic); }
+.tabel :is(th, td) { border: 1px solid var(--nisip); padding: 0.6em 0.85em; text-align: left; line-height: 1.4; white-space: nowrap; }
+.tabel thead th { white-space: normal; background: var(--carbune); color: var(--hartie); font-family: var(--font-titlu); font-weight: 600; letter-spacing: 0.03em; }
+.tabel tbody tr:nth-child(even) :is(td, th) { background: #faf8f4; }
+.tabel tbody th { font-weight: 600; }
+.tabel .numeric { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ---------- Hub ---------- */
+.carb-erou { border-bottom: 1px solid var(--nisip); }
+.carb-erou__rand {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(20rem, 27rem);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+}
+.carb-erou h1 { font-size: clamp(3rem, 2rem + 4.5vw, 5.25rem); margin-bottom: 1.25rem; }
+.carb-erou__intrebare { font-family: var(--font-titlu); font-weight: 700; font-size: var(--text-mare); line-height: 1.2; }
+.carb-erou__intro { margin-top: 0.75rem; max-width: 30rem; color: var(--grafit); font-size: var(--text-mare); line-height: 1.45; }
+.carb-erou__semn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--rosu);
+  font-family: var(--font-titlu);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.carb-erou__semn strong { font-size: 2.8rem; font-weight: 800; line-height: 1; }
+
+.calcul { display: grid; gap: 1.1rem; border-top: 6px solid var(--rosu); }
+.calcul__cap { display: flex; justify-content: space-between; align-items: baseline; }
+.calcul__cap .eticheta { margin: 0; }
+.calcul__pas { font-family: var(--font-titlu); font-weight: 700; font-size: var(--text-mic); color: var(--gri); }
+.calcul h2 { margin-top: -0.4rem; }
+
+.rezultate { padding-top: clamp(2.5rem, 6vw, 4rem); scroll-margin-top: 1rem; }
+.cap-sectiune { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 0.75rem 1.5rem; }
+.cap-sectiune p { color: var(--gri); }
+.insigna { padding: 0.35rem 0.8rem; border: 1px solid var(--gri-deschis); border-radius: 999px; background: var(--alb); font-size: var(--text-mic); white-space: nowrap; }
+
+.harta-rand { display: grid; grid-template-columns: minmax(0, 1fr) 22rem; gap: 1rem; margin-top: 1.5rem; align-items: start; }
+.harta { background: var(--alb); border: 1px solid var(--nisip); border-radius: 8px; padding: 1rem 1.25rem; min-width: 0; }
+.harta__cap { display: flex; justify-content: space-between; gap: 1rem; font-family: var(--font-titlu); font-weight: 700; font-size: var(--text-mic); }
+.harta__svg svg { display: block; width: 100%; height: auto; max-height: 34rem; }
+.harta__svg:empty { aspect-ratio: 720 / 546; }
+.carburanti .country { stroke: var(--alb); stroke-width: 1; cursor: pointer; transition: filter 0.15s; }
+.carburanti .country:hover { filter: brightness(0.85); }
+.carburanti .country:focus { outline: none; }
+.carburanti .country:focus-visible, .carburanti .country.selected { stroke: var(--carbune); stroke-width: 2.5; }
+.legenda { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.6rem; margin-top: 0.5rem; font-size: 0.85rem; color: var(--grafit); }
+.legenda__scala { width: 8rem; height: 0.6rem; border-radius: 999px; }
+.legenda__lipsa { display: inline-flex; align-items: center; gap: 0.35rem; margin-left: auto; }
+.legenda__lipsa::before { content: ''; width: 0.75rem; height: 0.75rem; border-radius: 2px; background: var(--gri-deschis); }
+
+.fisa-tara { display: grid; gap: 0.25rem; }
+.fisa-tara__cap { display: flex; justify-content: space-between; font-family: var(--font-titlu); font-weight: 700; font-size: var(--text-mic); color: var(--gri); }
+.fisa-tara h3 { font-size: var(--text-xl); margin-top: 0.5rem; }
+.fisa-tara__km { font-family: var(--font-titlu); font-weight: 800; font-size: clamp(3.5rem, 3rem + 2vw, 4.75rem); line-height: 1; margin-top: 0.5rem; }
+.fisa-tara__km small { font-size: 0.4em; font-weight: 700; }
+.fisa-tara__km + p { color: var(--gri); font-size: var(--text-mic); }
+.fisa-tara .legatura { justify-self: start; margin-top: 0.25rem; }
+.fisa-tara dl { margin: 0.75rem 0 1.25rem; border-top: 1px solid var(--nisip); }
+.fisa-tara dl div { display: flex; justify-content: space-between; gap: 1rem; padding: 0.5rem 0; border-bottom: 1px solid var(--nisip); font-size: var(--text-mic); }
+.fisa-tara dt { color: var(--gri); }
+.fisa-tara dd { margin: 0; font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+.statie { margin-top: 1rem; border-top: 1px solid var(--nisip); padding-top: 0.75rem; }
+.statie summary { cursor: pointer; font-weight: 600; }
+.statie summary:hover { color: var(--rosu); }
+.statie .camp { margin-top: 0.75rem; }
+.statie output { display: block; margin-top: 0.6rem; font-size: var(--text-mic); }
+
+.cauta { max-width: 26rem; margin-top: 2rem; }
+.clasament { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+
+.tari { padding-top: clamp(2.5rem, 6vw, 4rem); }
+.tari > p { color: var(--gri); margin-top: 0.35rem; }
+.tari__lista { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 11rem), 1fr)); gap: 0 1.5rem; margin: 1.25rem 0 0; padding: 0; list-style: none; }
+.tari__lista a { display: flex; justify-content: space-between; padding: 0.55rem 0; border-bottom: 1px solid var(--nisip); font-weight: 600; text-decoration: none; }
+.tari__lista a::after { content: '→'; color: var(--rosu); }
+.tari__lista a:hover { color: var(--carbune); background: var(--evidentiator); }
+.tari .tari__lista + p { margin-top: 1.25rem; }
+
+/* ---------- Country page ---------- */
+.tara-antet { padding-top: clamp(2rem, 5vw, 3.5rem); }
+.inapoi { display: inline-block; margin-bottom: 1.5rem; font-weight: 600; }
+.tara-antet h1 { max-width: 16em; }
+.tara-antet .intro { margin-top: 1rem; max-width: 40rem; color: var(--grafit); font-size: var(--text-mare); line-height: 1.45; }
+.tara-antet .discret { margin-top: 0.75rem; }
+
+.pe-scurt { margin-top: 2rem; border-left: 4px solid var(--rosu); }
+.pe-scurt__text { margin: 0.75rem 0 1rem; max-width: 46rem; font-size: var(--text-mare); font-weight: 600; line-height: 1.4; }
+.pe-scurt .discret { margin-top: 0.75rem; }
+
+.sectiune { margin-top: clamp(2.5rem, 6vw, 3.5rem); }
+.sectiune > p { color: var(--gri); margin-top: 0.35rem; }
+
+.setari { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem 1.25rem; align-items: start; margin-top: 1rem; background: var(--nisip); border: 0; }
+.setari .rezultat-personal { grid-column: 1 / -1; font-family: var(--font-titlu); font-weight: 700; font-size: var(--text-mare); line-height: 1.25; }
+
+.instrumente { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1rem; }
+.instrument { display: grid; gap: 0.9rem; align-content: start; }
+.instrument h3 { font-size: var(--text-mare); }
+.instrument > p { color: var(--gri); font-size: var(--text-mic); margin-top: -0.4rem; }
+.raspuns { border-top: 1px solid var(--nisip); padding-top: 0.9rem; display: grid; gap: 0.6rem; }
+.raspuns__cifra { font-family: var(--font-titlu); font-weight: 800; font-size: var(--text-xl); line-height: 1.1; }
+.raspuns__cifra small { display: block; font-family: var(--font-text); font-weight: 400; font-size: var(--text-mic); color: var(--gri); }
+.bara { display: grid; gap: 0.3rem; font-size: var(--text-mic); }
+.bara__rand { display: flex; justify-content: space-between; gap: 1rem; }
+.bara__rand strong { font-variant-numeric: tabular-nums; }
+.bara__fundal { height: 0.6rem; border-radius: 999px; background: var(--nisip); overflow: hidden; }
+.bara__fundal i { display: block; height: 100%; background: var(--rosu); border-radius: 999px; }
+
+.grafic { margin-top: 1rem; padding: 1rem 1rem 0.5rem; }
+.grafic svg { display: block; width: 100%; height: 17rem; overflow: visible; }
+.grafic text { font-family: var(--font-text); font-size: 13px; fill: var(--gri); }
+.grafic .grafic__valoare { font-family: var(--font-titlu); font-weight: 700; font-size: 15px; fill: var(--carbune); }
+.grafic + .discret { margin-top: 0.5rem; }
+.istoric .comutator { margin-top: 1rem; }
+.istoric details { margin-top: 1rem; }
+.istoric summary { cursor: pointer; font-weight: 600; }
+.istoric summary:hover { color: var(--rosu); }
+.istoric .actiuni { margin-top: 1rem; }
+
+.surse p { margin-top: 0.5rem; max-width: 46rem; }
+.surse ul { margin: 0.75rem 0 0; padding-left: 1.25em; }
+.surse li + li { margin-top: 0.4em; }
+.surse li::marker { color: var(--rosu); }
+
+/* ---------- Methodology ---------- */
+.metodologie { max-width: calc(var(--latime-text) + 2 * var(--margine)); }
+.metodologie h2 { margin-top: 2.5rem; }
+.metodologie h2 + p, .metodologie p + p { margin-top: 1rem; }
+.metodologie .formula { margin-top: 1rem; padding: 1rem 1.25rem; background: var(--alb); border: 1px solid var(--nisip); border-radius: 8px; font-family: var(--font-titlu); font-weight: 600; font-size: var(--text-mare); line-height: 1.4; }
+
+/* ---------- Embed ---------- */
+body:has(.carb-embed) :is(.antet, .subsol, .sari-la-continut) { display: none; }
+.carb-embed { padding: 1rem; }
+.carb-embed h1 { font-size: var(--text-xl); }
+.carb-embed .grafic { margin-top: 0.75rem; }
+.carb-embed .grafic svg { height: 14rem; }
+
+@media (max-width: 56rem) {
+  .carb-erou__rand, .harta-rand, .instrumente { grid-template-columns: minmax(0, 1fr); }
+  .setari { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .setari .camp:first-of-type { grid-column: 1 / -1; }
+}
+@media (max-width: 30rem) {
+  .setari { grid-template-columns: minmax(0, 1fr); }
+  .tabel :is(th, td) { padding: 0.55em 0.6em; }
+  .grafic { padding-inline: 0.5rem; }
+  .grafic svg { height: 14rem; }
+}
+.aviz { margin-top: 1.5rem; border-left: 4px solid var(--rosu); }

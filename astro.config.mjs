@@ -24,7 +24,9 @@ export default defineConfig({
   integrations: [
     sitemap({
       // The contact page stays out of Google until it has an address.
-      filter: (page) => site.contactEmail !== '' || !page.endsWith('/contact/'),
+      // The fuel chart for other sites' iframes is not a page of its own.
+      filter: (page) =>
+        (site.contactEmail !== '' || !page.endsWith('/contact/')) && !page.endsWith('/preturi-carburanti-europa/embed/'),
       // Articles get the date from their frontmatter, never the build date. Other pages get none.
       serialize: (item) => {
         const lastmod = lastmods.get(new URL(item.url).pathname);

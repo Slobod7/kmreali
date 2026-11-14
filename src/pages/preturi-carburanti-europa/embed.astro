@@ -1,0 +1,21 @@
+---
+// The chart other sites can put in an iframe: /preturi-carburanti-europa/embed/?country=HU&fuel=diesel.
+// The country page's "Copiază graficul pentru site-ul tău" writes the iframe code.
+import Base from '../../layouts/Base.astro';
+import { url } from '../../site';
+import '../../styles/carburanti.css';
+---
+
+<Base title="Evoluția prețului la carburanți" noindex>
+  <div class="carburanti carb-embed" data-pagina="embed">
+    <span class="eticheta">KM Reali · Comisia Europeană și BCE</span>
+    <h1 id="embed-titlu">Evoluția prețului</h1>
+    <p class="discret" id="grafic-descriere"></p>
+    <div class="card grafic"><svg id="grafic" role="img" aria-labelledby="embed-titlu grafic-descriere"></svg></div>
+    <p class="discret"><a id="embed-link" href={url('preturi-carburanti-europa/')} target="_blank">Vezi datele și metodologia pe KM Reali</a></p>
+  </div>
+</Base>
+
+<script>
+  import '../../scripts/carburanti';
+</script>

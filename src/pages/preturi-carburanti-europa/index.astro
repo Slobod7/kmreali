@@ -1,0 +1,122 @@
+---
+// „100 de lei prin Europa”: how far 100 lei of fuel takes you in each EU country this week.
+// The calculator, map and ranking come from src/scripts/carburanti.ts; the page carries this week's prices.
+import Base from '../../layouts/Base.astro';
+import { editie, felie, tari } from '../../carburanti/date';
+import { zi } from '../../carburanti/calcule';
+import { url } from '../../site';
+import '../../styles/carburanti.css';
+
+const date = felie({ weeks: [editie.week] });
+---
+
+<Base
+  title="100 de lei prin Europa"
+  seoTitle="Câți km faci cu 100 de lei în Europa? Prețuri carburanți UE"
+  description="Câți kilometri faci cu 100 de lei în fiecare țară din UE: prețuri medii la benzină și motorină, pe datele Comisiei Europene și cursul BCE."
+>
+  <div class="carburanti" data-pagina="hub">
+    <section class="carb-erou">
+      <div class="container carb-erou__rand">
+        <div>
+          <span class="eticheta">Date europene, din săptămâna de {zi(editie.week)}</span>
+          <h1>100 de lei<br /><span class="evidentiat">prin Europa.</span></h1>
+          <p class="carb-erou__intrebare">Câți kilometri faci cu 100 de lei în Europa?</p>
+          <p class="carb-erou__intro">Același buget, drumuri diferite. Vezi cât de departe ajungi în fiecare țară din UE.</p>
+          <p class="carb-erou__semn"><strong>{tari.length}</strong><span>de țări<br />o singură comparație</span></p>
+        </div>
+
+        <form id="calcul" class="card calcul" novalidate>
+          <div class="calcul__cap"><span class="eticheta">Începe de aici</span><span class="calcul__pas">01 / 02</span></div>
+          <h2>Hai să facem calculul tău.</h2>
+          <div class="camp">
+            <label for="consum">Consumul mediu al mașinii <span>(l/100 km)</span></label>
+            <div class="cu-unitate">
+              <input id="consum" inputmode="decimal" value="6,5" autocomplete="off" aria-describedby="consum-indiciu consum-eroare" />
+              <span>l/100 km</span>
+            </div>
+            <p id="consum-indiciu" class="discret">Consumul mediu de pe bord sau din cartea mașinii.</p>
+            <p id="consum-eroare" class="eroare" role="alert"></p>
+          </div>
+          <div class="camp">
+            <fieldset>
+              <legend>Ce carburant folosești?</legend>
+              <div class="optiuni">
+                <label><input type="radio" name="carburant" value="petrol" checked /><span>Benzină 95</span></label>
+                <label><input type="radio" name="carburant" value="diesel" /><span>Motorină</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <button class="buton buton--lat" type="submit">Calculează și arată harta <span aria-hidden="true">→</span></button>
+          <p class="discret">Pe baza mediilor naționale, nu a prețurilor de la o anumită benzinărie.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="rezultate" class="container rezultate" aria-labelledby="rezultate-titlu" hidden>
+      <div class="cap-sectiune">
+        <div>
+          <span class="eticheta">Rezultatul tău · 02 / 02</span>
+          <h2 id="rezultate-titlu">Europa, cu 100 de lei.</h2>
+          <p>Alege o țară pe hartă sau caut-o în listă.</p>
+        </div>
+        <span class="insigna" id="saptamana"></span>
+      </div>
+
+      <div class="harta-rand">
+        <div class="harta">
+          <div class="harta__cap"><span>Distanța posibilă</span><span>km cu 100 de lei</span></div>
+          <div class="harta__svg" id="harta"></div>
+          <div class="legenda">
+            <span id="legenda-min"></span><i class="legenda__scala" id="legenda-scala"></i><span id="legenda-max"></span>
+            <span class="legenda__lipsa">Fără date</span>
+          </div>
+        </div>
+        <aside id="fisa-tara" class="card fisa-tara" aria-live="polite"></aside>
+      </div>
+
+      <div class="camp cauta">
+        <label for="alege-tara">Caută sau alege o țară</label>
+        <input id="alege-tara" list="lista-tari" placeholder="De exemplu, Ungaria" autocomplete="off" />
+        <datalist id="lista-tari">{tari.map((t) => <option value={t.name} />)}</datalist>
+      </div>
+
+      <div class="clasament">
+        <div class="cap-sectiune">
+          <div>
+            <span class="eticheta">Toate rezultatele</span>
+            <h2>Compară țările.</h2>
+          </div>
+          <button id="sorteaza" class="pastila" type="button">Sortează după distanță ↓</button>
+        </div>
+        <div class="tabel">
+          <table>
+            <thead>
+              <tr><th scope="col">Țara</th><th scope="col" class="numeric">Distanță</th><th scope="col" class="numeric">Preț pe litru</th><th scope="col" class="numeric">Față de România</th></tr>
+            </thead>
+            <tbody id="clasament"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="container tari" aria-labelledby="tari-titlu">
+      <span class="eticheta">Pe țări</span>
+      <h2 id="tari-titlu">Prețuri și distanțe în fiecare țară.</h2>
+      <p>Prețurile săptămânii, costul unui drum și cât din preț sunt taxe.</p>
+      <ul class="tari__lista">
+        {tari.map((t) => <li><a href={url(`preturi-carburanti-europa/${t.slug}/`)}>{t.name}</a></li>)}
+      </ul>
+      <p class="discret">
+        Prețuri: <a href="https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en">Weekly Oil Bulletin, Comisia Europeană</a>.
+        Curs: BCE. <a href={url('preturi-carburanti-europa/metodologie/')}>Cum calculăm</a>.
+      </p>
+    </section>
+  </div>
+
+  <script type="application/json" id="date-carburanti" set:html={JSON.stringify(date).replaceAll('<', '\\u003c')} />
+</Base>
+
+<script>
+  import '../../scripts/carburanti';
+</script>

@@ -1,0 +1,160 @@
+---
+// One page per EU country: this week's prices, what 100 lei buys, the cost of a trip, the tax share and the last year.
+// The page is built for the current week at 6,5 l/100 km; src/scripts/carburanti.ts redoes it for the reader's settings.
+import Base from '../../layouts/Base.astro';
+import { editie, felie, saptamani, tari } from '../../carburanti/date';
+import { distanta, moneda, provenienta, raspunsPeScurt, randuriPreturi, zi } from '../../carburanti/calcule';
+import { url } from '../../site';
+import '../../styles/carburanti.css';
+
+export function getStaticPaths() {
+  return tari.map((tara) => ({ params: { country: tara.slug }, props: { tara } }));
+}
+
+const { tara } = Astro.props;
+const week = editie.week;
+const row = editie.observations[week][tara.cod];
+const benzina = row.petrol;
+const esteRomania = tara.cod === 'RO';
+const kmRomania = distanta(editie.observations[week].RO.petrol);
+const date = felie({ countries: [...new Set([tara.cod, 'RO'])] });
+---
+
+<Base
+  title={`Preț benzină și motorină în ${tara.name}`}
+  description={`Prețul mediu la benzină și motorină în ${tara.name}, în lei: câți km faci cu 100 de lei, cât costă un drum și cât din preț sunt taxe. Date săptămânale de la Comisia Europeană.`}
+  type="article"
+>
+  <div class="carburanti" data-pagina="tara" data-tara={tara.cod}>
+    <header class="container tara-antet">
+      <a class="inapoi" href={url('preturi-carburanti-europa/')}>← 100 de lei prin Europa</a>
+      <span class="eticheta">Prețuri carburanți · {tara.name}</span>
+      <h1>Cât de departe te duc <span class="evidentiat">100 de lei</span> în {tara.name}?</h1>
+      <p class="intro">Prețurile la pompă, costul unui drum și cât din preț sunt taxe, pe media națională raportată.</p>
+      <p class="discret" id="saptamana-antet">Săptămâna de {zi(week)} · Weekly Oil Bulletin, Comisia Europeană</p>
+    </header>
+
+    <div class="container">
+      <section class="card pe-scurt" aria-label="Pe scurt">
+        <strong class="evidentiat">Pe scurt</strong>
+        <p class="pe-scurt__text" id="pe-scurt">{raspunsPeScurt(tara.name, week, benzina)}</p>
+        {!esteRomania && kmRomania && <p id="pe-scurt-romania">În România, în aceeași săptămână, faci {Math.round(kmRomania)} km cu aceiași bani.</p>}
+        <div class="actiuni">
+          <button class="pastila" id="copiaza-citat" type="button">Citează rezultatul</button>
+          <button class="legatura" id="copiaza-link" type="button">Copiază linkul</button>
+        </div>
+        <p class="discret" id="pe-scurt-sursa">{provenienta(benzina)} Formula: 100 ÷ prețul în lei pe litru × 100 ÷ consum.</p>
+      </section>
+
+      <section class="sectiune" aria-labelledby="preturi-titlu">
+        <span class="eticheta">La pompă</span>
+        <h2 id="preturi-titlu">Prețurile săptămânii</h2>
+        <p id="preturi-saptamana">Media națională · săptămâna de {zi(week)}</p>
+        <div class="tabel">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Carburant</th>
+                <th scope="col" class="numeric">Lei pe litru</th>
+                {!esteRomania && <th scope="col" class="numeric">{moneda(tara.currency)} pe litru</th>}
+                <th scope="col" class="numeric">Cu 100 de lei*</th>
+              </tr>
+            </thead>
+            <tbody id="tabel-preturi" set:html={randuriPreturi(row, tara.currency)} />
+          </table>
+        </div>
+        <p class="discret">* La un consum de 6,5 l/100 km.</p>
+      </section>
+
+      <section class="sectiune" aria-labelledby="calcul-titlu">
+        <span class="eticheta">Calculul tău</span>
+        <h2 id="calcul-titlu">Pune mașina ta în calcul.</h2>
+        <form class="card setari" id="setari">
+          <p class="rezultat-personal" id="rezultat-personal" aria-live="polite"></p>
+          <div class="camp">
+            <label for="setari-consum">Consum <span>(l/100 km)</span></label>
+            <div class="cu-unitate"><input id="setari-consum" inputmode="decimal" value="6,5" autocomplete="off" /><span>l/100 km</span></div>
+          </div>
+          <div class="camp">
+            <fieldset>
+              <legend>Carburant</legend>
+              <div class="optiuni">
+                <label><input type="radio" name="carburant" value="petrol" checked /><span>Benzină 95</span></label>
+                <label><input type="radio" name="carburant" value="diesel" /><span>Motorină</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="camp">
+            <label for="setari-saptamana">Săptămâna</label>
+            <select id="setari-saptamana">
+              {saptamani.map((w) => <option value={w} selected={w === week}>{zi(w)}</option>)}
+            </select>
+          </div>
+        </form>
+
+        <div class="instrumente">
+          <div class="card instrument">
+            <h3>Cât mă costă drumul?</h3>
+            <p>{esteRomania ? 'Carburantul pentru un drum, la media națională.' : `Carburantul pentru un drum în ${tara.name}, comparat cu același drum în România.`}</p>
+            <div class="camp">
+              <label for="drum">Distanța drumului</label>
+              <div class="cu-unitate"><input id="drum" inputmode="decimal" value="500" autocomplete="off" /><span>km</span></div>
+            </div>
+            <div class="optiuni" aria-label="Distanțe des folosite">
+              <button type="button" data-drum="100">100 km</button>
+              <button type="button" data-drum="500">500 km</button>
+              <button type="button" data-drum="1000">1.000 km</button>
+            </div>
+            <div class="raspuns" id="cost-drum" aria-live="polite"></div>
+          </div>
+
+          <div class="card instrument">
+            <h3>Din 100 de lei la pompă, câți sunt taxe?</h3>
+            <p>Diferența dintre prețul cu taxe și cel fără taxe, în aceeași săptămână.</p>
+            <div class="raspuns" id="taxe" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sectiune istoric" aria-labelledby="istoric-titlu">
+        <span class="eticheta">În timp</span>
+        <h2 id="istoric-titlu">Cât de departe ajungeai în ultimul an?</h2>
+        <p>Ultimele 52 de săptămâni, cu setările tale.</p>
+        <div class="optiuni comutator" aria-label="Ce arată graficul">
+          <button type="button" data-grafic="km" aria-pressed="true">Km cu 100 de lei</button>
+          <button type="button" data-grafic="pret" aria-pressed="false">Lei pe litru</button>
+        </div>
+        <div class="card grafic"><svg id="grafic" role="img" aria-labelledby="grafic-descriere"></svg></div>
+        <p class="discret" id="grafic-descriere"></p>
+        <details>
+          <summary>Vezi datele graficului</summary>
+          <div class="tabel"><table id="tabel-istoric"></table></div>
+        </details>
+        <div class="actiuni">
+          <a class="pastila" id="descarca-csv" download={`carburanti-${tara.slug}.csv`} href="#">Descarcă CSV ↓</a>
+          <button class="legatura" id="copiaza-link-datat" type="button">Copiază linkul datat</button>
+          <button class="legatura" id="copiaza-embed" type="button">Copiază graficul pentru site-ul tău</button>
+        </div>
+      </section>
+
+      <section class="sectiune surse" aria-labelledby="surse-titlu">
+        <h2 id="surse-titlu">Surse și metodologie</h2>
+        <p>
+          Prețurile sunt medii naționale pentru săptămâna indicată, nu prețuri în timp real de la o anumită benzinărie. Cursul
+          BCE este cel din ziua de referință sau ultima zi publicată înainte.
+        </p>
+        <ul>
+          <li><a href="https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en">Weekly Oil Bulletin, Comisia Europeană</a></li>
+          <li><a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html">Cursuri de referință, BCE</a></li>
+          <li><a href={url('preturi-carburanti-europa/metodologie/')}>Cum calculăm</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <script type="application/json" id="date-carburanti" set:html={JSON.stringify(date).replaceAll('<', '\\u003c')} />
+</Base>
+
+<script>
+  import '../../scripts/carburanti';
+</script>
