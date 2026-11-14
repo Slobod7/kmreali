@@ -76,10 +76,16 @@ The comment at the top of `scripts/gsc.mjs` lists every option. The account can 
 
 The fuel comparison lives at `/preturi-carburanti-europa/`: a hub with a calculator, a map and a ranking, one page per EU country, a methodology page and a chart other sites can embed. The pages are Astro templates (`src/pages/preturi-carburanti-europa/`), the shared sums are in `src/carburanti/calcule.ts` and the browser script is `src/scripts/carburanti.ts`. Each page carries only the prices it needs; the full editions are published at `/carburanti/data/` for dated links and the embed.
 
-The data is in `data/carburanti/`: `current.json` is the edition the site shows and `editions/` keeps every published one, so a dated link (`?rev=…&week=…`) keeps showing the numbers it was shared with. To refresh it, install Python 3 and `openpyxl`, then run:
+The data is in `data/carburanti/`: `current.json` is the edition the site shows and `editions/` keeps every published one, so a dated link (`?rev=…&week=…`) keeps showing the numbers it was shared with.
+
+`scripts/carburanti/refresh.py --download` downloads the European Commission's Weekly Oil Bulletin workbooks and the ECB exchange rates, checks dates, units, the 27 countries and unusual jumps, and keeps the previous edition if anything fails. When the week and the prices are the same as in `current.json`, it changes nothing.
+
+The data refreshes itself every week (`.github/workflows/carburanti.yml`). The bulletin comes out on Thursdays, so the workflow runs on Thursday at 15:17 UTC and again on Friday at 07:17 UTC in case the bulletin is late. Each run builds the site as a check, commits the new `current.json` and edition to `main` and starts the deploy. It commits nothing when there is no new week. When a check fails, or the next bulletin is more than 10 days late, the run fails and GitHub sends an email; the site keeps the last good edition. The downloaded files stay with each run for 30 days (the `surse-carburanti` artifact). To refresh outside the schedule, open the workflow under Actions on GitHub and choose **Run workflow**.
+
+To refresh on your computer instead, install Python 3 and `openpyxl`, then run:
 
 ```bash
 python3 scripts/carburanti/refresh.py --download
 ```
 
-The script downloads the European Commission's Weekly Oil Bulletin workbooks and the ECB exchange rates, checks dates, units, the 27 countries and unusual jumps, and keeps the previous edition if anything fails. Then run `npm run build`, look at the pages and commit `data/carburanti/`. The downloaded workbooks stay in `data/carburanti/raw/` and `data/carburanti/sources/`, which git ignores. Nothing refreshes the data on its own yet: the pages show the week of the last refresh.
+Then run `npm run build`, look at the pages and commit `data/carburanti/current.json` and the new file in `data/carburanti/editions/`. The downloaded workbooks stay in `data/carburanti/raw/` and `data/carburanti/sources/`, which git ignores.

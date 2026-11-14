@@ -3,7 +3,7 @@
 
 Writes data/carburanti/current.json and data/carburanti/editions/<week>-<revision>.json. The Astro build reads them
 (src/carburanti/date.ts) and publishes the pages and the JSON under /carburanti/data/. Run `npm run build` afterwards."""
-import csv, datetime as dt, hashlib, json, os, re, shutil, sys, tempfile, urllib.parse, urllib.request
+import csv, datetime as dt, hashlib, json, os, re, shutil, sys, tempfile, time, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 import openpyxl
 ROOT=Path(__file__).resolve().parents[2]/'data/carburanti'; RAW=ROOT/'raw'; RAW.mkdir(parents=True,exist_ok=True)
@@ -11,8 +11,14 @@ PAGE='https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en'
 C={'AT':('Austria','Austria','EUR'),'BE':('Belgium','Belgia','EUR'),'BG':('Bulgaria','Bulgaria','EUR'),'HR':('Croatia','Croația','EUR'),'CY':('Cyprus','Cipru','EUR'),'CZ':('Czechia','Cehia','CZK'),'DK':('Denmark','Danemarca','DKK'),'EE':('Estonia','Estonia','EUR'),'FI':('Finland','Finlanda','EUR'),'FR':('France','Franța','EUR'),'DE':('Germany','Germania','EUR'),'GR':('Greece','Grecia','EUR'),'HU':('Hungary','Ungaria','HUF'),'IE':('Ireland','Irlanda','EUR'),'IT':('Italy','Italia','EUR'),'LV':('Latvia','Letonia','EUR'),'LT':('Lithuania','Lituania','EUR'),'LU':('Luxembourg','Luxemburg','EUR'),'MT':('Malta','Malta','EUR'),'NL':('Netherlands','Țările de Jos','EUR'),'PL':('Poland','Polonia','PLN'),'PT':('Portugal','Portugalia','EUR'),'RO':('Romania','România','RON'),'SK':('Slovakia','Slovacia','EUR'),'SI':('Slovenia','Slovenia','EUR'),'ES':('Spain','Spania','EUR'),'SE':('Sweden','Suedia','SEK')}
 URLS={'gross':'https://energy.ec.europa.eu/document/download/264c2d0f-f161-4ea3-a777-78faae59bea0_en','net':'https://energy.ec.europa.eu/document/download/78311f92-68f8-4b82-b5cf-1293beeaae77_en','history':'https://energy.ec.europa.eu/document/download/906e60ca-8b6a-44e7-8589-652854d2fd3f_en'}
 def get(url):
- req=urllib.request.Request(url,headers={'User-Agent':'KMRealiPrototype/1.0 contact: local prototype'})
- with urllib.request.urlopen(req,timeout=90) as r:return r.read()
+ # The Commission's site answers bursts with HTTP 429; wait and retry that and brief outages, not other errors.
+ for attempt in range(3):
+  try:
+   req=urllib.request.Request(url,headers={'User-Agent':'fuel-prices-refresh/1.0'})
+   with urllib.request.urlopen(req,timeout=90) as r:return r.read()
+  except OSError as e:
+   if attempt==2 or (isinstance(e,urllib.error.HTTPError) and e.code<500 and e.code!=429):raise
+   time.sleep(30*(attempt+1))
 def die(s): raise ValueError(s)
 def main():
  online='--download' in sys.argv
@@ -97,6 +103,9 @@ def main():
   old=json.loads(current.read_text()); oldweek=old['week']
   if week<oldweek:die('Ediție mai veche decât cea publicată')
   if online and week==oldweek and (dt.date.today()-dt.date.fromisoformat(week)).days>10:die('Ediția următoare întârzie; se păstrează ultima verificată')
+  # Same week, same prices and rates: keep the edition. Only the ECB file's newer days would change the revision.
+  if week==oldweek and observations==old['observations']:
+   print('Nicio schimbare:',week,old['revision'],'rămâne activă'); return
   if week>oldweek:
    for code in C:
     for ix,fuel in enumerate(['petrol','diesel']):
