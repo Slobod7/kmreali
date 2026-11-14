@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import CarburantiRecomandare from '../components/CarburantiRecomandare.astro';
+import MartoriRecomandare from '../components/MartoriRecomandare.astro';
 import logo from '../assets/brand/kmreali-logo.svg';
 import { faq, getArticles } from '../articles';
 import { site, url } from '../site';
@@ -87,6 +88,10 @@ const jsonLd = [
       )
     }
   </section>
+
+  <div class="container martori">
+    <MartoriRecomandare />
+  </div>
 
   <section class="container intrebari" aria-labelledby={faqHeadingId}>
     <FaqText />
@@ -202,6 +207,7 @@ const jsonLd = [
 
   .calculator { padding-top: clamp(2.5rem, 6vw, 4rem); }
   .noutati { display: grid; gap: 1.5rem; padding-top: clamp(2.5rem, 6vw, 4rem); }
+  .martori { padding-top: clamp(2.5rem, 6vw, 4rem); }
 
   /* One column on phones; on wide screens two, filled row by row. Both questions in a row take its
      height, so the lines under them meet; opening one only pushes down the rows below it. */

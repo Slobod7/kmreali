@@ -1,0 +1,19 @@
+---
+// The card that sends readers from the homepage and Ghiduri to the dashboard warning-light finder.
+import { url } from '../site';
+---
+
+<a class="martori-reco" href={url('martori-bord/')}>
+  <span>INSTRUMENT INTERACTIV</span>
+  <strong>Ce martor s-a aprins pe bord?</strong>
+  <span>Găsește simbolul după formă sau culoare. BMW, Mercedes-Benz, Audi, Dacia și alte mărci. →</span>
+</a>
+
+<style>
+  .martori-reco { display: grid; gap: .4rem; background: var(--carbune); color: var(--hartie); padding: 1.5rem; border-radius: 8px; text-decoration: none; border-left: 4px solid var(--rosu); }
+  .martori-reco > span { font-size: .9375rem; }
+  .martori-reco > span:first-child { color: var(--evidentiator); font-family: var(--font-titlu); letter-spacing: .06em; }
+  .martori-reco strong { font-family: var(--font-titlu); font-size: var(--text-xl); line-height: 1.2; }
+  .martori-reco:hover { color: var(--alb); }
+  .martori-reco:hover strong { text-decoration: underline; text-decoration-color: var(--evidentiator); text-underline-offset: .15em; }
+</style>
