@@ -21,6 +21,7 @@ const articles = await getArticles(category);
     </div>
   </header>
   <div class="container">
+    {Astro.slots.has('default') && <div class="sectiune-sus"><slot /></div>}
     {
       articles.length > 0 ? (
         <ul class="grila-articole">
@@ -42,5 +43,6 @@ const articles = await getArticles(category);
     border-bottom: 1px solid var(--nisip);
   }
   .sectiune-antet .container { display: grid; gap: 0.75rem; }
+  .sectiune-sus { margin-bottom: clamp(2rem, 4vw, 3rem); }
   .sectiune-antet p { max-width: 36rem; font-size: var(--text-mare); line-height: 1.45; color: var(--grafit); }
 </style>

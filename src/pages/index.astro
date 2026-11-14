@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import ArticleCard from '../components/ArticleCard.astro';
+import CarburantiRecomandare from '../components/CarburantiRecomandare.astro';
 import logo from '../assets/brand/kmreali-logo.svg';
 import { faq, getArticles } from '../articles';
 import { site, url } from '../site';
@@ -67,6 +68,10 @@ const jsonLd = [
       </div>
     </div>
   </section>
+
+  <div class="container calculator">
+    <CarburantiRecomandare />
+  </div>
 
   <section class="container noutati" aria-labelledby="noutati-titlu">
     <h2 id="noutati-titlu">Cele mai noi articole</h2>
@@ -195,6 +200,7 @@ const jsonLd = [
     .stalp { margin-top: 0; font-size: clamp(1.15rem, 0.1rem + 1.9vw, 2.1rem); }
   }
 
+  .calculator { padding-top: clamp(2.5rem, 6vw, 4rem); }
   .noutati { display: grid; gap: 1.5rem; padding-top: clamp(2.5rem, 6vw, 4rem); }
 
   /* One column on phones; on wide screens two, filled row by row. Both questions in a row take its

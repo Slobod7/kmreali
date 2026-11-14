@@ -1,0 +1,139 @@
+---
+// The card that sends readers from the homepage and Ghiduri to „100 de lei prin Europa”.
+// Its numbers come from the same edition as the fuel pages, so they change when the data is refreshed.
+import { editie, tari } from '../carburanti/date';
+import { distanta, zi } from '../carburanti/calcule';
+import { url } from '../site';
+
+interface Props {
+  /** Heading level, so the page outline stays correct. */
+  level?: 'h2' | 'h3';
+}
+
+const { level: Heading = 'h2' } = Astro.props;
+const saptamana = editie.observations[editie.week];
+
+const clasament = tari
+  .map((tara) => ({ ...tara, km: distanta(saptamana[tara.cod]?.petrol) }))
+  .filter((tara): tara is typeof tara & { km: number } => tara.km !== null)
+  .sort((a, b) => b.km - a.km);
+
+const departe = clasament[0];
+const aproape = clasament.at(-1)!;
+const romania = clasament.find((tara) => tara.cod === 'RO');
+
+// România sits between the two ends unless it is one of them; then it is shown once, under its own name.
+const randuri = [
+  { eticheta: 'Cel mai departe', tara: departe },
+  ...(romania && romania !== departe && romania !== aproape ? [{ eticheta: 'Acasă', tara: romania }] : []),
+  { eticheta: 'Cel mai aproape', tara: aproape },
+].map((rand) => ({ ...rand, acasa: rand.tara.cod === 'RO', latime: (rand.tara.km / departe.km) * 100 }));
+---
+
+<aside class="carb-reco" aria-labelledby="carb-reco-titlu">
+  <div class="carb-reco__text">
+    <span class="categorie">Calculator</span>
+    <Heading id="carb-reco-titlu" class="carb-reco__titlu">Câți km faci cu <span class="evidentiat">100 de lei</span> în Europa?</Heading>
+    <p>Prețul mediu la carburanți în cele {tari.length} de țări din UE, transformat în kilometri. Pune consumul mașinii tale și vezi cât de departe ajungi.</p>
+  </div>
+
+  <figure class="carb-reco__grafic">
+    <ul>
+      {
+        randuri.map(({ eticheta, tara, acasa, latime }) => (
+          <li class:list={{ acasa }}>
+            <span class="carb-reco__eticheta">{eticheta}</span>
+            <a href={url(`preturi-carburanti-europa/${tara.slug}/`)}>{tara.name}</a>
+            <strong>{Math.round(tara.km)} km</strong>
+            <span class="carb-reco__bara" aria-hidden="true"><span style={`width: ${latime.toFixed(1)}%`} /></span>
+          </li>
+        ))
+      }
+    </ul>
+    <figcaption>Cu 100 de lei, benzină 95 și un consum de 6,5&nbsp;l/100&nbsp;km. Prețuri medii din săptămâna de {zi(editie.week)}.</figcaption>
+  </figure>
+
+  <a class="buton" href={url('preturi-carburanti-europa/')}>Calculează pentru mașina ta</a>
+</aside>
+
+<style>
+  /* Wide screens: the text and its button on the left, the bars on the right.
+     Phones: text, bars, then the button, so the numbers come before the ask. */
+  .carb-reco {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas: 'text grafic' 'buton grafic';
+    grid-template-rows: auto 1fr;
+    gap: 1.25rem clamp(1.75rem, 4vw, 3.5rem);
+    padding: clamp(1.5rem, 3.5vw, 2.5rem);
+    background: var(--alb);
+    border: 1px solid var(--nisip);
+    border-top: 6px solid var(--rosu);
+    border-radius: 8px;
+  }
+
+  .carb-reco__text { grid-area: text; display: grid; gap: 0.75rem; justify-items: start; }
+  .carb-reco__titlu { font-size: var(--text-xl); line-height: 1.1; }
+  .carb-reco__text p { max-width: 32rem; color: var(--grafit); line-height: 1.5; }
+
+  .buton {
+    grid-area: buton;
+    justify-self: start;
+    align-self: start;
+    display: inline-block;
+    padding: 0.6rem 1.25rem 0.65rem;
+    background: var(--evidentiator);
+    color: var(--carbune);
+    border: 3px solid var(--carbune);
+    border-radius: 4px;
+    font-family: var(--font-titlu);
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+  .buton:hover { background: var(--carbune); color: var(--evidentiator); }
+
+  .carb-reco__grafic { grid-area: grafic; align-self: center; margin: 0; display: grid; gap: 1rem; }
+  .carb-reco__grafic ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.1rem; }
+
+  /* Label on top, then the country and its km on one line, then the bar. */
+  .carb-reco__grafic li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: 'eticheta eticheta' 'tara km' 'bara bara';
+    column-gap: 1rem;
+    row-gap: 0.2rem;
+    font-family: var(--font-titlu);
+    line-height: 1.15;
+  }
+  .carb-reco__eticheta { grid-area: eticheta; font-size: var(--text-mic); font-weight: 600; color: var(--gri); }
+  .carb-reco__grafic a {
+    grid-area: tara;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration-color: var(--rosu);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+  .carb-reco__grafic strong { grid-area: km; font-size: 1.3rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+
+  .carb-reco__bara {
+    grid-area: bara;
+    display: block;
+    height: 0.75rem;
+    margin-top: 0.25rem;
+    border-radius: 2px;
+    background: var(--nisip);
+  }
+  .carb-reco__bara span { display: block; height: 100%; border-radius: 2px; background: var(--carbune); }
+  /* România in the highlighter yellow, outlined so it still reads on white. */
+  .acasa .carb-reco__bara span { background: var(--evidentiator); box-shadow: inset 0 0 0 2px var(--carbune); }
+
+  .carb-reco__grafic figcaption { font-size: var(--text-mic); line-height: 1.45; color: var(--gri); }
+
+  @media (max-width: 48rem) {
+    .carb-reco { grid-template-columns: minmax(0, 1fr); grid-template-areas: 'text' 'grafic' 'buton'; grid-template-rows: none; row-gap: 1.5rem; }
+    .carb-reco__grafic ul { gap: 0.9rem; }
+  }
+</style>
