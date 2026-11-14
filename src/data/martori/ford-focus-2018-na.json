@@ -1,0 +1,177 @@
+{
+  "id": "ford-focus-2018-na",
+  "brand": "Ford",
+  "model": "Focus",
+  "generation": "2018 · SUA/Canada",
+  "verified": true,
+  "scope": "Ford Focus, 2018 · SUA/Canada. Sursă: manual oficial în engleză, SUA/Canada. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Ford Focus · 2018 · SUA/Canada · manual oficial în engleză, SUA/Canada",
+    "url": "https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2018-Ford-Focus-Owner-Manual-version-1_om_EN-US_09_2017.pdf",
+    "documentId": "JM5J 19A321 AA · First Printing 201706",
+    "overviewPages": [
+      91,
+      94
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. ",
+  "lights": [
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [
+        91
+      ],
+      "meaning": "ABS are o defecțiune.",
+      "action": "Solicită verificare cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Dacă numai ABS este aprins, frânarea normală rămâne disponibilă fără funcția antiblocare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "airbag",
+      "symbol": "airbag-rosu",
+      "color": "rosu",
+      "pages": [
+        91
+      ],
+      "meaning": "Sistemul de airbag necesită verificare.",
+      "action": "Solicită verificare cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu se aprinde la pornire, clipește sau rămâne aprins în mers: defecțiune."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "incarcare",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [
+        92
+      ],
+      "meaning": "Sistemul de încărcare are o defecțiune.",
+      "action": "Solicită verificare cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Instrucțiunea privește aprinderea în timpul funcționării motorului."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        92
+      ],
+      "meaning": "Frâna de parcare este aplicată, lichidul de frână este redus sau sistemul este defect.",
+      "action": "Verifică eliberarea frânei de parcare. Dacă avertizarea rămâne în mers, solicită imediat verificarea.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Manualul nord-american poate afișa varianta textuală BRAKE; simbolul de aici este ilustrativ."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [
+        93
+      ],
+      "meaning": "Sistemul de diagnosticare a detectat o problemă a emisiilor.",
+      "action": "Solicită service. Dacă clipește în mers, evită accelerarea și decelerarea puternică și solicită imediat verificare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipire în mers: posibile rateuri. Cele opt clipiri la circa 15 secunde după contact pot însemna test de emisii nepregătit, nu aceeași defecțiune."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "rezerva",
+      "symbol": "rezerva",
+      "color": "galben",
+      "pages": [
+        93
+      ],
+      "meaning": "Nivelul combustibilului este redus.",
+      "action": "Alimentează cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu deducem o distanță rămasă din martor."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [
+        94
+      ],
+      "meaning": "Presiunea uleiului motor necesită atenție.",
+      "action": "Oprește în siguranță, oprește motorul și verifică nivelul. Nu continua dacă martorul apare, chiar dacă nivelul este corect.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Manualul avertizează asupra avarierii motorului."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "stabilitate",
+      "symbol": "esc",
+      "color": "galben",
+      "pages": [
+        94
+      ],
+      "meaning": "Controlul stabilității intervine sau este defect.",
+      "action": "La lumină continuă în mers, solicită verificare cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipirea înseamnă intervenția sistemului; lipsa aprinderii la contact sau aprinderea continuă poate indica o defecțiune."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Controlul stabilității"
+    },
+    {
+      "id": "faza-lunga",
+      "symbol": "faza-lunga",
+      "color": "albastru",
+      "pages": [
+        93
+      ],
+      "meaning": "Faza lungă este activată.",
+      "action": "Comută luminile potrivit condițiilor de trafic.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Indicator de activare, inclusiv la semnalizarea cu faza lungă."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import MartoriFinder from '../components/MartoriFinder.astro';
+import { getEntry } from 'astro:content';
+import { articleUrl } from '../articles';
+import { url } from '../site';
+
+const guide = await getEntry('articole', 'martori-bord-skoda');
+const showGuide = guide && (import.meta.env.DEV || !guide.data.draft);
+---
+
+<Base title="Martori de bord: găsește simbolul și află ce faci" description="Identifică un martor de bord după formă sau culoare. Cataloage pentru BMW, Mercedes-Benz, Audi, Dacia, Volkswagen și alte mărci, cu sursa citată și instrucțiunile manualului pentru configurația aleasă.">
+  <div class="container warning-page">
+    <header class="warning-hero">
+      <a class="categorie" href={url('ghiduri/')}>GHIDURI / INSTRUMENTE UTILE</a>
+      <h1>Un simbol aprins.<br /><span>Ce ai de făcut?</span></h1>
+      <p>Recunoaște martorul dintr-o privire. Află ce înseamnă, ce contează în mesajul de pe bord și care este următorul pas.</p>
+    </header>
+    <MartoriFinder />
+    {showGuide && <p class="guide-link">Mai mult context: <a href={articleUrl(guide)}>ghidul martorilor de bord Škoda →</a>{guide.data.draft && <span> (ciornă, disponibilă numai local)</span>}</p>}
+  </div>
+</Base>
+
+<style>
+  .warning-page { padding-bottom: 3rem; }
+  .warning-hero { display: grid; gap: 1rem; padding-block: clamp(2rem, 5vw, 4rem) 2rem; }
+  .warning-hero h1 { font-size: clamp(3rem, 6vw, 5rem); max-width: 16em; }
+  .warning-hero h1 span { color: var(--rosu); }
+  .warning-hero > p { max-width: 43rem; font-size: var(--text-mare); line-height: 1.5; color: var(--grafit); }
+  .guide-link { border-top: 1px solid var(--nisip); padding-top: 1.5rem; font-size: 1rem; }
+  .guide-link a { font-weight: 600; text-underline-offset: .2em; }
+</style>

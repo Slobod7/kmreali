@@ -1,0 +1,144 @@
+{
+  "id": "opel-astra-k-2018-en",
+  "brand": "Opel",
+  "model": "Astra",
+  "generation": "K · ediția 03/2018 · EN",
+  "verified": true,
+  "scope": "Opel Astra, K · ediția 03/2018 · EN. Sursă: manual oficial în engleză, publicația din catalogul en_AU. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Opel Astra · K · ediția 03/2018 · EN · manual oficial în engleză, publicația din catalogul en_AU",
+    "url": "https://public-servicebox.opel.com/OVddb/OV/en_AU/Astra_K/2016_2021/2018_75/manual_user/ID-OASKOBSE1803-en_17_online.pdf",
+    "documentId": "ID-OASKOBSE1803-en · March 2018",
+    "overviewPages": [
+      112,
+      117
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. ",
+  "lights": [
+    {
+      "id": "airbag",
+      "symbol": "airbag-rosu",
+      "color": "rosu",
+      "pages": [
+        112
+      ],
+      "meaning": "Airbagurile sau pretensionatoarele pot fi defecte.",
+      "action": "Solicită imediat remedierea la un service.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Testul durează circa 4 secunde la contact; lipsa testului, persistența sau aprinderea în mers indică problemă."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "incarcare",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [
+        113
+      ],
+      "meaning": "Bateria nu se încarcă.",
+      "action": "Oprește în siguranță, oprește motorul și solicită asistență.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Cu motorul pornit, poate fi afectată și răcirea sau asistarea frânei."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [
+        113
+      ],
+      "meaning": "Sistemul de emisii este defect.",
+      "action": "Solicită imediat service. Dacă clipește, ridică accelerația până se oprește clipirea.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipirea poate indica o problemă care avariază catalizatorul."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        113
+      ],
+      "meaning": "Frâna de mână este aplicată sau lichidul de frână/ambreiaj este prea redus.",
+      "action": "Cu frâna de mână eliberată, oprește în siguranță și nu continua. Contactează service-ul.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu trata roșul ca o confirmare normală dacă frâna de parcare este eliberată."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "parcare",
+      "symbol": "parcare",
+      "color": "rosu",
+      "pages": [
+        113
+      ],
+      "meaning": "Frâna electrică de parcare este aplicată sau nu s-a aplicat/eliberat complet.",
+      "action": "La clipire, apasă frâna și urmează resetarea din manual. Dacă persistă, nu conduce și solicită asistență.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Continuu: aplicată. Clipire: aplicare/eliberare incompletă."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [
+        114
+      ],
+      "meaning": "Sistemul ABS este defect.",
+      "action": "Solicită verificarea sistemului.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Frânele rămân funcționale fără reglarea ABS; testul scurt la contact este normal."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "stabilitate",
+      "symbol": "esc",
+      "color": "galben",
+      "pages": [
+        114,
+        115
+      ],
+      "meaning": "ESC și controlul tracțiunii intervin sau sunt defecte.",
+      "action": "La lumină continuă, adaptează condusul la stabilitatea redusă și solicită remediere.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipire: intervenție activă. Continuu: defecțiune."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "ESC / controlul tracțiunii"
+    }
+  ]
+}

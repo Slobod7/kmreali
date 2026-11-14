@@ -1,0 +1,177 @@
+{
+  "id": "renault-clio-5-phase2-ro",
+  "brand": "Renault",
+  "model": "Clio",
+  "generation": "V phase 2 · manual 1457-3 RO",
+  "verified": true,
+  "scope": "Renault Clio, V phase 2 · manual 1457-3 RO. Sursă: manual oficial în română; numai avertizările termice descrise aici. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Renault Clio · V phase 2 · manual 1457-3 RO · manual oficial în română; numai avertizările termice descrise aici",
+    "url": "https://www.user-manual.renault.com/sites/renault/files/Clio_5_ph2_-_1457-3_ROM.pdf",
+    "documentId": "NU 1457-3 ROM",
+    "overviewPages": [
+      138,
+      143
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. Avertizările specifice E-tech full hybrid nu sunt încă ilustrate. Nu aplica indicația pentru alternator bateriei de tracțiune.",
+  "lights": [
+    {
+      "id": "stop",
+      "symbol": "stop",
+      "color": "rosu",
+      "pages": [
+        139
+      ],
+      "meaning": "Avertizarea impune oprirea obligatorie.",
+      "action": "Oprește în siguranță, oprește motorul și nu îl reporni. Solicită asistență Renault.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "În mers se asociază cu alți martori, mesaje și sunet."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        139
+      ],
+      "meaning": "Circuitul de frânare are o problemă sau nivelul lichidului este redus.",
+      "action": "Cu STOP și sunet, oprește și solicită asistență.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Aprinderea la frânare împreună cu STOP nu este confirmarea frânei de parcare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "incarcare",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [
+        139
+      ],
+      "meaning": "Circuitul electric are o supraîncărcare sau o descărcare.",
+      "action": "Dacă apare în mers cu STOP și sunet, oprește și solicită asistență.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Catalogul nu acoperă aici avertizarea specifică bateriei secundare E-tech."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [
+        139
+      ],
+      "meaning": "Presiunea uleiului necesită atenție.",
+      "action": "Cu STOP și sunet, oprește în siguranță și decuplează contactul. Verifică nivelul; dacă este normal, solicită asistență.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nivelul corect nu exclude altă problemă."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [
+        140
+      ],
+      "meaning": "Sistemul antiblocare este defect.",
+      "action": "Consultă rapid un reprezentant Renault.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Frânarea rămâne disponibilă ca la un vehicul fără ABS."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [
+        141
+      ],
+      "meaning": "Sistemul antipoluare necesită atenție.",
+      "action": "Continuu: contactează rapid Renault. La clipire, redu turația până se oprește clipirea și solicită rapid verificare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Instrucțiunea este pentru versiunile echipate cu acest indicator."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "rezerva",
+      "symbol": "rezerva",
+      "color": "galben",
+      "pages": [
+        141
+      ],
+      "meaning": "Combustibilul este la nivelul minim.",
+      "action": "Alimentează cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Portocaliu în mers cu sunet. Manualul indică aproximativ 50 km de autonomie rămasă; valoarea este orientativă."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "racire",
+      "symbol": "racire",
+      "color": "rosu",
+      "pages": [
+        141
+      ],
+      "meaning": "Temperatura lichidului de răcire este prea mare.",
+      "action": "Oprește în siguranță și lasă motorul la ralanti 1–2 minute. Dacă temperatura nu scade, oprește motorul și lasă-l să se răcească înainte de verificare. Contactează Renault.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Albastru la pornire este o stare diferită; roșu cere această procedură."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "racire-rece",
+      "symbol": "racire-albastru",
+      "color": "albastru",
+      "pages": [
+        141
+      ],
+      "meaning": "Indicatorul de răcire este albastru la pornire.",
+      "action": "Urmărește temperatura; dacă devine roșu, urmează procedura pentru supraîncălzire.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu echivalăm albastrul la pornire cu defecțiunea de temperatură."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Lichid de răcire rece"
+    }
+  ]
+}

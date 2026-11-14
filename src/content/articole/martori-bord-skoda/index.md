@@ -8,8 +8,8 @@ category: ghiduri
 cover: ./coperta-martori-bord.webp
 coverAlt: "Ilustrație: martori de bord Skoda pe fundal închis, cei de motor, ulei, ABS, airbag, EPC și lichid de răcire aprinși"
 # Source for every light and message: Škoda's Romanian owner's manual for Superb 3, edition 11/2018
-# (model year 2019), pages 41–51. The colours were read from the manual's pages, not from other sites.
-# The Octavia 3 manual of the same month has the same list, plus CNG and Offroad lights.
+# Document 3V0012714AJ, printed pages 41–51; PDF viewer pages are +2.
+# Finder coverage is restricted to this manual edition; other models are not verified.
 # Icons (martor-*.svg): ISO 7000 and Chris828 symbols from Wikimedia Commons (public domain or CC0),
 # put on a dark tile and coloured as in the manual; EPC, ECO, the snowflake and the wrench are drawn here.
 # Still to check (on Bogdan's car):
@@ -22,50 +22,52 @@ coverAlt: "Ilustrație: martori de bord Skoda pe fundal închis, cei de motor, u
 draft: true
 ---
 
-Pe bordul unei Skoda moderne pot apărea aproape 50 de martori. În manual, Škoda le spune „lămpi de control”. Am luat lista din [manualul oficial în limba română pentru Superb 3](https://ownersmanuals.blob.core.windows.net/ownersmanuals/ro/Superb_3V/11-2018/OwnersManual.pdf), generația mașinii mele, și am grupat martorii după ce trebuie să faci când se aprind: oprești, mergi la service sau doar iei la cunoștință. Lângă fiecare martor găsești simbolul lui, în culoarea din manual.
+Pe bordul unei Skoda moderne pot apărea aproape 50 de martori. În manual, Škoda le spune „lămpi de control”. Am luat lista din [manualul oficial în limba română pentru Superb 3](https://ownersmanuals.blob.core.windows.net/ownersmanuals/ro/Superb_3V/11-2018/OwnersManual.pdf), ediția din noiembrie 2018, document 3V0012714AJ. Am grupat martorii după culoare, dar acțiunea se stabilește din explicația fiecăruia și din mesajul de pe bord, nu numai din culoare. Lângă martorii pentru care avem ilustrații găsești un simbol orientativ, colorat după martor sau avertizarea asociată.
 
-Lista nu e doar pentru Superb. Am comparat-o cu manualul Octavia 3 din aceeași perioadă și e aproape identică: Octavia are în plus doar martorii pentru versiunea pe GNC (G-TEC) și pentru modul Offroad.
+**[Deschide căutătorul interactiv de martori de bord →](/martori-bord/)** Poți alege simbolul vizual, filtra după culoare sau căuta după formă. Oprește mai întâi în siguranță și folosește instrumentul numai cu mașina staționată.
+
+Acoperirea verificată este Superb III (3V), ediția de manual 11/2018. Instrumentul oferă separat și Octavia III și Fabia III, fiecare verificată față de propriul manual. Explicațiile acestui ghid rămân atribuite manualului Superb; nu presupunem compatibilitatea cu alte modele sau cu Superb facelift. Motorizarea, echiparea și piața pot schimba disponibilitatea și afișarea simbolurilor.
 
 **Pe scurt**
 
-- **Roșu:** oprește în siguranță și oprește motorul; la mai mulți martori roșii, manualul spune clar să nu continui.
-- **Galben:** poți merge mai departe, cu grijă, dar ajungi la service cât mai repede.
-- **Verde, albastru sau alb:** îți arată doar că o funcție e pornită.
-- **Clipește:** la presiunea uleiului și la blocarea volanului e mai grav decât aprins continuu; ESC-ul, în schimb, clipește când lucrează, și asta e normal.
+- **Roșu:** citește imediat mesajul. Presiunea uleiului cere oprirea motorului; frâna de parcare activată și centura au alte acțiuni.
+- **Galben:** nu este o permisiune generală de a continua. Presiunea în anvelope și nivelul uleiului pot cere oprire și verificare.
+- **Verde, albastru sau alb:** pot indica funcționarea unui sistem, o solicitare sau o avertizare, de exemplu riscul de polei.
+- **Clipește:** la presiunea uleiului, manualul cere oprirea motorului și interzice continuarea cu martorul clipind; la volan contează și mesajul. ESC clipește când intervine.
 
 ## Ce înseamnă culorile
 
-Culoarea îți spune cât de grav e:
+Culoarea ajută la identificare, dar nu înlocuiește mesajul și instrucțiunea pentru simbolul respectiv:
 
-- **Roșu:** pericol. Oprește cât mai repede, într-un loc sigur, departe de trafic, oprește motorul și pune avariile.
-- **Galben:** avertizare. La cei mai mulți martori galbeni, manualul spune că poți continua „într-un regim de conducere foarte precaut” și că trebuie să mergi imediat la service.
-- **Verde, albastru sau alb:** informare. O funcție e pornită, de exemplu faza lungă sau pilotul automat.
+- **Roșu:** unele avertizări cer să oprești și să nu continui, dar un P roșu poate însemna doar frâna de parcare activată.
+- **Galben:** unele defecțiuni permit deplasarea foarte precaută către service; alte avertizări, precum presiunea în anvelope sau nivelul uleiului, cer mai întâi oprire și verificare. Lampa de ceață spate aprinsă nu indică o defecțiune.
+- **Verde, albastru sau alb:** indică de obicei o stare de funcționare, dar un picior verde cere apăsarea frânei, iar fulgul avertizează asupra temperaturii scăzute.
 
-Pe Virtual Cockpit și pe celelalte afișaje color, simbolul e el însuși roșu sau galben. Pe afișajele monocrome, cum au multe Octavia 3, simbolul e alb, iar lângă el apare un triunghi roșu (pericol) sau galben (avertizare).
+Manualul arată că reprezentarea depinde de echipare: un simbol de pe afișaj poate fi monocrom și însoțit de o avertizare roșie sau galbenă. Citește mesajul complet și verifică dacă simbolul clipește. Ilustrațiile din ghid și din instrument sunt orientative, fără să reproducă exact bordul unei anumite mașini.
 
 La martorii importanți apare și un mesaj pe bord, uneori cu un semnal sonor. După prima afișare, mesajul dispare și rămâne doar triunghiul roșu sau galben, până se rezolvă problema. Mesajul îl găsești din nou în Infotainment (vezi mai jos).
 
-Simbolurile din tabele sunt cele standard, pe care le folosește și Škoda. Pe bordul mașinii tale pot arăta puțin diferit, de exemplu mai subțiri sau cu alt contur.
+Simbolurile din tabele sunt ilustrații orientative pentru identificare. Pe bordul mașinii tale pot arăta puțin diferit, de exemplu mai subțiri sau cu alt contur.
 
 ## Ce se aprinde când pui contactul
 
 Când pui contactul, unii martori se aprind pentru câteva secunde. E un test: mașina verifică sistemele respective. Dacă totul e în regulă, martorii se sting la câteva secunde după ce ai pus contactul sau după ce ai pornit motorul.
 
-În fotografia de sus, o Octavia 3 RS are contactul pus și motorul oprit. Se văd aprinși martorii EPC și de motor, ASR OFF (toți galbeni), plus centura și frâna de parcare (roșii). În dreapta e aprins verde piciorul pe pedală: mașina are cutie automată, stă în P și îți cere să apeși frâna. Cu motorul pornit, frâna de parcare eliberată și centura pusă, toți trebuie să se stingă.
+În fotografia de sus, o Octavia 3 RS are contactul pus și motorul oprit. Se văd aprinși martorii EPC și de motor, ASR OFF (toți galbeni), plus centura și frâna de parcare (roșii). În dreapta e aprins verde piciorul pe pedală: mașina are cutie automată, stă în P și îți cere să apeși frâna. Fotografia este un exemplu vizual de pe alt model, fără să confirme acoperirea lui în instrument. Martorii care rămân aprinși trebuie interpretați împreună cu mesajul și manualul mașinii respective.
 
 Contează martorul care rămâne aprins după pornire. La diesel contează și invers: dacă spirala preîncălzirii nu se aprinde deloc la contact, e o defecțiune la preîncălzire.
 
-## Martorii roșii: oprești
+## Martorii roșii
 
-La martorii de mai jos, oprește cât de repede poți în siguranță. Excepțiile sunt frâna de parcare și centura, pe care le rezolvi pe loc.
+Instrucțiunea diferă după simbol și mesaj. Când este necesară oprirea din motive tehnice, parchează la distanță sigură de trafic, oprește motorul și pornește avariile, conform manualului.
 
 | Martor | Ce înseamnă | Ce faci |
 | --- | --- | --- |
-| ![Martorul roșu al instalației de frânare: „!” într-un cerc, între paranteze](./martor-frana.svg) Frâna | prea puțin lichid de frână | Oprește și verifică nivelul lichidului de frână. Dacă e aprins și ABS-ul, nu mai pleca. |
+| ![Martorul roșu al instalației de frânare: „!” într-un cerc, între paranteze](./martor-frana.svg) Frâna | prea puțin lichid de frână | Oprește mașina și motorul, apoi verifică nivelul. Dacă este sub MIN, scade repede sau e aprins și ABS-ul, nu continua; cere asistență (p. 43 și 282). |
 | ![Martorul roșu al frânei de parcare: „P” într-un cerc, între paranteze](./martor-frana-de-parcare.svg) Frâna de parcare | frâna de parcare e trasă; cu mesajul „Defecțiune: frâna de parcare electrică”, frâna e defectă | Eliberează frâna. La defecțiune, mergi la service. |
 | ![Martorul roșu al centurii de siguranță](./martor-centura.svg) Centura | șoferul sau pasagerul din față nu are centura pusă | Pune centura. Peste circa 30 km/h martorul clipește și mașina sună cam 2 minute. |
-| ![Martorul roșu al lichidului de răcire: termometru în valuri](./martor-lichid-racire.svg) Lichidul de răcire | prea puțin lichid de răcire („Verificați nivelul lichidului de răcire”) sau motor supraîncălzit („Motor supraîncălzit Opriți!”) | Oprește, oprește motorul și lasă-l să se răcească. Verifică nivelul și pleacă doar după ce martorul s-a stins. |
-| ![Martorul roșu al presiunii uleiului: cana de ulei](./martor-presiune-ulei.svg) Presiunea uleiului (clipește) | presiunea uleiului e prea mică | Oprește imediat motorul și verifică nivelul. Nu mai pleca, chiar dacă nivelul e bun, și nu lăsa motorul nici la ralanti. |
+| ![Martorul roșu al lichidului de răcire: termometru în valuri](./martor-lichid-racire.svg) Lichidul de răcire | prea puțin lichid de răcire („Verificați nivelul lichidului de răcire”) sau motor supraîncălzit („Motor supraîncălzit Opriți!”) | Oprește mașina și motorul și lasă-l să se răcească. Nu deschide vasul cu motorul cald. La supraîncălzire, reia mersul numai după stingerea martorului. Dacă vasul este gol sau nu poți completa, nu continua (p. 48 și 281). |
+| ![Martorul roșu al presiunii uleiului: cana de ulei](./martor-presiune-ulei.svg) Presiunea uleiului (clipește) | presiunea uleiului e prea mică | Oprește imediat motorul și verifică nivelul. Dacă martorul clipește, nu continua, chiar dacă nivelul e bun, și nu lăsa motorul nici la ralanti. |
 | ![Martorul roșu al alternatorului: baterie](./martor-alternator.svg) Alternatorul | bateria nu se încarcă în timp ce motorul merge | Mergi la service. Dacă se aprinde și martorul lichidului de răcire, oprește: există risc de avarie la motor. |
 | ![Martorul roșu al servodirecției: volan cu „!”](./martor-servodirectie-rosu.svg) Servodirecția | servodirecția nu mai funcționează deloc, volanul se învârte mult mai greu | Ia contactul, pornește din nou și mergi puțin. Dacă martorul nu se stinge, oprește și cere ajutorul unui service. |
 | ![Martorul roșu al blocării volanului: volan cu „!”](./martor-servodirectie-rosu.svg) Blocarea volanului (KESSY), clipește | mesajul „Blocare volan defectă. Opriți!”: blocarea coloanei de direcție e defectă | Oprește. După ce iei contactul, nu mai poți porni motorul, așa că oprește unde mașina poate rămâne. |
@@ -74,9 +76,9 @@ La martorii de mai jos, oprește cât de repede poți în siguranță. Excepții
 
 Despre lichidul de răcire, manualul mai spune ceva: dacă nivelul e bun și martorul se aprinde din nou, poate fi de vină ventilatorul radiatorului. Verifică siguranța ventilatorului. Dacă și ea e în regulă și martorul tot se aprinde, nu mai pleca.
 
-## Martorii galbeni: mergi la service
+## Martorii galbeni
 
-Un martor galben nu te obligă să oprești pe loc. Unii sunt doar mementouri, ca rezerva de combustibil sau lichidul de parbriz.
+Nu toți cer aceeași acțiune. La presiunea în anvelope și la nivelul uleiului, oprești și verifici înainte de a decide dacă poți continua. Alții sunt indicații de nivel sau de funcționare, ca rezerva ori lampa de ceață spate.
 
 | Martor | Ce înseamnă | Ce faci |
 | --- | --- | --- |
@@ -89,10 +91,10 @@ Un martor galben nu te obligă să oprești pe loc. Unii sunt doar mementouri, c
 | ![Martorul galben al presiunii în anvelope: o „potcoavă” cu „!”](./martor-presiune-anvelope.svg) Presiunea în anvelope | s-a schimbat presiunea într-o roată; dacă clipește un minut și apoi rămâne aprins, e o defecțiune la sistem | Redu viteza, oprește și verifică anvelopele. După ce corectezi presiunea, memorează valorile (vezi mai jos). |
 | ![Martorul galben al plăcuțelor de frână](./martor-placute-frana.svg) Plăcuțele de frână | plăcuțele sunt uzate | Mergi la service. |
 | ![Martorul galben al rezervei de combustibil](./martor-rezerva.svg) Rezerva de combustibil | mai ai aproximativ 6 litri în rezervor | Alimentează. |
-| ![Martorul galben al nivelului de ulei: cana de ulei cu o linie ondulată](./martor-nivel-ulei.svg) Nivelul uleiului | prea puțin ulei („Completați cu ulei de motor”), prea mult („Reduceți nivelul uleiului”) sau senzorul e defect („Senzor ulei: adresați-vă unui atelier”) | Oprește și verifică nivelul. Dacă e prea puțin, completează. Dacă e prea mult sau e senzorul, mergi cu grijă la service. |
+| ![Martorul galben al nivelului de ulei: cana de ulei cu o linie ondulată](./martor-nivel-ulei.svg) Nivelul uleiului | prea puțin ulei („Completați cu ulei de motor”), prea mult („Reduceți nivelul uleiului”) sau senzorul e defect („Senzor ulei: adresați-vă unui atelier”) | Oprește și verifică nivelul. Dacă e prea puțin, completează; dacă nu poți completa, nu continua. Dacă e prea mult sau e senzorul, manualul permite mersul foarte precaut și cere service imediat. |
 | ![Martorul galben al servodirecției: volan cu „!”](./martor-servodirectie-galben.svg) Servodirecția | servodirecția funcționează parțial, volanul poate fi mai greu | Ia contactul, pornește din nou și mergi puțin. Dacă nu se stinge, mergi cu grijă la service. |
 | ![Martorul galben al cutiei automate: roată dințată cu „!”](./martor-cutie-galben.svg) Cutia automată | cutia e în regim de urgență (fără marșarier, viteză limitată) sau s-a încălzit („Continuare deplasare posibilă”) | Condu foarte calm și mergi la service. |
-| ![Martorul galben al blocării volanului: volan cu „!”](./martor-servodirectie-galben.svg) Blocarea volanului (KESSY), clipește | mesajul „Blocare volan: atelier!”: defecțiune sau volan rămas blocat | Mișcă puțin volanul stânga-dreapta. Dacă nu se deblochează sau mesajul rămâne, mergi la service. |
+| ![Martorul galben al blocării volanului: volan cu „!”](./martor-servodirectie-galben.svg) Blocarea volanului (KESSY), clipește | mesajul „Blocare volan: atelier!”: defecțiune sau volan rămas blocat | Dacă volanul este blocat, mișcă-l puțin în ambele sensuri. Dacă nu se deblochează, nu pleca; cere asistență. La defecțiune cu direcția deblocată, manualul permite mersul foarte precaut și cere service imediat. |
 | Suspensia adaptivă (DCC): amortizor | defecțiune la DCC | Mergi cu grijă la service. |
 | ![Martorul galben Front Assist](./martor-front-assist.svg) Front Assist | pericol de coliziune sau frânare automată de urgență, ori sistemul nu e disponibil momentan; cu „OFF”, Front Assist e oprit | Citește mesajul de pe bord. Front Assist se oprește singur când oprești ASR sau pui ESC pe Sport. |
 | ![Martorul galben al apelului de urgență](./martor-sos.svg) Apelul de urgență | defecțiune la sistemul de apel de urgență | Mergi la service. |
@@ -101,18 +103,18 @@ Un martor galben nu te obligă să oprești pe loc. Unii sunt doar mementouri, c
 
 Încă ceva despre martorul de presiune în anvelope: se poate aprinde și fără o problemă reală. Manualul dă exemple: mașina e încărcată mai mult pe o parte, tragi o remorcă sau urci o pantă lungă, ai pus lanțuri sau ai schimbat o roată. Invers, la condus sportiv, iarna sau pe drum neasfaltat se poate aprinde cu întârziere sau deloc. Iar la o pierdere bruscă de presiune, de exemplu la o explozie, sistemul nu te poate avertiza.
 
-### Doar la diesel
+### Preîncălzire, filtru de particule și sistemele diesel
 
 | Martor | Ce înseamnă și ce faci |
 | --- | --- |
 | ![Martorul galben al preîncălzirii: o spirală](./martor-preincalzire.svg) Preîncălzirea | Dacă clipește, e o defecțiune la unitatea de comandă a motorului, cu putere redusă. Dacă rămâne aprins după contact sau nu se aprinde deloc, e o defecțiune la preîncălzire. În ambele cazuri, mergi cu grijă la service. |
-| ![Martorul galben al filtrului de particule](./martor-filtru-particule.svg) Filtrul de particule | Filtrul e plin de funingine. Dacă traficul permite, mergi cu 50–120 km/h, ca filtrul să se curețe. Dacă martorul nu se stinge în 30 de minute, mergi la service. Cât e aprins, consumul e mai mare, puterea poate scădea și start-stop nu funcționează. Nu opri mașina deasupra ierbii uscate sau a frunzelor, pentru că filtrul e foarte fierbinte. |
+| ![Martorul galben al filtrului de particule](./martor-filtru-particule.svg) Filtrul de particule | Filtrul e plin de funingine. Dacă traficul și condițiile permit, mergi cu 50–120 km/h în treapta recomandată, ca filtrul să se curețe. Secțiunea din manual nu restrânge explicit acest martor la diesel. Dacă martorul nu se stinge în 30 de minute, mergi la service. Cât e aprins, consumul e mai mare, puterea poate scădea și start-stop nu funcționează. Nu opri mașina deasupra ierbii uscate sau a frunzelor, pentru că filtrul e foarte fierbinte. |
 | AdBlue | Nivelul e prea mic (completezi AdBlue) sau a apărut o eroare în sistem (mergi la service). |
 | ![Martorul galben de apă în motorină](./martor-apa-motorina.svg) Apă în motorină | Mesajul „Apă în filtrul de combustibil”. Mergi cu grijă la service. |
 
-## Martorii care doar te informează
+## Stări de funcționare și alte indicații
 
-Sunt de obicei verzi, albaștri sau albi:
+Sunt de obicei verzi, albaștri sau albi. Citește și solicitarea asociată: nu sunt toate simple confirmări că o funcție e pornită.
 
 | Martor | Ce înseamnă |
 | --- | --- |
@@ -124,7 +126,7 @@ Sunt de obicei verzi, albaștri sau albi:
 | ![Martorul verde al pilotului automat](./martor-pilot-automat.svg) Pilotul automat și limitatorul de viteză | Când e aprins, mașina ține viteza. Când clipește, ai depășit viteza setată la limitator. |
 | ![Martorul pilotului automat adaptiv](./martor-acc.svg) Pilotul automat adaptiv (ACC) | Simbolurile arată dacă ACC e gata de pornire sau reglează viteza. Cu „!”, ACC nu e disponibil. |
 | ![Martorul verde al pedalei de frână](./martor-pedala-frana.svg) Piciorul pe pedală | Apasă frâna. Apare la cutia automată, de exemplu când vrei să scoți maneta din P. |
-| ![Martorul verde Auto Hold: „P” într-un cerc](./martor-auto-hold.svg) Auto Hold | Funcția e pornită, iar mașina ține singură frâna când oprești. E același „P” ca la frâna de parcare, dar verde. |
+| ![Martorul verde Auto Hold: „P” într-un cerc](./martor-auto-hold.svg) Auto Hold | Funcția menține mașina pe loc. E același „P” ca la frâna de parcare, dar verde. |
 | ![Martorul verde Lane Assist](./martor-lane-assist.svg) Lane Assist | Arată dacă sistemul de menținere a benzii e pornit și dacă intervine. |
 | ![Martorul sistemului start-stop: „A” într-un cerc](./martor-start-stop.svg) START-STOP | Arată dacă motorul a fost oprit de start-stop sau dacă sistemul nu e disponibil (A tăiat). |
 | ![Martorul de temperatură scăzută: fulg de nea](./martor-fulg.svg) Fulgul de nea | Afară sunt sub +4 °C. Manualul avertizează că poate fi polei și la +4 °C. |
@@ -148,7 +150,7 @@ Manualul spune clar să nu continui în aceste situații:
 
 Dacă bateria a fost deconectată, de exemplu la schimb, după ce pui contactul se pot aprinde martorii ESC, servodirecției și presiunii în anvelope. E normal. Trebuie să se stingă după o distanță scurtă. Dacă rămân aprinși și după o nouă pornire și o distanță scurtă, e o defecțiune și mergi la service.
 
-**Din experiența mea:** și o baterie slabă poate scoate din funcțiune sisteme. La Superb-ul meu, când bateria a început să se descarce, pilotul automat adaptiv (ACC) n-a mai funcționat, iar senzorul radar din față s-a oprit și el. Dacă dintr-odată nu mai merg asistențele, verifică întâi bateria. Am scris despre asta și în [recenzia Superb-ului după 40.000 km](/recenzii/skoda-superb-2020-pareri-proprietar/).
+**Din experiența mea (relatare a autorului, neconfirmată ca diagnostic de manual):** și o baterie slabă poate scoate din funcțiune sisteme. La Superb-ul meu, când bateria a început să se descarce, pilotul automat adaptiv (ACC) n-a mai funcționat, iar senzorul radar din față s-a oprit și el. Această întâmplare nu stabilește cauza altor avertizări ACC: citește mesajul de pe mașina ta și urmează manualul. Am scris despre asta și în [recenzia Superb-ului după 40.000 km](/recenzii/skoda-superb-2020-pareri-proprietar/).
 
 ## Unde vezi ce înseamnă martorul
 
@@ -178,11 +180,11 @@ Martorul cu cheia fixă se resetează după revizie. Manualul spune că resetare
 
 ## Pe ce modele Škoda se aplică
 
-Lista e din manualul Superb 3 din noiembrie 2018 (anul-model 2019), cea mai nouă ediție în română pe care am găsit-o pe serverul de manuale Škoda. [Manualul Octavia 3 din aceeași lună](https://ownersmanuals.blob.core.windows.net/ownersmanuals/ro/Octavia_5E/11-2018/OwnersManual.pdf) are aceeași listă, plus martorii pentru GNC și pentru modul Offroad. La alte modele Škoda din aceeași perioadă, simbolurile principale sunt aceleași, dar verifică manualul mașinii tale.
+Lista este verificată față de manualul românesc Superb III (3V), ediția 11/2018, document 3V0012714AJ. Ediția manualului nu confirmă automat fiecare an de înmatriculare, motorizare sau echipare.
 
-Pentru Superb 3 facelift (2019–2023), ca al meu, n-am găsit manualul în română.
+În instrument există acum cataloage distincte pentru Octavia III (5E) și Fabia III (NJ), verificate separat față de manualele românești 11/2018. Selectează modelul corect: există diferențe de instrucțiuni și echipare. Celelalte modele și Superb III facelift nu sunt confirmate de această ediție. Consultă manualul livrat cu mașina ta; nu transfera automat nici culorile, nici permisiunea de a continua de la un model la altul.
 
-La modelele mai vechi, ca Octavia 1 sau Fabia 1, martorii sunt mai puțini și stau în cadranele analogice, dar culorile înseamnă același lucru: roșu oprești, galben mergi la service.
+Fotografia de mai jos este context ilustrativ, fără să extindă acoperirea catalogului la Octavia I.
 
 ![Bordul unei Skoda Octavia 1 noaptea, cu iluminare verde și martorul roșu de frână aprins în cadranul vitezometrului](./skoda-octavia-1-bord-noaptea.webp)
 
@@ -196,7 +198,7 @@ Dacă te interesează Superb-ul, am scris și o [recenzie după 40.000 km](/rece
 
 **Ce înseamnă martorul galben cu motor la Skoda?** E martorul sistemului de control al gazelor arse, cunoscut ca „check engine”. Arată o defecțiune la motor sau la sistemul de evacuare. Mașina poate intra în regim de urgență, cu puterea redusă. Poți merge, cu grijă, până la service.
 
-**Pot să merg cu martorul de motor aprins?** Da, dacă e aprins continuu și mașina merge normal: manualul spune să continui foarte precaut și să mergi imediat la service. Dacă martorul clipește, de obicei motorul are rateuri care pot strica catalizatorul; redu viteza și mergi direct la service.
+**Pot să merg cu martorul de motor aprins?** Pentru martorul aprins descris la pagina 45, manualul permite mersul foarte precaut și cere imediat service. Ediția 11/2018 nu descrie separat clipirea acestui martor; nu extindem automat permisiunea de continuare la această stare. Consultă manualul propriei mașini și cere asistență.
 
 **Ce înseamnă EPC la Skoda?** EPC apare la motoarele pe benzină și înseamnă o defecțiune la unitatea de comandă a motorului. Mașina intră de obicei în regim de urgență, cu putere redusă. Mergi cu grijă la service.
 
@@ -204,7 +206,7 @@ Dacă te interesează Superb-ul, am scris și o [recenzie după 40.000 km](/rece
 
 **Ce înseamnă martorul roșu cu termometru?** Fie e prea puțin lichid de răcire, fie motorul s-a supraîncălzit. Oprește, oprește motorul și lasă-l să se răcească înainte să verifici nivelul.
 
-**Ce înseamnă martorul cu roată dințată la Skoda DSG?** E martorul cutiei automate. Galben: cutia e în regim de urgență sau s-a încălzit, dar poți merge cu grijă. Roșu: oprește, pentru că cutia e supraîncălzită sau defectă.
+**Ce înseamnă martorul cu roată dințată la Skoda DSG?** E martorul cutiei automate. Citește mesajul: unele stări permit mersul foarte precaut, iar altele cer oprirea în siguranță. La supraîncălzirea cu mesaj de oprire, oprește motorul și reia deplasarea numai după stingerea avertizării. Dacă nu se stinge, cere asistență.
 
 **Cum resetez martorul de presiune în anvelope la Skoda?** Umflă toate anvelopele la presiunea recomandată, apoi în Infotainment intră în meniul CAR, la Stare autovehicul, alege sistemul de control al presiunii în anvelope și apasă SET. Un mesaj confirmă că valorile au fost memorate.
 

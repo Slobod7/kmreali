@@ -1,8 +1,22 @@
 ---
 import CategoryPage from '../components/CategoryPage.astro';
 import CarburantiRecomandare from '../components/CarburantiRecomandare.astro';
+import { url } from '../site';
 ---
 
 <CategoryPage category="ghiduri">
-  <CarburantiRecomandare />
+  <div class="instrumente">
+    <CarburantiRecomandare />
+    <a class="instrument-link" href={url('martori-bord/')}><span>INSTRUMENT INTERACTIV</span><strong>Ce martor s-a aprins pe bord?</strong><span>Găsește simbolul după formă sau culoare. BMW, Mercedes-Benz, Audi, Dacia și alte mărci. →</span></a>
+  </div>
 </CategoryPage>
+
+<style>
+  .instrumente { display: grid; gap: clamp(1.25rem, 3vw, 2rem); }
+  .instrument-link { display: grid; gap: .4rem; background: var(--carbune); color: var(--hartie); padding: 1.5rem; border-radius: 8px; text-decoration: none; border-left: 4px solid var(--rosu); }
+  .instrument-link > span { font-size: .9375rem; }
+  .instrument-link > span:first-child { color: var(--evidentiator); font-family: var(--font-titlu); letter-spacing: .06em; }
+  .instrument-link strong { font-family: var(--font-titlu); font-size: var(--text-xl); line-height: 1.2; }
+  .instrument-link:hover { color: var(--alb); }
+  .instrument-link:hover strong { text-decoration: underline; text-decoration-color: var(--evidentiator); text-underline-offset: .15em; }
+</style>

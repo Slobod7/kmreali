@@ -1,0 +1,108 @@
+{
+  "id": "fiat-500-2018-en",
+  "brand": "Fiat",
+  "model": "500",
+  "generation": "312 · ediția 06/2018",
+  "verified": true,
+  "scope": "Fiat 500, 312 · ediția 06/2018. Sursă: manual oficial în engleză, cu variații de versiune și piață. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Fiat 500 · 312 · ediția 06/2018 · manual oficial în engleză, cu variații de versiune și piață",
+    "url": "https://aftersales.fiat.com/eLumData/EN/00/150_500/00_150_500_603.91.636_EN_01_06.18_L_LG/00_150_500_603.91.636_EN_01_06.18_L_LG.pdf",
+    "documentId": "603.91.636 · 06.18",
+    "overviewPages": [
+      48,
+      52
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. ",
+  "lights": [
+    {
+      "id": "centura",
+      "symbol": "centura",
+      "color": "rosu",
+      "pages": [
+        48
+      ],
+      "meaning": "O centură față nu este cuplată.",
+      "action": "Cuplează centurile înainte de plecare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Continuu la staționare; clipire și sunet în mers."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "incarcare",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [
+        49
+      ],
+      "meaning": "Încărcarea bateriei este insuficientă.",
+      "action": "Dacă rămâne aprins cu motorul pornit, contactează imediat un service Fiat.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "La contact se aprinde, apoi trebuie să se stingă după pornire; la ralanti este permisă o scurtă întârziere."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "airbag",
+      "symbol": "airbag-rosu",
+      "color": "rosu",
+      "pages": [
+        50
+      ],
+      "meaning": "Sistemul de airbag sau pretensionare poate fi defect.",
+      "action": "Dacă nu se aprinde la contact ori rămâne aprins în mers, contactează imediat Fiat pentru verificare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Aprinderea câteva secunde la contact este normală. O eroare a martorului însuși poate avea avertizare separată."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        51
+      ],
+      "meaning": "Frâna de mână este aplicată sau lichidul de frână este sub minim.",
+      "action": "Dacă se aprinde în mers, verifică întâi că frâna de mână nu este trasă. Dacă martorul rămâne aprins cu frâna de mână eliberată, oprește imediat în siguranță și contactează Fiat: lichidul de frână poate fi sub minim.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Unele versiuni adaugă mesaj și semnal sonor. Cu ABS, interpretarea EBD are instrucțiune separată în manual."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [
+        52
+      ],
+      "meaning": "Presiunea uleiului motor este redusă.",
+      "action": "Oprește în siguranță și oprește imediat motorul. Contactează un service Fiat.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Continuu cu mesaj. Manualul menționează și variante de piață cu indicator galben; nu le echivalăm fără mesajul complet."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    }
+  ]
+}

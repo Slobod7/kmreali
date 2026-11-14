@@ -1,0 +1,250 @@
+{
+  "id": "bmw-seria-3-f30-x17-na",
+  "brand": "BMW",
+  "model": "Seria 3 Sedan",
+  "generation": "F30 · ediția X/2017 · SUA/Canada",
+  "verified": true,
+  "scope": "BMW Seria 3 Sedan, F30 · ediția X/2017 · SUA/Canada. Sursă: manual BMW în engleză, piața SUA/Canada; copie a publicației producătorului găzduită de CarManualDB. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "BMW Seria 3 Sedan · F30 · ediția X/2017 · SUA/Canada · manual BMW în engleză, piața SUA/Canada; copie a publicației producătorului găzduită de CarManualDB",
+    "url": "https://www.carmanualdb.com/files/BMW%203%20Series%202018%20%28F30%29%20Owners%20Manual.pdf",
+    "documentId": "BMW AG 01402984107 – X/17",
+    "overviewPages": [
+      106,
+      109
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. Nu sunt încă ilustrate toate mesajele Check Control, inclusiv avertizările detaliate de ulei sau de încărcare. Manualul BMW personalizat se poate consulta și prin Driver’s Guide, pentru propriul VIN.",
+  "lights": [
+    {
+      "id": "centura",
+      "symbol": "centura",
+      "color": "rosu",
+      "pages": [
+        106
+      ],
+      "meaning": "Centura șoferului sau a pasagerului nu este cuplată.",
+      "action": "Fixează corect centurile înainte de plecare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Aprins sau clipind: centură necuplată; obiectele de pe scaunul pasagerului pot declanșa avertizarea."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "airbag",
+      "symbol": "airbag-rosu",
+      "color": "rosu",
+      "pages": [
+        106
+      ],
+      "meaning": "Airbagul sau pretensionatorul centurii nu funcționează.",
+      "action": "Solicită imediat verificarea la un service calificat.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "La acest BMW, avertizarea sistemului de reținere este roșie."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "parcare",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        106,
+        107
+      ],
+      "meaning": "Frâna de parcare este acționată.",
+      "action": "Eliberează frâna de parcare înainte de deplasare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Se referă la indicatorul frânei aplicate, nu la orice mesaj despre frâne."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Frâna de parcare — indicator frână"
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [
+        107
+      ],
+      "meaning": "ABS sau asistarea frânării poate să nu funcționeze.",
+      "action": "Evită frânarea bruscă, ține cont de distanța de oprire mai mare și solicită verificare imediată.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Citește combinația cu celelalte avertizări din Check Control."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "dsc",
+      "symbol": "esc",
+      "color": "galben",
+      "pages": [
+        107
+      ],
+      "meaning": "DSC intervine sau este defect.",
+      "action": "La clipire, redu viteza și adaptează condusul. Dacă rămâne aprins, solicită verificare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipire: stabilizare activă. Aprins continuu: defecțiune."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Controlul stabilității DSC"
+    },
+    {
+      "id": "dsc-off",
+      "symbol": "esc-off",
+      "color": "galben",
+      "pages": [
+        107
+      ],
+      "meaning": "DSC este dezactivat sau DTC este activat.",
+      "action": "Ține cont de asistența limitată și verifică modul ales.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Aprinderea nu dovedește singură o defecțiune."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "DSC OFF / DTC"
+    },
+    {
+      "id": "anvelope",
+      "symbol": "anvelope",
+      "color": "galben",
+      "pages": [
+        108
+      ],
+      "meaning": "FTM/TPM semnalează pierderea presiunii sau o problemă de monitorizare.",
+      "action": "Redu viteza și oprește prudent pentru verificarea anvelopelor, conform mesajului Check Control.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "La TPM, clipire urmată de lumină continuă poate indica interferență, resetare incompletă, senzor absent sau defecțiune."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "directie",
+      "symbol": "directie-galben",
+      "color": "galben",
+      "pages": [
+        108
+      ],
+      "meaning": "Sistemul de direcție poate să nu funcționeze corect.",
+      "action": "Solicită verificarea la un service calificat.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu aplicăm aici mesajele de blocare KESSY din cataloagele Škoda."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Sistemul de direcție"
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [
+        108
+      ],
+      "meaning": "Sistemul de emisii semnalează o problemă.",
+      "action": "Aprins: verifică mașina cât mai curând. La clipire, redu viteza și solicită verificare imediată.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipirea poate indica rateuri care deteriorează catalizatorul; această distincție este descrisă explicit în manual."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "semnalizare",
+      "symbol": "semnalizare",
+      "color": "verde",
+      "pages": [
+        108
+      ],
+      "meaning": "Semnalizarea este activată.",
+      "action": "Verifică becurile dacă ritmul devine neobișnuit de rapid.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipirea foarte rapidă indică un bec de semnalizare defect."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "ceata-fata",
+      "symbol": "ceata-fata",
+      "color": "verde",
+      "pages": [
+        109
+      ],
+      "meaning": "Proiectoarele de ceață sunt pornite.",
+      "action": "Folosește-le potrivit vizibilității.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Indicator de activare, dacă există echiparea."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "faza-lunga",
+      "symbol": "faza-lunga",
+      "color": "albastru",
+      "pages": [
+        109
+      ],
+      "meaning": "Faza lungă este aprinsă.",
+      "action": "Comută luminile când traficul o cere.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu este avertizarea asistentului pentru faza lungă."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "check-control",
+      "symbol": "triunghi",
+      "color": "galben",
+      "pages": [
+        109
+      ],
+      "meaning": "Există cel puțin un mesaj Check Control afișat sau memorat.",
+      "action": "Deschide My Vehicle → Vehicle status → Check Control și citește mesajul.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Triunghiul nu identifică singur defecțiunea și nu permite să decizi continuarea numai după culoare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Mesaj Check Control"
+    }
+  ]
+}

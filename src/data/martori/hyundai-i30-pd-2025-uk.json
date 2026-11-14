@@ -1,0 +1,145 @@
+{
+  "id": "hyundai-i30-pd-2025-uk",
+  "brand": "Hyundai",
+  "model": "i30",
+  "generation": "PD · manual 2025 · UK",
+  "verified": true,
+  "scope": "Hyundai i30, PD · manual 2025 · UK. Sursă: manual oficial în engleză pentru UK. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Hyundai i30 · PD · manual 2025 · UK · manual oficial în engleză pentru UK",
+    "url": "https://dmassets.hyundai.com/is/content/hyundaiautoever/PDe_2025_en_UKpdf",
+    "documentId": "PDe 2025 en UK",
+    "overviewPages": [
+      155,
+      160
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. ",
+  "lights": [
+    {
+      "id": "airbag",
+      "symbol": "airbag-rosu",
+      "color": "rosu",
+      "pages": [
+        155
+      ],
+      "meaning": "Sistemul de reținere SRS are o defecțiune.",
+      "action": "Solicită verificare la un reparator autorizat Hyundai.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "La contact se aprinde aproximativ 6 secunde, apoi se stinge; aprinderea persistentă indică o problemă."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "centura",
+      "symbol": "centura",
+      "color": "rosu",
+      "pages": [
+        155
+      ],
+      "meaning": "Centura nu este fixată.",
+      "action": "Fixează centura înainte de deplasare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu este indicatorul de defecțiune SRS."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        156,
+        157
+      ],
+      "meaning": "Frâna de parcare este aplicată sau lichidul de frână este insuficient.",
+      "action": "Cu frâna eliberată, oprește prudent în cel mai apropiat loc sigur și oprește motorul pentru verificare. Nu conduce dacă există scurgeri, frâne anormale sau martorul persistă.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Frâna aplicată menține indicatorul aprins. Aprinderea în mers cu ABS cere atenție suplimentară."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [
+        157,
+        158
+      ],
+      "meaning": "ABS este defect.",
+      "action": "Solicită verificare Hyundai. Dacă apare și martorul de frână, evită viteza mare și frânarea bruscă și solicită verificare cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Doar ABS: frâna normală rămâne funcțională fără antiblocare. Combinația cu frâna poate însemna EBD defect."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [
+        159,
+        160
+      ],
+      "meaning": "Sistemul de control al emisiilor semnalează o defecțiune.",
+      "action": "Solicită verificare Hyundai cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Poate exista risc pentru catalizator sau pierdere de putere; semnificația depinde și de motor."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "incarcare",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [
+        160
+      ],
+      "meaning": "Alternatorul sau circuitul de încărcare este defect.",
+      "action": "Oprește prudent într-un loc sigur și oprește motorul. Solicită verificarea circuitului, conform manualului.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Manualul cere verificarea curelei alternatorului, nu înlocuirea automată a bateriei."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [
+        160
+      ],
+      "meaning": "Presiunea uleiului motor este redusă.",
+      "action": "Oprește în siguranță, oprește motorul și verifică nivelul. Dacă martorul persistă sau nu ai uleiul necesar, solicită verificare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Continuarea cu martorul aprins poate avaria motorul."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    }
+  ]
+}

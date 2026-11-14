@@ -1,0 +1,289 @@
+{
+  "id": "mercedes-clasa-c-w205-2018-09-de",
+  "brand": "Mercedes-Benz",
+  "model": "Clasa C Sedan",
+  "generation": "W205 · 09/2018 · piața Germania",
+  "verified": true,
+  "scope": "Mercedes-Benz Clasa C Sedan, W205 · 09/2018 · piața Germania. Sursă: manual oficial în engleză pentru vehicule destinate pieței germane. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Mercedes-Benz Clasa C Sedan · W205 · 09/2018 · piața Germania · manual oficial în engleză pentru vehicule destinate pieței germane",
+    "url": "https://static.oneweb.mercedes-benz.com/css-oom-assets/en-bd/pdf/mercedes-c-class-saloon-2018-september-w205-comand-owners-manual-1.pdf",
+    "documentId": "Mercedes-Benz 2055844220Z102",
+    "overviewPages": [
+      548,
+      560
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. ",
+  "lights": [
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        549,
+        550
+      ],
+      "meaning": "Asistarea frânei este defectă sau lichidul de frână este insuficient.",
+      "action": "Oprește în siguranță, nu continua și solicită service. Nu completa lichidul de frână pentru această avertizare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Se referă la martorul roșu cu motorul pornit; citește mesajul asociat."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "frana-galben",
+      "symbol": "frana-galben",
+      "color": "galben",
+      "pages": [
+        552
+      ],
+      "meaning": "Sistemul de frânare are o defecțiune.",
+      "action": "Adaptează viteza, păstrează distanța și solicită verificare imediată, conducând prudent.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Mesajul de pe afișaj poate impune o altă acțiune; varianta roșie are instrucțiune separată."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "parcare",
+      "symbol": "parcare",
+      "color": "rosu",
+      "pages": [
+        551
+      ],
+      "meaning": "Frâna electrică de parcare este aplicată sau necesită atenție.",
+      "action": "Citește mesajul de pe afișaj și verifică starea frânei înainte de plecare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Aprins sau clipind; la defecțiune se poate aprinde și indicatorul galben."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "parcare-galben",
+      "symbol": "parcare-galben",
+      "color": "galben",
+      "pages": [
+        551,
+        552
+      ],
+      "meaning": "Frâna electrică de parcare semnalează o defecțiune.",
+      "action": "Urmează mesajul afișat și solicită asistență de specialitate.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu interpreta indicatorul galben doar ca frână aplicată."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [
+        551
+      ],
+      "meaning": "ABS este defect; și alte sisteme de siguranță pot fi limitate.",
+      "action": "Condu prudent, citește mesajele și solicită imediat verificarea frânelor.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Un semnal sonor suplimentar poate indica și o problemă EBD."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "esp",
+      "symbol": "esc",
+      "color": "galben",
+      "pages": [
+        552,
+        553
+      ],
+      "meaning": "ESP intervine sau este defect.",
+      "action": "La clipire, adaptează condusul la aderență. La lumină continuă, condu prudent și solicită service.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipire: limita de aderență a fost atinsă. Continuu: defecțiune ESP."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Controlul stabilității ESP"
+    },
+    {
+      "id": "esp-off",
+      "symbol": "esc-off",
+      "color": "galben",
+      "pages": [
+        553,
+        554
+      ],
+      "meaning": "ESP este dezactivat.",
+      "action": "Condu prudent și reactivează-l când situația nu mai cere dezactivarea.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Dacă nu poate fi activat, solicită verificare imediată."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "ESP OFF"
+    },
+    {
+      "id": "airbag",
+      "symbol": "airbag-rosu",
+      "color": "rosu",
+      "pages": [
+        554
+      ],
+      "meaning": "Sistemul de reținere este defect.",
+      "action": "Solicită imediat verificarea și repararea la un service calificat.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Unele componente se pot declanșa neintenționat sau pot să nu funcționeze la accident."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "centura",
+      "symbol": "centura",
+      "color": "rosu",
+      "pages": [
+        555
+      ],
+      "meaning": "Șoferul sau pasagerul nu are centura cuplată.",
+      "action": "Fixează centurile și verifică obiectele așezate pe scaunul pasagerului.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipirea cu sunet în mers semnalează centura necuplată; obiectele pot menține avertizarea."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [
+        556,
+        557
+      ],
+      "meaning": "Poate exista o defecțiune la motor, evacuare sau alimentare.",
+      "action": "Solicită verificarea cât mai curând la un service calificat.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Citește mesajul; nu extindem aici la orice clipire o instrucțiune dată de manual doar pentru aprinderea continuă."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "electrica",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [
+        557
+      ],
+      "meaning": "Există o defecțiune electrică.",
+      "action": "Urmează mesajul de pe afișajul multifuncțional.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Simbolul nu confirmă automat că bateria trebuie înlocuită."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Defecțiune electrică"
+    },
+    {
+      "id": "racire",
+      "symbol": "racire",
+      "color": "rosu",
+      "pages": [
+        557,
+        558
+      ],
+      "meaning": "Temperatura sau sistemul lichidului de răcire este în afara stării normale.",
+      "action": "Oprește în siguranță și oprește motorul. Lasă-l să se răcească înainte de orice verificare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Cu semnal sonor, temperatura poate depăși 120 °C. Eventuala deplasare ulterioară depinde de temperatură și de instrucțiunea completă din manual."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "anvelope",
+      "symbol": "anvelope",
+      "color": "galben",
+      "pages": [
+        559,
+        560
+      ],
+      "meaning": "Presiunea unui pneu a scăzut sau monitorizarea este defectă.",
+      "action": "Oprește în siguranță și verifică pneurile și presiunile.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipire aproximativ un minut, apoi continuu: defecțiune de monitorizare; solicită service."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "rezerva",
+      "symbol": "rezerva",
+      "color": "galben",
+      "pages": [
+        557
+      ],
+      "meaning": "Combustibilul a ajuns în zona de rezervă.",
+      "action": "Alimentează.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu deducem o autonomie garantată din simbol."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "directie",
+      "symbol": "directie",
+      "color": "rosu",
+      "pages": [
+        560
+      ],
+      "meaning": "Direcția sau servodirecția este defectă.",
+      "action": "Oprește în siguranță și nu continua. Solicită asistență.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Instrucțiunea pentru această avertizare roșie este diferită de cea a unei simple funcții dezactivate."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Direcție / servodirecție"
+    }
+  ]
+}

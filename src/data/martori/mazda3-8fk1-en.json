@@ -1,0 +1,132 @@
+{
+  "id": "mazda3-8fk1-en",
+  "brand": "Mazda",
+  "model": "Mazda3",
+  "generation": "III · manual 8FK1-EO-16E",
+  "verified": true,
+  "scope": "Mazda Mazda3, III · manual 8FK1-EO-16E. Sursă: manual oficial online în engleză; ediție generală, cu echipări opționale. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Mazda Mazda3 · III · manual 8FK1-EO-16E · manual oficial online în engleză; ediție generală, cu echipări opționale",
+    "url": "https://owners-manual.mazda.com/gen/en/mazda3/mazda3_8fk1eo16e/contents/08070300.html",
+    "documentId": "Mazda3 · 8FK1-EO-16E",
+    "overviewPages": [],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "format": "web"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. ",
+  "lights": [
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [],
+      "meaning": "Lichid de frână redus sau frâne defecte.",
+      "action": "Oprește imediat în siguranță și contactează Mazda. Nu continua cu avertizarea persistentă.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Fără frână electrică, confirmă și frâna de mână. Cu ABS simultan, solicită tractare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "sourceUrl": "https://owners-manual.mazda.com/gen/en/mazda3/mazda3_8fk1eo16e/contents/08070301.html"
+    },
+    {
+      "id": "incarcare",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [],
+      "meaning": "Generatorul sau circuitul de încărcare este defect.",
+      "action": "Oprește în siguranță, nu continua și contactează Mazda.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Motorul se poate opri neașteptat."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "sourceUrl": "https://owners-manual.mazda.com/gen/en/mazda3/mazda3_8fk1eo16e/contents/08070301.html"
+    },
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [],
+      "meaning": "Presiunea uleiului este redusă.",
+      "action": "Oprește în siguranță și oprește motorul. Urmează verificarea nivelului; dacă persistă, oprește motorul și solicită tractare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Manualul cere așteptare 5 minute înainte de verificarea nivelului."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "sourceUrl": "https://owners-manual.mazda.com/gen/en/mazda3/mazda3_8fk1eo16e/contents/08070301.html"
+    },
+    {
+      "id": "racire",
+      "symbol": "racire",
+      "color": "rosu",
+      "pages": [],
+      "meaning": "Temperatura lichidului de răcire este foarte mare.",
+      "action": "La clipire, redu sarcina și oprește în siguranță pentru răcire. Continuu: oprește imediat în siguranță și oprește motorul.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Aprinderea continuă indică agravarea supraîncălzirii."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "sourceUrl": "https://owners-manual.mazda.com/gen/en/mazda3/mazda3_8fk1eo16e/contents/08070301.html"
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [],
+      "meaning": "ABS este defect.",
+      "action": "Solicită verificare Mazda cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Frânarea obișnuită rămâne fără ABS. Cu martorul de frână simultan, nu continua."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "sourceUrl": "https://owners-manual.mazda.com/gen/en/mazda3/mazda3_8fk1eo16e/contents/08070302.html"
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [],
+      "meaning": "Emisiile sau instalația electrică a motorului au o problemă.",
+      "action": "Evită viteza mare și solicită rapid verificare Mazda.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Valabil la lumină persistentă sau clipire continuă; la unele motoare poate apărea și cu rezervor aproape gol."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "sourceUrl": "https://owners-manual.mazda.com/gen/en/mazda3/mazda3_8fk1eo16e/contents/08070302.html"
+    },
+    {
+      "id": "airbag",
+      "symbol": "airbag-rosu",
+      "color": "rosu",
+      "pages": [],
+      "meaning": "Airbagul sau pretensionatorul poate fi defect.",
+      "action": "Solicită verificare Mazda cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipire continuă, aprindere persistentă sau lipsa testului la contact: posibilă defecțiune."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "sourceUrl": "https://owners-manual.mazda.com/gen/en/mazda3/mazda3_8fk1eo16e/contents/08070302.html"
+    }
+  ]
+}

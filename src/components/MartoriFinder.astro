@@ -1,0 +1,112 @@
+---
+import { vehicles, symbols, colors, lightAnchor, manualLink, lightName, lightLink } from '../data/martori';
+import { formatDate } from '../site';
+import '../styles/martori.css';
+
+const assets = import.meta.glob<string>('../content/articole/martori-bord-skoda/*.svg', { eager: true, query: '?url', import: 'default' });
+const brandCount = new Set(vehicles.map(vehicle => vehicle.brand)).size;
+const icon = (key: keyof typeof symbols) => assets[`../content/articole/martori-bord-skoda/${symbols[key].asset}`];
+---
+
+<section class="finder" data-warning-finder aria-label="Căutător de martori de bord">
+  <p class="finder-safety"><strong>Mai întâi, oprește în siguranță.</strong> Folosește acest instrument numai cu mașina staționată, într-un loc sigur.</p>
+
+  <div class="finder-controls" data-controls hidden>
+    <fieldset class="vehicle-picker">
+      <legend>01 <span>Alege mașina</span></legend>
+      <div class="vehicle-fields">
+        <label>Marcă<select data-brand aria-describedby="coverage-note"></select></label>
+        <label>Model<select data-model></select></label>
+        <label>Generație / ediție<select data-generation></select></label>
+      </div>
+    </fieldset>
+    <p id="coverage-note" class="finder-note">{brandCount} mărci · {vehicles.length} configurații, fiecare cu sursa citată. Sunt acoperite doar simbolurile afișate pentru ediția aleasă. Nu găsești mașina ta? Alege „Mașina mea nu este în listă”.</p>
+  </div>
+
+  <div class="finder-unsupported" data-unsupported hidden role="status">
+    <h2>Mașina sau configurația nu este încă acoperită</h2>
+    <p>Nu avem instrucțiuni pentru această alegere. Consultă manualul livrat cu mașina, inclusiv mesajul de pe bord. Nu transfera automat explicațiile de la alt model.</p>
+    <button type="button" data-default>Revino la catalog</button>
+  </div>
+
+  {vehicles.map((vehicle, index) => (
+    <div data-vehicle={vehicle.id} hidden={index !== 0}>
+      <div class="finder-interactive" data-interactive hidden>
+        <p class="finder-safety" data-missing hidden role="status">Simbolul din acest link nu este acoperit pentru configurația selectată. Alege un simbol din catalog.</p>
+        <div class="finder-search">
+          <h2 class="finder-step">02 <span>Găsește simbolul</span></h2>
+          <label class="sr-only" for={`search-${vehicle.id}`}>Caută după nume sau formă</label>
+          <input type="search" id={`search-${vehicle.id}`} data-search placeholder="Caută numele sau forma: potcoavă, spirală, motor…" autocomplete="off" />
+          <fieldset class="color-picker">
+            <legend>Culoarea martorului sau a avertizării asociate</legend>
+            <label><input type="radio" name={`color-${vehicle.id}`} value="" checked /><span>Toate</span></label>
+            {Object.entries(colors).map(([key, name]) => (
+              <label><input type="radio" name={`color-${vehicle.id}`} value={key} /><span><i class={`color-dot ${key}`} aria-hidden="true"></i>{name}</span></label>
+            ))}
+          </fieldset>
+        </div>
+
+        <p class="finder-help" id={`help-${vehicle.id}`}>Indică un simbol cu cursorul sau cu tasta Tab. Clicul ori atingerea fixează explicația. Închide cu Esc sau cu butonul „Închide”.</p>
+
+        <div class="instrument-panel">
+          <div class="cluster">
+            <div class="cluster-top"><span>KM REALI <b>/</b> EXPLORATOR DE BORD</span><span data-count>{vehicle.lights.length} simboluri</span></div>
+            <div class="cluster-readout" aria-hidden="true"><span>IDENTIFICĂ</span><strong>SIMBOLUL</strong><span>APOI CITEȘTE MESAJUL DE PE BORD</span></div>
+            <div class:list={["symbol-grid", { "symbol-grid--compact": vehicle.lights.length <= 15 }]} style={vehicle.lights.length <= 15 ? `--symbol-columns: ${vehicle.lights.length <= 10 ? 3 : 4}` : undefined} role="group" aria-label="Simboluri ilustrative, fără poziții reale pe bord">
+              {vehicle.lights.map(light => (
+                <button type="button" class="symbol-button" id={lightAnchor(vehicle, light)} data-symbol={light.id} data-color={light.color}
+                  data-search-text={`${lightName(light)} ${symbols[light.symbol].shape} ${light.equipment ?? ''} ${colors[light.color]}`}
+                  aria-label={`${lightName(light)} — ${colors[light.color]}`}
+                  aria-pressed="false" aria-controls={`info-${vehicle.id}`} aria-describedby={`help-${vehicle.id}`}>
+                  <img src={icon(light.symbol)} width="56" height="56" alt="" loading="eager" />
+                </button>
+              ))}
+            </div>
+            <div class="cluster-empty" data-empty hidden><strong>Niciun simbol găsit</strong><p>Încearcă „volan”, „cană de ulei” sau o altă culoare.</p><button type="button" data-reset>Șterge filtrele</button></div>
+            <p class="cluster-caption">Panou ilustrativ · pozițiile și pictogramele sunt orientative.<br />Nu reproduce bordul exact al unei mașini.</p>
+          </div>
+
+          <aside class="light-info" id={`info-${vehicle.id}`} aria-label="Explicația simbolului">
+            <div class="info-toolbar"><span data-preview-mode>EXPLICAȚIE</span><button type="button" data-close hidden>Închide <span aria-hidden="true">×</span></button></div>
+            <div data-info>
+              <div class="info-placeholder"><span aria-hidden="true">↖</span><h3>Ce simbol vezi pe bord?</h3><p>Alege-l din panou. Aici găsești semnificația și următorul pas.</p><p>Nu știi numele? Caută după formă: „spirală”, „potcoavă” sau „volan”.</p></div>
+            </div>
+          </aside>
+        </div>
+        <p class="finder-note">Culoarea singură nu stabilește ce ai de făcut. Pe afișajele monocrome, simbolul poate fi alb, alături de o avertizare colorată. Verifică mesajul, clipirea și celelalte lămpi aprinse.</p>
+        <p class="sr-only" data-announcement role="status" aria-live="polite" aria-atomic="true"></p>
+      </div>
+
+      <noscript><p class="finder-safety">Activează JavaScript pentru a folosi panoul interactiv. Documentul-sursă este disponibil în subsolul paginii.</p></noscript>
+
+      <footer class="finder-sources" aria-labelledby={`sources-${vehicle.id}`}>
+        <h2 id={`sources-${vehicle.id}`}>Surse și acoperire</h2>
+        <div class="coverage">
+          <p><strong>{vehicle.brand} {vehicle.model} {vehicle.generation}</strong><br />{vehicle.scope}</p>
+          <a href={manualLink(vehicle, vehicle.source.overviewPages[0])} target="_blank" rel="noopener">Sursa configurației ↗<span class="sr-only"> (filă nouă)</span></a>
+        </div>
+        <p>{vehicle.notCovered}</p>
+        <p>Sursă: <a href={manualLink(vehicle, vehicle.source.overviewPages[0])} target="_blank" rel="noopener">{vehicle.source.title} ↗<span class="sr-only"> (filă nouă)</span></a>, referință {vehicle.source.documentId}. {vehicle.source.format !== 'web' && <span>{vehicle.source.pageNumbering === 'pdf' ? 'Pagini în vizualizatorul PDF' : 'Pagini tipărite'}: {vehicle.source.overviewPages.join('–')}. </span>}Fiecare simbol trimite la secțiunea relevantă. Sursă consultată la {formatDate(new Date(vehicle.source.verifiedAt))}. Verifică ediția și piața mașinii tale înainte de a aplica instrucțiunile.</p>
+        <p>Ilustrații reutilizate din ghidul KM Reali: simboluri ISO 7000 și Chris828, de pe <a href="https://commons.wikimedia.org/wiki/Category:Dashboard_SVG_icons" target="_blank" rel="noopener">Wikimedia Commons ↗</a> (domeniu public / CC0), plus desene proprii. Contururile și grosimea liniilor pot diferi de cele de pe mașină.</p>
+      </footer>
+
+      {vehicle.lights.map(light => (
+        <template data-preview={light.id}>
+          <div class="info-title"><img src={icon(light.symbol)} width="48" height="48" alt="" /><p class={`info-color ${light.color}`}>{colors[light.color]}</p><h3>{lightName(light)}</h3></div>
+          {light.equipment && <p class="info-equipment">{light.equipment}</p>}
+          <p class="info-meaning">{light.meaning}</p>
+          <div class="info-action"><h4>Ce faci acum</h4><p>{light.action}</p></div>
+          <div class="info-states">{light.states.map(state => <p><strong>{state.label}:</strong> {state.text}</p>)}</div>
+          <details class="info-details"><summary>Mai multe detalii</summary><p>{light.detail}</p></details>
+          <p class="info-links"><a href={`?vehicul=${vehicle.id}#${lightAnchor(vehicle, light)}`} data-direct>Link direct la simbol</a><a href={lightLink(vehicle, light)} target="_blank" rel="noopener">{vehicle.source.format === 'web' ? 'Sursa oficială' : `${vehicle.source.pageNumbering === 'pdf' ? 'Manual PDF' : 'Manual'}, p. ${light.pages.join(', ')}`} ↗<span class="sr-only"> (filă nouă)</span></a></p>
+        </template>
+      ))}
+    </div>
+  ))}
+  <script type="application/json" data-configs set:html={JSON.stringify(vehicles.map(({ id, brand, model, generation }) => ({ id, brand, model, generation }))).replace(/</g, '\\u003c')} />
+</section>
+
+<script>
+  import { initWarningFinder } from '../scripts/martori-finder';
+  document.querySelectorAll<HTMLElement>('[data-warning-finder]').forEach(initWarningFinder);
+</script>

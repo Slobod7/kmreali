@@ -1,0 +1,132 @@
+{
+  "id": "nissan-qashqai-j12-2024-uk",
+  "brand": "Nissan",
+  "model": "Qashqai",
+  "generation": "J12 · 2024 · HR13DDT · UK",
+  "verified": true,
+  "scope": "Nissan Qashqai, J12 · 2024 · HR13DDT · UK. Sursă: manual oficial online în engleză, Nissan UK. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Nissan Qashqai · J12 · 2024 · HR13DDT · UK · manual oficial online în engleză, Nissan UK",
+    "url": "https://www.nissan.co.uk/owners/car-repair/car-owner-manual/manuals/iom/qashqai/0j12/e1/2024/warning-lights-2.shtml",
+    "documentId": "Qashqai J12 E1 2024 · HR13DDT",
+    "overviewPages": [],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "format": "web"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. Nu acoperă aici versiunea e-POWER.",
+  "lights": [
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [],
+      "meaning": "Sistemul de frânare poate fi defect sau lichidul este redus.",
+      "action": "Oprește imediat în siguranță și contactează Nissan. Nu conduce dacă lichidul este sub MIN până la verificarea sistemului.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Verifică mesajul și nivelul. La nivel corect și martor persistent, sistemul necesită verificare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "sourceUrl": "https://www.nissan.co.uk/owners/car-repair/car-owner-manual/manuals/iom/qashqai/0j12/e1/2024/brake-warning-light-red-1.shtml"
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [],
+      "meaning": "ABS poate fi defect.",
+      "action": "Solicită verificare la Nissan sau la un service calificat.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Frânarea obișnuită rămâne disponibilă fără antiblocare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "sourceUrl": "https://www.nissan.co.uk/owners/car-repair/car-owner-manual/manuals/iom/qashqai/0j12/e1/2024/anti-lock-braking-system-abs-warning-light-1.shtml"
+    },
+    {
+      "id": "incarcare",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [],
+      "meaning": "Sistemul de încărcare poate fi defect.",
+      "action": "Oprește în siguranță și oprește motorul. Solicită verificare; nu continua dacă cureaua alternatorului este slăbită, ruptă sau lipsește.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Dacă martorul persistă cu cureaua aparent corectă, circuitul necesită verificare rapidă."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "sourceUrl": "https://www.nissan.co.uk/owners/car-repair/car-owner-manual/manuals/iom/qashqai/0j12/e1/2024/charge-warning-light-1.shtml"
+    },
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [],
+      "meaning": "Presiunea uleiului poate fi prea mică.",
+      "action": "Oprește în siguranță, oprește imediat motorul și contactează Nissan.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Aprins sau clipind în mers: aceeași oprire. Nu este indicator de nivel al uleiului."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "sourceUrl": "https://www.nissan.co.uk/owners/car-repair/car-owner-manual/manuals/iom/qashqai/0j12/e1/2024/engine-oil-pressure-warning-light-1.shtml"
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [],
+      "meaning": "Comanda motorului are o defecțiune; mesajul schimbă acțiunea.",
+      "action": "Cu „Engine malfunction Power reduced Service now”, oprește motorul în siguranță și solicită tractare. Pentru „Engine malfunction Service Now”, nu depăși 70 km/h, evită accelerațiile/frânările puternice, pantele abrupte și solicită verificare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Cele două mesaje au instrucțiuni diferite chiar cu același martor portocaliu aprins continuu."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "sourceUrl": "https://www.nissan.co.uk/owners/car-repair/car-owner-manual/manuals/iom/qashqai/0j12/e1/2024/malfunction-warning-light-mil-orange-1.shtml"
+    },
+    {
+      "id": "anvelope",
+      "symbol": "anvelope",
+      "color": "galben",
+      "pages": [],
+      "meaning": "Presiune mică sau problemă TPMS.",
+      "action": "Oprește și verifică presiunile celor patru pneuri la rece, potrivit etichetei mașinii.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Indicatorul poate necesita rulare peste 25 km/h după reglare pentru stingere; consultă procedura completă de resetare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "sourceUrl": "https://www.nissan.co.uk/owners/car-repair/car-owner-manual/manuals/iom/qashqai/0j12/e1/2024/low-tyre-pressure-warning-light-where-fitted-1.shtml"
+    },
+    {
+      "id": "rezerva",
+      "symbol": "rezerva",
+      "color": "galben",
+      "pages": [],
+      "meaning": "Combustibilul a ajuns în rezervă.",
+      "action": "Alimentează la cea mai apropiată stație.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Indicator galben cu motorul pornit."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "sourceUrl": "https://www.nissan.co.uk/owners/car-repair/car-owner-manual/manuals/iom/qashqai/0j12/e1/2024/low-fuel-warning-light-1.shtml"
+    }
+  ]
+}

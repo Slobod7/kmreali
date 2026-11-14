@@ -1,0 +1,178 @@
+{
+  "id": "dacia-sandero-3-ro",
+  "brand": "Dacia",
+  "model": "Sandero / Stepway",
+  "generation": "III · manual oficial RO",
+  "verified": true,
+  "scope": "Dacia Sandero / Stepway, III · manual oficial RO. Sursă: România, documentul oficial Sandero/Stepway. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Dacia Sandero / Stepway · III · manual oficial RO · România, documentul oficial Sandero/Stepway",
+    "url": "https://cdn.group.renault.com/dac/ro/user-manuals/manual-utilizare-noul-sandero.pdf",
+    "documentId": "Dacia Sandero III · manual RO",
+    "overviewPages": [
+      76,
+      80
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. ",
+  "lights": [
+    {
+      "id": "stop",
+      "symbol": "stop",
+      "color": "rosu",
+      "pages": [
+        76
+      ],
+      "meaning": "O avertizare impune oprirea.",
+      "action": "Oprește în siguranță, oprește motorul și nu îl reporni. Contactează un reprezentant Dacia.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "STOP cu alt martor, mesaj și semnal sonor; cauza se citește din avertizarea asociată."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        77,
+        79
+      ],
+      "meaning": "Nivelul lichidului de frână este redus sau circuitul de frânare are o problemă.",
+      "action": "La avertizarea în mers cu STOP și sunet, oprește în siguranță și solicită asistență.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Se aprinde câteva secunde la punerea contactului, apoi se stinge. Nu indică frâna de mână trasă: aceasta are un martor separat."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "racire",
+      "symbol": "racire",
+      "color": "rosu",
+      "pages": [
+        77
+      ],
+      "meaning": "Lichidul de răcire este prea fierbinte.",
+      "action": "Oprește în siguranță și lasă motorul la ralanti 1–2 minute. Dacă temperatura nu scade, oprește motorul, lasă-l să se răcească și contactează un reprezentant.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Albastru la pornire poate fi normal; instrucțiunea de aici privește culoarea roșie."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "racire-rece",
+      "symbol": "racire-albastru",
+      "color": "albastru",
+      "pages": [
+        77
+      ],
+      "meaning": "Motorul este rece la pornire.",
+      "action": "Urmărește stingerea martorului după încălzire. Dacă devine roșu, urmează instrucțiunea pentru supraîncălzire.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu înseamnă aceeași problemă ca varianta roșie."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Lichid de răcire rece"
+    },
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [
+        78
+      ],
+      "meaning": "Presiunea uleiului necesită atenție.",
+      "action": "Dacă apare în mers cu STOP și sunet, oprește în siguranță și decuplează contactul. Verifică nivelul; dacă este corect, solicită asistență.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Un nivel corect nu exclude altă cauză a avertizării."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [
+        78
+      ],
+      "meaning": "Sistemul ABS este defect.",
+      "action": "Contactează cât mai repede un reprezentant Dacia.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Dacă rămâne aprins după pornire sau apare în mers, frânarea funcționează fără ABS."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "rezerva",
+      "symbol": "rezerva",
+      "color": "galben",
+      "pages": [
+        78
+      ],
+      "meaning": "Combustibilul a ajuns în rezervă.",
+      "action": "Alimentează cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Aprins în mers, însoțit de sunet. Manualul indică aproximativ 50 km de autonomie rămasă; valoarea nu este garantată."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "incarcare",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [
+        79
+      ],
+      "meaning": "Circuitul de încărcare are o suprasarcină sau o descărcare.",
+      "action": "Dacă apare în mers cu STOP și semnal sonor, oprește și solicită asistență.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu este un diagnostic de baterie care trebuie înlocuită."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [
+        80
+      ],
+      "meaning": "Sistemul de control al emisiilor semnalează o problemă.",
+      "action": "Continuu: contactează rapid un reprezentant. La clipire, redu turația până încetează clipirea și solicită verificare cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Diferența continuu/clipire este descrisă în acest manual."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    }
+  ]
+}

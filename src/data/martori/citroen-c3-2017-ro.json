@@ -1,0 +1,228 @@
+{
+  "id": "citroen-c3-2017-ro",
+  "brand": "Citroën",
+  "model": "C3",
+  "generation": "III · ediția 01/2017 · RO",
+  "verified": true,
+  "scope": "Citroën C3, III · ediția 01/2017 · RO. Sursă: manual oficial în română. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Citroën C3 · III · ediția 01/2017 · RO · manual oficial în română",
+    "url": "https://service.citroen.com/ACddb/modeles/c3/eGuide_c3_c3n2_ed01-17/pdfs/9999_9999_045_ro-RO.pdf",
+    "documentId": "C3 · eGuide ed01-17 · ro-RO",
+    "overviewPages": [
+      15,
+      22
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. ",
+  "lights": [
+    {
+      "id": "stop",
+      "symbol": "stop",
+      "color": "rosu",
+      "pages": [
+        15
+      ],
+      "meaning": "Există o defecțiune gravă indicată și de alt martor.",
+      "action": "Oprește în siguranță, decuplează contactul și solicită asistență.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "STOP continuu, alt martor, mesaj și sunet: nu folosi culoarea singură pentru diagnostic."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        15
+      ],
+      "meaning": "Nivelul lichidului de frână a scăzut semnificativ.",
+      "action": "Oprește în siguranță și urmează verificarea nivelului din manual. Dacă problema persistă, solicită service.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Împreună cu ABS indică repartitorul electronic defect: oprește în siguranță și solicită verificare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "parcare",
+      "symbol": "parcare",
+      "color": "rosu",
+      "pages": [
+        15
+      ],
+      "meaning": "Frâna de staționare este aplicată sau incomplet eliberată.",
+      "action": "Elibereaz-o cu piciorul pe pedala de frână, înainte de plecare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu confunda confirmarea frânei de mână cu o defecțiune de circuit."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "incarcare",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [
+        16
+      ],
+      "meaning": "Circuitul de încărcare a bateriei este defect.",
+      "action": "Dacă nu se stinge după pornire, contactează un service autorizat.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu stabilește singur piesa defectă."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [
+        17
+      ],
+      "meaning": "Circuitul de ungere al motorului este defect.",
+      "action": "Oprește în siguranță, decuplează contactul și solicită asistență.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Instrucțiune pentru martor aprins continuu."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "racire",
+      "symbol": "racire",
+      "color": "rosu",
+      "pages": [
+        17
+      ],
+      "meaning": "Temperatura lichidului de răcire este prea mare.",
+      "action": "Oprește în siguranță. Așteaptă răcirea motorului înainte de verificarea nivelului; solicită service dacă problema persistă.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu deschide circuitul fierbinte."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [
+        17
+      ],
+      "meaning": "Sistemul antipoluare sau comanda motorului are o defecțiune.",
+      "action": "Solicită rapid verificare. Cu STOP, oprește în siguranță și decuplează contactul.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Continuu: antipoluare. Clipire: risc pentru catalizator. Cu STOP: defecțiune majoră."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [
+        18
+      ],
+      "meaning": "Sistemul de antiblocare este defect.",
+      "action": "Condu prudent, cu viteză moderată, și contactează urgent un service.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Frânarea clasică rămâne disponibilă când avertizarea este numai ABS."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "anvelope",
+      "symbol": "anvelope",
+      "color": "galben",
+      "pages": [
+        18
+      ],
+      "meaning": "Presiunea unui pneu este insuficientă sau monitorizarea este defectă.",
+      "action": "Verifică rapid presiunile, preferabil la rece. Reinițializează sistemul după reglare, conform manualului.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Continuu cu mesaj: presiune redusă. Clipire apoi continuu cu Service: monitorizare defectă; solicită verificare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "stabilitate",
+      "symbol": "esc",
+      "color": "galben",
+      "pages": [
+        19
+      ],
+      "meaning": "CDS/ASR intervine sau este defect.",
+      "action": "Adaptează condusul la aderență; la lumină continuă solicită verificare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipire: reglare activă. Continuu: defecțiune."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Controlul stabilității CDS/ASR"
+    },
+    {
+      "id": "airbag",
+      "symbol": "airbag",
+      "color": "galben",
+      "pages": [
+        19
+      ],
+      "meaning": "Un airbag sau un pretensionator poate fi defect.",
+      "action": "Dacă nu se stinge după pornire, solicită verificare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Aprinderea pentru câteva secunde la contact este testul normal."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "rezerva",
+      "symbol": "rezerva",
+      "color": "galben",
+      "pages": [
+        20
+      ],
+      "meaning": "Combustibilul a ajuns în rezervă.",
+      "action": "Alimentează cât mai curând; nu goli complet rezervorul.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Manualul indică aproximativ 5 litri la prima aprindere, fără autonomie garantată."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    }
+  ]
+}

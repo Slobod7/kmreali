@@ -1,0 +1,165 @@
+{
+  "id": "peugeot-308-2018-en",
+  "brand": "Peugeot",
+  "model": "308",
+  "generation": "II (T9) · ediția 01/2018",
+  "verified": true,
+  "scope": "Peugeot 308, II (T9) · ediția 01/2018. Sursă: manual oficial în engleză; echiparea depinde de țara de vânzare. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Peugeot 308 · II (T9) · ediția 01/2018 · manual oficial în engleză; echiparea depinde de țara de vânzare",
+    "url": "https://public.servicebox.peugeot.com/APddb/modeles/308n/eGuide_308n_308_ed01-18_dag/pdfs/9999_9999_226_en-GB.pdf",
+    "documentId": "308 · eGuide ed01-18 · en-GB",
+    "overviewPages": [
+      12,
+      21
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. ",
+  "lights": [
+    {
+      "id": "stop",
+      "symbol": "stop",
+      "color": "rosu",
+      "pages": [
+        12,
+        15
+      ],
+      "meaning": "O defecțiune gravă este semnalată împreună cu alt martor.",
+      "action": "Oprește în siguranță, decuplează contactul și contactează un service.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Continuu, cu alt martor, mesaj și sunet."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [
+        12,
+        15
+      ],
+      "meaning": "Sistemul de ungere are o defecțiune.",
+      "action": "Oprește în siguranță, decuplează contactul și contactează un service.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu este indicatorul de nivel redus de ulei."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        12,
+        15
+      ],
+      "meaning": "Lichidul de frână a scăzut semnificativ.",
+      "action": "Oprește în siguranță și decuplează contactul. Urmează verificarea nivelului din manual; dacă problema persistă, contactează service-ul.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Cu ABS: repartitor electronic defect; oprește și solicită asistență."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "parcare",
+      "symbol": "parcare",
+      "color": "rosu",
+      "pages": [
+        12,
+        15
+      ],
+      "meaning": "Frâna de parcare este aplicată sau nu s-a eliberat complet.",
+      "action": "Verifică eliberarea înainte de plecare. La clipire sau mesaj de defecțiune, oprește și urmează procedura de imobilizare din manual.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipirea la frâna electrică poate indica o aplicare sau eliberare defectă, nu confirmarea funcționării normale."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "incarcare",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [
+        13,
+        15
+      ],
+      "meaning": "Circuitul de încărcare are o defecțiune.",
+      "action": "Oprește în siguranță și decuplează contactul. Curăță și strânge bornele bateriei. Dacă martorul nu se stinge după pornirea motorului, contactează service-ul.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Disponibilitatea acestui indicator depinde de țara de vânzare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [
+        14,
+        15
+      ],
+      "meaning": "Autodiagnosticarea motorului semnalează o defecțiune.",
+      "action": "Continuu: mergi rapid la service. La clipire, contactează fără întârziere un service.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipire: risc de distrugere a catalizatorului. Continuu: sistem de emisii defect."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "anvelope",
+      "symbol": "anvelope",
+      "color": "galben",
+      "pages": [
+        16
+      ],
+      "meaning": "Presiunea unuia sau a mai multor pneuri este mică.",
+      "action": "Verifică rapid presiunile și reinițializează detectarea după ajustare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipire apoi continuu împreună cu Service: sistemul nu mai monitorizează; verifică presiunile și solicită service."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "centura",
+      "symbol": "centura",
+      "color": "rosu",
+      "pages": [
+        13
+      ],
+      "meaning": "O centură nu este cuplată sau a fost decuplată.",
+      "action": "Fixează centurile înainte de plecare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Continuu sau clipire, cu semnal sonor."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    }
+  ]
+}

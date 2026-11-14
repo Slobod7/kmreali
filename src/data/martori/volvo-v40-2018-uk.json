@@ -1,0 +1,194 @@
+{
+  "id": "volvo-v40-2018-uk",
+  "brand": "Volvo",
+  "model": "V40",
+  "generation": "MY2018 · en-GB",
+  "verified": true,
+  "scope": "Volvo V40, MY2018 · en-GB. Sursă: manual original Volvo în engleză, ediția UK. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Volvo V40 · MY2018 · en-GB · manual original Volvo în engleză, ediția UK",
+    "url": "https://ldgsvccassets.blob.core.windows.net/pdfs/9c18fe608ce8c9acf22573f789cffd987ab726bc/V40_OwnersManual_MY18_en-GB_TP23288.pdf",
+    "documentId": "TP23288 · V40 MY18 en-GB",
+    "overviewPages": [
+      73,
+      76
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. ",
+  "lights": [
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        75,
+        76
+      ],
+      "meaning": "Lichidul de frână poate fi prea redus.",
+      "action": "Oprește în siguranță și verifică nivelul. Sub MIN, nu continua înainte de remedierea nivelului; pierderea trebuie investigată la service.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Cu ABS, urmează procedura de oprire/repornire din manual. Dacă ambele persistă, există risc de derapaj la frânare puternică."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [
+        75
+      ],
+      "meaning": "Presiunea uleiului motor este prea mică.",
+      "action": "Oprește în siguranță și oprește imediat motorul. Verifică nivelul; la nivel normal solicită service.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Numai pentru motoarele cu avertizare de presiune. Unele variante folosesc doar mesaj pentru nivelul uleiului."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "parcare",
+      "symbol": "parcare",
+      "color": "rosu",
+      "pages": [
+        75
+      ],
+      "meaning": "Frâna de parcare este aplicată.",
+      "action": "Verifică eliberarea înainte de plecare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Afișajele analogic și digital au variante de simbol; ilustrația este orientativă."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "airbag",
+      "symbol": "airbag-rosu",
+      "color": "rosu",
+      "pages": [
+        75
+      ],
+      "meaning": "Un sistem de siguranță SRS are o defecțiune.",
+      "action": "Solicită verificare la service cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Aprins persistent sau în timpul mersului."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "centura",
+      "symbol": "centura",
+      "color": "rosu",
+      "pages": [
+        75
+      ],
+      "meaning": "O centură față nu este cuplată sau o centură spate a fost decuplată.",
+      "action": "Cuplează centurile.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Indicatorul clipește pentru situațiile descrise."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "incarcare",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [
+        75
+      ],
+      "meaning": "Există o defecțiune în sistemul electric.",
+      "action": "Solicită verificare la service.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Avertizarea se referă la aprinderea în mers."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [
+        73
+      ],
+      "meaning": "ABS nu funcționează.",
+      "action": "Oprește în siguranță și urmează procedura de repornire din manual. Dacă persistă, solicită verificare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Frâna obișnuită continuă să funcționeze fără ABS; combinația cu avertizarea de frână are instrucțiune separată."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [
+        73
+      ],
+      "meaning": "Sistemul de emisii poate fi defect.",
+      "action": "Solicită verificare la service.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Aprins după pornirea motorului."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "rezerva",
+      "symbol": "rezerva",
+      "color": "galben",
+      "pages": [
+        74
+      ],
+      "meaning": "Nivelul combustibilului este redus.",
+      "action": "Alimentează cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu reprezintă o autonomie garantată."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "ceata-spate",
+      "symbol": "ceata-spate",
+      "color": "galben",
+      "pages": [
+        73
+      ],
+      "meaning": "Lumina de ceață spate este pornită.",
+      "action": "Folosește-o potrivit vizibilității.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Indicator de activare, fără a indica singur o defecțiune."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    }
+  ]
+}

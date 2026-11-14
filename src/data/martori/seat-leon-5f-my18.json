@@ -1,0 +1,178 @@
+{
+  "id": "seat-leon-5f-my18",
+  "brand": "SEAT",
+  "model": "Leon",
+  "generation": "III (5F) · MY18 · 11/2017",
+  "verified": true,
+  "scope": "SEAT Leon, III (5F) · MY18 · 11/2017. Sursă: manual oficial în engleză, ediția en-UK. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "SEAT Leon · III (5F) · MY18 · 11/2017 · manual oficial în engleză, ediția en-UK",
+    "url": "https://www.seat.com/datamanual-manual/leon/my18_w45/en-uk/LEON_11_17_EN.pdf",
+    "documentId": "LEON 11 17 EN · MY18 W45",
+    "overviewPages": [
+      49,
+      51
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. ",
+  "lights": [
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        49
+      ],
+      "meaning": "Lichidul de frână este prea redus sau sistemul de frânare este defect.",
+      "action": "Oprește în siguranță și nu continua. Solicită asistență.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Este o avertizare diferită de frâna de parcare aplicată."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "directie",
+      "symbol": "directie",
+      "color": "rosu",
+      "pages": [
+        49
+      ],
+      "meaning": "Direcția are o defecțiune.",
+      "action": "Oprește în siguranță și nu continua.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Instrucțiunea privește avertizarea roșie, aprinsă sau clipind."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Direcție — avertizare roșie"
+    },
+    {
+      "id": "centura",
+      "symbol": "centura",
+      "color": "rosu",
+      "pages": [
+        49
+      ],
+      "meaning": "Centura șoferului sau a pasagerului nu este cuplată.",
+      "action": "Cuplează corect centurile înainte de deplasare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Indicator de reamintire pentru ocupanți."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "parcare",
+      "symbol": "parcare",
+      "color": "rosu",
+      "pages": [
+        49
+      ],
+      "meaning": "Frâna de parcare este aplicată.",
+      "action": "Verifică eliberarea înainte de plecare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Această intrare nu acoperă toate defecțiunile frânei de parcare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "racire",
+      "symbol": "racire",
+      "color": "rosu",
+      "pages": [
+        51
+      ],
+      "meaning": "Nivelul lichidului de răcire este prea redus, temperatura prea mare sau circuitul este defect.",
+      "action": "Oprește în siguranță și nu continua. Urmează verificările de răcire din manual.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Aprins: nivel/temperatură. Clipire: defecțiune de sistem."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [
+        51
+      ],
+      "meaning": "Presiunea uleiului motor este prea mică.",
+      "action": "Oprește în siguranță și oprește motorul. Nu continua și nu îl lăsa la ralanti, chiar dacă nivelul este corect.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Instrucțiunea de oprire se aplică și la clipire."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "ceata-spate",
+      "symbol": "ceata-spate",
+      "color": "galben",
+      "pages": [
+        50
+      ],
+      "meaning": "Lumina de ceață spate este pornită.",
+      "action": "Folosește-o potrivit vizibilității.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Galbenul confirmă aici activarea unei lumini, nu o defecțiune."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "faza-lunga",
+      "symbol": "faza-lunga",
+      "color": "albastru",
+      "pages": [
+        50
+      ],
+      "meaning": "Faza lungă sau semnalizarea cu faza lungă este activă.",
+      "action": "Comută luminile după condițiile de trafic.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Indicator de activare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "avertizare-centrala",
+      "symbol": "triunghi",
+      "color": "galben",
+      "pages": [
+        50
+      ],
+      "meaning": "Există o informație suplimentară pe afișaj.",
+      "action": "Citește mesajul complet înainte de a decide următorul pas.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Triunghiul singur nu identifică problema."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Avertizare centrală — galben"
+    }
+  ]
+}

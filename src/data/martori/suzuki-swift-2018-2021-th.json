@@ -1,0 +1,163 @@
+{
+  "id": "suzuki-swift-2018-2021-th",
+  "brand": "Suzuki",
+  "model": "Swift",
+  "generation": "manual 2018–2021 · Thailanda",
+  "verified": true,
+  "scope": "Suzuki Swift, manual 2018–2021 · Thailanda. Sursă: manual oficial în engleză pentru Thailanda. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Suzuki Swift · manual 2018–2021 · Thailanda · manual oficial în engleză pentru Thailanda",
+    "url": "https://www.suzuki.co.th/upload/file/manual/en/Suzuki_Swift_Model_year_2018-2021.pdf",
+    "documentId": "Swift · Suzuki Thailand · model year 2018–2021",
+    "overviewPages": [
+      101,
+      108
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. Nu confirmă automat versiunile vândute în România sau varianta europeană mild-hybrid.",
+  "lights": [
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        101,
+        102
+      ],
+      "meaning": "Frâna de parcare este aplicată, lichidul este redus sau frânele sunt defecte.",
+      "action": "Dacă apare în mers, oprește prudent și solicită verificare imediată Suzuki. Urmează evaluarea din manual; dacă frânarea nu este sigură, solicită tractare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Cu ABS poate indica și distribuția forței de frânare defectă. Pedala și distanța de oprire se pot modifica."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [
+        102,
+        103
+      ],
+      "meaning": "ABS poate fi defect.",
+      "action": "Oprește prudent și urmează verificarea după repornire descrisă în manual. Dacă persistă, solicită verificare Suzuki.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Frânarea obișnuită rămâne disponibilă fără ABS; combinația cu frâna necesită verificare suplimentară."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "stabilitate",
+      "symbol": "esc",
+      "color": "galben",
+      "pages": [
+        103
+      ],
+      "meaning": "ESP intervine sau are o defecțiune.",
+      "action": "La clipire, condu prudent. La lumină continuă, solicită verificare Suzuki.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipire rapidă: stabilitate/tracțiune active. Continuu: posibilă defecțiune."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Controlul stabilității ESP"
+    },
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [
+        104
+      ],
+      "meaning": "Presiunea uleiului motor este insuficientă.",
+      "action": "Oprește în siguranță și oprește motorul. Verifică nivelul; dacă este suficient, sistemul de ungere trebuie verificat înainte de a conduce din nou.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu folosi acest martor pentru a decide când trebuie completat uleiul."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "incarcare",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [
+        104
+      ],
+      "meaning": "Sistemul de încărcare are o problemă.",
+      "action": "Solicită imediat verificare Suzuki.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Aprinderea cu motorul în funcțiune este diferită de testul la contact."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [
+        105
+      ],
+      "meaning": "Sistemul de emisii sau, după versiune, transmisia CVT are o problemă.",
+      "action": "Solicită remediere Suzuki; continuarea poate produce avarii.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Aprins sau clipind cu motorul pornit. Nu stabilim cauza doar din conturul motorului."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "rezerva",
+      "symbol": "rezerva",
+      "color": "galben",
+      "pages": [
+        106
+      ],
+      "meaning": "Combustibilul este la nivel redus.",
+      "action": "Alimentează cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Punctul de aprindere depinde și de pantă, curbe și deplasarea combustibilului."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "racire-rece",
+      "symbol": "racire-albastru",
+      "color": "albastru",
+      "pages": [
+        107
+      ],
+      "meaning": "Motorul este încă rece.",
+      "action": "Urmărește stingerea după încălzire. Dacă albastrul clipește, solicită verificare Suzuki.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Continuu: rece. Clipire albastră: problemă de sistem."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Lichid de răcire rece"
+    }
+  ]
+}

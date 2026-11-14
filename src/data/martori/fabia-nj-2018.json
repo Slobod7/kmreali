@@ -1,0 +1,618 @@
+{
+  "id": "skoda-fabia-nj-2018-11",
+  "brand": "Škoda",
+  "model": "Fabia",
+  "generation": "III (NJ) · manual 11/2018",
+  "verified": true,
+  "scope": "Fabia III (NJ), ediția de manual 11/2018, în limba română. Disponibilitatea depinde de motor, afișaj, echipare și piață. Nu confirmă automat alte ediții sau orice an de înmatriculare; versiunile diesel nu sunt acoperite de acest catalog.",
+  "source": {
+    "title": "Manual Škoda Fabia · română · 11/2018",
+    "url": "https://ownersmanuals.blob.core.windows.net/ownersmanuals/ro/Fabia_NJ/11-2018/OwnersManual.pdf",
+    "documentId": "6V0012714AK",
+    "overviewPages": [
+      37,
+      45
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 2
+  },
+  "notCovered": "Catalog parțial pentru Fabia III, manual 11/2018: nu sunt ilustrate separat becurile defecte, centurile spate, semnalizarea remorcii, ACC și Front Assist. Pentru acestea, vezi paginile 37–45. Nu extrapolăm la Fabia diesel sau la alte ediții; nu oferim aici Auto Hold, Lane Assist ori martorii diesel din catalogul Superb.",
+  "lights": [
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        38,
+        39
+      ],
+      "meaning": "Nivelul lichidului de frână este prea scăzut.",
+      "action": "Oprește în siguranță și nu continua deplasarea. Solicită asistența unui service.",
+      "states": [
+        {
+          "label": "Împreună cu ABS",
+          "text": "Nu continua deplasarea. Cere asistența unui service; distanța de frânare poate crește."
+        }
+      ],
+      "detail": "Pentru Fabia, manualul interzice continuarea la acest martor, fără să condiționeze oprirea de aprinderea ABS. Nu transfera procedura mai nuanțată de la alt model."
+    },
+    {
+      "id": "parcare",
+      "symbol": "parcare",
+      "color": "rosu",
+      "pages": [
+        38
+      ],
+      "meaning": "Frâna de mână este acționată.",
+      "action": "Eliberează frâna de mână înainte de plecare.",
+      "states": [
+        {
+          "label": "Semnal sonor peste 5 km/h",
+          "text": "Dacă mașina se deplasează cu frâna de mână trasă, manualul descrie o avertizare sonoră peste 5 km/h."
+        }
+      ],
+      "detail": "În această ediție Fabia, intrarea descrie frâna de mână. Nu aplicăm aici explicațiile despre frâna de parcare electrică sau Auto Hold de la Superb."
+    },
+    {
+      "id": "centura",
+      "symbol": "centura",
+      "color": "rosu",
+      "pages": [
+        39
+      ],
+      "meaning": "Șoferul sau pasagerul din față nu are centura fixată.",
+      "action": "Fixează centurile înainte de plecare. Dacă ești deja în mers, oprește în siguranță înainte de a le verifica.",
+      "states": [
+        {
+          "label": "Clipește și se aude un semnal",
+          "text": "La peste aproximativ 30 km/h, avertizarea devine intermitentă și sonoră. Oprirea sunetului după aproximativ două minute nu înseamnă că centura a fost fixată."
+        }
+      ],
+      "detail": "Această intrare privește centurile din față. Indicatoarele separate pentru centurile din spate nu sunt încă ilustrate în catalog."
+    },
+    {
+      "id": "racire",
+      "symbol": "racire",
+      "color": "rosu",
+      "pages": [
+        43,
+        216,
+        217
+      ],
+      "meaning": "Lichidul de răcire este insuficient sau motorul este supraîncălzit.",
+      "action": "Oprește în siguranță, oprește motorul și lasă-l să se răcească. Nu deschide vasul de expansiune cu motorul cald.",
+      "states": [
+        {
+          "label": "Mesaj despre nivel",
+          "text": "Verifică nivelul la rece, conform manualului. Dacă vasul este gol sau nu poți completa, nu continua; cere asistență. Dacă nivelul este corect și martorul se aprinde din nou, decuplează contactul și verifică siguranța ventilatorului radiatorului. Dacă și siguranța este în regulă, iar martorul revine, nu continua."
+        },
+        {
+          "label": "Mesaj de supraîncălzire",
+          "text": "Reia deplasarea numai după stingerea martorului."
+        }
+      ],
+      "detail": "Nu trata stingerea temporară drept o reparație. Manualul cere verificarea siguranței ventilatorului dacă nivelul este corect și avertizarea revine. Cu bateria aprinsă simultan, oprește motorul și cere asistență."
+    },
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [
+        43,
+        44
+      ],
+      "meaning": "Presiunea uleiului de motor este prea scăzută.",
+      "action": "Oprește în siguranță și oprește motorul. Verifică nivelul. Dacă martorul clipește, nu continua și nu lăsa motorul nici la ralanti; cere asistență.",
+      "states": [
+        {
+          "label": "Clipește",
+          "text": "Aceasta este starea de avertizare descrisă în manual. Un nivel corect de ulei nu permite continuarea cu martorul clipind."
+        }
+      ],
+      "detail": "Presiunea și nivelul uleiului sunt avertizări diferite. Dacă nu poți completa uleiul necesar, nu continua deplasarea. Catalogul nu confirmă o altă interpretare pentru un simbol care arată diferit sau un alt mesaj."
+    },
+    {
+      "id": "alternator",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [
+        43
+      ],
+      "meaning": "Cu motorul în funcțiune, bateria nu se încarcă.",
+      "action": "Dezactivează consumatorii electrici care nu sunt necesari. Condu foarte precaut și solicită imediat service. Dacă se aprinde și avertizarea de răcire, oprește motorul și nu continua.",
+      "states": [
+        {
+          "label": "Motor oprit / contact pus",
+          "text": "Descrierea defecțiunii din manual se referă la motorul care funcționează. Unele lămpi se aprind temporar la verificarea de la contact."
+        }
+      ],
+      "detail": "Simbolul bateriei indică încărcarea, nu identifică automat o baterie de înlocuit. Manualul avertizează explicit asupra riscului de avarie la motor când apare și simbolul lichidului de răcire."
+    },
+    {
+      "id": "directie-rosu",
+      "symbol": "directie",
+      "color": "rosu",
+      "pages": [
+        39,
+        40
+      ],
+      "equipment": "Pornire cu buton, pentru blocarea coloanei",
+      "meaning": "Asistarea direcției este complet defectă sau există o defecțiune gravă la blocarea coloanei.",
+      "action": "La blocarea volanului defectă, oprește și nu continua. Pentru servodirecție, urmează procedura din manual; dacă martorul roșu persistă, oprește și cere asistență.",
+      "states": [
+        {
+          "label": "Aprins continuu",
+          "text": "La servodirecție, volanul necesită mult mai multă forță. Manualul indică decuplarea contactului, repornirea și o distanță scurtă; dacă nu se stinge, nu continua."
+        },
+        {
+          "label": "Clipește + mesaj de oprire",
+          "text": "Blocarea coloanei la pornirea cu buton este defectă. După decuplarea contactului, nu mai poți cupla contactul sau porni motorul. Cere asistență."
+        }
+      ],
+      "detail": "Aceeași formă are două interpretări. Mesajul și clipirea fac diferența. Nu aplica procedura pentru servodirecție unei avertizări care cere oprirea din cauza blocării coloanei."
+    },
+    {
+      "id": "directie-galben",
+      "symbol": "directie-galben",
+      "color": "galben",
+      "pages": [
+        39,
+        40
+      ],
+      "equipment": "Pornire cu buton, pentru blocarea coloanei",
+      "meaning": "Asistarea direcției este parțial defectă sau blocarea coloanei necesită atenție.",
+      "action": "Citește mesajul. La defecțiune persistentă, solicită imediat service, conducând foarte precaut doar dacă direcția este deblocată.",
+      "states": [
+        {
+          "label": "Aprins continuu",
+          "text": "Pentru servodirecție, manualul indică repornirea și o distanță scurtă. Dacă persistă, mergi foarte precaut la service."
+        },
+        {
+          "label": "Clipește: mesajul contează",
+          "text": "La mesajul despre o defecțiune a blocării, manualul permite mersul foarte precaut și cere imediat service. La solicitarea de a mișca volanul, rotește-l ușor în ambele sensuri; dacă nu se deblochează, cere asistență și nu pleca."
+        }
+      ],
+      "detail": "După deconectarea și reconectarea bateriei, martorul poate apărea temporar. Dacă rămâne după repornire și o distanță scurtă, manualul indică o defecțiune și asistență imediată."
+    },
+    {
+      "id": "cutie-rosu",
+      "symbol": "cutie-rosu",
+      "color": "rosu",
+      "pages": [
+        42,
+        43
+      ],
+      "equipment": "Cutie automată; pictogramă pe MAXI DOT",
+      "meaning": "Mesajul indică supraîncălzire gravă sau o defecțiune a transmisiei.",
+      "action": "La mesajul de oprire, oprește mașina în siguranță. La supraîncălzire, oprește și motorul; nu relua mersul până nu se stinge avertizarea.",
+      "states": [
+        {
+          "label": "Supraîncălzire + oprire",
+          "text": "Dacă martorul nu se stinge după oprire, nu continua; solicită asistență."
+        },
+        {
+          "label": "Defecțiune + oprire în siguranță",
+          "text": "Oprește conform mesajului și cere asistență. Permisiunea de reluare după răcire nu se aplică automat unei defecțiuni."
+        }
+      ],
+      "detail": "La Fabia, manualul precizează că pictograma transmisiei este afișată numai pe MAXI DOT. Urmează textul de pe afișaj: defecțiunea care cere oprire nu permite reluarea doar pentru că s-a răcit cutia."
+    },
+    {
+      "id": "cutie-galben",
+      "symbol": "cutie-galben",
+      "color": "galben",
+      "pages": [
+        42,
+        43
+      ],
+      "equipment": "Cutie automată; pictogramă pe MAXI DOT",
+      "meaning": "Transmisia este supraîncălzită cu deplasarea permisă sau funcționează în regim de urgență.",
+      "action": "Continuă numai într-un regim foarte precaut dacă mesajul permite. La defecțiune, solicită imediat service.",
+      "states": [
+        {
+          "label": "Mesajul permite continuarea",
+          "text": "La supraîncălzire, manualul permite mersul foarte precaut. Un mesaj care cere oprirea aparține celeilalte avertizări."
+        },
+        {
+          "label": "Regim de urgență",
+          "text": "Pot lipsi marșarierul sau viteza normală. Solicită imediat asistența unui service."
+        }
+      ],
+      "detail": "La Fabia, pictograma transmisiei apare numai pe MAXI DOT. Afișajul cu segmente poate comunica starea prin text abreviat; permisiunea de continuare depinde de mesaj."
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [
+        40
+      ],
+      "meaning": "Există o defecțiune la sistemul de control al gazelor arse. Puterea motorului poate scădea.",
+      "action": "Pentru martorul aprins descris în manual, condu foarte precaut și solicită imediat asistența unui service.",
+      "states": [
+        {
+          "label": "Clipire: neverificată aici",
+          "text": "Această ediție nu dă o instrucțiune separată pentru check engine care clipește. Nu extrapola permisiunea de continuare; consultă manualul propriei mașini și cere asistență."
+        }
+      ],
+      "detail": "Martorul nu identifică piesa defectă. Citirea codurilor de diagnoză poate ajuta service-ul, dar ștergerea unui cod nu repară cauza. Nu există o recomandare comercială asociată acestei intrări."
+    },
+    {
+      "id": "epc",
+      "symbol": "epc",
+      "color": "galben",
+      "pages": [
+        40
+      ],
+      "equipment": "Motor pe benzină",
+      "meaning": "Există o defecțiune la unitatea de comandă a motorului; poate apărea regimul de urgență, cu putere redusă.",
+      "action": "Condu foarte precaut și solicită imediat asistența unui service.",
+      "states": [
+        {
+          "label": "Aprins",
+          "text": "Intrarea din acest manual se aplică motoarelor pe benzină. Nu o folosi pentru a identifica o defecțiune diesel."
+        }
+      ],
+      "detail": "EPC este o avertizare a controlului electronic al motorului. Din literele de pe bord nu se poate deduce singură componenta care trebuie înlocuită."
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [
+        40
+      ],
+      "meaning": "ABS este defect. Instalația de frână funcționează fără funcția antiblocare.",
+      "action": "Condu foarte precaut și solicită imediat service. Dacă apare și martorul roșu al frânei, nu continua; cere asistență.",
+      "states": [
+        {
+          "label": "ABS + frână roșie",
+          "text": "Este combinația pentru care manualul interzice continuarea deplasării. Distanța de frânare poate crește."
+        }
+      ],
+      "detail": "Faptul că frânele încă funcționează nu înseamnă că mașina frânează normal în orice condiții. Citește și avertizarea instalației de frână."
+    },
+    {
+      "id": "esc",
+      "symbol": "esc",
+      "color": "galben",
+      "pages": [
+        40
+      ],
+      "meaning": "ESC sau ASR intervine dacă martorul clipește; aprinderea continuă poate indica o defecțiune.",
+      "action": "Dacă rămâne aprins, condu foarte precaut și solicită imediat service. La apariția după pornire, manualul indică decuplarea și recuplarea contactului.",
+      "states": [
+        {
+          "label": "Clipește",
+          "text": "ESC sau ASR lucrează în acel moment; clipirea nu este, singură, o defecțiune."
+        },
+        {
+          "label": "După reconectarea bateriei",
+          "text": "Ar trebui să se stingă după o distanță scurtă. Dacă persistă, solicită service."
+        }
+      ],
+      "detail": "Mașina cu urme șerpuite nu trebuie confundată cu varianta OFF, care indică dezactivarea controlului tracțiunii."
+    },
+    {
+      "id": "asr-off",
+      "symbol": "asr-off",
+      "color": "galben",
+      "pages": [
+        40
+      ],
+      "meaning": "Controlul tracțiunii ASR este dezactivat.",
+      "action": "Ține cont că asistența la tracțiune este oprită. Reactivează sistemul când situația care a cerut dezactivarea a trecut.",
+      "states": [
+        {
+          "label": "Aprins continuu",
+          "text": "Controlul tracțiunii este dezactivat. Nu este aceeași situație ca martorul ESC care clipește în timpul unei intervenții."
+        }
+      ],
+      "detail": "Verifică inscripția OFF și starea sistemului. Nu presupune că o funcție dezactivată este automat o defecțiune."
+    },
+    {
+      "id": "airbag",
+      "symbol": "airbag",
+      "color": "galben",
+      "pages": [
+        41
+      ],
+      "meaning": "Mesajul poate indica o defecțiune sau dezactivarea unui sistem de siguranță.",
+      "action": "La defecțiune, cere verificarea imediată la un service: sistemele de siguranță pot să nu se declanșeze la accident.",
+      "states": [
+        {
+          "label": "La contact, 4 secunde",
+          "text": "Manualul descrie această afișare și când airbagul frontal al pasagerului a fost dezactivat cu cheia."
+        },
+        {
+          "label": "4 secunde aprins + 12 secunde clipire",
+          "text": "Poate indica dezactivarea prin diagnoză a unui airbag sau pretensionator. Verifică mesajul; nu presupune o simplă eroare."
+        }
+      ],
+      "detail": "Manualul Fabia descrie defecțiunea sistemului airbag și dezactivarea unui airbag sau pretensionator. Nu adăugăm aici interpretările protecției proactive a ocupanților de la Superb."
+    },
+    {
+      "id": "anvelope",
+      "symbol": "anvelope",
+      "color": "galben",
+      "pages": [
+        41,
+        197
+      ],
+      "meaning": "Presiunea s-a modificat într-o anvelopă sau monitorizarea presiunii este defectă.",
+      "action": "Redu viteza și evită frânarea sau virarea bruscă. Oprește, decuplează contactul și verifică anvelopele și presiunile.",
+      "states": [
+        {
+          "label": "Aprins continuu",
+          "text": "Corectează presiunea ori remediază pana, apoi memorează valorile corecte. Resetarea înaintea verificării poate ascunde o problemă."
+        },
+        {
+          "label": "Clipește circa 1 minut, apoi rămâne aprins",
+          "text": "Probabil o defecțiune de monitorizare. Oprește și repornește motorul. Dacă reapare clipirea, condu foarte precaut și solicită imediat service."
+        }
+      ],
+      "detail": "După corectarea presiunilor, manualul oferă două proceduri, în funcție de echipare: CAR → Stare autovehicul → control presiune → SET, sau butonul dedicat ținut apăsat, cu contactul pus, până la confirmare. Nu reseta înainte de verificare. Sistemul nu poate avertiza la orice pierdere rapidă de presiune."
+    },
+    {
+      "id": "rezerva",
+      "symbol": "rezerva",
+      "color": "galben",
+      "pages": [
+        41,
+        42
+      ],
+      "meaning": "Combustibilul a ajuns în zona de rezervă, aproximativ 7 litri în această ediție de manual.",
+      "action": "Alimentează. Nu folosi rezerva drept promisiune a unei anumite autonomii.",
+      "states": [
+        {
+          "label": "După alimentare",
+          "text": "Indicația dispare după alimentare și o distanță scurtă."
+        }
+      ],
+      "detail": "Manualul Fabia indică aproximativ 7 litri, o valoare diferită de cei 6 litri din edițiile Superb și Octavia consultate. Nu reprezintă o autonomie garantată."
+    },
+    {
+      "id": "nivel-ulei",
+      "symbol": "nivel-ulei",
+      "color": "galben",
+      "pages": [
+        44,
+        216
+      ],
+      "meaning": "Mesajul distinge între nivel prea scăzut, nivel prea ridicat și senzor defect.",
+      "action": "La mesajele despre nivel, oprește mașina și motorul, apoi verifică nivelul. Completează dacă este necesar, conform manualului.",
+      "states": [
+        {
+          "label": "Nivel prea scăzut",
+          "text": "Dacă nu poți completa uleiul necesar, nu continua deplasarea; cere asistență."
+        },
+        {
+          "label": "Nivel prea ridicat: citește și limita de la p. 216",
+          "text": "Secțiunea de martori de la p. 44 permite mersul foarte precaut, dar p. 216 interzice continuarea dacă nivelul verificat depășește domeniul admis. Dacă verificarea confirmă prea mult ulei, nu continua și cere asistență. La senzor defect, manualul cere service imediat, cu mers foarte precaut."
+        }
+      ],
+      "detail": "Un mesaj de nivel prea mare nu se rezolvă prin completare. La verificarea pe jojă, respectă domeniul admis și avertizarea de la pagina 216. Stingerea martorului după deschiderea capotei nu dovedește că nivelul s-a corectat."
+    },
+    {
+      "id": "parbriz",
+      "symbol": "parbriz",
+      "color": "galben",
+      "pages": [
+        45
+      ],
+      "meaning": "Nivelul lichidului de spălare a parbrizului este prea scăzut.",
+      "action": "Completează cu lichid de spălare potrivit, conform manualului.",
+      "states": [
+        {
+          "label": "Simbol pe afișaj",
+          "text": "Poate fi însoțit de un avertisment galben. Nu îl confunda cu termometrul lichidului de răcire."
+        }
+      ],
+      "detail": "Forma reprezintă un parbriz și jeturi de lichid. Nu este o indicație despre temperatura motorului."
+    },
+    {
+      "id": "filtru",
+      "symbol": "filtru",
+      "color": "galben",
+      "pages": [
+        44,
+        45
+      ],
+      "equipment": "Dacă există filtru de particule",
+      "meaning": "Filtrul de particule este colmatat cu funingine.",
+      "action": "Dacă traficul și condițiile permit, manualul indică 50–120 km/h în treapta recomandată pentru curățare. Dacă nu se stinge în 30 de minute, mergi foarte precaut la service.",
+      "states": [
+        {
+          "label": "Cât timp este aprins",
+          "text": "Consumul poate crește, puterea poate scădea, iar START-STOP nu este disponibil."
+        },
+        {
+          "label": "Filtru foarte fierbinte",
+          "text": "Nu parca peste iarbă uscată, frunze sau alte materiale inflamabile: există risc de incendiu."
+        }
+      ],
+      "detail": "Instrucțiunea aparține strict acestei ediții de manual. Nu încerca să atingi o viteză incompatibilă cu vremea, carosabilul sau traficul. Secțiunea nu limitează explicit filtrul la diesel; nu presupunem această compatibilitate."
+    },
+    {
+      "id": "ceata-spate",
+      "symbol": "ceata-spate",
+      "color": "galben",
+      "pages": [
+        40
+      ],
+      "meaning": "Lampa de ceață spate este activată.",
+      "action": "Verifică dacă ai nevoie de ea și dezactiveaz-o când condițiile nu o mai cer.",
+      "states": [
+        {
+          "label": "Galben, dar fără defecțiune",
+          "text": "Manualul descrie o lampă activată. Culoarea singură nu este o instrucțiune de mers la service."
+        }
+      ],
+      "detail": "Lampa de ceață spate și proiectoarele de ceață față au simboluri asemănătoare, dar orientarea și culoarea diferă."
+    },
+    {
+      "id": "semnalizare",
+      "symbol": "semnalizare",
+      "color": "verde",
+      "pages": [
+        42
+      ],
+      "meaning": "Semnalizarea stânga sau dreapta este activată; ambele săgeți clipesc la avarii.",
+      "action": "Verifică funcționarea semnalizării dacă ritmul devine neobișnuit de rapid.",
+      "states": [
+        {
+          "label": "Clipește de circa două ori mai repede",
+          "text": "Poate exista o eroare la instalația de semnalizare. Manualul exclude regimul de tractare a remorcii din această regulă."
+        }
+      ],
+      "detail": "Cele două săgeți sunt reunite în ilustrație pentru identificare. Poziționarea lor pe panoul real poate fi diferită."
+    },
+    {
+      "id": "faza-lunga",
+      "symbol": "faza-lunga",
+      "color": "albastru",
+      "pages": [
+        42
+      ],
+      "meaning": "Faza lungă sau semnalizarea cu farurile este activată.",
+      "action": "Verifică dacă faza lungă este potrivită pentru traficul din jur și comută când este necesar.",
+      "states": [
+        {
+          "label": "Aprins",
+          "text": "Este o indicație de funcționare, nu o defecțiune descrisă în această secțiune."
+        }
+      ],
+      "detail": "Raze drepte, simbol albastru. Litera A într-un simbol de far aparține asistentului pentru faruri și are o explicație separată."
+    },
+    {
+      "id": "ceata-fata",
+      "symbol": "ceata-fata",
+      "color": "verde",
+      "pages": [
+        42
+      ],
+      "equipment": "Proiectoare de ceață",
+      "meaning": "Proiectoarele de ceață sunt aprinse.",
+      "action": "Verifică dacă utilizarea lor este potrivită condițiilor de vizibilitate.",
+      "states": [
+        {
+          "label": "Aprins",
+          "text": "Indică activarea proiectoarelor. Nu este lampa galbenă de ceață spate."
+        }
+      ],
+      "detail": "Desenul are raze oblice traversate de o linie ondulată. Prezența funcției depinde de echipare."
+    },
+    {
+      "id": "pilot",
+      "symbol": "pilot",
+      "color": "verde",
+      "pages": [
+        42
+      ],
+      "equipment": "Pilot automat / limitator",
+      "meaning": "Viteza este reglată de pilotul automat, ACC sau limitatorul de viteză.",
+      "action": "Urmărește viteza setată și traficul. Dacă simbolul clipește, verifică depășirea limitei setate.",
+      "states": [
+        {
+          "label": "Clipește",
+          "text": "A fost depășită limita de viteză reglată la limitator."
+        }
+      ],
+      "detail": "Simbolul nu confirmă singur că reglarea distanței ACC este activă. Indicatoarele suplimentare ACC nu sunt încă ilustrate separat în acest catalog."
+    },
+    {
+      "id": "pedala",
+      "symbol": "pedala",
+      "color": "verde",
+      "pages": [
+        42
+      ],
+      "equipment": "Cutie automată",
+      "meaning": "Mașina cere acționarea pedalei de frână.",
+      "action": "Apasă pedala de frână conform solicitării mașinii.",
+      "states": [
+        {
+          "label": "Roșu în loc de verde",
+          "text": "Manualul descrie separat un simbol roșu de pedală la ACC: decelerarea este insuficientă, iar șoferul trebuie să frâneze (pagina 39). Nu confunda cele două solicitări."
+        }
+      ],
+      "detail": "În catalog este ilustrată varianta verde pentru transmisia automată. Avertizarea roșie ACC nu este încă ilustrată separat."
+    },
+    {
+      "id": "fulg",
+      "symbol": "fulg",
+      "color": "alb",
+      "pages": [
+        45
+      ],
+      "meaning": "Temperatura exterioară este sub +4 °C.",
+      "action": "Adaptează conducerea la posibilitatea de polei. Acesta poate exista și la +4 °C.",
+      "states": [
+        {
+          "label": "Avertizare de temperatură",
+          "text": "Nu te baza numai pe termometru pentru a decide dacă drumul este înghețat."
+        }
+      ],
+      "detail": "Un simbol alb poate transmite o avertizare utilă pentru siguranță; nu înseamnă neapărat că o funcție este pornită."
+    },
+    {
+      "id": "service",
+      "symbol": "service",
+      "color": "alb",
+      "pages": [
+        45,
+        52
+      ],
+      "meaning": "Se apropie sau a sosit termenul unei operații de service.",
+      "action": "Verifică distanța și zilele rămase și programează operația de service. Resetarea se face după întreținere, de către o unitate autorizată.",
+      "states": [
+        {
+          "label": "Mesaj la contact",
+          "text": "Poate arăta kilometrii și zilele până la termen sau faptul că termenul a sosit."
+        }
+      ],
+      "detail": "Manualul indică afișarea în Infotainment CAR → Setări → Service sau prin butonul panoului de bord. Recomandă să nu resetezi singur intervalul: poți introduce setări greșite."
+    },
+    {
+      "id": "start-stop",
+      "symbol": "start-stop",
+      "color": "alb",
+      "pages": [
+        45,
+        168
+      ],
+      "equipment": "START-STOP",
+      "meaning": "Indicatoarele arată dacă motorul este oprit automat sau nu este oprit de START-STOP.",
+      "action": "Citește starea și mesajul. Lipsa opririi automate nu confirmă singură o defecțiune.",
+      "states": [
+        {
+          "label": "A în cerc / varianta tăiată",
+          "text": "Disting oprirea automată de situația în care motorul nu este oprit automat. Acesta poate rămâne pornit din cauza temperaturii, bateriei sau climatizării."
+        },
+        {
+          "label": "Mesaj de defecțiune",
+          "text": "Dacă apare un mesaj de perturbare a sistemului, solicită asistența unui service."
+        }
+      ],
+      "detail": "În panou este ilustrată o singură variantă. Ambele stări sunt descrise la pagina 168. Nu deduce starea bateriei doar din faptul că START-STOP nu oprește motorul."
+    },
+    {
+      "id": "sos",
+      "symbol": "sos",
+      "color": "galben",
+      "pages": [
+        45
+      ],
+      "equipment": "Sistem de apel de urgență",
+      "meaning": "Există o defecțiune la sistemul de apeluri de urgență.",
+      "action": "Solicită asistența de specialitate a unui service.",
+      "states": [
+        {
+          "label": "Avertizare pe afișaj",
+          "text": "Simbolul este însoțit de avertizarea asociată. Nu presupune că apelul automat funcționează normal."
+        }
+      ],
+      "detail": "Această intrare descrie avertizarea din panoul de bord, nu toate stările LED-ului din butonul de apel."
+    }
+  ]
+}

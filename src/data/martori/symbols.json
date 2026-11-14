@@ -1,0 +1,227 @@
+{
+  "frana": {
+    "name": "Instalația de frână",
+    "asset": "martor-frana.svg",
+    "shape": "cerc paranteze semnul exclamării frâne"
+  },
+  "parcare": {
+    "name": "Frâna de parcare",
+    "asset": "martor-frana-de-parcare.svg",
+    "shape": "P cerc paranteze"
+  },
+  "centura": {
+    "name": "Centura de siguranță față",
+    "asset": "martor-centura.svg",
+    "shape": "om persoană așezată centură"
+  },
+  "racire": {
+    "name": "Lichidul de răcire",
+    "asset": "martor-lichid-racire.svg",
+    "shape": "termometru valuri apă temperatură"
+  },
+  "presiune-ulei": {
+    "name": "Presiunea uleiului",
+    "asset": "martor-presiune-ulei.svg",
+    "shape": "cană canistră stropitoare picătură ulei"
+  },
+  "alternator": {
+    "name": "Alternatorul / încărcarea bateriei",
+    "asset": "martor-alternator.svg",
+    "shape": "baterie acumulator dreptunghi plus minus"
+  },
+  "directie": {
+    "name": "Servodirecția / blocarea volanului",
+    "asset": "martor-servodirectie-rosu.svg",
+    "shape": "volan semnul exclamării direcție KESSY"
+  },
+  "directie-galben": {
+    "name": "Servodirecția / blocarea volanului",
+    "asset": "martor-servodirectie-galben.svg",
+    "shape": "volan semnul exclamării direcție KESSY"
+  },
+  "cutie-rosu": {
+    "name": "Cutia de viteze automată",
+    "asset": "martor-cutie-rosu.svg",
+    "shape": "roată dințată zimți semnul exclamării DSG transmisie"
+  },
+  "cutie-galben": {
+    "name": "Cutia de viteze automată",
+    "asset": "martor-cutie-galben.svg",
+    "shape": "roată dințată zimți semnul exclamării DSG transmisie"
+  },
+  "motor": {
+    "name": "Motorul (check engine)",
+    "asset": "martor-motor.svg",
+    "shape": "contur motor robinet elicopter gaze evacuare"
+  },
+  "epc": {
+    "name": "EPC",
+    "asset": "martor-epc.svg",
+    "shape": "litere EPC motor benzină"
+  },
+  "abs": {
+    "name": "ABS",
+    "asset": "martor-abs.svg",
+    "shape": "litere ABS cerc paranteze frâne"
+  },
+  "esc": {
+    "name": "ESC / ASR",
+    "asset": "martor-esc.svg",
+    "shape": "mașină urme șerpuite zigzag derapaj stabilitate tracțiune"
+  },
+  "asr-off": {
+    "name": "ASR dezactivat",
+    "asset": "martor-asr-off.svg",
+    "shape": "mașină urme șerpuite OFF tracțiune"
+  },
+  "airbag": {
+    "name": "Airbag / sisteme de siguranță",
+    "asset": "martor-airbag.svg",
+    "shape": "om așezat minge cerc în față"
+  },
+  "anvelope": {
+    "name": "Presiunea în anvelope",
+    "asset": "martor-presiune-anvelope.svg",
+    "shape": "potcoavă U semnul exclamării cauciuc roată TPMS"
+  },
+  "placute": {
+    "name": "Plăcuțele de frână",
+    "asset": "martor-placute-frana.svg",
+    "shape": "cerc paranteze întrerupte frâne"
+  },
+  "rezerva": {
+    "name": "Rezerva de combustibil",
+    "asset": "martor-rezerva.svg",
+    "shape": "pompă benzină carburant rezervor"
+  },
+  "nivel-ulei": {
+    "name": "Nivelul uleiului",
+    "asset": "martor-nivel-ulei.svg",
+    "shape": "cană canistră stropitoare valuri linie ondulată picătură"
+  },
+  "parbriz": {
+    "name": "Lichidul de parbriz",
+    "asset": "martor-lichid-parbriz.svg",
+    "shape": "parbriz jet stropi fântână ștergătoare"
+  },
+  "preincalzire": {
+    "name": "Preîncălzirea",
+    "asset": "martor-preincalzire.svg",
+    "shape": "spirală buclă arc rezistență diesel bujii"
+  },
+  "filtru": {
+    "name": "Filtrul de particule",
+    "asset": "martor-filtru-particule.svg",
+    "shape": "filtru dreptunghi puncte fum evacuare DPF GPF"
+  },
+  "apa-motorina": {
+    "name": "Apă în filtrul de combustibil",
+    "asset": "martor-apa-motorina.svg",
+    "shape": "filtru picături apă motorină diesel"
+  },
+  "ceata-spate": {
+    "name": "Lampa de ceață spate",
+    "asset": "martor-lampa-ceata-spate.svg",
+    "shape": "far linii dreapta linie ondulată"
+  },
+  "semnalizare": {
+    "name": "Semnalizarea",
+    "asset": "martor-semnalizare.svg",
+    "shape": "săgeți stânga dreapta avarii"
+  },
+  "faza-lunga": {
+    "name": "Faza lungă",
+    "asset": "martor-faza-lunga.svg",
+    "shape": "far raze linii drepte albastre"
+  },
+  "ceata-fata": {
+    "name": "Proiectoarele de ceață",
+    "asset": "martor-proiectoare-ceata.svg",
+    "shape": "far linii oblice stânga linie ondulată"
+  },
+  "pilot": {
+    "name": "Pilotul automat / limitatorul",
+    "asset": "martor-pilot-automat.svg",
+    "shape": "vitezometru cadran ac săgeată cruise"
+  },
+  "pedala": {
+    "name": "Apasă pedala de frână",
+    "asset": "martor-pedala-frana.svg",
+    "shape": "picior pantof pedală cerc"
+  },
+  "auto-hold": {
+    "name": "Auto Hold",
+    "asset": "martor-auto-hold.svg",
+    "shape": "P cerc paranteze verde frână"
+  },
+  "fulg": {
+    "name": "Temperatură exterioară scăzută",
+    "asset": "martor-fulg.svg",
+    "shape": "fulg nea zăpadă gheață stea polei"
+  },
+  "service": {
+    "name": "Termen de service",
+    "asset": "martor-service.svg",
+    "shape": "cheie fixă revizie"
+  },
+  "eco": {
+    "name": "Regim economic",
+    "asset": "martor-eco.svg",
+    "shape": "litere ECO"
+  },
+  "start-stop": {
+    "name": "START-STOP",
+    "asset": "martor-start-stop.svg",
+    "shape": "A cerc săgeată tăiat"
+  },
+  "asistent-faruri": {
+    "name": "Asistentul pentru faruri",
+    "asset": "martor-asistent-faza-lunga.svg",
+    "shape": "far A litera asistent fază lungă"
+  },
+  "sos": {
+    "name": "Apelul de urgență",
+    "asset": "martor-sos.svg",
+    "shape": "SOS telefon"
+  },
+  "lane-assist": {
+    "name": "Lane Assist",
+    "asset": "martor-lane-assist.svg",
+    "shape": "drum benzi linii mașină"
+  },
+  "airbag-rosu": {
+    "name": "Airbag / sisteme de reținere",
+    "asset": "martor-airbag-rosu.svg",
+    "shape": "om așezat minge cerc în față"
+  },
+  "frana-galben": {
+    "name": "Instalația de frână",
+    "asset": "martor-frana-galben.svg",
+    "shape": "cerc paranteze semnul exclamării frâne"
+  },
+  "parcare-galben": {
+    "name": "Frâna de parcare",
+    "asset": "martor-parcare-galben.svg",
+    "shape": "P cerc paranteze"
+  },
+  "racire-albastru": {
+    "name": "Temperatura lichidului de răcire",
+    "asset": "martor-racire-albastru.svg",
+    "shape": "termometru valuri apă temperatură"
+  },
+  "stop": {
+    "name": "Avertizare STOP",
+    "asset": "martor-stop.svg",
+    "shape": "STOP litere"
+  },
+  "triunghi": {
+    "name": "Avertizare generală",
+    "asset": "martor-triunghi.svg",
+    "shape": "triunghi semnul exclamării"
+  },
+  "esc-off": {
+    "name": "Controlul stabilității OFF",
+    "asset": "martor-esc-off.svg",
+    "shape": "mașină derapaj urme șerpuite OFF dezactivat ESP DSC ESC"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "id": "volkswagen-golf-8-ghid-2025-ie",
+  "brand": "Volkswagen",
+  "model": "Golf",
+  "generation": "VIII · ghid 24.03.2025 · Irlanda",
+  "verified": true,
+  "scope": "Volkswagen Golf, VIII · ghid 24.03.2025 · Irlanda. Sursă: ghid oficial în engleză, exemple pentru Golf 8; nu manual complet. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Volkswagen Golf · VIII · ghid 24.03.2025 · Irlanda · ghid oficial în engleză, exemple pentru Golf 8; nu manual complet",
+    "url": "https://www.volkswagen.ie/en/owners-and-services/customer-information/warning-and-indicator-lamps/warning-and-indicator-lamps-for-combustion-vehicles.html",
+    "documentId": "Volkswagen Ireland · warning and indicator lamps · Golf 8 example",
+    "overviewPages": [],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "format": "web"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. ",
+  "lights": [
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [],
+      "meaning": "Presiunea uleiului motor este prea mică.",
+      "action": "Oprește în siguranță și nu continua. Consultă manualul propriei mașini și solicită asistență.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Ghidul marchează explicit STOP / nu continua."
+        }
+      ],
+      "detail": "Ghidul Volkswagen folosește Golf 8 ca exemplu. Nu confirmă fiecare an sau echipare; procedura completă se verifică în manualul propriei mașini, după VIN.",
+      "sourceUrl": "https://www.volkswagen.ie/en/owners-and-services/customer-information/warning-and-indicator-lamps/warning-and-indicator-lamps-for-combustion-vehicles/engine-oil-pressure.html"
+    },
+    {
+      "id": "racire",
+      "symbol": "racire",
+      "color": "rosu",
+      "pages": [],
+      "meaning": "Nivelul lichidului de răcire este prea mic.",
+      "action": "Oprește în siguranță și nu continua. Verifică procedura din manualul mașinii.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Ghidul consultat descrie nivelul redus; nu confirmă aici fiecare cauză de supraîncălzire."
+        }
+      ],
+      "detail": "Ghidul Volkswagen folosește Golf 8 ca exemplu. Nu confirmă fiecare an sau echipare; procedura completă se verifică în manualul propriei mașini, după VIN.",
+      "sourceUrl": "https://www.volkswagen.ie/en/owners-and-services/customer-information/warning-and-indicator-lamps/warning-and-indicator-lamps-for-combustion-vehicles/engine-coolant-system.html"
+    },
+    {
+      "id": "racire-rece",
+      "symbol": "racire-albastru",
+      "color": "albastru",
+      "pages": [],
+      "meaning": "Lichidul de răcire este rece; motorul nu s-a încălzit.",
+      "action": "Verifică instrucțiunile pentru încălzirea motorului în manualul mașinii.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Această culoare are alt sens decât avertizarea roșie."
+        }
+      ],
+      "detail": "Ghidul Volkswagen folosește Golf 8 ca exemplu. Nu confirmă fiecare an sau echipare; procedura completă se verifică în manualul propriei mașini, după VIN.",
+      "name": "Lichid de răcire rece",
+      "sourceUrl": "https://www.volkswagen.ie/en/owners-and-services/customer-information/warning-and-indicator-lamps/warning-and-indicator-lamps-for-combustion-vehicles/engine-coolant-system-blue.html"
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [],
+      "meaning": "ABS este defect sau indisponibil.",
+      "action": "Oprește în siguranță pentru a citi mesajul și procedura din manual; solicită verificare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Ghidul nu oferă aici o procedură completă pentru fiecare combinație de martori."
+        }
+      ],
+      "detail": "Ghidul Volkswagen folosește Golf 8 ca exemplu. Nu confirmă fiecare an sau echipare; procedura completă se verifică în manualul propriei mașini, după VIN.",
+      "sourceUrl": "https://www.volkswagen.ie/en/owners-and-services/customer-information/warning-and-indicator-lamps/warning-and-indicator-lamps-for-combustion-vehicles/anti-lock-brake-system.html"
+    },
+    {
+      "id": "parcare",
+      "symbol": "parcare",
+      "color": "rosu",
+      "pages": [],
+      "meaning": "Frâna electrică de parcare este aplicată.",
+      "action": "Verifică eliberarea înainte de plecare, conform manualului.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Roșu confirmă aici frâna aplicată; galbenul este o intrare separată."
+        }
+      ],
+      "detail": "Ghidul Volkswagen folosește Golf 8 ca exemplu. Nu confirmă fiecare an sau echipare; procedura completă se verifică în manualul propriei mașini, după VIN.",
+      "sourceUrl": "https://www.volkswagen.ie/en/owners-and-services/customer-information/warning-and-indicator-lamps/warning-and-indicator-lamps-for-combustion-vehicles/electronic-parking-brake.html"
+    },
+    {
+      "id": "parcare-galben",
+      "symbol": "parcare-galben",
+      "color": "galben",
+      "pages": [],
+      "meaning": "Frâna electrică de parcare este defectă.",
+      "action": "Consultă mesajul și manualul propriei mașini; solicită verificare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu confunda avertizarea galbenă cu simpla aplicare a frânei."
+        }
+      ],
+      "detail": "Ghidul Volkswagen folosește Golf 8 ca exemplu. Nu confirmă fiecare an sau echipare; procedura completă se verifică în manualul propriei mașini, după VIN.",
+      "sourceUrl": "https://www.volkswagen.ie/en/owners-and-services/customer-information/warning-and-indicator-lamps/warning-and-indicator-lamps-for-combustion-vehicles/electronic-parking-brake-yellow.html"
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [],
+      "meaning": "O componentă de emisii este defectă sau motorul are rateuri.",
+      "action": "Oprește în siguranță pentru verificarea mesajului și instrucțiunilor din manual; solicită service.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Continuu: componentă de emisii. Clipire: rateuri; ambele pot produce avarii."
+        }
+      ],
+      "detail": "Ghidul Volkswagen folosește Golf 8 ca exemplu. Nu confirmă fiecare an sau echipare; procedura completă se verifică în manualul propriei mașini, după VIN.",
+      "sourceUrl": "https://www.volkswagen.ie/en/owners-and-services/customer-information/warning-and-indicator-lamps/warning-and-indicator-lamps-for-combustion-vehicles/exhaust-system.html"
+    },
+    {
+      "id": "placute",
+      "symbol": "placute",
+      "color": "galben",
+      "pages": [],
+      "meaning": "Plăcuțele de frână față sunt uzate.",
+      "action": "Consultă procedura din manual și programează verificarea frânelor.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu indică același lucru ca martorul roșu al circuitului de frânare."
+        }
+      ],
+      "detail": "Ghidul Volkswagen folosește Golf 8 ca exemplu. Nu confirmă fiecare an sau echipare; procedura completă se verifică în manualul propriei mașini, după VIN.",
+      "sourceUrl": "https://www.volkswagen.ie/en/owners-and-services/customer-information/warning-and-indicator-lamps/warning-and-indicator-lamps-for-combustion-vehicles/brake-pad-wear-indicator.html"
+    }
+  ]
+}

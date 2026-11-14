@@ -1,0 +1,181 @@
+{
+  "id": "honda-civic-5d-diesel-2018-eu",
+  "brand": "Honda",
+  "model": "Civic 5 uși Diesel",
+  "generation": "X · 2018 · Europa/UK",
+  "verified": true,
+  "scope": "Honda Civic 5 uși Diesel, X · 2018 · Europa/UK. Sursă: manual oficial în engleză, versiunea diesel Europa/UK. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Honda Civic 5 uși Diesel · X · 2018 · Europa/UK · manual oficial în engleză, versiunea diesel Europa/UK",
+    "url": "https://www.honda.co.uk/content/dam/local/uk/cars/owners/manuals/2018%20Civic%205dr%20Diesel%20Owners%20Manual.pdf",
+    "documentId": "32TGN6000 · 18 CIVIC 5D HUM DIESEL (KE KG)",
+    "overviewPages": [
+      95,
+      104
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. Nu acoperă Civic pe benzină, hibridul e:HEV sau alte piețe.",
+  "lights": [
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        95,
+        674,
+        675
+      ],
+      "meaning": "Frâna de parcare este aplicată sau sistemul de frânare are o problemă.",
+      "action": "Verifică eliberarea frânei de parcare. Dacă pedala nu are rezistență, oprește imediat în siguranță; solicită remediere imediată.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipire cu martorul galben: posibilă problemă a frânei electrice; urmează procedura din manual, nu te baza pe frâna de parcare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [
+        96,
+        672
+      ],
+      "meaning": "Presiunea uleiului motor este redusă.",
+      "action": "Oprește imediat în siguranță, oprește motorul și urmează verificarea nivelului din manual. Dacă martorul persistă, contactează Honda.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Manualul descrie o verificare după circa 3 minute; nu continua cu avertizarea aprinsă."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [
+        96,
+        673
+      ],
+      "meaning": "Există o problemă a sistemului de emisii.",
+      "action": "Evită viteza mare și solicită imediat verificare Honda.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Instrucțiune din manual pentru acest motor diesel; nu preluăm automat instrucțiunile de clipire de la motoare pe benzină."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "incarcare",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [
+        98,
+        672
+      ],
+      "meaning": "Bateria nu se încarcă.",
+      "action": "Redu consumatorii electrici, inclusiv climatizarea și dezaburirea spate, și contactează imediat Honda.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "La o oprire temporară, acest manual spune să nu oprești motorul: repornirea poate descărca rapid bateria."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "centura",
+      "symbol": "centura",
+      "color": "rosu",
+      "pages": [
+        98
+      ],
+      "meaning": "Șoferul sau pasagerul nu poartă centura.",
+      "action": "Cuplează centurile. Dacă persistă deși sunt cuplate, solicită verificare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipire și sunet în mers; poate exista o eroare de detectare dacă avertizarea persistă."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "rezerva",
+      "symbol": "rezerva",
+      "color": "galben",
+      "pages": [
+        99
+      ],
+      "meaning": "Nivelul combustibilului este redus.",
+      "action": "Alimentează cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Continuu: rezervă, aproximativ 7 litri. Clipire: problemă a indicatorului de nivel; solicită verificare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [
+        99
+      ],
+      "meaning": "ABS este defect.",
+      "action": "Solicită verificare Honda.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Frânarea normală rămâne disponibilă fără funcția antiblocare dacă numai ABS este aprins."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "airbag",
+      "symbol": "airbag-rosu",
+      "color": "rosu",
+      "pages": [
+        100
+      ],
+      "meaning": "SRS, un airbag sau pretensionatorul poate fi defect.",
+      "action": "Solicită verificare dacă rămâne aprins sau nu se aprinde deloc la contact.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu este indicatorul separat de dezactivare a airbagului pasagerului."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "anvelope",
+      "symbol": "anvelope",
+      "color": "galben",
+      "pages": [
+        103
+      ],
+      "meaning": "Presiunea este prea mică ori sistemul de detectare necesită atenție.",
+      "action": "Oprește în siguranță, verifică presiunile și ajustează-le. Inițializează sistemul conform manualului.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipire circa un minut apoi continuu: sistem defect sau roată de rezervă temporară; solicită verificare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    }
+  ]
+}

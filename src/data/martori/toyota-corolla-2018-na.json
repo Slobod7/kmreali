@@ -1,0 +1,162 @@
+{
+  "id": "toyota-corolla-2018-na",
+  "brand": "Toyota",
+  "model": "Corolla",
+  "generation": "XI · 2018 · SUA/Canada",
+  "verified": true,
+  "scope": "Toyota Corolla, XI · 2018 · SUA/Canada. Sursă: manual original Toyota în engleză, SUA/Canada. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Toyota Corolla · XI · 2018 · SUA/Canada · manual original Toyota în engleză, SUA/Canada",
+    "url": "https://s3.amazonaws.com/toyota.site.p01/toyota/manuals/OM02509U/OM02509U.pdf",
+    "documentId": "OM02509U · COROLLA_TMMMS_TMMC_U",
+    "overviewPages": [
+      482,
+      488
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. ",
+  "lights": [
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        482,
+        488
+      ],
+      "meaning": "Lichidul de frână este prea redus sau frânele sunt defecte.",
+      "action": "Oprește imediat în siguranță și contactează Toyota.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Se aprinde și cu frâna de parcare aplicată; dacă se stinge complet după eliberare, sistemul funcționează normal. Cu ABS: oprește și solicită asistență."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [
+        482
+      ],
+      "meaning": "Comanda motorului, accelerației sau transmisiei CVT poate fi defectă.",
+      "action": "Solicită imediat verificare Toyota.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Simbolul singur nu identifică piesa sau cauza."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "airbag",
+      "symbol": "airbag-rosu",
+      "color": "rosu",
+      "pages": [
+        482
+      ],
+      "meaning": "SRS, detectarea ocupantului sau pretensionatorul are o problemă.",
+      "action": "Solicită imediat verificare Toyota.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu este indicatorul de activare/dezactivare a airbagului pasagerului."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [
+        483
+      ],
+      "meaning": "ABS sau asistarea frânării este defectă.",
+      "action": "Solicită imediat verificare Toyota.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Împreună cu martorul de frână, oprește în siguranță și solicită asistență."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "stabilitate",
+      "symbol": "esc",
+      "color": "galben",
+      "pages": [
+        483
+      ],
+      "meaning": "VSC/TRAC intervine sau sistemul de stabilitate, tracțiune ori pornire în rampă are o defecțiune.",
+      "action": "La lumină continuă, solicită imediat verificare Toyota.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipire: VSC/TRAC funcționează. Continuu: posibilă defecțiune."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Controlul stabilității VSC/TRAC"
+    },
+    {
+      "id": "rezerva",
+      "symbol": "rezerva",
+      "color": "galben",
+      "pages": [
+        483
+      ],
+      "meaning": "Combustibilul este la aproximativ 7,5 litri sau mai puțin.",
+      "action": "Alimentează.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Valoarea nu reprezintă o autonomie garantată."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "centura",
+      "symbol": "centura",
+      "color": "rosu",
+      "pages": [
+        483
+      ],
+      "meaning": "O centură nu este cuplată.",
+      "action": "Cuplează centurile pe locurile ocupate.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Verifică și indicatorul separat pentru pasagerii spate, după echipare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "anvelope",
+      "symbol": "anvelope",
+      "color": "galben",
+      "pages": [
+        484,
+        488
+      ],
+      "meaning": "Presiunea unui pneu este mică sau monitorizarea este defectă.",
+      "action": "Oprește în siguranță cât mai curând și reglează presiunile la valorile prescrise. Evită manevrele și frânările bruște. Dacă martorul nu se stinge după câteva minute, verifică anvelopele: poate fi o pană. Dacă nu este, solicită verificarea sistemului la Toyota.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Aprins după circa un minut de clipire: defecțiune a sistemului; solicită verificare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    }
+  ]
+}

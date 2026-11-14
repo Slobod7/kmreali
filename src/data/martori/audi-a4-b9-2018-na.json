@@ -1,0 +1,160 @@
+{
+  "id": "audi-a4-b9-2018-na",
+  "brand": "Audi",
+  "model": "A4",
+  "generation": "B9 · 2018 · SUA/Canada",
+  "verified": true,
+  "scope": "Audi A4, B9 · 2018 · SUA/Canada. Sursă: manual Audi în engleză, SUA/Canada; copie a publicației producătorului găzduită de StartMyCar. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Audi A4 · B9 · 2018 · SUA/Canada · manual Audi în engleză, SUA/Canada; copie a publicației producătorului găzduită de StartMyCar",
+    "url": "https://manuals.startmycar.com/published/Audi-A4_2018_EN_US_8c22d5eedf.pdf",
+    "documentId": "Audi A4 2018 · EN US · publicație originală Audi",
+    "overviewPages": [
+      28,
+      37
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. ",
+  "lights": [
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        30,
+        31
+      ],
+      "meaning": "Sistemul de frânare este defect sau nivelul lichidului este prea mic.",
+      "action": "Oprește în siguranță și nu continua cu avertizarea persistentă. Solicită asistență Audi.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Cu ABS și ESC, funcțiile de stabilizare pot fi defecte. Varianta SUA poate afișa textul BRAKE."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "parcare",
+      "symbol": "parcare",
+      "color": "rosu",
+      "pages": [
+        31
+      ],
+      "meaning": "Frâna electrică de parcare este aplicată sau forța nu se formează suficient.",
+      "action": "La clipire, asigură suplimentar mașina în treapta 1 sau P, conform transmisiei. Verifică stingerea înainte de plecare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Continuu: aplicată. Clipire: forță insuficientă sau absentă."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "racire",
+      "symbol": "racire",
+      "color": "rosu",
+      "pages": [
+        32
+      ],
+      "meaning": "Nivelul lichidului este redus sau temperatura prea mare; mesajul decide procedura.",
+      "action": "Cu mesaj de oprire și verificare nivel, oprește motorul și nu continua. Cu mesajul „Coolant temperature: too high. Let engine run with vehicle stationary”, lasă-l la ralanti câteva minute; dacă martorul nu se stinge, nu continua și solicită asistență.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu deschide capota dacă iese abur sau lichid. Lasă motorul să se răcească înainte de a lucra în compartiment."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "centura",
+      "symbol": "centura",
+      "color": "rosu",
+      "pages": [
+        32
+      ],
+      "meaning": "Centura șoferului sau pasagerului nu este cuplată.",
+      "action": "Cuplează centurile.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Peste o anumită viteză apare și sunetul de avertizare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "incarcare",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [
+        32
+      ],
+      "meaning": "Instalația electrică are o defecțiune.",
+      "action": "Cu mesajul roșu „Electrical system: malfunction! Safely stop vehicle”, oprește în siguranță, oprește motorul și solicită asistență.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Mesajele galbene despre repornire imposibilă au alte instrucțiuni și nu sunt acoperite de această intrare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [
+        33
+      ],
+      "meaning": "Presiunea uleiului este prea mică.",
+      "action": "Oprește în siguranță, oprește motorul și nu continua drumul. Verifică nivelul uleiului: dacă este prea mic, completează și continuă doar după ce martorul se stinge. Dacă nivelul este corect și martorul se aprinde în continuare, nu continua și solicită asistență Audi.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu este un indicator de nivel de ulei."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [
+        35
+      ],
+      "meaning": "Electronica motorului a detectat o problemă.",
+      "action": "Solicită verificare Audi; verifică și închiderea corectă a bușonului de combustibil, potrivit manualului.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Testul la contact trebuie să se stingă după pornire și stabilizarea ralantiului."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "rezerva",
+      "symbol": "rezerva",
+      "color": "galben",
+      "pages": [
+        36
+      ],
+      "meaning": "Rezervă de combustibil sau problemă a sistemului rezervorului.",
+      "action": "Cu mesaj de alimentare, alimentează. Cu mesaj de defecțiune a rezervorului, solicită imediat service.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "La prima avertizare de rezervă, manualul indică aproximativ 8 litri; mesajul de alimentare imediată cere alimentare imediată."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    }
+  ]
+}

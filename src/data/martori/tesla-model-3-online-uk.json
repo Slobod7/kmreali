@@ -1,0 +1,141 @@
+{
+  "id": "tesla-model-3-online-uk",
+  "brand": "Tesla",
+  "model": "Model 3",
+  "generation": "manual online · UK · consultat 14.11.2026",
+  "verified": true,
+  "scope": "Tesla Model 3, manual online · UK · consultat 14.11.2026. Sursă: manual oficial online; afișajul diferă cu software-ul, opțiunile și piața. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Tesla Model 3 · manual online · UK · consultat 14.11.2026 · manual oficial online; afișajul diferă cu software-ul, opțiunile și piața",
+    "url": "https://www.tesla.com/ownersmanual/model3/en_gb/GUID-80B80D48-E3A9-4857-864B-F4CC9B56FD7E.html",
+    "documentId": "Model 3 · Car Status · en_GB",
+    "overviewPages": [],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "format": "web"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. Nu confirmă un an de fabricație sau toate versiunile de software. Simbolurile sunt redate ilustrativ, inclusiv variantele cu text BRAKE/PARK.",
+  "lights": [
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [],
+      "meaning": "Sistem de frânare defect sau lichid insuficient.",
+      "action": "Oprește sigur, apăsând ferm și constant frâna. Contactează imediat Tesla.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Exceptând aprinderea scurtă la pornire."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "frana-galben",
+      "symbol": "frana-galben",
+      "color": "galben",
+      "pages": [],
+      "meaning": "Asistarea frânei este defectă.",
+      "action": "Oprește sigur, apăsând ferm și constant frâna.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Compensarea hidraulică este activă."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [],
+      "meaning": "ABS este defect.",
+      "action": "Condu prudent, evită frânarea puternică și contactează Tesla.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Frânele funcționează; distanța de oprire poate crește. Testul scurt la pornire este normal."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "parcare",
+      "symbol": "parcare",
+      "color": "rosu",
+      "pages": [],
+      "meaning": "Frâna de parcare este aplicată manual.",
+      "action": "Verifică eliberarea înainte de plecare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Confirmare de activare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "parcare-galben",
+      "symbol": "parcare-galben",
+      "color": "galben",
+      "pages": [],
+      "meaning": "Problemă electrică a frânei de parcare.",
+      "action": "Citește mesajul afișat și solicită asistență.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Apare împreună cu un mesaj de eroare."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "airbag",
+      "symbol": "airbag-rosu",
+      "color": "rosu",
+      "pages": [],
+      "meaning": "Sistemul airbag necesită atenție.",
+      "action": "Contactează imediat Tesla.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Dacă nu clipește scurt înainte de deplasare sau rămâne aprins."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "centura",
+      "symbol": "centura",
+      "color": "rosu",
+      "pages": [],
+      "meaning": "Centura unui loc ocupat nu este cuplată.",
+      "action": "Cuplează centurile.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Verifică locul indicat."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "stabilitate",
+      "symbol": "esc",
+      "color": "galben",
+      "pages": [],
+      "meaning": "Controlul stabilității intervine sau este defect.",
+      "action": "Dacă rămâne aprins, contactează imediat Tesla.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Clipire: control activ. Continuu: defecțiune."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea.",
+      "name": "Controlul stabilității"
+    }
+  ]
+}

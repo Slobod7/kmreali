@@ -1,0 +1,162 @@
+{
+  "id": "kia-sportage-nq5-2026-us",
+  "brand": "Kia",
+  "model": "Sportage",
+  "generation": "NQ5 · 2026 · SUA",
+  "verified": true,
+  "scope": "Kia Sportage, NQ5 · 2026 · SUA. Sursă: manual Kia America în engleză; copie a publicației producătorului găzduită de CarManualDB. Catalogul nu confirmă alte ediții, toate motorizările sau toate echipările.",
+  "source": {
+    "title": "Kia Sportage · NQ5 · 2026 · SUA · manual Kia America în engleză; copie a publicației producătorului găzduită de CarManualDB",
+    "url": "https://www.carmanualdb.com/files/Kia%20Sportage%202026%20%28NQ5%29%20Owners%20Manual.pdf",
+    "documentId": "Kia America ©2025 · Sportage 2026 NQ5",
+    "overviewPages": [
+      149,
+      154
+    ],
+    "verifiedAt": "2026-11-14",
+    "pdfPageOffset": 0,
+    "pageNumbering": "pdf"
+  },
+  "notCovered": "Catalog parțial: sunt acoperite numai simbolurile afișate în panou, în stările descrise. Pentru orice alt simbol, mesaj sau echipare consultă manualul propriei mașini. Nu acoperă aici Sportage HEV/PHEV sau versiunile europene.",
+  "lights": [
+    {
+      "id": "airbag",
+      "symbol": "airbag-rosu",
+      "color": "rosu",
+      "pages": [
+        149
+      ],
+      "meaning": "Sistemul SRS are o defecțiune.",
+      "action": "Solicită verificare Kia dacă avertizarea persistă după test.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "La contact, testul durează aproximativ 3–6 secunde."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "centura",
+      "symbol": "centura",
+      "color": "rosu",
+      "pages": [
+        149
+      ],
+      "meaning": "Centura șoferului nu este cuplată.",
+      "action": "Cuplează centurile înainte de plecare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Indicator de reamintire; nu este eroarea SRS."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "frana",
+      "symbol": "frana",
+      "color": "rosu",
+      "pages": [
+        150
+      ],
+      "meaning": "Frâna de parcare este aplicată sau lichidul de frână este insuficient.",
+      "action": "Cu frâna eliberată, oprește prudent într-un loc sigur, oprește motorul și verifică nivelul. La scurgeri, martor persistent sau frânare anormală, nu conduce: solicită tractare și verificare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Indicatorul poate avea textul BRAKE pe piața SUA; ilustrația noastră este orientativă."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "abs",
+      "symbol": "abs",
+      "color": "galben",
+      "pages": [
+        150,
+        151
+      ],
+      "meaning": "ABS este defect.",
+      "action": "Solicită verificare Kia. Cu martorul de frână simultan, evită viteza mare și frânările bruște și solicită verificare cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Doar ABS: frânarea obișnuită funcționează fără antiblocare; combinația poate indica EBD defect."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "incarcare",
+      "symbol": "alternator",
+      "color": "rosu",
+      "pages": [
+        151,
+        152
+      ],
+      "meaning": "Alternatorul sau circuitul de încărcare este defect.",
+      "action": "Oprește prudent într-un loc sigur și oprește motorul. Solicită verificarea curelei și a circuitului.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Nu stabilește că bateria trebuie înlocuită."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "motor",
+      "symbol": "motor",
+      "color": "galben",
+      "pages": [
+        152
+      ],
+      "meaning": "Sistemul de emisii, motorul sau transmisia semnalează o defecțiune.",
+      "action": "Solicită verificare Kia.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Poate exista risc pentru catalizator și limitare de putere; nu transferăm o procedură de la alt motor."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "presiune-ulei",
+      "symbol": "presiune-ulei",
+      "color": "rosu",
+      "pages": [
+        152,
+        153
+      ],
+      "meaning": "Presiunea uleiului motor este scăzută.",
+      "action": "Oprește în siguranță, oprește motorul și verifică nivelul. Dacă avertizarea persistă sau nu ai uleiul necesar, solicită verificare.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Continuarea cu avertizarea aprinsă poate avaria motorul; limitarea de putere nu înlocuiește oprirea."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    },
+    {
+      "id": "rezerva",
+      "symbol": "rezerva",
+      "color": "galben",
+      "pages": [
+        153
+      ],
+      "meaning": "Rezervorul este aproape gol.",
+      "action": "Alimentează cât mai curând.",
+      "states": [
+        {
+          "label": "Stare și mesaj",
+          "text": "Rularea cu nivel foarte mic poate provoca rateuri și afecta catalizatorul."
+        }
+      ],
+      "detail": "Instrucțiunea rezumă sursa indicată pentru configurația selectată; dacă manualul mașinii tale spune altceva, urmează manualul. Citește și mesajul complet de pe afișaj; echiparea sau o altă culoare poate schimba interpretarea."
+    }
+  ]
+}
