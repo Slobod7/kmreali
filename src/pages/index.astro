@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import CarburantiRecomandare from '../components/CarburantiRecomandare.astro';
 import MartoriRecomandare from '../components/MartoriRecomandare.astro';
+import DrumLungRecomandare from '../components/DrumLungRecomandare.astro';
 import logo from '../assets/brand/kmreali-logo.svg';
 import { faq, getArticles } from '../articles';
 import { site, url } from '../site';
@@ -91,6 +92,7 @@ const jsonLd = [
 
   <div class="container martori">
     <MartoriRecomandare />
+    <DrumLungRecomandare />
   </div>
 
   <section class="container intrebari" aria-labelledby={faqHeadingId}>
@@ -207,7 +209,8 @@ const jsonLd = [
 
   .calculator { padding-top: clamp(2.5rem, 6vw, 4rem); }
   .noutati { display: grid; gap: 1.5rem; padding-top: clamp(2.5rem, 6vw, 4rem); }
-  .martori { padding-top: clamp(2.5rem, 6vw, 4rem); }
+  /* The tool cards side by side on wide screens, stacked on phones. */
+  .martori { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: clamp(1.25rem, 3vw, 2rem); padding-top: clamp(2.5rem, 6vw, 4rem); }
 
   /* One column on phones; on wide screens two, filled row by row. Both questions in a row take its
      height, so the lines under them meet; opening one only pushes down the rows below it. */

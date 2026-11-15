@@ -1,0 +1,247 @@
+/* Road-trip checklist (/pregatire-drum-lung/). Everything is scoped to .rt.
+   Without JavaScript the page is one column: the checks and the country sheets, as a guide.
+   With it (.is-ready) the summary sits beside the list on wide screens. */
+
+.rt { --rt-linie: #aaa79f; --rt-verde: #47735a; padding-bottom: 1rem; }
+.rt [hidden] { display: none !important; }
+.rt .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.rt button, .rt input, .rt select { font: inherit; }
+
+/* Hero */
+.rt-hero { display: grid; grid-template-columns: minmax(0, 1fr) 19rem; gap: clamp(2rem, 5vw, 4rem); align-items: center; padding-block: clamp(2rem, 5vw, 3.6rem) clamp(2rem, 4vw, 3.3rem); }
+.rt-hero h1 { font-size: clamp(3rem, 6.2vw, 5.4rem); margin: 1rem 0 1.2rem; letter-spacing: -0.015em; }
+.rt-hero h1 span { color: var(--rosu); }
+.rt-hero > div > p { max-width: 42rem; font-size: var(--text-mare); line-height: 1.45; color: var(--grafit); }
+.rt-start {
+  display: inline-flex; gap: 1.5rem; margin-top: 1.6rem; padding: 0.6rem 1.25rem 0.65rem;
+  background: var(--evidentiator); color: var(--carbune); border: 3px solid var(--carbune); border-radius: 4px;
+  font-family: var(--font-titlu); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.02em; text-decoration: none;
+}
+.rt-start:hover { background: var(--carbune); color: var(--evidentiator); }
+.rt-hero-note { display: block; margin-top: 0.65rem; font-size: 0.875rem; color: var(--gri); }
+
+.rt-ticket { background: var(--carbune); color: var(--hartie); padding: 1.55rem; border-top: 5px solid var(--evidentiator); border-radius: 4px; transform: rotate(2deg); }
+.rt-ticket-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; }
+.rt-ticket ol { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+.rt-ticket li { display: flex; align-items: center; gap: 1rem; padding: 0.7rem 0; border-bottom: 1px solid #ffffff30; font-family: var(--font-titlu); font-size: 1.35rem; font-weight: 600; line-height: 1.15; }
+.rt-ticket li strong { font-size: 2.2rem; color: var(--evidentiator); }
+.rt-ticket p { margin: 1.1rem 0 0; color: var(--gri-deschis); font-size: 0.875rem; line-height: 1.5; }
+
+/* Car and route */
+.rt-setup { background: var(--alb); padding: clamp(1rem, 3vw, 1.6rem); border: 1px solid var(--nisip); border-radius: 8px; }
+.rt-section-heading, .rt-list-heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.rt-section-heading h2 { font-size: 1.8rem; }
+.rt-eyebrow { display: block; margin-bottom: 0.5rem; color: var(--rosu); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.07em; }
+.rt-small { font-size: 0.875rem; color: var(--gri); }
+.rt-form-grid { display: grid; grid-template-columns: 1fr 1fr 1.7fr; gap: 1.2rem; align-items: start; margin-top: 1.5rem; }
+.rt label, .rt legend { font-size: 0.9375rem; font-weight: 600; }
+.rt input:not([type='checkbox']), .rt select {
+  display: block; width: 100%; min-width: 0; min-height: 46px; margin-top: 0.35rem; padding: 0.65rem;
+  border: 1px solid var(--rt-linie); border-radius: 4px; background: var(--alb); color: var(--carbune); font-size: 1rem; font-weight: 400;
+}
+.rt input[type='checkbox'] { width: 1.15rem; height: 1.15rem; margin: 0 0.4rem 0 0; vertical-align: middle; accent-color: var(--rosu); }
+.rt-optional { font-size: 0.75rem; font-weight: 400; color: var(--gri); }
+.rt-trip-options, .rt-countries { min-width: 0; margin: 0; padding: 0; border: 0; }
+.rt-trip-options legend { margin-bottom: 0.65rem; }
+.rt-trip-options label { display: inline-flex; align-items: center; min-height: 2rem; margin-right: 0.9rem; font-size: 0.9375rem; white-space: nowrap; }
+.rt-countries { margin-top: 1.35rem; padding-top: 1rem; border-top: 1px solid var(--nisip); }
+.rt-countries legend { float: left; width: 100%; margin-bottom: 0.7rem; }
+.rt-countries legend span { margin-left: 0.5rem; font-size: 0.875rem; font-weight: 400; color: var(--gri); }
+.rt-countries > div { clear: both; display: flex; flex-wrap: wrap; gap: 0.45rem; }
+
+.rt button { min-height: 44px; padding: 0.65rem 0.9rem; border: 1px solid var(--rt-linie); border-radius: 4px; background: transparent; color: var(--carbune); font-size: 0.9375rem; font-weight: 600; cursor: pointer; }
+.rt button:hover { background: var(--nisip); }
+.rt .rt-country-option { display: flex; align-items: center; gap: 0.45rem; min-height: 42px; padding: 0.5rem 0.75rem; font-size: 0.9375rem; }
+.rt-country-option b { font-size: 0.7rem; letter-spacing: 0.05em; color: var(--gri); }
+.rt .rt-country-option[aria-pressed='true'] { background: var(--carbune); border-color: var(--carbune); color: var(--alb); }
+.rt .rt-country-option[aria-pressed='true']:hover { background: var(--grafit); }
+.rt-country-option[aria-pressed='true'] b { color: var(--evidentiator); }
+.rt-country-option[aria-pressed='true']::after { content: '✓'; }
+.rt-coverage { margin: 0.8rem 0 0; font-size: 0.875rem; color: var(--gri); }
+.rt-storage { min-height: 2rem; margin: 0; padding-top: 0.5rem; font-size: 0.875rem; color: var(--gri); }
+
+/* Checklist */
+.rt-workspace { display: grid; gap: 2rem; margin-top: 1.7rem; align-items: start; scroll-margin-top: 1rem; }
+.rt.is-ready .rt-workspace { grid-template-columns: minmax(0, 1fr) 20rem; }
+.rt-list-heading h2 { font-size: 2.1rem; }
+.rt .rt-open-filter { font-size: 0.9375rem; font-weight: 400; white-space: nowrap; }
+.rt-tabs { display: flex; gap: 0.3rem; margin-top: 1.3rem; padding-top: 3px; border-bottom: 2px solid var(--carbune); overflow-x: auto; }
+.rt .rt-tabs button { border: 0; border-radius: 4px 4px 0 0; font-family: var(--font-titlu); font-size: 1.1rem; letter-spacing: 0.02em; white-space: nowrap; }
+.rt .rt-tabs button[aria-pressed='true'] { background: var(--carbune); color: var(--alb); }
+
+.rt-group-heading { display: flex; align-items: baseline; gap: 0.7rem; margin: 1.6rem 0 0.45rem; }
+.rt-group-heading span { color: var(--rosu); font-family: var(--font-titlu); font-size: 1.25rem; font-weight: 700; }
+.rt-group-heading h3 { font-size: 1.6rem; }
+.rt-group-intro { margin: 0 0 1rem; font-size: 0.9375rem; color: var(--gri); }
+
+.rt-check { margin-bottom: 0.65rem; overflow: hidden; background: var(--alb); border: 1px solid var(--nisip); border-radius: 6px; }
+.rt-check[data-status='ok'] { border-left: 4px solid var(--rt-verde); }
+.rt-check[data-status='issue'] { border-left: 4px solid var(--rosu); }
+.rt-check[data-status='na'] { opacity: 0.7; }
+.rt-check-top { display: grid; grid-template-columns: 1.5rem minmax(0, 1fr); gap: 0.7rem; padding: 1.15rem 1.2rem 0.6rem; }
+.rt-check-icon { width: 1.25rem; height: 1.25rem; margin-top: 0.22rem; border: 1.5px solid var(--rt-linie); border-radius: 3px; font-size: 0.8rem; font-weight: 700; line-height: 1.05rem; text-align: center; }
+.rt-check[data-status='ok'] .rt-check-icon { background: var(--rt-verde); border-color: var(--rt-verde); color: var(--alb); }
+.rt-check[data-status='issue'] .rt-check-icon { background: var(--rosu); border-color: var(--rosu); color: var(--alb); }
+.rt-check h4 { font-size: 1.45rem; line-height: 1.15; }
+.rt-check-top p { margin: 0.4rem 0 0; font-size: 0.9375rem; line-height: 1.5; color: var(--gri); }
+.rt .rt-tags { display: flex; flex-wrap: wrap; gap: 0.3rem 0.8rem; margin: 0 0 0.3rem; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+.rt-important { color: var(--rosu); }
+.rt-condition { color: var(--grafit); }
+.rt-condition::before { content: '● '; color: var(--rt-linie); }
+
+.rt-detail { margin: 0 1.2rem 0 3.4rem; border-top: 1px solid #ebe7df; }
+.rt-detail summary { display: flex; justify-content: space-between; gap: 1rem; padding: 0.55rem 0; font-size: 0.875rem; font-weight: 600; cursor: pointer; list-style: none; }
+.rt-detail summary::-webkit-details-marker { display: none; }
+.rt-detail summary::after { content: '+'; color: var(--rosu); font-size: 1.2rem; line-height: 1; }
+.rt-detail[open] summary::after { content: '−'; }
+.rt-when { margin-left: auto; font-weight: 400; color: var(--gri); }
+.rt-detail p { margin: 0 0 0.6rem; font-size: 0.9375rem; line-height: 1.55; color: var(--grafit); }
+.rt .rt-source { font-size: 0.8125rem; color: var(--gri); }
+.rt-source a { text-underline-offset: 3px; }
+.rt-answer { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 0.4rem 1.2rem 1rem 3.4rem; }
+.rt .rt-answer button { min-height: 36px; padding: 0.35rem 0.65rem; font-size: 0.8125rem; }
+.rt .rt-answer button[aria-pressed='true'] { background: var(--carbune); border-color: var(--carbune); color: var(--alb); }
+.rt .rt-answer button[data-answer='issue'][aria-pressed='true'] { background: var(--rosu); border-color: var(--rosu); }
+.rt-print-status { display: none; }
+.rt-empty { margin: 1rem 0 0; padding: 1.3rem; border: 1px dashed var(--rt-linie); font-size: 0.9375rem; color: var(--gri); }
+.rt-notice { margin: 2rem 0 0; padding: 1rem; border: 1px solid var(--rosu); border-radius: 4px; }
+
+/* Summary */
+.rt-summary { position: sticky; top: 1rem; padding: 1.4rem; background: var(--hartie); border: 1px solid var(--carbune); border-top: 5px solid var(--carbune); border-radius: 4px; }
+.rt-summary h2 { font-size: 2rem; }
+.rt-trip { margin: 0.8rem 0 0; font-size: 0.9375rem; color: var(--grafit); }
+.rt-counter { display: flex; align-items: center; gap: 0.85rem; margin: 1.3rem 0 1rem; }
+.rt-counter strong { padding: 0 0.4rem; background: var(--evidentiator); font-family: var(--font-titlu); font-size: 4.5rem; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+.rt-counter > span { font-size: 0.9375rem; line-height: 1.4; }
+.rt-summary progress { display: block; width: 100%; height: 6px; border: 0; accent-color: var(--rosu); }
+.rt-summary progress::-webkit-progress-bar { background: var(--nisip); }
+.rt-summary progress::-webkit-progress-value { background: var(--rosu); }
+.rt-stats { margin: 0.7rem 0 0; font-size: 0.875rem; line-height: 1.6; }
+.rt-stats b { color: var(--rosu); }
+.rt-issues { margin: 0.5rem 0 0; padding-left: 1.1rem; font-size: 0.875rem; color: var(--rosu); }
+.rt-issues:empty { display: none; }
+.rt-summary-note { margin: 1rem 0 1.2rem; padding-top: 1rem; border-top: 1px solid var(--nisip); font-size: 0.875rem; line-height: 1.5; }
+.rt .rt-primary { display: block; width: 100%; background: var(--carbune); border-color: var(--carbune); color: var(--alb); text-align: left; }
+.rt .rt-primary:hover { background: var(--grafit); }
+.rt-outline { display: flex; justify-content: space-between; margin-top: 0.5rem; padding: 0.65rem 0.9rem; border: 1px solid var(--rt-linie); border-radius: 4px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; }
+.rt-outline:hover { background: var(--nisip); }
+.rt .rt-text-button { display: block; min-height: 40px; padding: 0.5rem 0; border: 0; color: var(--gri); font-size: 0.875rem; text-decoration: underline; }
+.rt .rt-text-button:hover { background: none; color: var(--carbune); }
+.rt-local-note { margin: 0; font-size: 0.8125rem; line-height: 1.5; color: var(--gri); }
+
+/* Country sheets */
+.rt-route { margin-top: 2.6rem; padding-top: 1.4rem; border-top: 2px solid var(--carbune); scroll-margin-top: 1rem; }
+.rt-route-intro { margin: 0.8rem 0 1rem; font-size: 0.9375rem; color: var(--gri); }
+.rt-country-cards { display: flex; flex-direction: column; gap: 0.65rem; }
+.rt-country-card { background: var(--alb); border: 1px solid var(--nisip); border-radius: 6px; }
+.rt-country-card summary { display: flex; align-items: center; gap: 0.7rem; padding: 1rem 1.1rem; font-family: var(--font-titlu); font-size: 1.4rem; font-weight: 700; cursor: pointer; list-style: none; }
+.rt-country-card summary::-webkit-details-marker { display: none; }
+.rt-country-card summary::after { content: '+'; color: var(--rosu); }
+.rt-country-card[open] summary::after { content: '−'; }
+.rt-country-card summary small { padding: 0.25rem 0.35rem; background: var(--hartie); font: 600 0.7rem var(--font-text); letter-spacing: 0.05em; }
+/* „De verificat / ✓ Verificat” needs the script; without it the + moves to the right edge instead. */
+.rt-country-card summary em { display: none; margin-left: auto; font: 400 0.8125rem var(--font-text); color: var(--gri); }
+.rt.is-ready .rt-country-card summary em { display: inline; }
+.rt:not(.is-ready) .rt-country-card summary::after { margin-left: auto; }
+.rt-country-body { padding: 0 1.2rem 1.2rem; }
+.rt-country-body dl { margin: 0; font-size: 0.9375rem; line-height: 1.55; }
+.rt-country-body dt { margin-top: 0.9rem; color: var(--rosu); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.rt-country-body dd { margin: 0.25rem 0 0.65rem; }
+.rt-country-body a { font-size: 0.875rem; text-underline-offset: 3px; }
+.rt-date-hint { display: block; margin: 0.6rem 0 0.2rem; padding: 0.6rem 0.75rem; background: #fff6c7; border-left: 4px solid var(--evidentiator); font-size: 0.875rem; font-weight: 600; }
+.rt-rules-link { display: inline-block; margin-top: 0.4rem; font-weight: 600; }
+.rt .rt-country-review { display: block; margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid var(--nisip); font-size: 0.9375rem; font-weight: 400; }
+.rt-source-date { margin: 1rem 0 0; font-size: 0.8125rem; line-height: 1.6; color: var(--gri); }
+
+/* Personal checks */
+.rt-personal { margin-top: 2.5rem; }
+.rt-personal h2 { font-size: 1.8rem; }
+.rt-personal > p { margin: 0.6rem 0 0; font-size: 0.9375rem; color: var(--gri); }
+.rt-personal form { display: flex; gap: 0.5rem; margin: 1rem 0; }
+.rt .rt-personal form input { flex: 1; margin: 0; }
+.rt .rt-personal form button { background: var(--carbune); border-color: var(--carbune); color: var(--alb); white-space: nowrap; }
+.rt .rt-personal form button:hover { background: var(--grafit); }
+.rt-personal-list { margin: 0; padding: 0; list-style: none; }
+.rt-personal-row { display: flex; align-items: center; gap: 0.6rem; padding: 0.4rem 0; border-bottom: 1px solid var(--nisip); }
+.rt .rt-personal-row label { flex: 1; font-weight: 400; overflow-wrap: anywhere; }
+.rt .rt-personal-row button { min-height: 40px; padding: 0.2rem 0.7rem; border: 0; font-size: 1.2rem; }
+
+/* Editorial */
+.rt-editorial { margin-top: 4rem; padding-top: 1.8rem; border-top: 2px solid var(--carbune); }
+.rt-editorial h2 { font-size: clamp(2rem, 1.6rem + 1.5vw, 2.6rem); }
+.rt-editorial-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; margin-top: 1.8rem; }
+.rt-editorial-grid article { padding-top: 1rem; border-top: 1px solid var(--nisip); }
+.rt-editorial-grid article > span { color: var(--rosu); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; }
+.rt-editorial-grid h3 { margin: 0.7rem 0; font-size: 1.65rem; }
+.rt-editorial-grid p { margin: 0; font-size: 0.9375rem; line-height: 1.6; color: var(--grafit); }
+.rt-editorial-grid a { display: inline-block; margin-top: 0.8rem; font-size: 0.875rem; text-underline-offset: 3px; }
+
+@media (max-width: 62rem) {
+  .rt-hero { grid-template-columns: minmax(0, 1fr) 16rem; }
+  .rt.is-ready .rt-workspace { grid-template-columns: minmax(0, 1fr) 17rem; gap: 1.2rem; }
+  .rt-list-heading { flex-direction: column; align-items: flex-start; }
+  .rt-form-grid { grid-template-columns: 1fr 1fr; }
+  .rt-trip-options { grid-column: 1 / -1; }
+  .rt-section-heading > .rt-small { display: none; }
+}
+
+/* Phones: the summary comes first, compact, then the list. */
+@media (max-width: 46rem) {
+  .rt-hero { display: block; }
+  .rt-hero h1 { font-size: clamp(2.6rem, 11vw, 4rem); }
+  .rt-ticket { display: none; }
+  .rt-countries legend span { display: block; margin: 0.2rem 0 0; }
+  .rt.is-ready .rt-workspace { display: flex; flex-direction: column; margin-top: 1rem; }
+  .rt-main, .rt-summary { width: 100%; min-width: 0; }
+  .rt-summary { position: static; order: -1; padding: 1rem; display: grid; grid-template-columns: 1fr 1fr; column-gap: 0.75rem; align-items: center; }
+  .rt-summary > :not(.rt-counter, .rt-primary, .rt-outline) { grid-column: 1 / -1; }
+  .rt-summary h2 { font-size: 1.65rem; }
+  .rt-counter { grid-column: 1 / -1; margin: 1rem 0 0.75rem; }
+  .rt-counter strong { font-size: 3.5rem; }
+  .rt-summary-note { margin-bottom: 0.75rem; }
+  .rt .rt-primary, .rt-outline { margin-top: 0; font-size: 0.875rem; }
+  .rt-check-top { padding-inline: 0.9rem; }
+  .rt-detail { margin: 0 0.9rem; }
+  .rt-answer { padding-inline: 0.9rem; }
+  .rt-detail summary { flex-wrap: wrap; }
+  .rt-editorial-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .rt-personal form { flex-wrap: wrap; }
+  .rt .rt-personal form input { flex-basis: 100%; }
+}
+
+@media (max-width: 24rem) {
+  .rt-form-grid { grid-template-columns: 1fr; }
+  .rt-summary { display: block; }
+  .rt .rt-primary, .rt-outline { margin-top: 0.5rem; }
+}
+
+@media print {
+  @page { margin: 15mm; }
+  body { display: block !important; background: var(--alb) !important; font-size: 10pt; }
+  body > header, body > footer, .sari-la-continut,
+  .rt-start, .rt-hero-note, .rt-ticket, .rt-setup, .rt-storage, .rt-tabs, .rt-open-filter, .rt-answer,
+  .rt-primary, .rt-outline, .rt-text-button, .rt-personal form, .rt-personal-row button, .rt-editorial,
+  .rt-local-note, .rt-country-review, .rt-empty, .rt-notice { display: none !important; }
+  .container { max-width: none !important; padding: 0 !important; }
+  .rt-hero { display: block; padding: 0 0 1rem; }
+  .rt-hero h1 { font-size: 26pt; }
+  .rt-hero > div > p { font-size: 11pt; }
+  .rt.is-ready .rt-workspace { display: flex; flex-direction: column; margin: 0; }
+  .rt-main, .rt-summary { width: 100%; }
+  .rt-summary { position: static; order: -1; display: block; padding: 1rem; break-inside: avoid; }
+  .rt-counter strong { font-size: 26pt; }
+  .rt-summary progress { display: none; }
+  .rt-check, .rt-country-card { break-inside: avoid; }
+  .rt-check-top { padding: 0.6rem; }
+  .rt-check h4 { font-size: 14pt; }
+  .rt-detail { margin-left: 2.8rem; }
+  .rt-detail summary { display: none; }
+  .rt-detail p, .rt .rt-source { font-size: 9pt; }
+  .rt-print-status { display: block; padding: 0 0.6rem 0.6rem; font-size: 9pt; font-weight: 600; }
+  .rt-country-body .rt-print-status { padding-inline: 0; }
+  .rt-country-body a::after { content: ' (' attr(href) ')'; font-size: 8pt; overflow-wrap: anywhere; }
+  .rt-country-card summary { font-size: 15pt; }
+  .rt-list-heading h2 { font-size: 20pt; }
+  .rt-personal { margin-top: 1rem; }
+  .rt-source-date { font-size: 8pt; }
+}

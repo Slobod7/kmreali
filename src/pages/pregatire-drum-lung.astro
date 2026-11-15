@@ -1,0 +1,234 @@
+---
+// Road-trip checklist. Every check and country sheet is in the HTML, so the page reads as a guide
+// without JavaScript and in search; src/scripts/drum-lung.ts adds the choices, the ticks and the summary.
+import Base from '../layouts/Base.astro';
+import { categories, checks, conditionLabels, countries, engineLabels, reviewed, sources } from '../drum-lung/date.ts';
+import { engines } from '../drum-lung/stare.ts';
+import { formatDate, url } from '../site';
+import '../styles/drum-lung.css';
+
+const reviewedOn = formatDate(new Date(reviewed));
+const answers = [
+  { value: 'ok', label: '✓ În regulă' },
+  { value: 'issue', label: '! De rezolvat' },
+  { value: 'na', label: 'Nu se aplică' },
+];
+---
+
+<Base
+  title="Checklist înainte de drum lung cu mașina"
+  description="Pregătește mașina pentru un drum lung: ulei, anvelope, frâne, echipament, acte și regulile țărilor de pe traseu. Ghid practic și checklist pe care îl bifezi în browser."
+>
+  <div class="container rt" data-drum-lung>
+    <header class="rt-hero">
+      <div>
+        <a class="categorie" href={url('ghiduri/')}>GHIDURI / LA DRUM LUNG</a>
+        <h1>Destinația e aleasă.<br />Dar <span>mașina e pregătită?</span></h1>
+        <p>Ulei, anvelope, frâne. Acte, viniete și regulile țărilor prin care treci. Verifică lucrurile care contează înainte de următorii kilometri.</p>
+        <a class="rt-start" href="#verificari">Începe verificările <span aria-hidden="true">↓</span></a>
+        <span class="rt-hero-note">Ghid practic + checklist salvat în browser, fără cont</span>
+      </div>
+      <aside class="rt-ticket" aria-label="Pregătirea în trei pași">
+        <span class="rt-ticket-label">FIȘA TA DE DRUM</span>
+        <ol>
+          <li><strong>01</strong> Verifici mașina</li>
+          <li><strong>02</strong> Citești regulile traseului</li>
+          <li><strong>03</strong> Rezolvi ce a rămas</li>
+        </ol>
+        <p>Pentru drumuri cu mașina, de la un weekend la câteva mii de kilometri.</p>
+      </aside>
+    </header>
+
+    <section class="rt-setup" aria-labelledby="rt-setup-titlu" data-js hidden>
+      <div class="rt-section-heading">
+        <div>
+          <span class="rt-eyebrow">ÎNAINTE SĂ RIDICI CAPOTA</span>
+          <h2 id="rt-setup-titlu">Cu ce mașină și pe unde mergi?</h2>
+        </div>
+        <span class="rt-small">Schimbi traseul? Lista se adaptează.</span>
+      </div>
+      <div class="rt-form-grid">
+        <label>Motorizare
+          <select data-field="engine">
+            {engines.map((engine) => <option value={engine}>{engineLabels[engine]}</option>)}
+          </select>
+        </label>
+        <label>Data plecării <span class="rt-optional">opțional</span>
+          <input type="date" data-field="date" />
+        </label>
+        <fieldset class="rt-trip-options">
+          <legend>Condiții de drum</legend>
+          <label><input type="checkbox" data-option="winter" /> Iarnă / munte</label>
+          <label><input type="checkbox" data-option="children" /> Cu copii</label>
+          <label><input type="checkbox" data-option="trailer" /> Cu remorcă</label>
+        </fieldset>
+      </div>
+      <fieldset class="rt-countries">
+        <legend>Țări de pe traseu <span>Adaugă și țările de tranzit, nu doar destinația.</span></legend>
+        <div>
+          {countries.map((country) => (
+            <button type="button" class="rt-country-option" data-country={country.id} data-name={country.name} aria-pressed="false"><b>{country.code}</b> {country.name}</button>
+          ))}
+        </div>
+      </fieldset>
+      <p class="rt-coverage">Prima versiune: autoturisme de până la 3,5 t și {countries.length} țări europene. Pentru alte țări, verifică la autoritățile locale.</p>
+    </section>
+
+    <p class="rt-storage" data-storage role="status"></p>
+
+    <div class="rt-workspace" id="verificari">
+      <div class="rt-main">
+        <div class="rt-list-heading">
+          <div>
+            <span class="rt-eyebrow">VERIFICI. BIFEZI. PLECI LINIȘTIT.</span>
+            <h2>Checklist înainte de drum</h2>
+          </div>
+          <label class="rt-open-filter" data-js hidden><input type="checkbox" data-only-open /> Doar ce a rămas</label>
+        </div>
+        <div class="rt-tabs" role="group" aria-label="Secțiuni checklist" data-js hidden>
+          {categories.map((category, index) => <button type="button" data-tab={category.id} aria-pressed={index === 0 ? 'true' : 'false'}>{category.tab}</button>)}
+          <button type="button" data-tab="all" aria-pressed="false">Toate</button>
+        </div>
+
+        {categories.map((category) => (
+          <section class="rt-group" data-group={category.id} aria-labelledby={`rt-grup-${category.id}`}>
+            <div class="rt-group-heading"><span>{category.number}</span><h3 id={`rt-grup-${category.id}`}>{category.name}</h3></div>
+            <p class="rt-group-intro">{category.intro}</p>
+            {checks.filter((check) => check.cat === category.id).map((check) => (
+              <article class="rt-check" data-check={check.id} data-condition={check.condition} data-status="pending">
+                <div class="rt-check-top">
+                  <span class="rt-check-icon" aria-hidden="true"></span>
+                  <div>
+                    {(check.important || (check.condition && conditionLabels[check.condition])) && (
+                      <p class="rt-tags">
+                        {check.important && <span class="rt-important">De verificat cu atenție</span>}
+                        {check.condition && conditionLabels[check.condition] && <span class="rt-condition">{conditionLabels[check.condition]}</span>}
+                      </p>
+                    )}
+                    <h4>{check.title}</h4>
+                    <p>{check.short}</p>
+                  </div>
+                </div>
+                <details class="rt-detail">
+                  <summary>Cum verifici <span class="rt-when">{check.when}</span></summary>
+                  {check.steps.map((step) => <p>{step}</p>)}
+                  <p class="rt-source">
+                    {check.source
+                      ? <a href={sources[check.source].url} target="_blank" rel="noopener">{sources[check.source].label} ↗<span class="sr-only"> (filă nouă)</span></a>
+                      : 'Consultă manualul mașinii și instrucțiunile operatorilor.'}
+                    {check.related && <><br /><a href={url(check.related.path)}>{check.related.label} →</a></>}
+                  </p>
+                </details>
+                <div class="rt-answer" role="group" aria-label={`Stare: ${check.title}`} data-js hidden>
+                  {answers.map((answer) => <button type="button" data-answer={answer.value} aria-pressed="false">{answer.label}</button>)}
+                </div>
+                <p class="rt-print-status" data-print-status></p>
+              </article>
+            ))}
+          </section>
+        ))}
+        <p class="rt-empty" data-empty hidden>Nu mai sunt verificări deschise aici. Alege altă secțiune sau dezactivează filtrul.</p>
+
+        <section class="rt-route" id="reguli" aria-labelledby="rt-reguli-titlu">
+          <div class="rt-list-heading">
+            <div>
+              <span class="rt-eyebrow">ȘI ȚARA PRIN CARE DOAR TRECI CONTEAZĂ</span>
+              <h2 id="rt-reguli-titlu">Regulile de pe traseul tău</h2>
+            </div>
+            <span class="rt-small" data-country-count></span>
+          </div>
+          <p class="rt-route-intro">Taxe, dotări și lucruri de reținut. Deschide fișa fiecărei țări și confirmă regulile pentru mașina și data ta.</p>
+          <div class="rt-country-cards">
+          {countries.map((country) => (
+            <details class="rt-country-card" data-country-card={country.id}>
+              <summary><small>{country.code}</small>{country.name}<em data-review-label>De verificat</em></summary>
+              <div class="rt-country-body">
+                <dl>
+                  <dt>{country.taxTitle}</dt>
+                  <dd>
+                    {country.tax}
+                    {country.id === 'at' && <span class="rt-date-hint" data-vignette-hint hidden></span>}
+                    <br /><a href={country.taxLink.url} target="_blank" rel="noopener">{country.taxLink.label} ↗<span class="sr-only"> (filă nouă)</span></a>
+                  </dd>
+                  <dt>Echipament</dt>
+                  <dd>
+                    {country.gear}
+                    {country.gearLink && <><br /><a href={country.gearLink.url} target="_blank" rel="noopener">{country.gearLink.label} ↗<span class="sr-only"> (filă nouă)</span></a></>}
+                  </dd>
+                  <dt>De reținut</dt>
+                  <dd>
+                    {country.tip}
+                    {country.tipLinks?.map((link) => <><br /><a href={link.url} target="_blank" rel="noopener">{link.label} ↗<span class="sr-only"> (filă nouă)</span></a></>)}
+                  </dd>
+                </dl>
+                <a class="rt-rules-link" href={country.rules} target="_blank" rel="noopener">{country.name}: viteze, alcool, lumini și alte reguli oficiale ↗<span class="sr-only"> (filă nouă)</span></a>
+                <label class="rt-country-review" data-js hidden><input type="checkbox" data-review={country.id} /> Am verificat cerințele pentru traseul și mașina mea.</label>
+                <p class="rt-print-status" data-review-print></p>
+              </div>
+            </details>
+          ))}
+          </div>
+          <p class="rt-empty" data-no-countries hidden>Alege mai sus țările de pe traseu ca să vezi fișele lor. Verificările tehnice rămân valabile.</p>
+          <p class="rt-source-date">Surse consultate la {reviewedOn}. Fișele sunt repere de pregătire, nu o listă completă de obligații. Limitele de viteză, regulile de iarnă, echipamentele și accesul în orașe se confirmă la sursa oficială înainte de plecare.</p>
+        </section>
+
+        <section class="rt-personal" aria-labelledby="rt-personal-titlu" data-js hidden>
+          <h2 id="rt-personal-titlu">Ce mai ai de făcut?</h2>
+          <p>Adaugă verificările specifice mașinii sau drumului tău.</p>
+          <form data-add-form>
+            <input data-new-task maxlength="150" placeholder="De ex. verific prinderea cutiei de plafon" aria-label="Verificare personală" required />
+            <button type="submit">+ Adaugă</button>
+          </form>
+          <ul class="rt-personal-list" data-personal></ul>
+        </section>
+      </div>
+
+      <aside class="rt-summary" aria-labelledby="rt-rezumat-titlu" data-js hidden>
+        <span class="rt-eyebrow">FIȘA TA DE DRUM</span>
+        <h2 id="rt-rezumat-titlu">Ce mai ai de verificat</h2>
+        <p class="rt-trip" data-trip></p>
+        <div class="rt-counter"><strong data-done>0</strong><span>din <b data-total>0</b><br /><span data-total-unit>verificări</span> în regulă</span></div>
+        <progress data-progress value="0" max="1" aria-label="Progresul verificărilor"></progress>
+        <p class="rt-stats" data-stats aria-live="polite"></p>
+        <ul class="rt-issues" data-issues></ul>
+        <p class="rt-summary-note">Bifele arată ce ai verificat tu. O problemă la frâne, la anvelope sau un martor roșu se rezolvă înainte de drum.</p>
+        <button class="rt-primary" type="button" data-print>Imprimă / salvează PDF</button>
+        <a class="rt-outline" href="#reguli">Vezi regulile pe țări <span aria-hidden="true">↓</span></a>
+        <button class="rt-text-button" type="button" data-reset>Resetează fișa</button>
+        <p class="rt-local-note">Fără cont. Progresul rămâne pe acest dispozitiv, în browserul curent.</p>
+      </aside>
+    </div>
+
+    <noscript><p class="rt-notice">Cu JavaScript activat poți alege mașina și traseul, bifa verificările și imprima fișa. Lista de mai sus și fișele țărilor se citesc și fără el.</p></noscript>
+
+    <section class="rt-editorial" aria-labelledby="rt-ghid-titlu">
+      <span class="rt-eyebrow">CITEȘTE ÎNAINTE SĂ BIFEZI</span>
+      <h2 id="rt-ghid-titlu">Trei lucruri care merită<br />mai mult decât o privire</h2>
+      <div class="rt-editorial-grid">
+        <article>
+          <span>01 / ANVELOPE</span>
+          <h3>Presiunea e pentru mașină. Și pentru încărcătura ei.</h3>
+          <p>Pasagerii și bagajele pot schimba valoarea recomandată. Citește eticheta mașinii, măsoară la rece și verifică toate roțile. Un flanc care arată bine nu îți spune ce presiune ai.</p>
+          <a href={sources.michelin.url} target="_blank" rel="noopener">Explicația Michelin ↗<span class="sr-only"> (filă nouă)</span></a>
+        </article>
+        <article>
+          <span>02 / SUB CAPOTĂ</span>
+          <h3>Un nivel scăzut are și o cauză.</h3>
+          <p>Uleiul, răcirea și frânele au proceduri diferite. Consultă manualul, folosește lichidul corect și cere o verificare dacă nivelul scade iar. Nu deschide vasul de răcire cu motorul fierbinte.</p>
+          <a href={sources.rac.url} target="_blank" rel="noopener">Verificările explicate de RAC ↗<span class="sr-only"> (filă nouă)</span></a>
+        </article>
+        <article>
+          <span>03 / DINCOLO DE GRANIȚĂ</span>
+          <h3>Aceeași mașină. Alte reguli.</h3>
+          <p>O vinietă nu acoperă automat fiecare tronson, iar echipamentul și cerințele de iarnă diferă. Verifică ruta dus-întors și regulile tuturor țărilor prin care treci.</p>
+          <a href={sources.eu.url} target="_blank" rel="noopener">Regulile din Your Europe ↗<span class="sr-only"> (filă nouă)</span></a>
+        </article>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<script>
+  import { initDrumLung } from '../scripts/drum-lung';
+  document.querySelectorAll<HTMLElement>('[data-drum-lung]').forEach(initDrumLung);
+</script>

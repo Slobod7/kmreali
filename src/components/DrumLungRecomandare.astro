@@ -1,0 +1,19 @@
+---
+// The card that sends readers from the homepage and Ghiduri to the road-trip checklist.
+import { url } from '../site';
+---
+
+<a class="drum-lung-reco" href={url('pregatire-drum-lung/')}>
+  <span>GHID + CHECKLIST DE DRUM LUNG</span>
+  <strong>Mașina e pregătită pentru drum lung?</strong>
+  <span>Ulei, anvelope, frâne, echipament și regulile țărilor de pe traseu. Bifezi în browser și imprimi fișa înainte de plecare. →</span>
+</a>
+
+<style>
+  .drum-lung-reco { display: grid; gap: .4rem; background: var(--carbune); color: var(--hartie); padding: 1.5rem; border-radius: 8px; text-decoration: none; border-left: 4px solid var(--rosu); }
+  .drum-lung-reco > span { font-size: .9375rem; }
+  .drum-lung-reco > span:first-child { color: var(--evidentiator); font-family: var(--font-titlu); letter-spacing: .06em; }
+  .drum-lung-reco strong { font-family: var(--font-titlu); font-size: var(--text-xl); line-height: 1.2; }
+  .drum-lung-reco:hover { color: var(--alb); }
+  .drum-lung-reco:hover strong { text-decoration: underline; text-decoration-color: var(--evidentiator); text-underline-offset: .15em; }
+</style>

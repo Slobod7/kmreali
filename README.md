@@ -99,3 +99,13 @@ To check the sums after a change:
 ```bash
 node --test scripts/cumparare/check.test.mjs
 ```
+
+## „Pregătire de drum lung”
+
+The road-trip checklist lives at `/pregatire-drum-lung/` and is linked from the homepage and Ghiduri. Every check and country sheet is written into the page, so it reads as a guide without JavaScript; the browser script adds the car and route choices, the ticks, the summary and printing. Each reader's progress stays in their own browser.
+
+The checks, the 9 country sheets and their sources are in `src/drum-lung/date.ts`, with the date they were last checked against the official pages in `reviewed`. Change that date when you re-check them. The saved state and the sums are in `src/drum-lung/stare.ts`, and the browser script is `src/scripts/drum-lung.ts`. To check them after a change:
+
+```bash
+node --test scripts/drum-lung/check.test.mjs
+```
