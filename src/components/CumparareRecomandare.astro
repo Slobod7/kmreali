@@ -1,0 +1,19 @@
+---
+// The card that sends readers from Ghiduri to the second-hand buying checklist.
+import { url } from '../site';
+---
+
+<a class="cumparare-reco" href={url('verificare-masina-sh/')}>
+  <span>CHECKLIST DE CUMPĂRARE</span>
+  <strong>Ce verifici înainte să cumperi o mașină SH?</strong>
+  <span>Alege modelul, ia lista la vizionare și adună lucrările de discutat la preț. Cele mai căutate 10 modele SH de pe Autovit, plus Superb. →</span>
+</a>
+
+<style>
+  .cumparare-reco { display: grid; gap: .4rem; background: var(--carbune); color: var(--hartie); padding: 1.5rem; border-radius: 8px; text-decoration: none; border-left: 4px solid var(--rosu); }
+  .cumparare-reco > span { font-size: .9375rem; }
+  .cumparare-reco > span:first-child { color: var(--evidentiator); font-family: var(--font-titlu); letter-spacing: .06em; }
+  .cumparare-reco strong { font-family: var(--font-titlu); font-size: var(--text-xl); line-height: 1.2; }
+  .cumparare-reco:hover { color: var(--alb); }
+  .cumparare-reco:hover strong { text-decoration: underline; text-decoration-color: var(--evidentiator); text-underline-offset: .15em; }
+</style>

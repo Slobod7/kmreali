@@ -1,0 +1,78 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../site';
+import { models, rankingSource } from '../data/cumparare/catalog.mjs';
+import '../styles/cumparare.css';
+---
+<Base title="Checklist de cumpărare mașină SH" description="Pregătește vizionarea unei mașini second-hand: verificări cu surse, istoric de întreținere și bugetul lucrărilor de discutat la negociere.">
+  <div class="container buying-page" id="buying-app" data-base={import.meta.env.BASE_URL}>
+    <header class="buying-hero">
+      <div>
+        <a class="categorie" href={url('ghiduri/')}>GHIDURI / ÎNAINTE SĂ CUMPERI</a>
+        <h1>Vezi mașina.<br />Verifică <span>și povestea.</span></h1>
+        <p>Ia cu tine întrebările potrivite. Pune pe hârtie ce ai verificat, ce lipsește și cât te-ar costa lucrările rămase.</p>
+      </div>
+      <div class="buying-ticket" aria-label="Cum folosești instrumentul">
+        <span class="ticket-label">FIȘA TA DE VIZIONARE</span>
+        <strong>01 <span>Alegi mașina</span></strong>
+        <strong>02 <span>Verifici și notezi</span></strong>
+        <strong>03 <span>Discuți prețul</span></strong>
+        <p>Fără cont. Fără linkuri afiliate.</p>
+      </div>
+    </header>
+    <noscript><p class="buying-notice">Activează JavaScript pentru checklist și calcul. Poți consulta <a href="https://www.rarom.ro/?p=298753">RAR Auto-Pass</a> și <a href="https://www.adac.de/rund-ums-fahrzeug/auto-kaufen-verkaufen/gebrauchtwagenkauf/kfz-kaufvertrag/">ghidul general ADAC</a>.</p></noscript>
+    <div id="buying-interactive" hidden>
+      <section class="vehicle-panel" aria-labelledby="vehicle-heading">
+        <div class="panel-heading"><h2 id="vehicle-heading">Cu ce mașină te întâlnești?</h2><span>PRIMA VERSIUNE · ACOPERIRE PARȚIALĂ</span></div>
+        <form id="vehicle-form" class="vehicle-grid">
+          <label class="model-field">Model<select name="model" id="buy-model">{models.map(m => <option value={m.id}>{m.rank ? `${String(m.rank).padStart(2, '0')} · ` : '+ '}{m.name}</option>)}</select></label>
+          <label>Generație<select name="generation" id="buy-generation"></select></label>
+          <label>Motor<select name="fuel" id="buy-fuel"></select></label>
+          <label>Cutie<select name="gearbox"><option value="unknown">Nu știu încă</option><option value="manual">Manuală</option><option value="auto">Automată</option></select></label>
+          <label>Tracțiune<select name="drive"><option value="unknown">Nu știu încă</option><option value="two">Două roți motrice</option><option value="awd">Integrală / 4x4</option></select></label>
+          <label>Kilometraj <span class="unit">km</span><input name="km" type="number" min="0" max="2000000" step="1" placeholder="ex. 165000" inputmode="numeric" /></label>
+          <label>Anul fabricației<input name="year" type="number" min="1900" max="2027" step="1" placeholder="ex. 2017" inputmode="numeric" /></label>
+          <label>Dotări de probat<select name="trim"><option value="">De bază / nu știu</option><option value="comfort">Confort: scaune, hayon electric</option><option value="sport">Sport: suspensie reglabilă</option></select></label>
+        </form>
+        <p id="coverage" class="coverage"></p>
+        <p class="ranking-note">Primele 10 modele: ordinea vizualizărilor SH din <a href={rankingSource} target="_blank" rel="noopener noreferrer">raportul Autovit, octombrie 2025</a>. Generațiile sunt alegeri editoriale, nu un clasament separat.</p>
+      </section>
+      <p id="storage-status" class="storage-status" role="status"></p>
+      <div class="buying-workspace">
+        <div>
+          <div class="checklist-toolbar"><div><span class="eyebrow">LA FIECARE PAS, O SURSĂ</span><h2>Lista pentru vizionare</h2></div><label class="filter-toggle"><input type="checkbox" id="only-open" /> Doar de clarificat</label></div>
+          <p class="list-help">„În regulă” înseamnă verificat de tine. Un risc raportat la model nu confirmă un defect la această mașină.</p>
+          <div id="checklist"></div>
+          <section class="notes-panel" aria-labelledby="notes-heading">
+            <span class="eyebrow">DOAR ÎN ACEST BROWSER</span><h2 id="notes-heading">Ce mai vrei să întrebi?</h2>
+            <label for="private-notes">Note personale · nu sunt incluse în link sau la imprimare</label>
+            <textarea id="private-notes" rows="4" maxlength="4000" placeholder="Ex. Cere factura ultimei revizii și o programare la service."></textarea>
+            <button type="button" class="text-button" id="delete-notes">Șterge notele acestei configurații</button>
+          </section>
+        </div>
+        <aside class="budget-panel" aria-labelledby="budget-heading">
+          <span class="eyebrow">PENTRU DISCUȚIA DESPRE PREȚ</span><h2 id="budget-heading">Ce rămâne de făcut</h2>
+          <p id="vehicle-summary"></p>
+          <p id="print-coverage" class="print-answer"></p>
+          <div class="budget-amount"><strong id="budget-total">0</strong><span>lei</span></div>
+          <p id="budget-caption">Adaugă lucrări și estimări.</p>
+          <ul id="budget-items"></ul>
+          <p class="budget-disclaimer">Totalul folosește devizele introduse de tine, în lei. Este un buget de discutat, nu o reducere garantată. Nu dubla piesele sau manopera între lucrări.</p>
+          <div class="progress-meta"><strong id="progress-label"></strong><span id="issue-count"></span></div>
+          <progress id="check-progress" value="0" max="1" aria-label="Verificări completate"></progress>
+          <div class="budget-actions"><button type="button" class="primary-button" id="share-checklist">Copiază linkul fișei ↗</button><button type="button" id="print-checklist">Imprimă / salvează PDF</button></div>
+          <p class="share-hint">Linkul include mașina, răspunsurile și sumele. Notele personale rămân aici.</p>
+          <p id="action-status" role="status" aria-live="polite"></p>
+          <label id="manual-link-label" hidden>Link de copiat<input id="manual-link" readonly /></label>
+          <button type="button" id="reset-checklist" class="text-button">Resetează răspunsurile acestei fișe</button>
+        </aside>
+      </div>
+      <section class="buying-method" aria-labelledby="method-heading"><h2 id="method-heading">Ce poate spune fișa. Și unde se oprește.</h2>
+        <div><p><strong>Verificări, nu diagnostice:</strong> pentru cele 10 modele, punctele specifice provin din rapoarte ADAC pentru generațiile diesel indicate, pe piața germană. Nu acoperă toate motorizările, anii sau echipările. Pentru Superb folosim experiența autorului, din recenziile KM Reali.</p>
+        <p><strong>Kilometri, timp și istoric:</strong> scadențele se calculează numai din intervalele și ultimele lucrări completate. Intervalele se confirmă după VIN. O factură lipsă se poate bugeta; o posibilă defecțiune nu devine automat o lucrare datorată.</p>
+        <p><strong>Prețuri fără presupuneri:</strong> nu avem încă un catalog de devize românești pentru toate modelele. Introdu o ofertă de service pentru fiecare lucrare. Un cost lipsă rămâne neestimat, nu gratuit. Surse consultate la 14.11.2026.</p></div>
+      </section>
+    </div>
+  </div>
+</Base>
+<script>import '../scripts/cumparare-ui';</script>

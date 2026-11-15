@@ -89,3 +89,13 @@ python3 scripts/carburanti/refresh.py --download
 ```
 
 Then run `npm run build`, look at the pages and commit `data/carburanti/current.json` and the new file in `data/carburanti/editions/`. The downloaded workbooks stay in `data/carburanti/raw/` and `data/carburanti/sources/`, which git ignores.
+
+## „Checklist de cumpărare SH”
+
+The second-hand buying checklist lives at `/verificare-masina-sh/` and is linked from Ghiduri. The models, checks and sources are in `src/data/cumparare/catalog.mjs`; the sums (service due dates, the budget, the share link) are in `src/scripts/cumparare-core.mjs`, and the browser script is `src/scripts/cumparare-ui.ts`. Each reader's answers stay in their own browser; the share link carries the car, the answers and the amounts, never the notes. `docs/verificare-masina-sh.md` explains the rules and how the sources were checked.
+
+To check the sums after a change:
+
+```bash
+node --test scripts/cumparare/check.test.mjs
+```
