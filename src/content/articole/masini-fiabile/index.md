@@ -3,6 +3,7 @@ title: "Mașini fiabile 2026 – noi și second hand, sub 30.000 €"
 # Shown in Google results and on the article card. Aim for 140–160 characters.
 description: "Ce mașini fiabile poți lua în 2026 cu sub 30.000 €, noi sau second hand: modelele care ies bine la TÜV, ADAC și What Car?, cu prețuri din România."
 date: 2026-11-10
+updated: 2026-11-15
 category: topuri
 cover: ./coperta-masini-fiabile.webp
 coverAlt: "Ilustrație: trei mașini pe un drum, cea din mijloc roșie și bifată, deasupra textului „sub 30.000 €”"
@@ -36,10 +37,12 @@ Alege bugetul și ce fel de mașină vrei. Pentru cele second hand, prețul e me
 | --- | --- | --- |
 | [TÜV-Report 2026](https://www.tuvsud.com/de-de/publikationen/tuev-report/maengelzwerge-und-fehlerriesen) | câte mașini pică inspecția tehnică periodică din Germania (echivalentul ITP) cu defecte grave, pe vârste de la 2 la 13 ani | noiembrie 2025, aproximativ 9,5 milioane de inspecții |
 | [ADAC Pannen&shy;statistik 2026](https://www.adac.de/rund-ums-fahrzeug/unfall-schaden-panne/adac-pannenstatistik-2026/) | la câte pane a ieșit ADAC, la 1.000 de mașini, pentru mașini de 2–9 ani | aprilie 2026, pane din 2025 |
-| [What Car? Reliability Survey](https://www.whatcar.com/news/reliability-survey-most-reliable-cars-brands/n26159) | defectele raportate de proprietari în ultimii doi ani, cât au costat și cât a stat mașina în service, la mașini de până la 5 ani | octombrie 2026 |
+| [What Car? Reliability Survey](https://www.whatcar.com/news/reliability-survey-most-reliable-cars-brands/n26159) | defectele raportate de proprietari în ultimii doi ani, cât au costat și cât a stat mașina în service, la mașini de până la 5 ani | 2026 (din septembrie 2026) unde există, altfel 2025; anul e scris lângă fiecare notă |
 | [Driver Power](https://www.autoexpress.co.uk/best-cars-vans/91220/most-and-least-reliable-car-manufacturers-2026) | nota de fiabilitate dată de proprietari, pe mărci | august 2026 |
 
 Sursele măsoară lucruri diferite. TÜV numără defectele care te pică la inspecție: frâne, suspensie, direcție, lumini, pierderi de ulei. Nu vede o cutie care smucește sau un ecran care se blochează. ADAC numără mașinile care te lasă pe drum, iar aproape jumătate din pane vin de la bateria de 12 V. What Car? întreabă proprietarii, deci prinde și electronica și cât te costă reparația, dar doar la mașini tinere. Din cauza asta, același model poate fi printre cele mai bune într-un clasament și la coada altuia.
+
+Ediția 2026 a sondajului What Car? a apărut din septembrie 2026, dar nu pentru toate clasele. Clasamentul pe mărci, lista celor mai și mai puțin fiabile modele și clasa mașinilor mici sunt din 2026. Pentru SUV-urile mici, compacte și SUV-urile de familie, paginile pe clase aveau încă notele din 2025 când am verificat, pe 15 noiembrie 2026. Unde există o notă pe model din 2026, am folosit-o pe aceea. Altfel am păstrat nota din 2025 și am scris anul lângă ea.
 
 Regula după care am ales: un model intră în listă dacă e bine clasat în cel puțin două surse și nu e la coada niciuneia. Când una dintre surse îl trage în jos, scriu asta lângă el.
 
@@ -71,7 +74,7 @@ Problema e că aproape nu găsești: pe Autovit erau doar 11 anunțuri din 2018�
 
 ### Skoda Fabia (din 2021, a patra generație)
 
-Proprietarii britanici îi dau 97,5% la What Car?, iar la ADAC Fabia apare printre modelele fiabile în toți anii din statistică (acolo intră mai ales generația anterioară). Pe Autovit sunt 40 de anunțuri din 2022–2024, cu un median de 9.890 €. Kilometrajul median e însă de 99.000 km, mult pentru o mașină de 2–4 ani.
+Proprietarii britanici îi dau 97,5% la What Car? 2026, iar la ADAC Fabia apare printre modelele fiabile în toți anii din statistică (acolo intră mai ales generația anterioară). Pe Autovit sunt 40 de anunțuri din 2022–2024, cu un median de 9.890 €. Kilometrajul median e însă de 99.000 km, mult pentru o mașină de 2–4 ani.
 
 **Atenție la:** ecranul central. Pe forumul britanic Briskoda, mai mulți proprietari de Fabia 4 scriu că ecranul se stinge și repornește; unuia i s-a schimbat unitatea, altul a primit 90% reducere de la dealer pentru reparație ([Briskoda](https://www.briskoda.net/forums/topic/534312-infotainment-fabia-22-plate/)). La proba de drum, ține mașina pornită cu telefonul conectat câteva minute.
 
@@ -85,7 +88,7 @@ Proprietarii britanici îi dau 97,5% la What Car?, iar la ADAC Fabia apare print
 
 ## Second hand 10.000–15.000 €
 
-Între 10.000 și 15.000 € alegerea e mai largă: trei SUV-uri mici și o compactă, de 5–10 ani, toate bine clasate în cel puțin două surse. Mazda CX-3, Suzuki Vitara și Audi Q2 ies bine la TÜV, iar Kia Ceed are cea mai bună notă dintre compacte la What Car?. Mașinile de pe Autovit au însă de obicei între 101.000 și 185.000 km, așa că istoricul de service contează mult.
+Între 10.000 și 15.000 € alegerea e mai largă: trei SUV-uri mici și o compactă, de 5–10 ani, toate bine clasate în cel puțin două surse. Mazda CX-3, Suzuki Vitara și Audi Q2 ies bine la TÜV, iar Kia Ceed are cea mai bună notă dintre compacte la What Car? 2025. Mașinile de pe Autovit au însă de obicei între 101.000 și 185.000 km, așa că istoricul de service contează mult.
 
 ### Mazda CX-3 (benzină, din 2015)
 
@@ -101,7 +104,7 @@ Pe Autovit am găsit 14 anunțuri pe benzină din 2016–2019, cu un preț media
 
 ### Suzuki Vitara (din 2015)
 
-Vitara apare în top 10 la TÜV la două vârste: locul 8 la 6–7 ani (8,7%) și locul 5 la 8–9 ani (11,4%). La ADAC are între 2,8 și 6,2 pane la 1.000 de mașini, cifre mici în toți anii. La What Car? are 95,4%.
+Vitara apare în top 10 la TÜV la două vârste: locul 8 la 6–7 ani (8,7%) și locul 5 la 8–9 ani (11,4%). La ADAC are între 2,8 și 6,2 pane la 1.000 de mașini, cifre mici în toți anii. La What Car? 2026 are 97,6%.
 
 Pe Autovit: 35 de anunțuri din 2016–2021, cu un median de 12.000 € și 138.000 km.
 
@@ -113,7 +116,7 @@ Pe Autovit: 35 de anunțuri din 2016–2021, cu un median de 12.000 € și 138.
 
 ### Kia Ceed (din 2018, a treia generație)
 
-Ceed-ul din 2018–2025 are 98,8% la What Car?, cea mai bună notă dintre compacte. La ADAC e doar mediu. Pe Autovit sunt 37 de anunțuri din 2018–2021, cu un median de 11.000 € și 130.000 km.
+Ceed-ul din 2018–2025 are 98,8% la What Car? 2025, cea mai bună notă dintre compacte. La ADAC e doar mediu. Pe Autovit sunt 37 de anunțuri din 2018–2021, cu un median de 11.000 € și 130.000 km.
 
 **Atenție la:** generație. Ceed-ul și Hyundai i30 de dinainte de 2018 sunt printre ultimele 10 la TÜV la 10–11 ani, iar i30 și la 12–13 ani. Nota bună e a generației din 2018.
 
@@ -123,7 +126,7 @@ Ceed-ul din 2018–2025 are 98,8% la What Car?, cea mai bună notă dintre compa
 
 ### Audi Q2 (din 2016)
 
-E pe locul 3 la TÜV la 4–5 ani și la 6–7 ani, are 98,5% la What Car? și pane puține la ADAC. Pe Autovit: 31 de anunțuri din 2017–2020, cu un median de 14.000 €.
+E pe locul 3 la TÜV la 4–5 ani și la 6–7 ani, are 98,5% la What Car? 2026, la fel ca în 2025, și pane puține la ADAC. Pe Autovit: 31 de anunțuri din 2017–2020, cu un median de 14.000 €.
 
 **Atenție la:** kilometraj. Q2-urile de pe Autovit au în medie 185.000 km, mult peste celelalte modele din listă.
 
@@ -137,7 +140,7 @@ E pe locul 3 la TÜV la 4–5 ani și la 6–7 ani, are 98,5% la What Car? și p
 
 ### Volkswagen T-Roc (prima generație)
 
-T-Roc e cel mai constant model din TÜV 2026: locul 1 la 6–7 ani (6,7%), primul la egalitate la 4–5 ani și pe locul 2 la 2–3 ani. La What Car? are 99,0%, iar la ADAC are pane puține în toți anii.
+T-Roc e cel mai constant model din TÜV 2026: locul 1 la 6–7 ani (6,7%), primul la egalitate la 4–5 ani și pe locul 2 la 2–3 ani. La ADAC are pane puține în toți anii, iar la What Car? 2025 are 99,0%. În ediția 2026, What Car? nu mai dă nota exactă și spune doar că trece de 90%.
 
 Pe Autovit: 76 de anunțuri din 2018–2021, cu un median de 15.900 € și 123.000 km.
 
@@ -149,7 +152,7 @@ Pe Autovit: 76 de anunțuri din 2018–2021, cu un median de 15.900 € și 123.
 
 ### Skoda Karoq (din 2017)
 
-La TÜV, Karoq e pe locul 4 la 6–7 ani (7,8%). La ADAC are între 3,2 și 7,7 pane la 1.000 de mașini, iar la What Car? are 95,5%. Pe Autovit sunt 90 de anunțuri din 2018–2021, cu un median de 17.000 € și 155.000 km.
+La TÜV, Karoq e pe locul 4 la 6–7 ani (7,8%). La ADAC are între 3,2 și 7,7 pane la 1.000 de mașini, iar la What Car? 2025 are 95,5%. Pe Autovit sunt 90 de anunțuri din 2018–2021, cu un median de 17.000 € și 155.000 km.
 
 **Atenție la:** aceleași motoare și cutii ca la T-Roc. Pe benzină cu automată, verifică ce DSG are mașina și ce s-a făcut la ea în service.
 
@@ -159,7 +162,7 @@ La TÜV, Karoq e pe locul 4 la 6–7 ani (7,8%). La ADAC are între 3,2 și 7,7 
 
 ### Mazda CX-5 pe benzină (2017–2025)
 
-What Car? dă note separate pe motorizări: 98,4% pentru CX-5 pe benzină și 94,9% pentru diesel. La ADAC, CX-5 apare printre modelele fiabile în toți anii. Pe Autovit sunt 32 de anunțuri pe benzină din 2017–2021, cu un median de 19.900 € și 120.000 km.
+What Car? 2025 dă note separate pe motorizări: 98,4% pentru CX-5 pe benzină și 94,9% pentru diesel. Ediția 2026 dă o singură notă pentru generația asta, 95,3%, fără să spună motorizarea. La ADAC, CX-5 apare printre modelele fiabile în toți anii. Pe Autovit sunt 32 de anunțuri pe benzină din 2017–2021, cu un median de 19.900 € și 120.000 km.
 
 **Atenție la:** motorizare. Peste jumătate din CX-5 de pe Autovit din acești ani nu sunt pe benzină, ci în mare parte diesel 2.2 (77 de anunțuri cu toate motoarele, cu un median de 16.000 €). Datele sunt mai bune pentru benzină, care e și mai scumpă.
 
@@ -169,7 +172,7 @@ What Car? dă note separate pe motorizări: 98,4% pentru CX-5 pe benzină și 94
 
 ### Toyota Corolla hibrid (din 2019)
 
-Corolla are 96,5% la What Car?, iar Toyota e pe locul 3 la TÜV pe mărci, la mașinile de 10–11 ani. ADAC o trece însă pe lista problemelor pentru anul 2023, din cauza bateriei de 12 V (detalii mai jos).
+Corolla are 96,5% la What Car? 2025, iar Toyota e pe locul 3 la TÜV pe mărci, la mașinile de 10–11 ani. ADAC o trece însă pe lista problemelor pentru anul 2023, din cauza bateriei de 12 V (detalii mai jos).
 
 Pe Autovit sunt 93 de anunțuri din 2019–2021, cu un median de 17.000 € și 124.000 km, și 96 din 2022–2024, cu un median de 18.000 € și 108.000 km.
 
@@ -179,7 +182,7 @@ Pe Autovit sunt 93 de anunțuri din 2019–2021, cu un median de 17.000 € și 
 
 *Foto: Vauxford, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2019_Toyota_Corolla_Design_VVT-i_HEV_1.8_Front.jpg), licență [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.ro). Fotografie redimensionată.*
 
-**Alternativă, cu rezerve:** Mazda3 pe benzină (din 2019) are kilometraje mai mici pe Autovit (33 de anunțuri din 2019–2022, cu un median de 16.500 € și 85.000 km), dar doar 90,8% la What Car?, iar ADAC trece anul 2020 pe lista problemelor.
+**Alternativă, cu rezerve:** Mazda3 pe benzină (din 2019) are kilometraje mai mici pe Autovit (33 de anunțuri din 2019–2022, cu un median de 16.500 € și 85.000 km), dar doar 90,8% la What Car? 2025, iar ADAC trece anul 2020 pe lista problemelor.
 
 ## Second hand 20.000–30.000 €
 
@@ -187,9 +190,9 @@ Pe Autovit sunt 93 de anunțuri din 2019–2021, cu un median de 17.000 € și 
 
 ### Kia Sportage (din 2022, a cincea generație)
 
-Sportage-ul nou e pe locul 8 la TÜV la 2–3 ani (4,0%) și are 96,5% la What Car?, pe benzină și hibrid. Pe Autovit sunt 116 anunțuri din 2022–2024, cu un median de 22.300 € și 103.000 km.
+Sportage-ul nou e pe locul 8 la TÜV la 2–3 ani (4,0%) și are 96,5% la What Car? 2025, pe benzină și hibrid. Pe Autovit sunt 116 anunțuri din 2022–2024, cu un median de 22.300 € și 103.000 km.
 
-**Atenție la:** generație. Sportage-ul din 2016–2021 are doar 72,9% la What Car?, al doilea cel mai slab SUV de familie din sondaj. E și mult mai des întâlnit: 236 de anunțuri, în jur de 15.400 €. Varianta plug-in hybrid a generației noi are și ea doar 90,1%.
+**Atenție la:** generație. Sportage-ul din 2016–2021 are doar 72,9% la What Car? 2025, al doilea cel mai slab SUV de familie din acea ediție. E și mult mai des întâlnit: 236 de anunțuri, în jur de 15.400 €. Varianta plug-in hybrid a generației noi are și ea doar 90,1%.
 
 ![Kia Sportage hibrid albă din 2022, văzută din față](./kia-sportage-hybrid-2022-fata.webp)
 
@@ -197,9 +200,9 @@ Sportage-ul nou e pe locul 8 la TÜV la 2–3 ani (4,0%) și are 96,5% la What C
 
 ### Cu mai puține date
 
-- **Honda CR-V (din 2018):** 95,5% la What Car?, iar Honda e a doua marcă în sondaj; nu am date TÜV sau ADAC pe model. Pe Autovit: 25 de anunțuri din 2018–2022, cu un median de 22.850 €.
-- **Hyundai Tucson (din 2021):** 94,3% la What Car?, fără alte date pe generația asta. Pe Autovit: 217 anunțuri din 2021–2023, cu un median de 22.500 €.
-- **Toyota RAV4 hibrid (din 2019):** 98,9% la What Car?, dar cel mai slab din clasa lui la ADAC în 2017–2022, din cauza bateriei de 12 V. Pe Autovit: 50 de anunțuri din 2019–2021, cu un median de 25.000 € și 149.000 km.
+- **Honda CR-V (din 2018):** 94,4% la What Car? 2026, față de 95,5% în 2025, deși Honda e a doua marcă în sondaj. Nu am date TÜV sau ADAC pe model. Pe Autovit: 25 de anunțuri din 2018–2022, cu un median de 22.850 €.
+- **Hyundai Tucson (din 2021):** 94,3% la What Car? 2025, fără alte date pe generația asta. Pe Autovit: 217 anunțuri din 2021–2023, cu un median de 22.500 €.
+- **Toyota RAV4 hibrid (din 2019):** 98,9% la What Car? 2025, dar cel mai slab din clasa lui la ADAC în 2017–2022, din cauza bateriei de 12 V. Pe Autovit: 50 de anunțuri din 2019–2021, cu un median de 25.000 € și 149.000 km.
 
 ## Mașini noi sub 30.000 €
 
@@ -208,14 +211,14 @@ La o mașină nouă nu există încă date de fiabilitate: TÜV o vede prima dat
 | Model | Preț de la | De ce | Atenție |
 | --- | --- | --- | --- |
 | Suzuki Swift | 16.910 € | Suzuki e prima marcă la What Car? 2026 | generație nouă din 2024, încă fără date |
-| Skoda Fabia | 17.281 € | 97,5% la What Car?; fiabilă la ADAC | ecranul central (vezi mai sus) |
-| Skoda Kamiq | 19.733 € | fiabil la ADAC; 94,1% la What Car? | – |
-| Kia Stonic | 19.917 € după promoție | 96,4% la What Car?; garanție 7 ani | prețul de listă e 21.417 € |
+| Skoda Fabia | 17.281 € | 97,5% la What Car? 2026; fiabilă la ADAC | ecranul central (vezi mai sus) |
+| Skoda Kamiq | 19.733 € | fiabil la ADAC; 94,1% la What Car? 2025 | – |
+| Kia Stonic | 19.917 € după promoție | 96,4% la What Car? 2025; garanție 7 ani | prețul de listă e 21.417 € |
 | Suzuki Vitara | 22.125 € | bine la TÜV, ADAC și What Car? | versiunea full hybrid are altă cutie |
-| Toyota Corolla sedan hibrid | 22.918 € după promoție | 96,5% la What Car?; garanție până la 10 ani, cu revizii la Toyota | bateria de 12 V (vezi mai jos); cea de 22.507 € e pe benzină |
+| Toyota Corolla sedan hibrid | 22.918 € după promoție | 96,5% la What Car? 2025; garanție până la 10 ani, cu revizii la Toyota | bateria de 12 V (vezi mai jos); cea de 22.507 € e pe benzină |
 | Toyota Yaris Cross | 23.616 € după promoție | locul 4 la TÜV la 2–3 ani | pe lista problemelor ADAC în 2022–2023; prețul de listă e 25.123 € |
 | Mazda2 Hybrid | 23.680 € | Mazda 2 câștigă TÜV 2026; e un Yaris cu sigla Mazda | TÜV nu spune clar dacă premiul e al hibridului |
-| Honda Jazz hibrid | 25.990 € | 97,1% la What Car? | simulatorul de frână la cele din 2020–2022 (vezi mai jos) |
+| Honda Jazz hibrid | 25.990 € | 97,1% la What Car? 2026 | simulatorul de frână la cele din 2020–2022 (vezi mai jos) |
 | Kia Sportage | 26.308 € după promoție | locul 8 la TÜV la 2–3 ani; garanție 7 ani | fără promoție, 32.308 € |
 | Toyota Corolla hatchback hibrid | 26.835 € | ca la sedan | ca la sedan |
 
@@ -223,16 +226,16 @@ Surse: [Toyota](https://www.toyota.ro/new-cars), [Skoda](https://www.skoda.ro/mo
 
 **Honda Jazz și simulatorul de frână:** în decembrie 2023, Honda a anunțat în Japonia o remediere pentru mașini produse între iulie 2018 și martie 2022, printre care și Jazz (Fit). Senzorul de presiune din simulatorul de frână se poate coroda, se aprinde un martor și pedala devine mai grea; remedierea e un simulator nou ([Honda Japonia](https://www.honda.co.jp/recall/auto/info/231208_683.html)). În Marea Britanie, proprietarii de Jazz hibrid din 2020 au primit scrisori că piesa se schimbă gratuit ([ClubJazz](https://clubjazz.org/forum/index.php?topic=17262.0)). Un Jazz nou, produs după martie 2022, nu intră în această remediere; la unul second hand, cere la dealer verificarea după VIN.
 
-**Dacia Duster nou, de la 19.500 €:** e cel mai ieftin SUV, iar What Car? îi dă 95% Duster-ului din 2018 încoace, la mașini de până la 5 ani. La TÜV însă, Duster-ul e ultimul la 6–7 ani și la 10–11 ani (vezi mai jos). Duster 3, din 2024, nu are încă date.
+**Dacia Duster nou, de la 19.500 €:** e cel mai ieftin SUV, iar What Car? 2025 îi dă 95% Duster-ului din 2018 încoace, la mașini de până la 5 ani. La TÜV însă, Duster-ul e ultimul la 6–7 ani și la 10–11 ani (vezi mai jos). Duster 3, din 2024, nu are încă date.
 
 ## Mașini populare care nu ies bine
 
 - **Dacia Duster și Sandero după 6 ani:** la TÜV, Duster e ultimul din 95 de modele la 6–7 ani (23,5% picate), penultimul la 8–9 ani (29,8%) și ultimul din 84 la 10–11 ani (34,2%). Sandero e printre ultimele trei la 8–9 și 12–13 ani. Nu înseamnă neapărat că se strică motorul: TÜV numără ce pică inspecția (frâne, suspensie, direcție, lumini). Dar înseamnă mai multe reparații la fiecare ITP. Și în sondajul Driver Power, Dacia e a patra cea mai puțin fiabilă marcă.
-- **Kia Sportage 2016–2021:** 72,9% la What Car?, deși generația următoare are 96,5%.
-- **Ford Focus:** printre ultimele 5 la TÜV la 8–9 ani, iar generația 2018–2026 are 87,3% la What Car?.
+- **Kia Sportage 2016–2021:** 72,9% la What Car? 2025, deși generația următoare are 96,5%.
+- **Ford Focus:** printre ultimele 5 la TÜV la 8–9 ani, iar generația 2018–2026 are 85,6% la What Car? 2026.
 - **Hyundai i30 și Kia Ceed de dinainte de 2018:** printre ultimele 10 la TÜV la 10–11 ani; i30 și la 12–13 ani.
-- **Skoda Octavia 4 și VW Golf 8 (din 2020):** nu sunt la coada TÜV, dar la What Car? au doar 89,5% și 82,2%, în a doua jumătate a clasamentului compactelor.
-- **Nissan Juke pe benzină (din 2019):** 55,2% la What Car?, ultimul dintre SUV-urile mici.
+- **Skoda Octavia 4 și VW Golf 8 (din 2020):** nu sunt la coada TÜV, dar la What Car? 2025 au doar 89,5% și 82,2%, în a doua jumătate a clasamentului compactelor.
+- **Nissan Juke pe benzină (din 2019):** 55,2% la What Car? 2025, ultimul dintre SUV-urile mici.
 
 Și mașina mea apare într-un clasament prost: TÜV pune Skoda Superb de 2–3 ani pe locul 101 din 110 (9,6% picate). Pe al meu l-am cumpărat cu 80.000 km, iar în aproape 40.000 km nu s-a stricat nimic important ([recenzia](/recenzii/skoda-superb-2020-pareri-proprietar/)). Nu e o contradicție: TÜV numără ce pică la inspecție, nu ce te lasă pe drum, iar o singură mașină nu face o statistică.
 
@@ -259,13 +262,13 @@ Un model fiabil nu garantează un exemplar bun. Înainte să plătești:
 
 **Care e cea mai fiabilă mașină second hand sub 10.000 €?** În datele din 2026, Suzuki Swift 2017–2024: 100% la What Car?, în top 10 TÜV la 6–7 ani și pane puține la ADAC, la aproximativ 10.000 €. Se găsește însă greu. Skoda Fabia din 2022 încoace costă cam la fel și se găsește mai ușor, dar verifică ecranul central și kilometrajul. Dacă poți ajunge la 13.000 €, Mazda CX-3 pe benzină e prima la TÜV la 8–9 ani.
 
-**Toyota mai e cea mai fiabilă marcă?** Depinde de sursă. La TÜV, Toyota e pe locul 3 la mașinile de 10–11 ani, iar la Driver Power pe locul 5. La What Car? e doar a 17-a din 30, iar ADAC trece mai multe modele Toyota printre cele care rămân cel mai des în pană, din cauza bateriei de 12 V. Hibridul în sine are o reputație bună.
+**Toyota mai e cea mai fiabilă marcă?** Depinde de sursă. La TÜV, Toyota e pe locul 3 la mașinile de 10–11 ani, iar la Driver Power pe locul 5. La What Car? 2026 e doar a 17-a din 30, iar ADAC trece mai multe modele Toyota printre cele care rămân cel mai des în pană, din cauza bateriei de 12 V. Hibridul în sine are o reputație bună.
 
-**Dacia e o mașină fiabilă?** Când e nouă, destul de bine: Duster-ul din 2018 încoace are 95% la What Car?. După 6 ani însă, Duster și Sandero sunt printre ultimele modele la TÜV, iar Driver Power pune Dacia printre cele mai puțin fiabile mărci. E o mașină ieftină și simplă, dar nu una dintre cele mai fiabile.
+**Dacia e o mașină fiabilă?** Când e nouă, destul de bine: Duster-ul din 2018 încoace are 95% la What Car? 2025. După 6 ani însă, Duster și Sandero sunt printre ultimele modele la TÜV, iar Driver Power pune Dacia printre cele mai puțin fiabile mărci. E o mașină ieftină și simplă, dar nu una dintre cele mai fiabile.
 
 **Ce mașină nouă fiabilă iei cu sub 30.000 €?** Suzuki Swift sau Vitara, Skoda Fabia sau Kamiq, Toyota Corolla sau Yaris Cross hibrid și Kia Sportage în promoție au cele mai bune argumente: modele anterioare bine clasate și, la Toyota și Kia, garanții lungi.
 
-**De ce clasamentele de fiabilitate nu se potrivesc între ele?** Pentru că măsoară lucruri diferite. TÜV numără defectele care te pică la ITP-ul german, ADAC panele pe drum, iar What Car? ce spun proprietarii despre mașinile de până la 5 ani. Toyota RAV4, de exemplu, are 98,9% la What Car? și e cel mai slab din clasa lui la ADAC.
+**De ce clasamentele de fiabilitate nu se potrivesc între ele?** Pentru că măsoară lucruri diferite. TÜV numără defectele care te pică la ITP-ul german, ADAC panele pe drum, iar What Car? ce spun proprietarii despre mașinile de până la 5 ani. Toyota RAV4, de exemplu, are 98,9% la What Car? 2025 și e cel mai slab din clasa lui la ADAC.
 
 **De ce nu folosiți Consumer Reports sau J.D. Power?** Pentru că sunt sondaje din Statele Unite, cu modele și motoare care nu se vând în Europa. Pentru o mașină cumpărată în România, datele din Germania și Marea Britanie sunt mai apropiate.
 
