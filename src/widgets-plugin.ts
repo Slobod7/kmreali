@@ -117,7 +117,7 @@ function matrix({ modele, actualizat }: Data) {
     <span class="nivel nivel--mediu">gri</span> la mijloc,
     <span class="nivel nivel--slab">roșu</span> printre cele mai slabe,
     <span class="nivel">–</span> fără date pe model sau nici în top, nici la coadă.
-    TÜV: defecte la inspecție. ADAC: pane la 1.000 de mașini. What Car?: nota de la proprietari, verde de la 95%, roșu sub 88%.
+    TÜV: defecte la inspecție. ADAC: pane la 1.000 de mașini. What Car?: nota de la proprietari, cu anul ediției în paranteză, verde de la 95%, roșu sub 88%.
     Driver Power: doar marca, din primele și ultimele 10. Actualizat pe ${esc(dateRo(actualizat))}.
   </figcaption>
 </figure>`;

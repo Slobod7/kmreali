@@ -1,6 +1,6 @@
 {
-  "_despre": "Datele pentru căutarea după buget și pentru tabelul surselor din articol. În text, <div data-widget=\"cautator\"></div> și <div data-widget=\"matrice\"></div> arată unde apar. Nivel: bun, mediu, slab sau null (fără date). Prețurile second hand sunt de pe Autovit (pretDeLa = 10% din anunțuri sunt sub această sumă, pret = mediana), cele noi de pe site-urile oficiale, cu TVA. După ce schimbi fișierul, salvează o dată și index.md ca să se vadă în previzualizare. Fotografiile din căutare sunt în public/foto/masini-fiabile/ (400×225), cu autorul și licența în „fotografii”.",
-  "actualizat": "2026-11-01",
+  "_despre": "Datele pentru căutarea după buget și pentru tabelul surselor din articol. În text, <div data-widget=\"cautator\"></div> și <div data-widget=\"matrice\"></div> arată unde apar. Nivel: bun, mediu, slab sau null (fără date). Prețurile second hand sunt de pe Autovit (pretDeLa = 10% din anunțuri sunt sub această sumă, pret = mediana), cele noi de pe site-urile oficiale, cu TVA. După ce schimbi fișierul, salvează o dată și index.md ca să se vadă în previzualizare. Fotografiile din căutare sunt în public/foto/masini-fiabile/ (400×225), cu autorul și licența în „fotografii”. La What Car?, anul din paranteză e ediția sondajului din care vine nota: 2025 sau 2026.",
+  "actualizat": "2026-11-15",
   "modele": {
     "vw-t-roc": {
       "nume": "VW T-Roc",
@@ -10,7 +10,7 @@
       "surse": {
         "tuv": ["bun", "loc 1 la 6–7 ani"],
         "adac": ["bun", "fiabil"],
-        "whatcar": ["bun", "99,0%"],
+        "whatcar": ["bun", "99,0% (2025)"],
         "driverpower": null
       },
       "atentie": "smucituri la plecarea de pe loc la 1.5 TSI din primii ani; cutia DSG DQ200 la motoarele mici.",
@@ -24,7 +24,7 @@
       "surse": {
         "tuv": ["bun", "loc 4 la 6–7 ani"],
         "adac": ["bun", "3,2–7,7 pane"],
-        "whatcar": ["bun", "95,5%"],
+        "whatcar": ["bun", "95,5% (2025)"],
         "driverpower": ["bun", "Skoda: loc 8"]
       },
       "atentie": "aceleași motoare și cutii ca la T-Roc; verifică ce DSG are și istoricul în service.",
@@ -52,7 +52,7 @@
       "surse": {
         "tuv": ["bun", "loc 5 la 8–9 ani"],
         "adac": ["bun", "2,8–6,2 pane"],
-        "whatcar": ["bun", "95,4%"],
+        "whatcar": ["bun", "97,6% (2026)"],
         "driverpower": ["bun", "Suzuki: loc 6"]
       },
       "atentie": "motorul: datele nu separă 1.6, 1.0/1.4 turbo, mild hybrid și full hybrid.",
@@ -66,7 +66,7 @@
       "surse": {
         "tuv": ["bun", "loc 6 la 6–7 ani"],
         "adac": ["bun", "fiabil"],
-        "whatcar": ["bun", "100%"],
+        "whatcar": ["bun", "100% (2026)"],
         "driverpower": ["bun", "Suzuki: loc 6"]
       },
       "atentie": "se găsește greu second hand.",
@@ -80,7 +80,7 @@
       "surse": {
         "tuv": ["bun", "loc 3 (4–7 ani)"],
         "adac": ["bun", "fiabil"],
-        "whatcar": ["bun", "98,5%"],
+        "whatcar": ["bun", "98,5% (2026)"],
         "driverpower": null
       },
       "atentie": "kilometrajul: anunțurile au în medie 185.000 km.",
@@ -94,7 +94,7 @@
       "surse": {
         "tuv": null,
         "adac": ["bun", "fiabil"],
-        "whatcar": ["bun", "98,4% benzină"],
+        "whatcar": ["bun", "98,4% benzină (2025)"],
         "driverpower": ["bun", "Mazda: loc 3"]
       },
       "atentie": "multe anunțuri sunt diesel 2.2; datele sunt mai bune pentru benzină.",
@@ -108,7 +108,7 @@
       "surse": {
         "tuv": null,
         "adac": ["mediu", "anul 2023 slab"],
-        "whatcar": ["bun", "96,5%"],
+        "whatcar": ["bun", "96,5% (2025)"],
         "driverpower": ["bun", "Toyota: loc 5"]
       },
       "atentie": "kilometraj mare pentru vârstă; cere un test al bateriei de 12 V.",
@@ -122,7 +122,7 @@
       "surse": {
         "tuv": null,
         "adac": ["mediu", "3,7–8,5 pane"],
-        "whatcar": ["bun", "98,8%"],
+        "whatcar": ["bun", "98,8% (2025)"],
         "driverpower": null
       },
       "atentie": "generația de dinainte de 2018 e la coada TÜV la 10–11 ani.",
@@ -136,10 +136,10 @@
       "surse": {
         "tuv": ["bun", "loc 8 la 2–3 ani"],
         "adac": null,
-        "whatcar": ["bun", "96,5%"],
+        "whatcar": ["bun", "96,5% (2025)"],
         "driverpower": null
       },
-      "atentie": "nu o confunda cu generația 2016–2021 (72,9% la What Car?).",
+      "atentie": "nu o confunda cu generația 2016–2021 (72,9% la What Car? 2025).",
       "foto": "kia-sportage"
     },
     "skoda-fabia": {
@@ -150,7 +150,7 @@
       "surse": {
         "tuv": null,
         "adac": ["bun", "fiabil, gen. 3"],
-        "whatcar": ["bun", "97,5%"],
+        "whatcar": ["bun", "97,5% (2026)"],
         "driverpower": ["bun", "Skoda: loc 8"]
       },
       "atentie": "ecranul central care se stinge și repornește; kilometraj mare pentru vârstă.",
@@ -178,7 +178,7 @@
       "surse": {
         "tuv": ["bun", "loc 6 la 8–9 ani"],
         "adac": ["bun", "fiabil"],
-        "whatcar": ["mediu", "94,6%"],
+        "whatcar": ["mediu", "94,6% (2026)"],
         "driverpower": ["bun", "Mazda: loc 3"]
       },
       "atentie": "aproape nu există anunțuri în România.",
@@ -192,7 +192,7 @@
       "surse": {
         "tuv": null,
         "adac": ["slab", "cel mai slab din clasă"],
-        "whatcar": ["bun", "98,9%"],
+        "whatcar": ["bun", "98,9% (2025)"],
         "driverpower": ["bun", "Toyota: loc 5"]
       },
       "atentie": "bateria de 12 V: RAV4 a primit doar un update de software.",
@@ -206,7 +206,7 @@
       "surse": {
         "tuv": null,
         "adac": ["slab", "cele mai multe pane"],
-        "whatcar": ["bun", "95,7%"],
+        "whatcar": ["bun", "95,7% (2025)"],
         "driverpower": ["bun", "Toyota: loc 5"]
       },
       "atentie": "bateria de 12 V.",
@@ -220,7 +220,7 @@
       "surse": {
         "tuv": ["bun", "loc 4 la 2–3 ani"],
         "adac": ["slab", "2022–2023 slab"],
-        "whatcar": ["mediu", "91,4%"],
+        "whatcar": ["mediu", "91,4% (2025)"],
         "driverpower": ["bun", "Toyota: loc 5"]
       },
       "atentie": "bateria de 12 V; cea mai mare se montează din noiembrie 2024.",
@@ -234,7 +234,7 @@
       "surse": {
         "tuv": null,
         "adac": ["slab", "anul 2020 slab"],
-        "whatcar": ["mediu", "90,8%"],
+        "whatcar": ["mediu", "90,8% (2025)"],
         "driverpower": ["bun", "Mazda: loc 3"]
       },
       "atentie": "ADAC trece anul 2020 pe lista problemelor.",
@@ -248,7 +248,7 @@
       "surse": {
         "tuv": null,
         "adac": null,
-        "whatcar": ["bun", "95,5%"],
+        "whatcar": ["mediu", "94,4% (2026)"],
         "driverpower": ["bun", "Honda: loc 4"]
       },
       "atentie": "o singură sursă pe model; puține anunțuri.",
@@ -262,7 +262,7 @@
       "surse": {
         "tuv": null,
         "adac": null,
-        "whatcar": ["mediu", "94,3%"],
+        "whatcar": ["mediu", "94,3% (2025)"],
         "driverpower": null
       },
       "atentie": "o singură sursă pe generația asta.",
@@ -276,7 +276,7 @@
       "surse": {
         "tuv": null,
         "adac": null,
-        "whatcar": ["bun", "97,1%"],
+        "whatcar": ["bun", "97,1% (2026)"],
         "driverpower": ["bun", "Honda: loc 4"]
       },
       "atentie": "simulatorul de frână la cele din 2020–2022: verifică după VIN.",
@@ -290,7 +290,7 @@
       "surse": {
         "tuv": ["slab", "ultimul la 6–7 ani"],
         "adac": ["mediu", "crește cu vârsta"],
-        "whatcar": ["bun", "95,0% din 2018"],
+        "whatcar": ["bun", "95,0% (2025), din 2018"],
         "driverpower": ["slab", "Dacia: a 4-a de la coadă"]
       },
       "atentie": "după 6 ani, mai multe defecte la ITP."
@@ -303,7 +303,7 @@
       "surse": {
         "tuv": ["slab", "loc 86 din 88 la 8–9 ani"],
         "adac": ["bun", "fiabil"],
-        "whatcar": ["mediu", "91,7% din 2021"],
+        "whatcar": ["mediu", "91,7% (2026), din 2021"],
         "driverpower": ["slab", "Dacia: a 4-a de la coadă"]
       },
       "atentie": "după 8 ani, mai multe defecte la ITP."
@@ -316,10 +316,10 @@
       "surse": {
         "tuv": null,
         "adac": ["mediu", "7,1–21,8 pane"],
-        "whatcar": ["slab", "72,9%"],
+        "whatcar": ["slab", "72,9% (2025)"],
         "driverpower": null
       },
-      "atentie": "al doilea cel mai slab SUV de familie la What Car?."
+      "atentie": "al doilea cel mai slab SUV de familie la What Car? 2025."
     },
     "ford-focus": {
       "nume": "Ford Focus",
@@ -329,7 +329,7 @@
       "surse": {
         "tuv": ["slab", "loc 84 din 88 la 8–9 ani"],
         "adac": null,
-        "whatcar": ["slab", "87,3% din 2018"],
+        "whatcar": ["slab", "85,6% (2026), din 2018"],
         "driverpower": ["slab", "Ford: a 10-a de la coadă"]
       },
       "atentie": "slab și la TÜV, și la proprietari."
@@ -342,10 +342,10 @@
       "surse": {
         "tuv": null,
         "adac": null,
-        "whatcar": ["slab", "82,2%"],
+        "whatcar": ["slab", "82,2% (2025)"],
         "driverpower": null
       },
-      "atentie": "locul 28 din 30 la compactele What Car?."
+      "atentie": "locul 28 din 30 la compactele What Car? 2025."
     }
   },
   "oferte": [
@@ -369,17 +369,17 @@
     {"model": "hyundai-tucson", "stare": "folosita", "tip": "suv", "motor": ["benzina", "diesel", "hibrid"], "pret": 22491, "pretDeLa": 17890, "km": 99974, "anunturi": 217, "ani": "2021–2023", "link": "https://www.autovit.ro/autoturisme/hyundai/tucson/de-la-2021?search%5Bfilter_float_year%3Ato%5D=2023"},
     {"model": "toyota-rav4", "stare": "folosita", "tip": "suv", "motor": ["hibrid"], "pret": 24999, "pretDeLa": 19900, "km": 149000, "anunturi": 50, "ani": "2019–2021", "link": "https://www.autovit.ro/autoturisme/toyota/rav-4/de-la-2019?search%5Bfilter_float_year%3Ato%5D=2021&search%5Bfilter_enum_fuel_type%5D=hybrid"},
     {"nume": "Suzuki Swift", "generatie": "generația din 2024", "grup": "lista", "stare": "noua", "tip": "mica", "motor": ["benzina"], "pret": 16910, "deCe": "Suzuki e prima marcă la What Car? 2026.", "atentie": "generație nouă, cu alt motor; încă fără date.", "link": "https://auto.suzuki.ro/cars/swift-hybrid", "foto": "suzuki-swift-2024"},
-    {"nume": "Skoda Fabia", "generatie": "nouă", "grup": "lista", "stare": "noua", "tip": "mica", "motor": ["benzina"], "pret": 17281, "deCe": "97,5% la What Car?; fiabilă la ADAC.", "atentie": "ecranul central.", "link": "https://www.skoda.ro/models/overview", "foto": "skoda-fabia"},
-    {"nume": "Skoda Kamiq", "generatie": "nou", "grup": "lista", "stare": "noua", "tip": "suv", "motor": ["benzina"], "pret": 19733, "deCe": "fiabil la ADAC; 94,1% la What Car?.", "link": "https://www.skoda.ro/models/overview", "foto": "skoda-kamiq"},
-    {"nume": "Kia Stonic", "generatie": "nou", "grup": "lista", "stare": "noua", "tip": "suv", "motor": ["benzina"], "pret": 19917, "pretNota": "după promoție; listă 21.417 €", "deCe": "96,4% la What Car?; garanție 7 ani.", "link": "https://www.kia.ro/modele/stonic", "foto": "kia-stonic"},
+    {"nume": "Skoda Fabia", "generatie": "nouă", "grup": "lista", "stare": "noua", "tip": "mica", "motor": ["benzina"], "pret": 17281, "deCe": "97,5% la What Car? 2026; fiabilă la ADAC.", "atentie": "ecranul central.", "link": "https://www.skoda.ro/models/overview", "foto": "skoda-fabia"},
+    {"nume": "Skoda Kamiq", "generatie": "nou", "grup": "lista", "stare": "noua", "tip": "suv", "motor": ["benzina"], "pret": 19733, "deCe": "fiabil la ADAC; 94,1% la What Car? 2025.", "link": "https://www.skoda.ro/models/overview", "foto": "skoda-kamiq"},
+    {"nume": "Kia Stonic", "generatie": "nou", "grup": "lista", "stare": "noua", "tip": "suv", "motor": ["benzina"], "pret": 19917, "pretNota": "după promoție; listă 21.417 €", "deCe": "96,4% la What Car? 2025; garanție 7 ani.", "link": "https://www.kia.ro/modele/stonic", "foto": "kia-stonic"},
     {"nume": "Suzuki Vitara", "generatie": "nouă", "grup": "lista", "stare": "noua", "tip": "suv", "motor": ["benzina", "hibrid"], "pret": 22125, "deCe": "bine la TÜV, ADAC și What Car?.", "atentie": "versiunea full hybrid are altă cutie.", "link": "https://auto.suzuki.ro/cars/vitara-hybrid", "foto": "suzuki-vitara"},
-    {"nume": "Toyota Corolla sedan", "generatie": "hibrid, nouă", "grup": "lista", "stare": "noua", "tip": "compacta", "motor": ["hibrid"], "pret": 22918, "pretNota": "după promoție; listă 25.464 €", "deCe": "96,5% la What Car?; garanție până la 10 ani, cu revizii la Toyota.", "atentie": "bateria de 12 V mai mare abia din februarie 2026.", "link": "https://www.toyota.ro/new-cars/corolla-sedan", "foto": "toyota-corolla-sedan"},
+    {"nume": "Toyota Corolla sedan", "generatie": "hibrid, nouă", "grup": "lista", "stare": "noua", "tip": "compacta", "motor": ["hibrid"], "pret": 22918, "pretNota": "după promoție; listă 25.464 €", "deCe": "96,5% la What Car? 2025; garanție până la 10 ani, cu revizii la Toyota.", "atentie": "bateria de 12 V mai mare abia din februarie 2026.", "link": "https://www.toyota.ro/new-cars/corolla-sedan", "foto": "toyota-corolla-sedan"},
     {"nume": "Toyota Yaris Cross", "generatie": "hibrid, nou", "grup": "lista", "stare": "noua", "tip": "suv", "motor": ["hibrid"], "pret": 23616, "pretNota": "după promoție; listă 25.123 €", "deCe": "locul 4 la TÜV la 2–3 ani.", "atentie": "pe lista problemelor ADAC în 2022–2023.", "link": "https://www.toyota.ro/new-cars", "foto": "toyota-yaris-cross"},
     {"nume": "Mazda2 Hybrid", "generatie": "nouă", "grup": "lista", "stare": "noua", "tip": "mica", "motor": ["hibrid"], "pret": 23680, "deCe": "Mazda 2 câștigă TÜV 2026; e un Yaris cu sigla Mazda.", "atentie": "TÜV nu spune clar dacă premiul e al hibridului.", "link": "https://www.mazda.ro/modele/", "foto": "mazda-2-hybrid"},
-    {"nume": "Honda Jazz", "generatie": "hibrid, nouă", "grup": "lista", "stare": "noua", "tip": "mica", "motor": ["hibrid"], "pret": 25990, "deCe": "97,1% la What Car?; Honda e a doua marcă în sondaj.", "link": "https://hondatrading.ro/", "foto": "honda-jazz"},
+    {"nume": "Honda Jazz", "generatie": "hibrid, nouă", "grup": "lista", "stare": "noua", "tip": "mica", "motor": ["hibrid"], "pret": 25990, "deCe": "97,1% la What Car? 2026; Honda e a doua marcă în sondaj.", "link": "https://hondatrading.ro/", "foto": "honda-jazz"},
     {"nume": "Kia Sportage", "generatie": "nouă", "grup": "lista", "stare": "noua", "tip": "suv", "motor": ["benzina", "hibrid"], "pret": 26308, "pretNota": "după promoție; listă 32.308 €", "deCe": "locul 8 la TÜV la 2–3 ani; garanție 7 ani.", "link": "https://www.kia.ro/modele/sportage", "foto": "kia-sportage"},
-    {"nume": "Toyota Corolla hatchback", "generatie": "hibrid, nouă", "grup": "lista", "stare": "noua", "tip": "compacta", "motor": ["hibrid"], "pret": 26835, "deCe": "96,5% la What Car?; garanție până la 10 ani, cu revizii la Toyota.", "atentie": "bateria de 12 V mai mare abia din februarie 2026.", "link": "https://www.toyota.ro/new-cars", "foto": "toyota-corolla"},
-    {"nume": "Dacia Duster", "generatie": "nou", "grup": "rezerve", "stare": "noua", "tip": "suv", "motor": ["benzina", "hibrid"], "pret": 19500, "deCe": "cel mai ieftin SUV; 95,0% la What Car? pentru cel din 2018.", "atentie": "la TÜV, Duster e la coadă după 6 ani; Duster 3 nu are încă date.", "link": "https://www.dacia.ro/preturi-de-lista.html", "foto": "dacia-duster"}
+    {"nume": "Toyota Corolla hatchback", "generatie": "hibrid, nouă", "grup": "lista", "stare": "noua", "tip": "compacta", "motor": ["hibrid"], "pret": 26835, "deCe": "96,5% la What Car? 2025; garanție până la 10 ani, cu revizii la Toyota.", "atentie": "bateria de 12 V mai mare abia din februarie 2026.", "link": "https://www.toyota.ro/new-cars", "foto": "toyota-corolla"},
+    {"nume": "Dacia Duster", "generatie": "nou", "grup": "rezerve", "stare": "noua", "tip": "suv", "motor": ["benzina", "hibrid"], "pret": 19500, "deCe": "cel mai ieftin SUV; 95,0% la What Car? 2025 pentru cel din 2018.", "atentie": "la TÜV, Duster e la coadă după 6 ani; Duster 3 nu are încă date.", "link": "https://www.dacia.ro/preturi-de-lista.html", "foto": "dacia-duster"}
   ],
   "fotografii": {
     "audi-q2": {
