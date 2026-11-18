@@ -1,0 +1,984 @@
+{
+  "_despre": "Datele pentru căutarea după buget și pentru tabelul surselor din articol. În text, <div data-widget=\"cautator\"></div> și <div data-widget=\"matrice\"></div> arată unde apar. Nivel: bun, mediu, slab sau null (fără date). Prețurile second hand sunt de pe Autovit (pretDeLa = 10% din anunțuri sunt sub această sumă, pret = mediana), cele noi de pe site-urile oficiale, cu TVA. După ce schimbi fișierul, salvează o dată și index.md ca să se vadă în previzualizare. Fotografiile din căutare sunt în public/foto/masini-de-familie/ (400×225), cu autorul și licența în „fotografii”. La What Car?, anul din paranteză e ediția sondajului din care vine nota: 2025 sau 2026. Câmpuri în plus față de „Mașini fiabile”: filtre.tip (tipurile de caroserie din căutare), filtre.buget (de unde pornește bugetul), locuri (7 pentru mașinile cu 7 locuri) și portbagaj (textul de pe card).",
+  "actualizat": "2026-11-15",
+  "filtre": {
+    "tip": {
+      "break": "Break",
+      "suv": "SUV",
+      "monovolum": "Monovolum"
+    },
+    "buget": 20000
+  },
+  "modele": {
+    "skoda-octavia-combi-3": {
+      "nume": "Skoda Octavia Combi",
+      "generatie": "2017–2020, a treia generație",
+      "grup": "lista",
+      "sectiune": "skoda-octavia-combi-20172020-a-treia-generație",
+      "surse": {
+        "tuv": [
+          "mediu",
+          "12,4% la 6–7 ani (media 13,6%)"
+        ],
+        "adac": null,
+        "whatcar": null,
+        "driverpower": [
+          "bun",
+          "Skoda: loc 8"
+        ]
+      },
+      "atentie": "kilometraj mare: jumătate din anunțuri au peste 222.000 km. La benzină cu automată, află ce DSG are.",
+      "foto": "skoda-octavia-combi-3"
+    },
+    "skoda-octavia-combi-4": {
+      "nume": "Skoda Octavia Combi",
+      "generatie": "din 2020, a patra generație",
+      "grup": "lista",
+      "sectiune": "skoda-octavia-combi-din-2020-a-patra-generație",
+      "surse": {
+        "tuv": [
+          "mediu",
+          "6,9% la 2–3 ani (media 6,5%)"
+        ],
+        "adac": null,
+        "whatcar": [
+          "mediu",
+          "89,5% (2025)"
+        ],
+        "driverpower": [
+          "bun",
+          "Skoda: loc 8"
+        ]
+      },
+      "atentie": "multe sunt diesel foste de flotă, cu peste 160.000 km; verifică sistemul multimedia.",
+      "foto": "skoda-octavia-combi-4"
+    },
+    "vw-passat-variant": {
+      "nume": "Volkswagen Passat Variant",
+      "generatie": "B8, 2015–2023",
+      "grup": "lista",
+      "sectiune": "volkswagen-passat-variant-b8-20152023",
+      "surse": {
+        "tuv": [
+          "mediu",
+          "13,2% la 6–7 ani (media 13,6%)"
+        ],
+        "adac": [
+          "bun",
+          "printre cele mai bune din clasă"
+        ],
+        "whatcar": null,
+        "driverpower": null
+      },
+      "atentie": "pierderi de ulei, discuri de frână, arcuri; la 4Motion, uleiul de la Haldex și DSG.",
+      "foto": "vw-passat-variant"
+    },
+    "toyota-corolla-ts": {
+      "nume": "Toyota Corolla Touring Sports",
+      "generatie": "hibrid, din 2019",
+      "grup": "lista",
+      "sectiune": "toyota-corolla-touring-sports-hibrid-din-2019",
+      "surse": {
+        "tuv": null,
+        "adac": [
+          "mediu",
+          "anul 2023 slab"
+        ],
+        "whatcar": [
+          "bun",
+          "96,5% (2025)"
+        ],
+        "driverpower": [
+          "bun",
+          "Toyota: loc 5"
+        ]
+      },
+      "atentie": "portbagaj mai mic decât la celelalte breakuri; cere un test al bateriei de 12 V.",
+      "foto": "toyota-corolla-ts"
+    },
+    "kia-ceed-sw": {
+      "nume": "Kia Ceed SW",
+      "generatie": "din 2018",
+      "grup": "lista",
+      "sectiune": "toyota-corolla-touring-sports-hibrid-din-2019",
+      "surse": {
+        "tuv": null,
+        "adac": [
+          "mediu",
+          "3,7–8,5 pane"
+        ],
+        "whatcar": [
+          "bun",
+          "98,8% (2025)"
+        ],
+        "driverpower": null
+      },
+      "atentie": "se găsește greu: doar 15 anunțuri pe Autovit.",
+      "foto": "kia-ceed-sw"
+    },
+    "skoda-superb-combi": {
+      "nume": "Skoda Superb Combi",
+      "generatie": "2015–2023, a treia generație",
+      "grup": "rezerve",
+      "sectiune": "skoda-superb-combi-20152023-a-treia-generație",
+      "surse": {
+        "tuv": [
+          "slab",
+          "loc 101 din 110 la 2–3 ani"
+        ],
+        "adac": null,
+        "whatcar": [
+          "mediu",
+          "93,8% benzină (2025)"
+        ],
+        "driverpower": [
+          "bun",
+          "Skoda: loc 8"
+        ]
+      },
+      "atentie": "arcuri, amortizoare și frâne, de aici vine scorul TÜV; la diesel, What Car? raportează mai multe defecte.",
+      "foto": "skoda-superb-combi"
+    },
+    "skoda-kodiaq": {
+      "nume": "Skoda Kodiaq",
+      "generatie": "2016–2024, prima generație",
+      "grup": "lista",
+      "sectiune": "skoda-kodiaq-20162024-prima-generație",
+      "surse": {
+        "tuv": [
+          "bun",
+          "loc 8 la 6–7 ani"
+        ],
+        "adac": null,
+        "whatcar": [
+          "bun",
+          "diesel 97,8%, benzină 92,2% (2025)"
+        ],
+        "driverpower": [
+          "bun",
+          "Skoda: loc 8"
+        ]
+      },
+      "atentie": "consumul de ulei la 2.0 TSI, injectoarele și turbo la diesel, brațele suspensiei.",
+      "foto": "skoda-kodiaq"
+    },
+    "kia-sportage": {
+      "nume": "Kia Sportage",
+      "generatie": "din 2022",
+      "grup": "lista",
+      "sectiune": "kia-sportage-din-2022-a-cincea-generație",
+      "surse": {
+        "tuv": [
+          "bun",
+          "loc 8 la 2–3 ani"
+        ],
+        "adac": null,
+        "whatcar": [
+          "bun",
+          "96,5% (2025)"
+        ],
+        "driverpower": null
+      },
+      "atentie": "nu o confunda cu generația 2016–2021 (72,9% la What Car? 2025).",
+      "foto": "kia-sportage"
+    },
+    "skoda-karoq": {
+      "nume": "Skoda Karoq",
+      "generatie": "din 2017",
+      "grup": "lista",
+      "sectiune": "skoda-karoq-din-2017",
+      "surse": {
+        "tuv": [
+          "bun",
+          "loc 4 la 6–7 ani"
+        ],
+        "adac": [
+          "bun",
+          "3,2–7,7 pane"
+        ],
+        "whatcar": [
+          "bun",
+          "95,5% (2025)"
+        ],
+        "driverpower": [
+          "bun",
+          "Skoda: loc 8"
+        ]
+      },
+      "atentie": "aceleași motoare și cutii ca la T-Roc; verifică ce DSG are și istoricul în service.",
+      "foto": "skoda-karoq"
+    },
+    "vw-touran": {
+      "nume": "Volkswagen Touran",
+      "generatie": "din 2015, a doua generație",
+      "grup": "lista",
+      "sectiune": "volkswagen-touran-din-2015-a-doua-generație",
+      "surse": {
+        "tuv": [
+          "mediu",
+          "11,4% la 6–7 ani (media 13,6%)"
+        ],
+        "adac": [
+          "bun",
+          "printre cele mai bune din clasă"
+        ],
+        "whatcar": null,
+        "driverpower": null
+      },
+      "atentie": "multe au 5 locuri, nu 7; verifică după VIN rechemările pentru direcție și airbag.",
+      "foto": "vw-touran"
+    },
+    "vw-tiguan-2": {
+      "nume": "Volkswagen Tiguan",
+      "generatie": "2016–2024, a doua generație",
+      "grup": "rezerve",
+      "sectiune": "suv-uri-cu-rezerve",
+      "surse": {
+        "tuv": [
+          "mediu",
+          "9,6% la 6–7 ani (media 13,6%)"
+        ],
+        "adac": [
+          "bun",
+          "printre cele mai bune din clasă"
+        ],
+        "whatcar": [
+          "slab",
+          "74,4% benzină (2026)"
+        ],
+        "driverpower": null
+      },
+      "atentie": "DSG, dezactivarea cilindrilor la 1.5 TSI, cureaua de distribuție în baie de ulei la dieselul 2.0 TDI.",
+      "foto": "vw-tiguan-2"
+    },
+    "hyundai-tucson": {
+      "nume": "Hyundai Tucson",
+      "generatie": "din 2021",
+      "grup": "rezerve",
+      "sectiune": "suv-uri-cu-rezerve",
+      "surse": {
+        "tuv": null,
+        "adac": null,
+        "whatcar": [
+          "mediu",
+          "94,3% (2025)"
+        ],
+        "driverpower": null
+      },
+      "atentie": "o singură sursă pe generația asta.",
+      "foto": "hyundai-tucson"
+    },
+    "toyota-rav4": {
+      "nume": "Toyota RAV4",
+      "generatie": "hibrid, din 2019",
+      "grup": "rezerve",
+      "sectiune": "suv-uri-cu-rezerve",
+      "surse": {
+        "tuv": null,
+        "adac": [
+          "slab",
+          "cel mai slab din clasă"
+        ],
+        "whatcar": [
+          "bun",
+          "98,9% (2025)"
+        ],
+        "driverpower": [
+          "bun",
+          "Toyota: loc 5"
+        ]
+      },
+      "atentie": "bateria de 12 V: RAV4 a primit doar un update de software.",
+      "foto": "toyota-rav4"
+    },
+    "honda-cr-v": {
+      "nume": "Honda CR-V",
+      "generatie": "din 2018",
+      "grup": "rezerve",
+      "sectiune": "suv-uri-cu-rezerve",
+      "surse": {
+        "tuv": null,
+        "adac": null,
+        "whatcar": [
+          "mediu",
+          "94,4% (2026)"
+        ],
+        "driverpower": [
+          "bun",
+          "Honda: loc 4"
+        ]
+      },
+      "atentie": "o singură sursă pe model; puține anunțuri.",
+      "foto": "honda-cr-v"
+    },
+    "dacia-jogger": {
+      "nume": "Dacia Jogger",
+      "generatie": "din 2022",
+      "grup": "rezerve",
+      "sectiune": "dacia-jogger-din-2022",
+      "surse": {
+        "tuv": null,
+        "adac": null,
+        "whatcar": [
+          "mediu",
+          "91,5% (2025)"
+        ],
+        "driverpower": [
+          "slab",
+          "Dacia: a 4-a de la coadă"
+        ]
+      },
+      "atentie": "o stea la Euro NCAP; la What Car?, cutia și ambreiajul sunt defectele cele mai dese.",
+      "foto": "dacia-jogger"
+    },
+    "hyundai-santa-fe": {
+      "nume": "Hyundai Santa Fe",
+      "generatie": "2018–2024, a patra generație",
+      "grup": "rezerve",
+      "sectiune": "cu-7-locuri",
+      "surse": {
+        "tuv": null,
+        "adac": null,
+        "whatcar": [
+          "bun",
+          "100% (2025)"
+        ],
+        "driverpower": null
+      },
+      "atentie": "o singură sursă pe model și doar 23 de anunțuri.",
+      "foto": "hyundai-santa-fe"
+    },
+    "peugeot-5008": {
+      "nume": "Peugeot 5008",
+      "generatie": "2017–2024",
+      "grup": "slabe",
+      "sectiune": "mașini-de-familie-populare-care-nu-ies-bine",
+      "surse": {
+        "tuv": null,
+        "adac": null,
+        "whatcar": [
+          "slab",
+          "79,3% (2026)"
+        ],
+        "driverpower": null
+      },
+      "atentie": "32% au avut un defect, cel mai slab model Peugeot la What Car? 2026.",
+      "foto": "peugeot-5008"
+    },
+    "vw-sharan": {
+      "nume": "VW Sharan / Seat Alhambra",
+      "generatie": "2010–2022",
+      "grup": "slabe",
+      "sectiune": "mașini-de-familie-populare-care-nu-ies-bine",
+      "surse": {
+        "tuv": [
+          "slab",
+          "Sharan: loc 97 la 4–5 ani"
+        ],
+        "adac": null,
+        "whatcar": null,
+        "driverpower": null
+      },
+      "atentie": "printre ultimele la TÜV la 4–7 ani."
+    },
+    "ford-s-max": {
+      "nume": "Ford S-Max",
+      "generatie": "2015–2023",
+      "grup": "slabe",
+      "sectiune": "mașini-de-familie-populare-care-nu-ies-bine",
+      "surse": {
+        "tuv": [
+          "slab",
+          "loc 105 din 110 la 2–3 ani"
+        ],
+        "adac": [
+          "slab",
+          "2016–2018 slab"
+        ],
+        "whatcar": null,
+        "driverpower": [
+          "slab",
+          "Ford: a 10-a de la coadă"
+        ]
+      },
+      "atentie": "slab și la TÜV, și la ADAC."
+    },
+    "citroen-berlingo": {
+      "nume": "Citroën Berlingo",
+      "generatie": "",
+      "grup": "slabe",
+      "sectiune": "mașini-de-familie-populare-care-nu-ies-bine",
+      "surse": {
+        "tuv": [
+          "slab",
+          "loc 86 la 6–7 ani"
+        ],
+        "adac": null,
+        "whatcar": null,
+        "driverpower": null
+      },
+      "atentie": "printre ultimele la TÜV la 6–11 ani."
+    },
+    "kia-sportage-vechi": {
+      "nume": "Kia Sportage",
+      "generatie": "2016–2021",
+      "grup": "slabe",
+      "sectiune": "mașini-de-familie-populare-care-nu-ies-bine",
+      "surse": {
+        "tuv": null,
+        "adac": [
+          "mediu",
+          "7,1–21,8 pane"
+        ],
+        "whatcar": [
+          "slab",
+          "72,9% (2025)"
+        ],
+        "driverpower": null
+      },
+      "atentie": "al doilea cel mai slab SUV de familie la What Car? 2025."
+    }
+  },
+  "oferte": [
+    {
+      "model": "skoda-octavia-combi-3",
+      "stare": "folosita",
+      "tip": "break",
+      "motor": [
+        "benzina",
+        "diesel"
+      ],
+      "pret": 9390,
+      "pretDeLa": 7350,
+      "km": 222000,
+      "anunturi": 112,
+      "ani": "2017–2019",
+      "portbagaj": "610 l",
+      "link": "https://www.autovit.ro/autoturisme/skoda/octavia/seg-combi/de-la-2017?search%5Bfilter_float_year%3Ato%5D=2019"
+    },
+    {
+      "model": "skoda-octavia-combi-4",
+      "stare": "folosita",
+      "tip": "break",
+      "motor": [
+        "benzina",
+        "diesel"
+      ],
+      "pret": 15780,
+      "pretDeLa": 12450,
+      "km": 162000,
+      "anunturi": 149,
+      "ani": "2021–2023",
+      "portbagaj": "640 l (1.700 l cu bancheta rabatată)",
+      "link": "https://www.autovit.ro/autoturisme/skoda/octavia/seg-combi/de-la-2021?search%5Bfilter_float_year%3Ato%5D=2023"
+    },
+    {
+      "model": "vw-passat-variant",
+      "stare": "folosita",
+      "tip": "break",
+      "motor": [
+        "benzina",
+        "diesel"
+      ],
+      "pret": 15500,
+      "pretDeLa": 12500,
+      "km": 182000,
+      "anunturi": 105,
+      "ani": "2019–2022",
+      "portbagaj": "650 l (1.780 l cu bancheta rabatată)",
+      "link": "https://www.autovit.ro/autoturisme/volkswagen/passat/seg-combi/de-la-2019?search%5Bfilter_float_year%3Ato%5D=2022"
+    },
+    {
+      "model": "toyota-corolla-ts",
+      "stare": "folosita",
+      "tip": "break",
+      "motor": [
+        "hibrid"
+      ],
+      "pret": 16974,
+      "pretDeLa": 14990,
+      "km": 128000,
+      "anunturi": 79,
+      "ani": "2019–2022",
+      "portbagaj": "598 l (1.8) sau 581 l (2.0)",
+      "link": "https://www.autovit.ro/autoturisme/toyota/corolla/seg-combi/de-la-2019?search%5Bfilter_float_year%3Ato%5D=2022&search%5Bfilter_enum_fuel_type%5D=hybrid"
+    },
+    {
+      "model": "kia-ceed-sw",
+      "stare": "folosita",
+      "tip": "break",
+      "motor": [
+        "benzina",
+        "diesel"
+      ],
+      "pret": 11988,
+      "pretDeLa": 7999,
+      "km": 151000,
+      "anunturi": 15,
+      "ani": "2018–2022",
+      "portbagaj": "625 l",
+      "link": "https://www.autovit.ro/autoturisme/kia/ceed/seg-combi/de-la-2018?search%5Bfilter_float_year%3Ato%5D=2022"
+    },
+    {
+      "model": "skoda-superb-combi",
+      "stare": "folosita",
+      "tip": "break",
+      "motor": [
+        "benzina",
+        "diesel"
+      ],
+      "pret": 17490,
+      "pretDeLa": 12700,
+      "km": 161000,
+      "anunturi": 60,
+      "ani": "2019–2022",
+      "portbagaj": "660 l (1.950 l cu bancheta rabatată)",
+      "link": "https://www.autovit.ro/autoturisme/skoda/superb/seg-combi/de-la-2019?search%5Bfilter_float_year%3Ato%5D=2022"
+    },
+    {
+      "model": "skoda-kodiaq",
+      "stare": "folosita",
+      "tip": "suv",
+      "motor": [
+        "benzina",
+        "diesel"
+      ],
+      "pret": 19550,
+      "pretDeLa": 15990,
+      "km": 171000,
+      "anunturi": 135,
+      "ani": "2018–2021",
+      "portbagaj": "720 l cu 5 locuri",
+      "link": "https://www.autovit.ro/autoturisme/skoda/kodiaq/de-la-2018?search%5Bfilter_float_year%3Ato%5D=2021"
+    },
+    {
+      "model": "skoda-kodiaq",
+      "generatie": "cu 7 locuri, 2016–2024",
+      "stare": "folosita",
+      "tip": "suv",
+      "locuri": 7,
+      "motor": [
+        "benzina",
+        "diesel"
+      ],
+      "pret": 19370,
+      "pretDeLa": 15950,
+      "km": 193000,
+      "anunturi": 18,
+      "ani": "2018–2021",
+      "portbagaj": "270 l cu toate locurile ocupate",
+      "atentie": "doar 18 anunțuri spun că au 7 locuri; probabil sunt mai multe, uită-te în poze după al treilea rând.",
+      "link": "https://www.autovit.ro/autoturisme/skoda/kodiaq/de-la-2018?search%5Bfilter_float_year%3Ato%5D=2021&search%5Bfilter_float_nr_seats%3Afrom%5D=7"
+    },
+    {
+      "model": "kia-sportage",
+      "stare": "folosita",
+      "tip": "suv",
+      "motor": [
+        "benzina",
+        "diesel",
+        "hibrid"
+      ],
+      "pret": 22290,
+      "pretDeLa": 16990,
+      "km": 103000,
+      "anunturi": 116,
+      "ani": "2022–2024",
+      "link": "https://www.autovit.ro/autoturisme/kia/sportage/de-la-2022?search%5Bfilter_float_year%3Ato%5D=2024",
+      "portbagaj": "591 l (benzină)"
+    },
+    {
+      "model": "skoda-karoq",
+      "stare": "folosita",
+      "tip": "suv",
+      "motor": [
+        "benzina",
+        "diesel"
+      ],
+      "pret": 16990,
+      "pretDeLa": 13500,
+      "km": 154996,
+      "anunturi": 90,
+      "ani": "2018–2021",
+      "link": "https://www.autovit.ro/autoturisme/skoda/karoq/de-la-2018?search%5Bfilter_float_year%3Ato%5D=2021",
+      "portbagaj": "521 l (479–588 l cu bancheta VarioFlex)"
+    },
+    {
+      "model": "vw-touran",
+      "stare": "folosita",
+      "tip": "monovolum",
+      "locuri": 7,
+      "generatie": "5 sau 7 locuri, din 2015",
+      "motor": [
+        "benzina",
+        "diesel"
+      ],
+      "pret": 11890,
+      "pretDeLa": 7699,
+      "km": 213000,
+      "anunturi": 25,
+      "ani": "2016–2020",
+      "portbagaj": "743 l cu 5 locuri, 137 l cu 7",
+      "link": "https://www.autovit.ro/autoturisme/volkswagen/touran/de-la-2016?search%5Bfilter_float_year%3Ato%5D=2020"
+    },
+    {
+      "model": "dacia-jogger",
+      "stare": "folosita",
+      "tip": "monovolum",
+      "locuri": 7,
+      "generatie": "5 sau 7 locuri, din 2022",
+      "motor": [
+        "benzina"
+      ],
+      "pret": 12501,
+      "pretDeLa": 9899,
+      "km": 86000,
+      "anunturi": 67,
+      "ani": "2022–2024",
+      "portbagaj": "708 l cu 5 locuri, 160 l cu 7",
+      "link": "https://www.autovit.ro/autoturisme/dacia/jogger/de-la-2022?search%5Bfilter_float_year%3Ato%5D=2024"
+    },
+    {
+      "model": "vw-tiguan-2",
+      "stare": "folosita",
+      "tip": "suv",
+      "motor": [
+        "benzina",
+        "diesel"
+      ],
+      "pret": 18500,
+      "pretDeLa": 14999,
+      "km": 168000,
+      "anunturi": 231,
+      "ani": "2018–2021",
+      "portbagaj": "520–615 l, după poziția banchetei",
+      "link": "https://www.autovit.ro/autoturisme/volkswagen/tiguan/de-la-2018?search%5Bfilter_float_year%3Ato%5D=2021"
+    },
+    {
+      "model": "hyundai-tucson",
+      "stare": "folosita",
+      "tip": "suv",
+      "motor": [
+        "benzina",
+        "diesel",
+        "hibrid"
+      ],
+      "pret": 22491,
+      "pretDeLa": 17890,
+      "km": 99974,
+      "anunturi": 217,
+      "ani": "2021–2023",
+      "link": "https://www.autovit.ro/autoturisme/hyundai/tucson/de-la-2021?search%5Bfilter_float_year%3Ato%5D=2023",
+      "portbagaj": "620 l (benzină), 577 l (hibrid)"
+    },
+    {
+      "model": "toyota-rav4",
+      "stare": "folosita",
+      "tip": "suv",
+      "motor": [
+        "hibrid"
+      ],
+      "pret": 24999,
+      "pretDeLa": 19900,
+      "km": 149000,
+      "anunturi": 50,
+      "ani": "2019–2021",
+      "link": "https://www.autovit.ro/autoturisme/toyota/rav-4/de-la-2019?search%5Bfilter_float_year%3Ato%5D=2021&search%5Bfilter_enum_fuel_type%5D=hybrid"
+    },
+    {
+      "model": "honda-cr-v",
+      "stare": "folosita",
+      "tip": "suv",
+      "motor": [
+        "benzina",
+        "diesel",
+        "hibrid"
+      ],
+      "pret": 22850,
+      "pretDeLa": 17000,
+      "km": 112318,
+      "anunturi": 25,
+      "ani": "2018–2022",
+      "link": "https://www.autovit.ro/autoturisme/honda/cr-v/de-la-2018?search%5Bfilter_float_year%3Ato%5D=2022"
+    },
+    {
+      "model": "hyundai-santa-fe",
+      "stare": "folosita",
+      "tip": "suv",
+      "locuri": 7,
+      "motor": [
+        "benzina",
+        "diesel"
+      ],
+      "pret": 19990,
+      "pretDeLa": 16490,
+      "km": 158000,
+      "anunturi": 23,
+      "ani": "2018–2020",
+      "link": "https://www.autovit.ro/autoturisme/hyundai/santa-fe/de-la-2018?search%5Bfilter_float_year%3Ato%5D=2020"
+    },
+    {
+      "model": "peugeot-5008",
+      "stare": "folosita",
+      "tip": "suv",
+      "locuri": 7,
+      "motor": [
+        "benzina",
+        "diesel"
+      ],
+      "pret": 13190,
+      "pretDeLa": 10890,
+      "km": 167000,
+      "anunturi": 58,
+      "ani": "2018–2021",
+      "link": "https://www.autovit.ro/autoturisme/peugeot/5008/de-la-2018?search%5Bfilter_float_year%3Ato%5D=2021"
+    },
+    {
+      "nume": "Dacia Jogger",
+      "generatie": "7 locuri, nouă",
+      "grup": "rezerve",
+      "stare": "noua",
+      "tip": "monovolum",
+      "locuri": 7,
+      "motor": [
+        "benzina"
+      ],
+      "pret": 20950,
+      "pretNota": "după reducere de 500 €; TCe 110 sau ECO-G 120",
+      "portbagaj": "708 l cu 5 locuri, 160 l cu 7",
+      "deCe": "cea mai ieftină mașină nouă cu 7 locuri.",
+      "atentie": "o stea la Euro NCAP.",
+      "link": "https://www.dacia.ro/preturi-de-lista.html",
+      "foto": "dacia-jogger"
+    },
+    {
+      "nume": "Dacia Jogger Hybrid 155",
+      "generatie": "7 locuri, nouă",
+      "grup": "rezerve",
+      "stare": "noua",
+      "tip": "monovolum",
+      "locuri": 7,
+      "motor": [
+        "hibrid"
+      ],
+      "pret": 26150,
+      "deCe": "versiunea hibridă, tot cu 7 locuri.",
+      "atentie": "o stea la Euro NCAP.",
+      "link": "https://www.dacia.ro/preturi-de-lista.html",
+      "foto": "dacia-jogger"
+    },
+    {
+      "nume": "Dacia Bigster",
+      "generatie": "nouă",
+      "grup": "rezerve",
+      "stare": "noua",
+      "tip": "suv",
+      "motor": [
+        "benzina",
+        "hibrid"
+      ],
+      "pret": 23350,
+      "pretNota": "după reducere de 369 €; mild hybrid 140",
+      "portbagaj": "667 l (546 l la Hybrid 155)",
+      "deCe": "667 l de portbagaj, mai mult decât Sportage, la un preț mai mic.",
+      "atentie": "trei stele la Euro NCAP; model nou, fără date de fiabilitate.",
+      "link": "https://www.dacia.ro/preturi-de-lista.html",
+      "foto": "dacia-bigster"
+    },
+    {
+      "nume": "Kia Sportage",
+      "generatie": "nouă",
+      "grup": "lista",
+      "stare": "noua",
+      "tip": "suv",
+      "motor": [
+        "benzina"
+      ],
+      "pret": 26308,
+      "pretNota": "după promoție, până pe 30 noiembrie; listă 32.308 €",
+      "portbagaj": "591 l",
+      "deCe": "locul 8 la TÜV la 2–3 ani; garanție 7 ani.",
+      "link": "https://www.kia.ro/modele/sportage",
+      "foto": "kia-sportage"
+    },
+    {
+      "nume": "Toyota Corolla Touring Sports",
+      "generatie": "hibrid, nouă",
+      "grup": "lista",
+      "stare": "noua",
+      "tip": "break",
+      "motor": [
+        "hibrid"
+      ],
+      "pret": 26869,
+      "pretNota": "după promoție; listă 28.584 €",
+      "portbagaj": "598 l (1.8) sau 581 l (2.0)",
+      "deCe": "96,5% la What Car? 2025 pentru Corolla; garanție până la 10 ani, cu revizii la Toyota.",
+      "atentie": "bateria de 12 V mai mare abia din februarie 2026.",
+      "link": "https://www.toyota.ro/new-cars",
+      "foto": "toyota-corolla-ts"
+    },
+    {
+      "nume": "Skoda Octavia Combi",
+      "generatie": "nouă",
+      "grup": "lista",
+      "stare": "noua",
+      "tip": "break",
+      "motor": [
+        "benzina",
+        "diesel"
+      ],
+      "pret": 27933,
+      "portbagaj": "640 l",
+      "deCe": "640 l de portbagaj, mai mult decât Corolla Touring Sports; generația asta nu e la coada niciunei surse.",
+      "link": "https://www.skoda.ro/models/overview",
+      "foto": "skoda-octavia-combi-4"
+    }
+  ],
+  "fotografii": {
+    "skoda-karoq": {
+      "fisier": "skoda-karoq.webp",
+      "alt": "Skoda Karoq gri, văzută din față",
+      "autor": "Vauxford",
+      "pagina": "https://commons.wikimedia.org/wiki/File:2018_Skoda_Karoq_SE_TSi_S-A_1.0_Front.jpg",
+      "licenta": "CC BY-SA 4.0",
+      "licentaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.ro"
+    },
+    "kia-sportage": {
+      "fisier": "kia-sportage.webp",
+      "alt": "Kia Sportage albă din generația 2022, văzută din față",
+      "autor": "Vauxford",
+      "pagina": "https://commons.wikimedia.org/wiki/File:2022_Kia_Sportage_GT-Line_ISG_HEV_Automatic_1.6_Front.jpg",
+      "licenta": "CC BY-SA 4.0",
+      "licentaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.ro"
+    },
+    "hyundai-tucson": {
+      "fisier": "hyundai-tucson.webp",
+      "alt": "Hyundai Tucson alb din 2021, văzut din față",
+      "autor": "Vauxford",
+      "pagina": "https://commons.wikimedia.org/wiki/File:2021_Hyundai_Tucson_Ultimate_T-GDi_MHEV_1.6_Front.jpg",
+      "licenta": "CC BY-SA 4.0",
+      "licentaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.ro"
+    },
+    "toyota-rav4": {
+      "fisier": "toyota-rav4.webp",
+      "alt": "Toyota RAV4 hibrid albastru închis, văzut din față",
+      "autor": "Vauxford",
+      "pagina": "https://commons.wikimedia.org/wiki/File:2019_Toyota_RAV4_Excel_Hybrid_CVT_2.5_Front.jpg",
+      "licenta": "CC BY-SA 4.0",
+      "licentaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.ro"
+    },
+    "honda-cr-v": {
+      "fisier": "honda-cr-v.webp",
+      "alt": "Honda CR-V hibrid alb, expus la un salon auto",
+      "autor": "Rutger van der Maar",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Honda_CR-V_Hybrid.jpg",
+      "licenta": "CC BY 2.0",
+      "licentaUrl": "https://creativecommons.org/licenses/by/2.0/deed.ro"
+    },
+    "skoda-octavia-combi-3": {
+      "fisier": "skoda-octavia-combi-3.webp",
+      "alt": "Skoda Octavia Combi gri din 2017, văzută din față",
+      "autor": "Vauxford",
+      "pagina": "https://commons.wikimedia.org/wiki/File:2017_Skoda_Octavia_SE_L_TDi_S-A_Estate_2.0_Front.jpg",
+      "licenta": "CC BY-SA 4.0",
+      "licentaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.ro"
+    },
+    "skoda-octavia-combi-4": {
+      "fisier": "skoda-octavia-combi-4.webp",
+      "alt": "Skoda Octavia Combi albastră din 2020, văzută din față",
+      "autor": "Vauxford",
+      "pagina": "https://commons.wikimedia.org/wiki/File:2020_Skoda_Octavia_SE_L_First_Edition_TDi_Estate_2.0_Front.jpg",
+      "licenta": "CC BY-SA 4.0",
+      "licentaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.ro"
+    },
+    "vw-passat-variant": {
+      "fisier": "vw-passat-variant.webp",
+      "alt": "Volkswagen Passat Variant argintiu din 2020, văzut din față",
+      "autor": "M 93",
+      "pagina": "https://commons.wikimedia.org/wiki/File:VW_Passat_Variant_2.0_TDI_4Motion_R-Line_Edition_%28B8%2C_Facelift%29_%E2%80%93_f_16022020.jpg",
+      "licenta": "CC BY-SA 3.0 DE",
+      "licentaUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.ro"
+    },
+    "skoda-kodiaq": {
+      "fisier": "skoda-kodiaq.webp",
+      "alt": "Skoda Kodiaq gri din 2017, văzută din față",
+      "autor": "Vauxford",
+      "pagina": "https://commons.wikimedia.org/wiki/File:2017_Skoda_Kodiaq_TDi_SCR_4x4_2.0.jpg",
+      "licenta": "CC BY-SA 4.0",
+      "licentaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.ro"
+    },
+    "vw-touran": {
+      "fisier": "vw-touran.webp",
+      "alt": "Volkswagen Touran argintiu din 2018, văzut din față",
+      "autor": "Vauxford",
+      "pagina": "https://commons.wikimedia.org/wiki/File:2018_Volkswagen_Touran_1.6.jpg",
+      "licenta": "CC BY-SA 4.0",
+      "licentaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.ro"
+    },
+    "dacia-jogger": {
+      "fisier": "dacia-jogger.webp",
+      "alt": "Dacia Jogger verde din 2024, văzută din față",
+      "autor": "Vauxford",
+      "pagina": "https://commons.wikimedia.org/wiki/File:2024_Dacia_Jogger_Extreme_1.0_Front.jpg",
+      "licenta": "CC BY-SA 4.0",
+      "licentaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.ro"
+    },
+    "kia-ceed-sw": {
+      "fisier": "kia-ceed-sw.webp",
+      "alt": "Kia Ceed SW argintie din 2019, văzută din față",
+      "autor": "Vauxford",
+      "pagina": "https://commons.wikimedia.org/wiki/File:2019_Kia_Ceed_sw_2_NAV_CRDI_ISG_1.6_Front.jpg",
+      "licenta": "CC BY-SA 4.0",
+      "licentaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.ro"
+    },
+    "toyota-corolla-ts": {
+      "fisier": "toyota-corolla-ts.webp",
+      "alt": "Toyota Corolla Touring Sports hibrid gri, văzută din față",
+      "autor": "Alexander Migl",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Toyota_Corolla_Touring_Sports_Hybrid_(E210)_IMG_2661.jpg",
+      "licenta": "CC BY-SA 4.0",
+      "licentaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.ro"
+    },
+    "skoda-superb-combi": {
+      "fisier": "skoda-superb-combi.webp",
+      "alt": "Skoda Superb Combi gri din 2020, văzută din față",
+      "autor": "Vauxford",
+      "pagina": "https://commons.wikimedia.org/wiki/File:2020_Skoda_Superb_Sportline%2B_TSi_4X4_Estate_2.0_Front.jpg",
+      "licenta": "CC BY-SA 4.0",
+      "licentaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.ro"
+    },
+    "vw-tiguan-2": {
+      "fisier": "vw-tiguan-2.webp",
+      "alt": "Volkswagen Tiguan gri din 2018, văzut din față",
+      "autor": "Vauxford",
+      "pagina": "https://commons.wikimedia.org/wiki/File:2018_Volkswagen_Tiguan_R-Line_TSi_BlueMotion_4Motion_2.0_Front.jpg",
+      "licenta": "CC BY-SA 4.0",
+      "licentaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.ro"
+    },
+    "hyundai-santa-fe": {
+      "fisier": "hyundai-santa-fe.webp",
+      "alt": "Hyundai Santa Fe argintiu din 2019, văzut din față",
+      "autor": "Vauxford",
+      "pagina": "https://commons.wikimedia.org/wiki/File:2019_Hyundai_Santa_Fe_HTRAC_Front.jpg",
+      "licenta": "CC BY-SA 4.0",
+      "licentaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.ro"
+    },
+    "dacia-bigster": {
+      "fisier": "dacia-bigster.webp",
+      "alt": "Dacia Bigster neagră la un dealer, văzută din față",
+      "autor": "Trop86",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Dacia_Bigster_191023.jpg",
+      "licenta": "CC0 1.0",
+      "licentaUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.ro"
+    },
+    "peugeot-5008": {
+      "fisier": "peugeot-5008.webp",
+      "alt": "Peugeot 5008 albastru închis din 2018, văzut din față",
+      "autor": "Vauxford",
+      "pagina": "https://commons.wikimedia.org/wiki/File:2018_Peugeot_5008_Allure_Automatic_1.2_Front.jpg",
+      "licenta": "CC BY-SA 4.0",
+      "licentaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.ro"
+    }
+  }
+}
