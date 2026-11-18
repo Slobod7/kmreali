@@ -2,18 +2,17 @@
 title: "Mașini de familie 2026 – cele mai bune alegeri sub 30.000 €"
 # Shown in Google results and on the article card. Aim for 140–160 characters.
 description: "Ce mașină de familie iei în 2026 cu sub 30.000 €: break, SUV sau 7 locuri, cu portbagajul, fiabilitatea la TÜV, ADAC și What Car? și prețuri din România."
-date: 2026-11-16
+date: 2026-11-18
 category: topuri
 # Drawn by scripts/coperte.mjs: node scripts/coperte.mjs masini-de-familie
 cover: ./coperta-masini-de-familie.webp
 coverAlt: "Ilustrație: o mașină break roșie cu o cutie pe plafon și un cărucior lângă portbagaj, sub textul „sub 30.000 €”"
-# Before publishing:
-#   add the author's own family notes to the Superb section (child seats, luggage, long trips);
-#   recheck the Kia Sportage promo price (valid until 30 November 2026).
+# After 30 November 2026: the Kia Sportage price (26.308 €, in the text and date.json) is a promo valid until then; recheck it.
+# Can be added any time: the author's own family notes in the Superb section (child seats, luggage, long trips).
 # Research notes, with sources and what is not verified: docs/masini-de-familie.md
 # When TÜV-Report 2027 is out: update the TÜV numbers in the text and in date.json, then set `updated:`.
 # Set to true to hide the article from the live site.
-draft: true
+draft: false
 ---
 
 O mașină de familie trebuie să ducă oameni, bagaje și de multe ori un cărucior sau două scaune de copil. Pentru lista asta am pornit de la spațiu: litrii de portbagaj, locurile și, unde există, al treilea rând. Apoi am scos modelele pe care sursele de fiabilitate le pun la coadă: inspecțiile tehnice din Germania (TÜV), panele la care a ieșit asistența rutieră ADAC și sondajul What Car? cu proprietari din Marea Britanie.
