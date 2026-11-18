@@ -141,7 +141,7 @@ const coperte = {
           <circle r="92" fill="${c.alb}" stroke="${c.carbune}" stroke-width="10"/>
           <path d="M-40 2 L-12 30 L42 -28" fill="none" stroke="${c.carbune}" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
         </g>
-        <rect x="510" y="708" width="580" height="140" fill="${c.evidentiator}"/>
+        <rect x="440" y="708" width="720" height="140" fill="${c.evidentiator}"/>
         ${text(800, 818, 136, 'sub 30.000 €', { anchor: 'middle' })}
       `,
       );
