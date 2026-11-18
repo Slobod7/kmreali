@@ -41,14 +41,16 @@
       const budget = Number(filters.get('buget'));
       const state = filters.get('stare');
       const type = filters.get('tip');
+      const seats = Number(filters.get('locuri') || 0);
       const engine = filters.get('motor');
       const matches = new Set<HTMLElement>();
 
       for (const card of cards) {
-        const { stare, tip, motor = '', pret, pretDeLa } = card.dataset;
+        const { stare, tip, locuri, motor = '', pret, pretDeLa } = card.dataset;
         const match =
           (!state || stare === state) &&
           (!type || tip === type) &&
+          Number(locuri) >= seats &&
           (!engine || motor.split(' ').includes(String(engine))) &&
           Number(pretDeLa) <= budget;
         if (match) matches.add(card);

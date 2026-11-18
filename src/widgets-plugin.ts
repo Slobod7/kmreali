@@ -36,8 +36,13 @@ interface Offer {
   generatie?: string;
   grup?: Group;
   stare: 'folosita' | 'noua';
-  tip: 'mica' | 'compacta' | 'suv';
+  /** One of the keys in filtre.tip (default: mica, compacta, suv). */
+  tip: string;
   motor: string[];
+  /** Set for cars with 7 seats; the search then gets a „7 locuri” filter. */
+  locuri?: number;
+  /** Shown on the card, e.g. "640 l (1.700 l cu bancheta rabatată)". */
+  portbagaj?: string;
   pret: number;
   pretDeLa?: number;
   pretNota?: string;
@@ -55,6 +60,8 @@ interface Data {
   modele: Record<string, Model>;
   oferte: Offer[];
   fotografii: Record<string, Photo>;
+  /** Optional: the body types the search offers and where the budget slider starts. */
+  filtre?: { tip?: Record<string, string>; buget?: number };
   /** Where the card photos are served from; set by the plugin, not in date.json. */
   folderFoto: string;
 }
@@ -124,7 +131,11 @@ function matrix({ modele, actualizat }: Data) {
 }
 
 /** The search by budget: every car as a card; the page's script hides the ones that don't match. */
-function finder({ modele, oferte, fotografii, folderFoto }: Data) {
+const defaultTypes = { mica: 'Mică', compacta: 'Compactă', suv: 'SUV' };
+
+function finder({ modele, oferte, fotografii, filtre, folderFoto }: Data) {
+  const budget = filtre?.buget ?? 15000;
+  const sevenSeats = oferte.some((offer) => (offer.locuri ?? 0) >= 7);
   const order: Group[] = ['lista', 'rezerve', 'slabe'];
   const offers = oferte
     .map((offer) => ({ offer, model: offer.model ? modele[offer.model] : undefined }))
@@ -139,11 +150,12 @@ function finder({ modele, oferte, fotografii, folderFoto }: Data) {
   <form class="cautator__filtre">
     <div class="cautator__buget">
       <label for="cautator-buget">Buget maxim</label>
-      <output for="cautator-buget" data-buget>15.000 €</output>
-      <input type="range" id="cautator-buget" name="buget" min="5000" max="30000" step="500" value="15000">
+      <output for="cautator-buget" data-buget>${euro(budget)}</output>
+      <input type="range" id="cautator-buget" name="buget" min="5000" max="30000" step="500" value="${budget}">
     </div>
     ${choice('stare', 'Mașina', { folosita: 'Second hand', noua: 'Nouă' })}
-    ${choice('tip', 'Tip', { mica: 'Mică', compacta: 'Compactă', suv: 'SUV' })}
+    ${choice('tip', 'Tip', filtre?.tip ?? defaultTypes)}
+    ${sevenSeats ? choice('locuri', 'Locuri', { '7': '7 locuri' }) : ''}
     ${choice('motor', 'Motor', { benzina: 'Benzină', diesel: 'Diesel', hibrid: 'Hibrid' })}
   </form>
   <p class="cautator__numar" aria-live="polite" data-numar></p>
@@ -160,7 +172,8 @@ function finder({ modele, oferte, fotografii, folderFoto }: Data) {
 }
 
 function choice(name: string, legend: string, options: Record<string, string>) {
-  const radios = Object.entries({ '': 'Oricare', ...options }).map(
+  // A list, not one object: JavaScript puts number keys such as '7' before '' (Oricare).
+  const radios = [['', 'Oricare'], ...Object.entries(options)].map(
     ([value, label]) =>
       `<label><input type="radio" name="${name}" value="${value}"${value === '' ? ' checked' : ''}><span>${label}</span></label>`,
   );
@@ -191,7 +204,7 @@ function card(offer: Offer, model?: Model, photo?: Photo) {
   ];
 
   return `
-    <li class="masina" data-grup="${group}" data-stare="${offer.stare}" data-tip="${offer.tip}" data-motor="${offer.motor.join(' ')}" data-pret="${offer.pret}" data-pret-de-la="${offer.pretDeLa ?? offer.pret}"${used && (offer.anunturi ?? 0) < 12 ? ' data-rar' : ''}>
+    <li class="masina" data-grup="${group}" data-stare="${offer.stare}" data-tip="${esc(offer.tip)}" data-locuri="${offer.locuri ?? 5}" data-motor="${offer.motor.join(' ')}" data-pret="${offer.pret}" data-pret-de-la="${offer.pretDeLa ?? offer.pret}"${used && (offer.anunturi ?? 0) < 12 ? ' data-rar' : ''}>
       <div class="masina__cap">
         ${photo ? `<img class="masina__foto" src="${esc(photo.fisier)}" alt="${esc(photo.alt)}" width="400" height="225" loading="lazy" decoding="async">` : ''}
         <div class="masina__titlu">
@@ -201,6 +214,7 @@ function card(offer: Offer, model?: Model, photo?: Photo) {
       </div>
       <p class="masina__pret">${price}</p>
       ${used ? `<p class="masina__nota" data-peste-buget hidden>Cele mai multe anunțuri sunt peste bugetul tău; uită-te la cele mai ieftine.</p>` : ''}
+      ${offer.portbagaj ? `<p><strong>Portbagaj:</strong> ${esc(offer.portbagaj)}</p>` : ''}
       ${notes}
       ${offer.deCe ? `<p><strong>De ce:</strong> ${esc(offer.deCe)}</p>` : ''}
       ${warning ? `<p><strong>Atenție la:</strong> ${esc(warning)}</p>` : ''}

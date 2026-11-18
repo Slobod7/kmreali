@@ -47,11 +47,19 @@ const caroserii = {
     stalp: 250,
     roti: [140, 432],
   },
+  // Estate: the roof runs back to an almost upright tailgate. `cutie` is an optional roof box.
+  break: {
+    body: 'M22 166 L22 74 Q24 54 42 50 L80 44 Q160 36 268 34 L360 34 Q402 36 444 84 L548 98 Q578 104 582 124 L582 162 Q582 170 574 170 L30 170 Q22 170 22 166 Z',
+    geam: 'M50 96 L54 66 Q56 58 70 57 L268 46 L354 46 Q384 50 418 90 Z',
+    stalp: [124, 292],
+    roti: [140, 474],
+    cutie: 'M100 42 Q104 16 144 13 L304 11 Q336 13 344 35 Z',
+  },
 };
 
 let nrMasina = 0;
 /** One car standing on the ground line `sol`, its left end at `x`. Wheels touch the ground at y = 206 of 600. */
-function masina({ tip, x, sol, w = 600, culoare = c.carbune, geam = c.grafit, jante = c.gri }) {
+function masina({ tip, x, sol, w = 600, culoare = c.carbune, geam = c.grafit, jante = c.gri, cutie }) {
   const m = caroserii[tip];
   const id = `geam${nrMasina++}`;
   const k = w / 600;
@@ -64,9 +72,10 @@ function masina({ tip, x, sol, w = 600, culoare = c.carbune, geam = c.grafit, ja
     .join('');
   return `<g transform="translate(${x} ${sol - 206 * k}) scale(${k})">
     <clipPath id="${id}"><path d="${m.geam}"/></clipPath>
+    ${cutie && m.cutie ? `<path d="${m.cutie}" fill="${cutie}"/>` : ''}
     <path d="${m.body}" fill="${culoare}"/>
     <path d="${m.geam}" fill="${geam}"/>
-    <rect x="${m.stalp - 7}" y="0" width="14" height="120" fill="${culoare}" clip-path="url(#${id})"/>
+    ${[m.stalp].flat().map((s) => `<rect x="${s - 7}" y="0" width="14" height="120" fill="${culoare}" clip-path="url(#${id})"/>`).join('')}
     ${roti}
   </g>`;
 }
@@ -81,6 +90,18 @@ function borna({ x, y, w, km, cap = 'KM' }) {
     <path d="M0 ${r} A${r} ${r} 0 0 1 ${w} ${r} L${w} ${h - 8} Q${w} ${h} ${w - 8} ${h} L8 ${h} Q0 ${h} 0 ${h - 8} Z" fill="none" stroke="${c.carbune}" stroke-width="${w * 0.045}"/>
     <text x="${w / 2}" y="${r * 0.86}" text-anchor="middle" font-family="Barlow Condensed" font-weight="700" font-size="${w * 0.2}" letter-spacing="${w * 0.012}" fill="${c.alb}">${cap}</text>
     <text x="${w / 2}" y="${r * 1.05 + (h - r * 1.05) / 2 + w * 0.085}" text-anchor="middle" font-family="Barlow Condensed" font-weight="800" font-size="${w * 0.25}" fill="${c.carbune}">${km}</text>
+  </g>`;
+}
+
+/** A pram standing on the ground line `sol`, its left end at `x`, `h` tall. */
+function carucior({ x, sol, h }) {
+  const k = h / 200;
+  return `<g transform="translate(${x} ${sol - 200 * k}) scale(${k})">
+    <path d="M60 176 L118 132 M150 176 L92 132" stroke="${c.carbune}" stroke-width="9" stroke-linecap="round"/>
+    <path d="M168 72 L204 18 L222 30" fill="none" stroke="${c.carbune}" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 72 L174 72 Q174 132 122 136 L70 136 Q18 132 18 72 Z" fill="${c.grafit}"/>
+    <path d="M18 72 A78 78 0 0 1 96 -6 L96 72 Z" fill="${c.carbune}"/>
+    ${[60, 150].map((cx) => `<circle cx="${cx}" cy="176" r="24" fill="${c.carbune}"/><circle cx="${cx}" cy="176" r="9" fill="${c.gri}"/>`).join('')}
   </g>`;
 }
 
@@ -122,6 +143,24 @@ const coperte = {
         </g>
         <rect x="510" y="708" width="580" height="140" fill="${c.evidentiator}"/>
         ${text(800, 818, 136, 'sub 30.000 €', { anchor: 'middle' })}
+      `,
+      );
+    },
+  },
+
+  // Top: the same budget as „Mașini fiabile”, on a red estate packed for a family: roof box on top, pram by the boot.
+  'masini-de-familie': {
+    fisier: 'coperta-masini-de-familie.webp',
+    html: () => {
+      const sol = 690;
+      return pagina(
+        c.hartie,
+        `
+        <rect x="0" y="${sol}" width="1600" height="${900 - sol}" fill="${c.nisip}"/>
+        ${carucior({ x: 236, sol, h: 236 })}
+        ${masina({ tip: 'break', x: 520, sol, w: 860, culoare: c.rosu, cutie: c.carbune })}
+        <rect x="440" y="110" width="720" height="140" fill="${c.evidentiator}"/>
+        ${text(800, 220, 136, 'sub 30.000 €', { anchor: 'middle' })}
       `,
       );
     },
