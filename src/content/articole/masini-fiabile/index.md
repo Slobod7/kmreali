@@ -186,7 +186,7 @@ Pe Autovit sunt 93 de anunțuri din 2019–2021, cu un median de 17.000 € și 
 
 ## Second hand 20.000–30.000 €
 
-Între 20.000 și 30.000 € lista are doar SUV-uri de familie, iar datele sunt mai puține decât la bugetele mici. Doar Kia Sportage din generația nouă iese bine în două surse. Pentru Honda CR-V și Hyundai Tucson am găsit mai ales nota de la What Car?, iar Toyota RAV4 hibrid iese bine acolo, dar slab la ADAC.
+Între 20.000 și 30.000 € lista are doar SUV-uri de familie, iar datele sunt mai puține decât la bugetele mici. Doar Kia Sportage din generația nouă iese bine în două surse. Pentru Honda CR-V și Hyundai Tucson am găsit mai ales nota de la What Car?, iar Toyota RAV4 hibrid iese bine acolo, dar slab la ADAC. Dacă îți trebuie portbagaj mare sau 7 locuri, breakurile și monovolumele sunt în [articolul despre mașini de familie](/topuri/masini-de-familie/).
 
 ### Kia Sportage (din 2022, a cincea generație)
 
@@ -234,7 +234,7 @@ Surse: [Toyota](https://www.toyota.ro/new-cars), [Skoda](https://www.skoda.ro/mo
 - **Kia Sportage 2016–2021:** 72,9% la What Car? 2025, deși generația următoare are 96,5%.
 - **Ford Focus:** printre ultimele 5 la TÜV la 8–9 ani, iar generația 2018–2026 are 85,6% la What Car? 2026.
 - **Hyundai i30 și Kia Ceed de dinainte de 2018:** printre ultimele 10 la TÜV la 10–11 ani; i30 și la 12–13 ani.
-- **Skoda Octavia 4 și VW Golf 8 (din 2020):** nu sunt la coada TÜV, dar la What Car? 2025 au doar 89,5% și 82,2%, în a doua jumătate a clasamentului compactelor.
+- **Skoda Octavia 4 și VW Golf 8 (din 2020):** nu sunt la coada TÜV, dar la What Car? 2025 au doar 89,5% și 82,2%, în a doua jumătate a clasamentului compactelor. Octavia Combi e totuși în [lista mașinilor de familie](/topuri/masini-de-familie/#skoda-octavia-combi-din-2020-a-patra-generație), unde regula e mai blândă.
 - **Nissan Juke pe benzină (din 2019):** 55,2% la What Car? 2025, ultimul dintre SUV-urile mici.
 
 Și mașina mea apare într-un clasament prost: TÜV pune Skoda Superb de 2–3 ani pe locul 101 din 110 (9,6% picate). Pe al meu l-am cumpărat cu 80.000 km, iar în aproape 40.000 km nu s-a stricat nimic important ([recenzia](/recenzii/skoda-superb-2020-pareri-proprietar/)). Nu e o contradicție: TÜV numără ce pică la inspecție, nu ce te lasă pe drum, iar o singură mașină nu face o statistică.
