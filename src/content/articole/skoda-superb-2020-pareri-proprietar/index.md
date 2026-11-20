@@ -106,7 +106,7 @@ Superb are 4.869 mm lungime și un ampatament de 2.841 mm, iar asta se simte mai
 
 ![Gurile de aerisire și comenzile de climatizare pentru pasagerii din spate ai Skodei Superb](./skoda-superb-2020-guri-aerisire-spate.webp)
 
-Portbagajul l-am testat serios, la două mutări: Cluj–Chișinău și apoi Chișinău–București. Cu bancheta rabatată am încărcat o placă de gresie de 120 × 60 cm și tot a mai rămas loc pentru bagaje. La spațiu îi dau 9 din 10.
+Portbagajul l-am testat serios, la două mutări: Cluj–Chișinău și apoi Chișinău–București. Cu bancheta rabatată am încărcat o placă de gresie de 120 × 60 cm și tot a mai rămas loc pentru bagaje. La spațiu îi dau 9 din 10. Cum stă Superb Combi față de alte mașini de familie, la portbagaj, fiabilitate și preț, am scris în [Mașini de familie 2026](/topuri/masini-de-familie/#skoda-superb-combi-20152023-a-treia-generație).
 
 ![Portbagajul deschis al Skodei Superb 2020 liftback, cu volum de 625 de litri](./skoda-superb-2020-portbagaj.webp)
 
