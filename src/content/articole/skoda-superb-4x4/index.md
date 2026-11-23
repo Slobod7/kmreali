@@ -118,7 +118,7 @@ Tyre Reviews a pus în Finlanda față în față două BMW X1: unul cu 4x4 și 
 
 Eu am iarna anvelope Hankook pe aceleași jante de 19". Sunt foarte bune, dar ceva mai zgomotoase decât cele de vară.
 
-Și legea e aceeași pentru toți: în România, anvelopele de iarnă sunt obligatorii când drumul e acoperit de zăpadă, gheață sau polei, indiferent de lună și indiferent dacă mașina e 4x4 ([Codul rutier, OUG 195/2002](https://legislatie.just.ro/Public/DetaliiDocument/41006)). Manualul Škoda cere anvelope de iarnă pe toate cele patru roți, cu cel puțin 4 mm adâncime a profilului ([manualul Superb 3](https://ownersmanuals.blob.core.windows.net/ownersmanuals/ro/Superb_3V/11-2018/OwnersManual.pdf)).
+Și legea e aceeași pentru toți: în România, anvelopele de iarnă sunt obligatorii când drumul e acoperit de zăpadă, gheață sau polei, indiferent de lună și indiferent dacă mașina e 4x4 ([Codul rutier, OUG 195/2002](https://legislatie.just.ro/Public/DetaliiDocument/41006)). Manualul Škoda cere anvelope de iarnă pe toate cele patru roți, cu cel puțin 4 mm adâncime a profilului ([manualul Superb 3](https://ownersmanuals.blob.core.windows.net/ownersmanuals/ro/Superb_3V/11-2018/OwnersManual.pdf)). Ce amendă iei fără ele și ce trebuie să scrie pe anvelope găsești în [ghidul despre anvelopele de iarnă](/ghiduri/anvelope-de-iarna/).
 
 ### Lanțurile: doar în față și doar pe 16" sau 17"
 
