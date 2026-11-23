@@ -278,6 +278,54 @@ const coperte = {
   },
 };
 
+// Guide: the law's three road conditions on the highlighter, next to a winter tyre with M+S and the snowflake on its sidewall.
+coperte['anvelope-de-iarna'] = {
+  fisier: 'coperta-anvelope-de-iarna.webp',
+  html: () => {
+    const cx = 1150;
+    const cy = 450;
+    // Tread grooves: paper-coloured notches cut into the tyre's edge.
+    const caneluri = Array.from({ length: 44 }, (_, i) =>
+      `<rect x="${cx - 13}" y="${cy - 440}" width="26" height="66" rx="5" fill="${c.hartie}" transform="rotate(${(i * 360) / 44} ${cx} ${cy})"/>`,
+    ).join('');
+    const prezoane = Array.from({ length: 5 }, (_, i) => {
+      const a = (i * 2 * Math.PI) / 5 - Math.PI / 2;
+      return `<circle cx="${(cx + 52 * Math.cos(a)).toFixed(1)}" cy="${(cy + 52 * Math.sin(a)).toFixed(1)}" r="11" fill="${c.carbune}"/>`;
+    }).join('');
+    const spite = Array.from({ length: 5 }, (_, i) =>
+      `<path d="M${cx - 26} ${cy - 76} L${cx - 40} ${cy - 196} Q${cx} ${cy - 206} ${cx + 40} ${cy - 196} L${cx + 26} ${cy - 76} Z" fill="${c.grafit}" transform="rotate(${36 + i * 72} ${cx} ${cy})"/>`,
+    ).join('');
+    // The 3PMSF symbol: three-peak mountain with a snowflake, 200 wide.
+    const alpin = (x, y, k) => `<g transform="translate(${x} ${y}) scale(${k})" fill="none" stroke="${c.alb}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 210 L62 104 L92 146 L132 60 L176 150 L192 130 L190 210 Z"/>
+        <g transform="translate(104 172)">
+          <path d="M0 -30 L0 30 M-26 -15 L26 15 M-26 15 L26 -15"/>
+          <path d="M-8 -22 L0 -14 L8 -22 M-8 22 L0 14 L8 22 M-23 -4 L-13 -8 L-15 -19 M23 4 L13 8 L15 19 M-23 4 L-13 8 L-15 19 M23 -4 L13 -8 L15 -19" stroke-width="6"/>
+        </g>
+      </g>`;
+    const cuvinte = ['zăpadă', 'gheață', 'polei'];
+    return pagina(
+      c.hartie,
+      `
+      <circle cx="${cx}" cy="${cy}" r="410" fill="${c.carbune}"/>
+      ${caneluri}
+      <circle cx="${cx}" cy="${cy}" r="330" fill="${c.grafit}"/>
+      <circle cx="${cx}" cy="${cy}" r="318" fill="${c.carbune}"/>
+      <circle cx="${cx}" cy="${cy}" r="212" fill="${c.gri}"/>
+      ${spite}
+      <circle cx="${cx}" cy="${cy}" r="86" fill="${c.gri}"/>
+      ${prezoane}
+      <path id="flanc" d="M${cx - 266} ${cy} A266 266 0 0 1 ${cx + 266} ${cy}" fill="none"/>
+      <text font-family="Barlow Condensed" font-weight="800" font-size="76" fill="${c.alb}" letter-spacing="4">
+        <textPath href="#flanc" startOffset="50%" text-anchor="middle">M+S</textPath>
+      </text>
+      ${alpin(cx - 217 - 50, cy + 152 - 55, 0.5)}
+      ${cuvinte.map((w, i) => `<rect x="90" y="${190 + i * 190}" width="560" height="150" fill="${c.evidentiator}"/>${text(120, 310 + i * 190, 150, w)}`).join('')}
+    `,
+    );
+  },
+};
+
 // ---------- Render ----------
 
 const tmp = mkdtempSync(join(tmpdir(), 'coperte-'));
