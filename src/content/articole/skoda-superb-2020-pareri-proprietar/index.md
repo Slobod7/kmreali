@@ -124,7 +124,7 @@ Echiparea Laurin & Klement are tot ce îți trebuie: sistem audio Canton, bord d
 
 - **Jantele de 19" și anvelopele 235/40 R19:** arată foarte bine, dar nu sunt practice. Anvelopele sunt mai scumpe decât cele de 17" sau 18", fac zgomot pe drumuri proaste și se taie ușor în gropi. Mie mi s-a întâmplat de două ori: o dată anvelopa s-a tăiat complet, a doua oară am putut-o repara. Partea bună: cu anvelope de calitate, aderența e excelentă.
 - **Rotițele de volum de pe volan s-au crăpat:** nu se schimbă separat, doar cu tot butonul. Piesele sunt comandate.
-- **Pilotul automat adaptiv (ACC) și bateria:** când bateria începe să se descarce, ACC-ul nu mai funcționează, iar senzorul radar din față se oprește și el. Dacă ACC-ul refuză să pornească, verifică întâi bateria.
+- **Pilotul automat adaptiv (ACC) și bateria:** când bateria începe să se descarce, ACC-ul nu mai funcționează, iar senzorul radar din față se oprește și el. Dacă ACC-ul refuză să pornească, verifică întâi bateria. Ce înseamnă ceilalți martori de pe bord am adunat în [ghidul martorilor Skoda](/ghiduri/martori-bord-skoda/).
 - **Vopseaua neagră:** nu e un defect, dar nu stă curată niciodată.
 
 ![Janta de 19 inch a Skodei Superb 2020 cu anvelopă Bridgestone 235/40 R19](./skoda-superb-2020-jante.webp)
