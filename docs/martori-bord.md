@@ -25,7 +25,7 @@ Corecturi mai mici, aplicate tot atunci:
 
 Rămân deschise Ford (sursă inaccesibilă) și cifrele „3–6 secunde” la airbagul Kia, ilizibile în fontul PDF-ului.
 
-Ruta `/martori-bord/` folosește layout-ul, fonturile și navigarea KM Reali. Este accesibilă din Ghiduri. Articolul `martori-bord-skoda` rămâne draft; instrumentul trimite înapoi către el numai în dezvoltare sau după publicarea articolului.
+Ruta `/martori-bord/` folosește layout-ul, fonturile și navigarea KM Reali. Este accesibilă din Ghiduri. Articolul `martori-bord-skoda` e publicat din 26 noiembrie 2026 la `/ghiduri/martori-bord-skoda/`, iar instrumentul trimite înapoi către el.
 
 ## Interfața actuală
 
