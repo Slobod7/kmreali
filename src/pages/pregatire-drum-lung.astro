@@ -149,6 +149,7 @@ const answers = [
                     {country.tax}
                     {country.id === 'at' && <span class="rt-date-hint" data-vignette-hint hidden></span>}
                     <br /><a href={country.taxLink.url} target="_blank" rel="noopener">{country.taxLink.label} ↗<span class="sr-only"> (filă nouă)</span></a>
+                    {country.guide && <><br /><a href={url(country.guide.url)}>{country.guide.label}</a></>}
                   </dd>
                   <dt>Echipament</dt>
                   <dd>
