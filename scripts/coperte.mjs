@@ -326,6 +326,34 @@ coperte['anvelope-de-iarna'] = {
   },
 };
 
+// Guide: a car on the motorway under an M1 sign, with the three short vignettes as tags; the 10-day one on the highlighter.
+coperte['vinieta-ungaria'] = {
+  fisier: 'coperta-vinieta-ungaria.webp',
+  html: () => {
+    const sol = 700;
+    const etichete = [
+      { x: 80, w: 250, str: '1 zi' },
+      { x: 360, w: 400, str: '10 zile', activ: true },
+      { x: 790, w: 350, str: '1 lună' },
+    ];
+    return pagina(
+      c.hartie,
+      `
+      <rect x="0" y="${sol}" width="1600" height="${900 - sol}" fill="${c.carbune}"/>
+      ${[0, 1, 2, 3, 4, 5, 6, 7].map((i) => `<rect x="${40 + i * 200}" y="${sol + 92}" width="110" height="14" fill="${c.hartie}"/>`).join('')}
+      <rect x="1318" y="300" width="24" height="${sol - 300}" fill="${c.gri}"/>
+      <rect x="1180" y="110" width="300" height="220" rx="22" fill="${c.grafit}"/>
+      <rect x="1196" y="126" width="268" height="188" rx="14" fill="none" stroke="${c.alb}" stroke-width="8"/>
+      ${text(1330, 278, 170, 'M1', { anchor: 'middle', culoare: c.alb })}
+      ${etichete
+        .map(({ x, w, str, activ }) => `<rect x="${x}" y="120" width="${w}" height="150" fill="${activ ? c.evidentiator : c.nisip}"/>${text(x + w / 2, 240, 128, str, { anchor: 'middle', culoare: activ ? c.carbune : c.gri })}`)
+        .join('')}
+      ${masina({ tip: 'liftback', x: 160, sol, w: 820, culoare: c.rosu })}
+    `,
+    );
+  },
+};
+
 // ---------- Render ----------
 
 const tmp = mkdtempSync(join(tmpdir(), 'coperte-'));

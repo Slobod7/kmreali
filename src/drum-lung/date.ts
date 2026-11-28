@@ -48,6 +48,8 @@ export interface Country {
   taxTitle: string;
   tax: string;
   taxLink: Link;
+  /** A KM Reali guide about this country's road taxes, linked under the official page. */
+  guide?: Link;
   gear: string;
   gearLink?: Link;
   tip: string;
@@ -81,6 +83,7 @@ export const countries: Country[] = [
     taxTitle: 'Taxe de drum',
     tax: 'Alege e-matrica pentru categoria mașinii și drumurile folosite. O vinietă de județ nu acoperă toată țara.',
     taxLink: { label: 'Nemzeti Útdíj · tarife e-matrica', url: 'https://nemzetiutdij.hu/en/e-vignette/tolls/e-vignette-rates' },
+    guide: { label: 'Ce vinietă alegi și cât costă în 2027', url: '/ghiduri/vinieta-ungaria/' },
     gear: 'Ghidul oficial enumeră triunghiul de avertizare. Ține și vesta la îndemână pentru o oprire de urgență.',
     tip: 'Toleranță zero la alcool pentru șoferi. Luminile sunt obligatorii și ziua, în afara localităților.',
   },
