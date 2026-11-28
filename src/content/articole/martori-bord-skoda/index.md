@@ -48,6 +48,8 @@ Manualul arată că reprezentarea depinde de echipare: un simbol de pe afișaj p
 
 La martorii importanți apare și un mesaj pe bord, uneori cu un semnal sonor. După prima afișare, mesajul dispare și rămâne doar triunghiul roșu sau galben, până se rezolvă problema. Mesajul îl găsești din nou în Infotainment (vezi mai jos).
 
+Cine stabilește culorile și ce spun alte 21 de mărci despre aceiași martori ai în [ghidul martorilor de bord pe culori](/ghiduri/semnificatie-martori-bord/).
+
 ## Ce se aprinde când pui contactul
 
 Când pui contactul, unii martori se aprind pentru câteva secunde. E un test: mașina verifică sistemele respective. Dacă totul e în regulă, martorii se sting la câteva secunde după ce ai pus contactul sau după ce ai pornit motorul.

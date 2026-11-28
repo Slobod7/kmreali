@@ -354,6 +354,45 @@ coperte['vinieta-ungaria'] = {
   },
 };
 
+// Guide: warning lights sorted into three columns by colour, each under a bar of its colour.
+coperte['semnificatie-martori-bord'] = {
+  fisier: 'coperta-semnificatie-martori-bord.webp',
+  html: () => {
+    const dir = join(articole, 'martori-bord-skoda');
+    const coloane = [
+      { bara: '#ff3b30', martori: ['presiune-ulei', 'frana', 'alternator', 'lichid-racire'] },
+      { bara: '#ffb000', martori: ['motor', 'abs', 'presiune-anvelope', 'esc'] },
+      { bara: '#34c759', martori: ['semnalizare', 'faza-lunga', 'racire-albastru', 'pilot-automat'] },
+    ];
+    const size = 170;
+    const gap = 24;
+    const latime = 2 * size + gap;
+    const intre = 90;
+    const x0 = (1600 - (3 * latime + 2 * intre)) / 2;
+    const y0 = (900 - (24 + 40 + 2 * size + gap)) / 2;
+    const icoana = (nume) =>
+      readFileSync(join(dir, `martor-${nume}.svg`), 'utf8')
+        .replace(/^<svg[^>]*>/, '')
+        .replace(/<\/svg>\s*$/, '')
+        .replace(/<rect width="200" height="200" rx="40" fill="#15171a"\/>/, '');
+    const continut = coloane
+      .map(({ bara, martori }, k) => {
+        const x = x0 + k * (latime + intre);
+        return `<rect x="${x}" y="${y0}" width="${latime}" height="24" rx="12" fill="${bara}"/>
+          ${martori
+            .map((nume, i) => {
+              const xi = x + (i % 2) * (size + gap);
+              const yi = y0 + 64 + Math.floor(i / 2) * (size + gap);
+              return `<g transform="translate(${xi} ${yi})"><rect width="${size}" height="${size}" rx="28" fill="${c.grafit}"/>
+                <svg x="0" y="0" width="${size}" height="${size}" viewBox="0 0 200 200">${icoana(nume)}</svg></g>`;
+            })
+            .join('')}`;
+      })
+      .join('');
+    return pagina(c.carbune, continut);
+  },
+};
+
 // ---------- Render ----------
 
 const tmp = mkdtempSync(join(tmpdir(), 'coperte-'));
